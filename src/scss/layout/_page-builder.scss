@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the EN Page Builder
+// -----------------------------------------------------------------------------
+
+body#en__pagebuilder{
+
+  /* Give the background some color so that input fields stand out */
+  background-color: $light-grey;
+
+  /* Reduces min-height of the page builder */
+  .en__component--page.ui-sortable{
+    min-height: 0;
+  }
+
+
+  #main-content{
+    /* Prevent content from jumping in page builder as the editor adds divs to the markup on field / row focus */
+    .en__component--active.en__component--activeTarget .en__field:nth-last-child(2),
+    .en__component--active.en__component--activeTarget .en__field:last-of-type{
+      /* margin-right: 0; */
+    }
+  }
+}

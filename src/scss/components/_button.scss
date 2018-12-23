@@ -1,0 +1,168 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+#main-content {
+
+  .en__field--donationAmt.en__field.en__field--radio .en__field__item{
+    min-width: 100px;
+    margin-bottom: rem(16px);  /*In the event the buttons wrap */
+  }
+
+  /** New CSS For Collapsed Slim Twitter Cards **/
+  #en_actionMessageToggle_ToggleWrapper button {
+    margin: 0;
+    background-color: transparent;
+    color: $text-color;
+    outline: none;
+  }
+
+  #en_actionMessageToggle_SubmitButton button {
+    margin: 0;
+    background-color: $brand-color;
+    color: #ffffff;
+  }
+
+  /************************************
+ * Utility: Pill Buttons
+ * .pill-buttons - Rounds corners to create pill shape
+ ***********************************/
+  .pill-buttons {
+    button,
+    &.radio-to-buttons label,
+    &.radio-to-buttons input[type='radio'] + label,
+    &.radio-to-buttons input[type='text'],
+    &.radio-to-buttons input[type='number'],
+    &.radio-to-buttons input[type='tel'] {
+      border-radius: 1000px;
+      padding-top: rem(8px);
+      padding-bottom: rem(8px);
+    }
+  }
+
+
+  /************************************
+ * Utility: Dark Style Buttons
+ * .dark-buttons - Can be applied to buttons and both radio selects and checkboxes
+ ***********************************/
+
+  .dark-buttons {
+    button,
+    &.radio-to-buttons label.en__field__label.en__field__label--item:hover,
+    &.radio-to-buttons input[type='radio']:checked + label {
+      background-color: $radio-checked-color;
+      border-color: $radio-checked-color;
+    }
+
+    button:hover,
+    button:focus,
+    .en__field__input--radio:checked + .en__field__label::before,
+    .en__field__input--checkbox:checked + .en__field__label::before {
+      background-color: $radio-checked-color;
+      border-color: $radio-checked-color;
+    }
+
+    .en__field--donationAmt .en__field__item--other.has-value input,
+    .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill,
+    .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill:hover,
+    .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill:focus
+    .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill {
+      -webkit-text-fill-color: #fff;
+      -webkit-box-shadow: 0 0 0 1000px $radio-checked-color inset;
+      caret-color: #fff;
+      background-color: $radio-checked-color;
+      border-color: $radio-checked-color;
+      color: #fff;
+    }
+
+    .en__field--donationAmt .en__field__item--other.has-value::before {
+      color: #fff;
+    }
+
+  }
+
+  /************************************
+ * Utility: Thin Buttons
+ * .thin-buttons - Reduces font-size and padding
+ ***********************************/
+  .thin-buttons {
+    button,
+    &.radio-to-buttons label.en__field__label--item,
+    &.radio-to-buttons input[type='radio'] + label.en__field__label--item,
+    &.radio-to-buttons input[type='text'] + label.en__field__label--item,
+    &.radio-to-buttons input[type='tel'] + label.en__field__label--item {
+      padding-top: rem(5px);
+      padding-bottom: rem(5px);
+      font-size: rem(12px);
+    }
+  }
+
+  .red .en__submit button{
+    background-color: $red;
+  }
+
+  .arrow .en__submit button::after{
+    content:"→";
+    float: right;
+    margin-right: rem(16px);
+    opacity: .9;
+  }
+
+  .arrow .en__submit button:disabled::after{
+    content: none;
+  }
+
+  button {
+    display: block;
+    margin: rem(0 0 16px 0);
+    font-family: inherit;
+    padding: rem(14px 16px);
+    border: rem(1px solid transparent);
+    border-radius: $field-border-radius;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: rem(16px);
+    text-align: center;
+    cursor: pointer;
+    background-color: $button-bg-color;
+    color: $button-txt-color;
+  }
+
+  .en__submit {
+    width: 370px;
+    max-width: 100%;
+    margin: rem(16px 0);
+    button{
+      width: 100%;
+      font-size: rem(20px);
+      font-weight: bold;
+      padding: rem(12px 0);
+      line-height: 0.8;
+      letter-spacing: 1.9px;
+      margin: rem(32px 0);
+    }
+  }
+
+  .next-step .en__submit button {
+    width: initial;
+    margin-left: auto;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: $button-hover-bg-color;
+  }
+
+  button[disabled],
+  button[disabled]:hover,
+  button[disabled]:focus {
+    background-color: $button-disabled-bg-color;
+    color: $button-txt-color;
+  }
+
+  button[disabled] {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+
+}

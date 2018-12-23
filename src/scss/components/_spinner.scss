@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the spinner component.
+// -----------------------------------------------------------------------------
+
+/************************************
+ * Loading spinner for submit button
+ ***********************************/
+
+@keyframes spin {
+  0% {
+    tranform: rotate(0deg);
+  }
+  100% {
+    tranform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: rem(12px);
+  height: rem(12px);
+  margin-top: rem(-5px);
+  vertical-align: middle;
+}
+
+.loader-quart {
+  border-radius: 50%;
+  border: rem(6px solid rgba(255, 255, 255, 0.4));
+  &::after {
+    content: '';
+    position: absolute;
+    top: rem(-6px);
+    right: rem(-6px);
+    bottom: rem(-6px);
+    left: rem(-6px);
+    border-radius: rem(50px);
+    border: rem(6px solid transparent);
+    border-top-color: #ffffff;
+    animation: spin 1s linear infinite;
+  }
+}

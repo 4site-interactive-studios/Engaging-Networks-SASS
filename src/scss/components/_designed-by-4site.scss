@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Designed By 4Site Footer Snippet.
+// -----------------------------------------------------------------------------
+
+/************************************
+* Utility: Designed by 4Site
+* #designed-by-4site
+* .light-font - Add for when being used on dark backgrounds
+* Markup: <!-- Thank you for supporting 4Site Studios -->
+* Markup: <div class="light-font" id="designed-by-4site"><a alt="4Site Studios" href="https://www.4sitestudios.com/engaging-networks" target="_blank" title="4Site Studios"><span class="text-fade">Designed with </span><span id="made-with-love">&hearts;</span><span class="text-fade"> by 4Site Studios</span></a></div>
+***********************************/
+
+/* Overkill, because if you're going to do something you love */
+@keyframes heartbeat
+{
+  0%{transform: scale( 1.100 );}
+  5%{transform: scale( 1.150 );}
+  10%{transform: scale( 1.200 );}
+  15%{transform: scale( 1.225 );}
+  20%{transform: scale( 1.250 );}
+  25%{transform: scale( 1.225 );}
+  30%{transform: scale( 1.200 );}
+  35%{transform: scale( 1.150 );}
+  40%{transform: scale( 1.100 );}
+  45%{transform: scale( 1.050 );}
+  50%{transform: scale( 1.000 );}
+  55%{transform: scale( 0.950 );}
+  60%{transform: scale( 0.900 );}
+  65%{transform: scale( 0.875 );}
+  70%{transform: scale( 0.850 );}
+  75%{transform: scale( 0.850 );}
+  80%{transform: scale( 0.850 );}
+  85%{transform: scale( 0.875 );}
+  90%{transform: scale( 0.900 );}
+  95%{transform: scale( 0.950 );}
+  100%{transform: scale( 1.000 );}
+}
+
+#designed-by-4site {
+  text-align: center;
+  font-size: 80%;
+  margin: rem(40px 8px 0 8px);
+  .text-fade{
+    opacity: 0.9;
+  }
+  #made-with-love {
+    color: $red;
+    display: inline-block;
+  }
+  a{
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  &.light-font a{
+    color: #ffffff;
+    text-shadow: 1px -1px rgba($darker-grey, .2);
+  }
+  /* Matches average healthy human heartbeat */
+  &:hover #made-with-love{
+    animation: heartbeat .6s infinite;
+  }
+}

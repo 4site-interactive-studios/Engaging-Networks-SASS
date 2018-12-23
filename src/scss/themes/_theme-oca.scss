@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains everything related to the Organic Consumers Association
+// theme.
+// -----------------------------------------------------------------------------
+
+/* Add a background image when the page is not embedded or in the page builder */
+@include media(">large") {
+  body:not(.embedded):not(#en__pagebuilder) {
+    background: #3d834a url("../../images/oca/fruit-and-vegetables-seamless-green-compressor.jpg") repeat;
+    background-size: 300px;
+    background-position: left top;
+  }
+}

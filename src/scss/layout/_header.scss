@@ -1,0 +1,194 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+#main-content {
+
+  .header-logo {
+    justify-content: flex-start;
+
+    img {
+      height: 57px;
+      width: auto;
+      display: block;
+    }
+
+    a {
+      cursor: default;
+    }
+
+  }
+
+  .header-secondary-cta img {
+    display: block;
+  }
+
+  /* In the event paragraph text is added, remove top margin to prevent vertical mis-alignment when centering */
+  .header-logo .en__component:first-child p,
+  .header-secondary-cta .en__component:first-child p,
+  .banner-image .en__component:first-child p {
+    margin-top: 0;
+  }
+
+  /* In the event paragraph text is added, remove bottom margin to prevent vertical mis-alignment when centering */
+  .header-logo .en__component:last-child p,
+  .header-secondary-cta .en__component:last-child p,
+  .banner-image .en__component:last-child p {
+    margin-bottom: 0;
+  }
+
+  .header-secondary-cta {
+    justify-content: flex-end;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+  }
+
+  .header-logo,
+  .header-secondary-cta {
+    display: flex;
+    height: 88px;
+    align-items: center;
+  }
+
+  .social-share {
+    p {
+      text-align: right;
+      font-size: rem(14px);
+      letter-spacing: 0.7px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      display: inline;
+      margin-left: rem(16px);
+      height: 16px;
+    }
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition: opacity 0.3s;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: rem(25px);
+    padding: rem(32px);
+
+
+    &.image-100h {
+      min-height: 100px;
+    }
+
+    &.image-200h {
+      min-height: 200px;
+    }
+
+    &.image-300h {
+      min-height: 300px;
+    }
+
+    &.image-400h {
+      min-height: 400px;
+    }
+
+    &.image-500h {
+      min-height: 500px;
+    }
+
+    &.image-600h {
+      min-height: 600px;
+    }
+
+    &.image-700h {
+      min-height: 700px;
+    }
+
+    &.image-800h {
+      min-height: 800px;
+    }
+
+    &.image-900h {
+      min-height: 900px;
+    }
+
+    &.image-1000h {
+      min-height: 1000px;
+    }
+
+  }
+
+  .banner.image-position-bottom {
+    background-position: center bottom;
+  }
+
+  .banner.image-position-center {
+    background-position: center center;
+  }
+}
+
+/* EN Defaults to making the divs blocks after 600px, we're keeping them Flexbox all the way down */
+@include media("<small") {
+  .social-share {
+    color: transparent;
+  }
+}
+
+/************************************
+ * Medium Breakpoint (Mid Resolution Device)
+ * At this breakpoint, rows elements expand to take up their own row
+ * A row with two input fields display 50% width will now have to rows, one for each input field, displaying 100% width
+ * Inputs that are multipart (ie Spit Text) will still retain their look on a single row and are not broken up
+ * REF: https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+ ***********************************/
+
+@include media("<medium") {
+
+  #main-content .banner {
+    &.image-100h {
+      min-height: 100px;
+    }
+
+    &.image-200h {
+      min-height: 200px;
+    }
+
+    &.image-300h {
+      min-height: 300px;
+    }
+
+    &.image-400h {
+      min-height: 300px;
+    }
+
+    &.image-500h {
+      min-height: 400px;
+    }
+
+    &.image-600h {
+      min-height: 400px;
+    }
+
+    &.image-700h {
+      min-height: 400px;
+    }
+
+    &.image-800h {
+      min-height: 500px;
+    }
+
+    &.image-900h {
+      min-height: 500px;
+    }
+
+    &.image-1000h {
+      min-height: 500px;
+    }
+  }
+
+}

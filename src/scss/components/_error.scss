@@ -1,0 +1,121 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Error Messages.
+// -----------------------------------------------------------------------------
+
+
+/* When EN's field validator flags an error it jumps the user to the first error on thepage. Our cu stom error JS executes after EN's and sets a body level class that we can reorder the field presentation on. If we don't wait to re-order the fields, the page will jump to the error which appears below the input resulting in the user having to scroll up to make the change. This is something that should be fixed on EN's end and how they handle errors, but until then we need this work around */
+/* Code dependent on "oc-en-error-helpers.js" which must execute after EN's "pagedata.js" */
+body.error-jump-assist #main-content .en__component .en__field__error{
+  order: 1;
+}
+
+
+#main-content {
+  .en__field__error-wrapper .en__field__item{
+    margin-bottom: rem(4px);
+  }
+  
+  /* Page Level Errors */
+  .en__errorHeader {
+    margin-left: rem(-30px);
+    margin-right: rem(-30px);
+    padding: rem(8px 30px);
+    color: $error-color;
+    font-weight: 700;
+    text-align: center;
+    background-color: $light-grey;
+  }
+
+  .en__errorList > .en__error {
+    margin-left: rem(-30px);
+    margin-right: rem(-30px);
+    padding: rem(8px 30px);
+    list-style: none;
+    color: $error-color;
+    text-align: center;
+    background-color: $light-grey;
+  }
+
+  /* Field Level Inline Errors */
+  .en__component .en__field__error {
+    padding: rem(4px 16px);
+    color: #ffffff;
+    font-size: 0.75rem;
+    border-radius: $field-border-radius;
+    background-color: $error-color;
+  }
+
+  .en__component .en__field__error-wrapper .en__field__error,
+  .en__component .en__field__error-wrapper input,
+  .en__component .en__field__error-wrapper select,
+  .en__component .en__field__error-wrapper textarea{
+    border-radius: $field-border-radius;
+    border: 1px solid $error-color;
+  }
+
+  /* QA Needed: Look into way to do this without :not(radio-to-buttons) so that all Radio to Buttons related code can be in the corresponding Utility section */
+  .en__component:not(.radio-to-buttons) .en__field__error-wrapper .en__field__error{
+    border-radius: rem(0 0 5px 5px);
+    border-top: 0;
+  }
+
+
+  .en__component .en__field__error-wrapper{
+    input:not(.en__field__input--other),
+    select,
+    textarea{
+      border-radius: rem(5px 5px 0 0);
+    }
+    &.en__field--splittext input,
+    &.en__field--tripletext input,
+    &.en__field--splitselect select,
+    &.en__field--tripleselect input,
+    &.en__field--splittext .en__field__error,
+    &.en__field--tripletext .en__field__error,
+    &.en__field--splitselect .en__field__error,
+    &.en__field--tripleselect .en__field__error,
+    &.en__field--radio.en__field--withOther .en__field__error{
+      border-radius: $field-border-radius;
+      border: 1px solid $error-color;
+    }
+
+    /* Adjust bottom margin on error to make display uniform */
+    &.en__field--radio .en__field__item:last-of-type,
+    &.en__field--checkbox .en__field__item:last-of-type,
+    &.en__field--splittext .en__field__item:last-of-type,
+    &.en__field--tripletext .en__field__item:last-of-type,
+    &.en__field--splitselect .en__field__item:last-of-type,
+    &.en__field--tripleselect .en__field__item:last-of-type{
+      margin-bottom: rem(5px);
+    }
+
+    &.en__field--radio,
+    &.en__field--checkbox,
+    &.en__field--splittext,
+    &.en__field--tripletext,
+    &.en__field--splitselect,
+    &.en__field--tripleselect{
+      margin-bottom: rem(16px);
+    }
+
+  }
+  .en__errorHeader,
+  .en__errorList > .en__error,
+  .en__component .en__field__error,
+  .en__component .en__field__error-wrapper .en__field__error,
+  .en__component .en__field__error-wrapper input,
+  .en__component .en__field__error-wrapper select,
+  .en__component .en__field__error-wrapper textarea,
+  .en__component .en__field__error-wrapper.en__field--splittext input,
+  .en__component .en__field__error-wrapper.en__field--tripletext input,
+  .en__component .en__field__error-wrapper.en__field--splitselect select,
+  .en__component .en__field__error-wrapper.en__field--tripleselect input,
+  .en__component .en__field__error-wrapper.en__field--splittext .en__field__error,
+  .en__component .en__field__error-wrapper.en__field--tripletext .en__field__error,
+  .en__component .en__field__error-wrapper.en__field--splitselect .en__field__error,
+  .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__error,
+  .en__component .en__field__error-wrapper.en__field--radio.en__field--withOther .en__field__error,
+  .en__component .radio-to-buttons .en__field__error-wrapper .en__field__label--item{
+    border: 1px solid $error-color;
+  }
+}

@@ -1,0 +1,371 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to Forms.
+// -----------------------------------------------------------------------------
+
+body.form-right #main-content-wrapper {
+  margin-right: initial;
+}
+
+body.form-left #main-content-wrapper {
+  margin-left: initial;
+}
+
+#main-content {
+  /* General */
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="range"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  input[type="hidden"],
+  select,
+  textarea {
+    max-width: 100%;
+    width: 100%;
+    min-width: initial;
+    display: block;
+    box-sizing: border-box;
+    height: rem(40px);
+    margin: 0;
+    padding: rem(8px);
+    border: rem(1px solid $field-border-color);
+    border-radius: $field-border-radius;
+    background-color: $field-bg-color;
+    box-shadow: $field-box-shadow;
+    font-family: inherit;
+    font-size: rem(16px);
+    font-weight: normal;
+    line-height: 1.5;
+    color: $field-txt-color;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+    appearance: none;
+  }
+
+  select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+    background-origin: content-box;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: rem(9px 6px);
+    padding-right: rem(16px);
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+  }
+
+  textarea {
+    height: rem(100px);
+    resize: vertical;
+  }
+
+  /* Focus state */
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="email"]:focus,
+  input[type="month"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus,
+  input[type="range"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="text"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="week"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border: rem(1px solid $field-focus-border-color);
+    background-color: $field-focus-bg-color;
+    box-shadow: $field-focus-box-shadow;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
+  }
+
+  /**
+  * Form Block Component: Select Fields
+  * Overrides EN Default Styling to ensure mobile friendly widths
+  */
+  .en__field__input--select {
+    min-width: initial !important;
+  }
+
+
+  /* Custom Styling for Radio & Checkbox Inputs */
+  .en__field__input--radio,
+  .en__field__input--checkbox {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  .en__field__input--radio + .en__field__label,
+  .en__field__input--checkbox + .en__field__label {
+    position: relative;
+    margin-left: rem(32px);
+    cursor: pointer;
+    display: flex;
+  }
+
+  .en__field__input--radio + .en__field__label::before,
+  .en__field__input--checkbox + .en__field__label::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: rem(-32px);
+    display: inline-block;
+    vertical-align: middle;
+    border: rem(1px solid $radio-border-color);
+    box-shadow: rem(inset 0 0 0 5px #fff);
+    cursor: pointer;
+    transition-duration: .25s;
+    transition-property: border-color, background-color;
+  }
+
+
+  .en__field__input--radio + .en__field__label::before {
+    border-radius: 50%;
+  }
+
+  .en__field__input--checkbox + .en__field__label::before {
+    border-radius: $field-border-radius;
+    box-shadow: none;
+  }
+
+  .en__field__input--radio:checked + .en__field__label::before,
+  .en__field__input--checkbox:checked + .en__field__label::before {
+    border-color: $radio-checked-color;
+    background-color: $radio-checked-color;
+  }
+
+  /* CSS code for checkmark symbol */
+  /* REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
+  .en__field__input--checkbox:checked + .en__field__label::before {
+    content: "\a0\2713";
+    border-color: $radio-checked-color;
+    background-color: $radio-checked-color;
+    color: #ffffff;
+  }
+
+  /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
+  .en__field__input--radio:focus + .en__field__label::before,
+  .en__field__input--checkbox:focus + .en__field__label::before {
+    outline: $field-outline-color auto rem(5px);
+  }
+
+  /* QA Needed: EN's hidden input field */
+  .en__field--hidden {
+    display: block;
+    width: 100% !important;
+  }
+
+  /* Forces the hidden "Other" field on the Donation Amount block to be shown by default */
+  .en__field--donationAmt.show-other .en__field__item--hidden {
+    display: inline-block;
+  }
+
+  .msgDetails {
+
+    .en__component--contactblock .en__field__input--checkbox + .en__field__label::before {
+      top: -2%;
+    }
+
+    .en__component--contactblock,
+    .en__component--formblock {
+      display: none;
+      padding: 0;
+    }
+
+    &.show .en__component--contactblock,
+    &.show .en__component--formblock {
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    /* Hide Edit and Submit button once a collapsed action is expanded */
+    &.show #en_actionMessageToggle_ToggleWrapper,
+    &.show #en_actionMessageToggle_SubmitButton {
+      display: none;
+    }
+
+  }
+
+  .en-row-center.en__component--formblock,
+  .en-row-center .en__field__element {
+    justify-content: center;
+  }
+
+  .recurring-payment {
+    margin-bottom: rem(20px);
+  }
+
+  .en__component--formblock.recurring-payment {
+    flex-direction: row;
+  }
+
+  .en-row-center.recurring-payment div.en__field__item:first-of-type {
+    text-align: right;
+  }
+
+  .en-row-end.en__component--formblock,
+  .en-row-end .en__field__element {
+    justify-content: flex-end;
+  }
+
+  .en__component .recurring-payment .en__field__item {
+    margin-right: rem(8px);
+  }
+
+  .en__field--donationAmt .en__field__item--other input {
+    padding-left: rem(32px);
+    min-width: 215px;
+  }
+
+  /* When monthly giving is selected, append "/mo" to giving amount button labels */
+  /* Depends on JS to add "monthly-giving" class to function */
+  /* This needs further work */
+  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
+    content: "/mo";
+    line-height: 2;
+    font-size: 75%;
+    margin-left: rem(3px);
+    color: $mid-grey;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  }
+
+  /* Add coloring when checked or on hover */
+  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input:checked + .en__field__label--item::after,
+  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input:hover + .en__field__label--item::after {
+    color: #FFF;
+  }
+
+  /* Exclude adding "/mo" to Other input buttons */
+  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input[value="Other"] + .en__field__label--item::after,
+  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input[value="other"] + .en__field__label--item::after {
+    content: initial;
+  }
+
+  /* Hot fix for donation frequency and amount being in the same secton together */
+  .recurring-payment,
+  .en__field--donationAmt .en__field__element--radio {
+    flex-wrap: wrap;
+    justify-items: center;
+    width: 90%;
+    margin: rem(15px) auto;
+
+  }
+
+
+  /* First pass at making "Other" input for monthly gifts look better */
+  .show-hidden-input .en__field--donationAmt .en__field__item--other::before {
+    display: block;
+    content: "$";
+    position: relative;
+    font-family: inherit;
+    font-size: rem(16px);
+    font-weight: normal;
+    line-height: 1.5;
+    height: 0;
+    left: rem(16px);
+    top: rem(8px);
+  }
+
+  .show-hidden-input .en__field--donationAmt .en__field__item--other::after {
+    display: block;
+    opacity: .8;
+    font-size: 80%;
+    position: relative;
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: rem(8px);
+    left: rem(16px);
+    top: rem(4px);
+  }
+
+  .show-hidden-input .en__field--donationAmt.monthly-giving .en__field__item--other::after {
+    content: "enter monthly amount";
+  }
+
+  .show-hidden-input .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
+    content: "enter amount";
+  }
+
+  /* Advocacy form */
+  .en__component--contactblock {
+    background-color: initial;
+    padding: 0;
+    margin-top: rem(16px);
+    margin-bottom: rem(16px);
+  }
+
+  /* Temporary fix of EN Advanced Columns to add IE 11 support */
+  /* REF: https://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/ */
+  /* REF: https://github.com/philipwalton/flexbugs#flexbug-4 */
+  .en__component--column.en__component--advcolumn {
+    flex: 1 0 0%;
+  }
+}
+
+@include media(">medium") {
+  #main-content .recurring-payment .en__field__item {
+    min-width: 170px;
+  }
+}
+
+/************************************
+ * Medium Breakpoint (Mid Resolution Device)
+ * At this breakpoint, rows elements expand to take up their own row
+ * A row with two input fields display 50% width will now have to rows, one for each input field, displaying 100% width
+ * Inputs that are multipart (ie Spit Text) will still retain their look on a single row and are not broken up
+ * REF: https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+ ***********************************/
+
+@include media ("<medium") {
+
+  /* Override EN Default Behavior */
+  .en__component--column.en__component--advcolumn.row-breakout{
+    width: auto;
+  }
+
+  /* Hide all the middle giving value */
+  .donation-amount.show-hidden-input.round-buttons .en__field__item:not(:first-of-type):not(:last-of-type){
+    display: none;
+  }
+
+  /* Show the second giving value */
+  #main-content .donation-amount.show-hidden-input.round-buttons .en__field__item:nth-child(2){
+    display: initial !important;
+  }
+
+  /* Hides long form country select */
+  #main-content #en_custom_field_simple_country_select_long {
+    display: none;
+  }
+
+  /* Shows short form hidden country select */
+  #main-content #en_custom_field_simple_country_select_short {
+    display: initial;
+  }
+
+  .en__component--column.en__component--advcolumn,
+  .en__component--row--2 .en__component--column {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Copy Block Component.
+// -----------------------------------------------------------------------------
+
+#main-content .en__component--copyblock{
+
+  /**
+  * Copy Block Component: Personel Information Title
+  */
+  &.personal-information-title > h2 {
+    margin-left: rem(32px);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: baseline;
+      margin-left: rem(-32px);
+      margin-right: 2%;
+      height: rem(28px);
+      width: rem(28px);
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABe0lEQVRYR+2W4TEEQRCFv4sAGZABESACMkAEZIAMiAAZEAEiIANCIALqq9s9e1e7Nd2zVfbPddXV1NZ1v37zeqanZ0xss4nzsyZQo8ABcAK4bjcl/ARegIdmDVc2S+AUuCugnwH3UQYZAu72Iwi8A6hK0TIEboDzIuLc4Ra4iPhmCFjj/Qgo8NqckaJ7hsAXsFFEnDvouxXxzRD4iQB2fELYIacGdE1gcgUmvwV2N1twxGzJds2iZQ7hLvBWRJw77AHvEd8MAfEiZQg3IQGzBHwP3NlQQ/oGVCr0DtQQMMYEKrFKwuQ+0SHp2/JkFWjj+l5GW68tOGW1BEyy2heqsKJBm81LqMSWwG/Xrim9CrhaIg9jUZESAe/yEXCc0vXP+RHwZ1/otSEC7tTRq535KvMvwrwVjmoqs2R9BK6Ay7EZB+LFvu7+t0ogM3bVclwa17oElP25FjUZd9iWo0vAw+KB+w97ag92l0Bm5htLcjEzlq7h2ETF+MkJ/AKQCTkh5Nk4+QAAAABJRU5ErkJggg==');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+
+  /**
+   * Copy Block Component: Address Title
+   */
+  &.address-title > h2 {
+    margin-left: rem(32px);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: bottom;
+      margin-left: rem(-32px);
+      margin-right: 2%;
+      height: rem(32px);
+      width: rem(28px);
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB6UlEQVRYR6WX/TFlQRDFz4uADKwIEAEbASJABIgAEVgRIAJEgAgQATIgAupXdUeN2Zme7rld9f66fbrP9PdbKC77kjYlrU8/LDxPv1tJdxGTi4DyjqRzSX86mDdJx5Ig0xUvgX+SDrvWfiuAgYgpHgIjzpPTC0lHFoMeAcJ+UzGA4asp73ymHnC0V9HdtdLRI0A+VzKjn5K2MselP4g8SFrKPmBjtRUFiwDVflkANwznSRUSTwWuGQWLACHOQ9rNZ+a0xF5L4kH/iUWA3l7LEJ7Xt6KALfAhAl+Fdq9eSuMuvGXUZcBoMRc+QmBOCuBZ9WURoJ2Y+e6hYhTh49S+oRooKxmwJwq1Nhzqgtoc+JD0tzOI7iUtF089mCZnKAJsvddGkREd5gLthfBqllW116dJyEQMEUC5nAVG0Tc/vWR3Q5gAC4YbYI6wktmoVekNFysNXlIsomr4m71ZWOay2fZ6K/Q4z1jpTelFACDrl8oeETqGeTKLAOByKHnINIdPDvZEYDQK3dd7ayARjkTB9foogUhHmJU/koKEOZV00imAM0noucRbA8kYM57pmB+quaP3aeqxM1wSJdArSFfhzUlBwtb+rESO1h8OIxEAXKYiHPrEYJQA+Pzw8Bwq1ZqYQwCDaf9zHwzJN9UKWyGqF8gUAAAAAElFTkSuQmCC');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  /**
+   * Copy Block Component: Payment Information Title
+   */
+  &.payment-information-title > h2 {
+    margin-left: rem(32px);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: baseline;
+      margin-left: rem(-32px);
+      margin-right: 2%;
+      height: rem(28px);
+      width: rem(32px);
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAtElEQVRYR+2WwQ3CMAxFXyfoCGUEOgkrsAEjEDZghG5URmg26AYgR40ERVVQgpwe7FsOzn/6tmw3VI6msj4GEB24AyfgoFSSCRiAmwCI+EVJeC0TAGagBXrgoQRyBEZgEoDnIqrdkEHXAN4dUCr/p4wBmAO7csAGkTkQHVgvp9Q7d4JuLqOU4L+2pwHs5x6oeZJ56XwHXHNbuTAvHKUSAnEGusIPf033y1nutKffF6ABVHfgBWDaOs5lsuVZAAAAAElFTkSuQmCC');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  &.view-message .btn--view-message {
+    padding-left: 0;
+    background-color: #ffffff;
+    color: inherit;
+    font-size: rem(24px);
+    text-align: left;
+  }
+
+  &.view-message .btn--view-message::before {
+    content: '\2b';
+    display: inline-block;
+    margin-right: 2%;
+  }
+
+  &.view-message .btn--view-message.active::before {
+    content: '\2212';
+    display: inline-block;
+    margin-right: 2%;
+  }
+
+}

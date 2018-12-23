@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the EN Page and NOT Page Builder
+// -----------------------------------------------------------------------------
+
+body:not(#en__pagebuilder) {
+
+  .banner-image{
+    display: none;
+  }
+
+  /* Hide the settings block when the live page is viewed */
+  .background-settings,
+  .layout-settings {
+    display: none;
+  }
+
+  #main-content {
+
+    .banner-image{
+      position: absolute;
+    }
+
+    .en__component--formblock.simple_country_select:not(.country-select-visible) {
+      opacity: 0;
+      height: 0;
+    }
+
+    /************************************
+   * Utility: Collapsed Div
+   * Needs corresponding JS to work
+   * .collapsed-div
+   ***********************************/
+
+    .click-to-expand.expanded {
+      height: initial;
+    }
+
+    .click-to-expand:not(.expanded) {
+      cursor: pointer;
+      height: 230px;
+      overflow: hidden;
+    }
+
+    .click-to-expand:not(.expanded) .click-to-expand-text-wrapper {
+      height: 180px;
+    }
+
+    .click-to-expand:not(.expanded) .click-to-expand-text-wrapper:not(.div-expanded) {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .click-to-expand:not(.expanded) .click-to-expand-text-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 250px;
+      background-image: linear-gradient(
+                      rgba(255, 255, 255, 0) 0%,
+                      rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    .click-to-expand:not(.expanded) .click-to-expand-cta {
+      background: url(https://apps.4sitestudios.com/temp/custom-template/images/collapsed-div.png);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 107px 29px;
+      z-index: 100;
+      width: 107px;
+      height: 29px;
+      bottom: 0;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
+
+    /* Doubles Height */
+    .height-500px.click-to-expand:not(.expanded) {
+      height: 550px;
+    }
+
+    .height-500px.click-to-expand:not(.expanded) .click-to-expand-text-wrapper,
+    .height-500px.click-to-expand:not(.expanded) .click-to-expand-text-wrapper::after {
+      height: 500px;
+    }
+  }
+}

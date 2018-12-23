@@ -1,0 +1,113 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Template 1 Page.
+// -----------------------------------------------------------------------------
+#main-content {
+  .banner-text {
+    text-align: center;
+    max-width: 500px;
+
+    p {
+      font-size: rem(26px);
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      padding: rem(0 15px);
+      color: $text-color;
+      display: inline-block;
+      box-decoration-break: clone;
+
+      &:first-of-type:not(:only-child) {
+        padding-top: rem(5px);
+        padding-bottom: rem(2px);
+        margin-bottom: 0;
+      }
+
+      &:last-of-type:not(:only-child) {
+        padding-top: rem(2px);
+        padding-bottom: rem(5px);
+        margin-top: 0;
+      }
+    }
+
+    &.green p {
+      color: #ffffff;
+      display: inline;
+      background-color: $green;
+      padding: rem(5px 0);
+      position: relative;
+      box-shadow: 1em 0 0 0 $green, -1em 0 0 0 $green;
+    }
+
+    &.red p {
+      color: #ffffff;
+      display: inline;
+      background-color: $red;
+      padding: rem(5px 0);
+      position: relative;
+      box-shadow: 1em 0 0 0 $red, -1em 0 0 0 $red;
+    }
+
+    &.black p {
+      color: #ffffff;
+      display: inline;
+      background-color: $darker-grey;
+      padding: rem(5px 0);
+      position: relative;
+      box-shadow: 1em 0 0 0 $darker-grey, -1em 0 0 0 $darker-grey;
+    }
+
+    &:first-of-type:not(:only-child) {
+      top: rem(-16px);
+    }
+
+    &:last-of-type:not(:only-child) {
+      bottom: rem(-16px);
+    }
+
+    &.lead p {
+      font-size: rem(34px);
+    }
+  }
+
+  .en__field__label {
+    font-size: rem(14px);
+    font-weight: 500;
+  }
+
+  /*Override EN Default Icons */
+
+  .en__share__button {
+    height: 16px;
+    width: 16px;
+  }
+
+  .en__shares {
+    align-items: center;
+
+    &::before {
+      content: "SHARE";
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      color: #323232;
+      margin-right: 1rem;
+    }
+  }
+
+  .en__share__button--facebook {
+    background-image: url(../../images/global/facebook.svg) !important;
+  }
+
+  .en__share__button--twitter {
+    background-image: url(../../images/global/twitter.svg) !important;
+  }
+
+  .en__share__button--gplus {
+    background-size: 16px;
+  }
+
+}

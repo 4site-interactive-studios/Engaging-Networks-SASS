@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the radio to button component.
+// -----------------------------------------------------------------------------
+
+/************************************
+ * Utility: Radio Buttons
+ * .radio-to-buttons - Converts Radio selects to Buttons. Also partially working for checkboxes but needs more development and QA
+ ***********************************/
+
+
+#main-content .radio-to-buttons{
+
+  /* Converts Radio Selects to Styled Button Selects */
+  label.en__field__label.en__field__label--item:hover,
+  input[type='radio']:checked + label {
+    background-color: $radio-checked-color;
+    border: 1px solid transparent;
+    color: $light-grey;
+  }
+
+  .en__field__label--item{
+    padding-top: rem(12px);
+    padding-bottom: rem(12px);
+  }
+
+  .en__field__input--radio+.en__field__label::before,
+  .en__field__input--checkbox+.en__field__label::before,
+  .en__field__input--radio:checked+.en__field__label::before,
+  .en__field__input--checkbox:checked+.en__field__label::before{
+    display: none !important;
+  }
+
+  .en__field__input--radio+.en__field__label,
+  .en__field__input--checkbox+.en__field__label{
+    margin-left: 0 !important;
+  }
+
+  label.en__field__label.en__field__label--item {
+    display: block;
+    padding: rem(15px);
+    border-radius: $field-border-radius;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: rem(16px);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid $mid-grey;
+  }
+
+}

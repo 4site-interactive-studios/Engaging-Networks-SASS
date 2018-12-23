@@ -1,0 +1,2915 @@
+@charset "UTF-8";
+/*
+
+
+##         ######  #### ######## ########     ######  ######## ##     ## ########  ####  #######   ######
+##    ##  ##    ##  ##     ##    ##          ##    ##    ##    ##     ## ##     ##  ##  ##     ## ##    ##
+##    ##  ##        ##     ##    ##          ##          ##    ##     ## ##     ##  ##  ##     ## ##
+##    ##   ######   ##     ##    ######       ######     ##    ##     ## ##     ##  ##  ##     ##  ######
+#########       ##  ##     ##    ##                ##    ##    ##     ## ##     ##  ##  ##     ##       ##
+      ##  ##    ##  ##     ##    ##          ##    ##    ##    ##     ## ##     ##  ##  ##     ## ##    ##
+      ##   ######  ####    ##    ########     ######     ##     #######  ########  ####  #######   ######
+
+*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import "https://use.typekit.net/euy8mnd.css";
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*! sanitize.css v8.0.0 | CC0 License | github.com/csstools/sanitize.css */
+/* Document
+ * ========================================================================== */
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add border box sizing in all browsers (opinionated).
+ */
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* 1 */
+  box-sizing: border-box;
+  /* 2 */
+}
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritance in all browsers (opinionated).
+ */
+::before,
+::after {
+  text-decoration: inherit;
+  /* 1 */
+  vertical-align: inherit;
+  /* 2 */
+}
+
+/**
+ * 1. Use the default cursor in all browsers (opinionated).
+ * 2. Use the default user interface font in all browsers (opinionated).
+ * 3. Correct the line height in all browsers.
+ * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 5. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ * 6. Breaks words to prevent overflow in all browsers (opinionated).
+ */
+html {
+  cursor: default;
+  /* 1 */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 2 */
+  line-height: 1.15;
+  /* 3 */
+  -moz-tab-size: 4;
+  /* 4 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 4 */
+  -ms-text-size-adjust: 100%;
+  /* 5 */
+  -webkit-text-size-adjust: 100%;
+  /* 5 */
+  word-break: break-word;
+  /* 6 */
+}
+
+/* Sections
+ * ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+ * ========================================================================== */
+/**
+ * 1. Add the correct sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * Add the correct display in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+nav ol,
+nav ul {
+  list-style: none;
+}
+
+/**
+ * 1. Use the default monospace user interface font
+ *    in all browsers (opinionated).
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Oxygen Mono, Liberation Mono, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Add the correct text decoration in Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Use the default monospace user interface font
+ *    in all browsers (opinionated).
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Oxygen Mono, Liberation Mono, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Remove the text shadow on text selections in Firefox 61- (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow
+ *    in all browsers (opinionated).
+ */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000;
+  /* 1 */
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000;
+  /* 1 */
+  text-shadow: none;
+}
+
+/* Embedded content
+ * ========================================================================== */
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Tabular data
+ * ========================================================================== */
+/**
+ * Collapse border spacing in all browsers (opinionated).
+ */
+table {
+  border-collapse: collapse;
+}
+
+/* Forms
+ * ========================================================================== */
+/**
+ * Inherit styling in all browsers (opinionated).
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/**
+ * Remove the margin in Safari.
+ */
+button,
+input,
+select {
+  margin: 0;
+}
+
+/**
+ * 1. Show the overflow in IE.
+ * 2. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ */
+button {
+  overflow: visible;
+  /* 1 */
+  text-transform: none;
+  /* 2 */
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * Show the overflow in Edge and IE.
+ */
+input {
+  overflow: visible;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ */
+legend {
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in Edge and IE.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Remove the margin in Firefox and Safari.
+ * 2. Remove the default vertical scrollbar in IE.
+ * 3. Change the resize direction on textareas in all browsers (opinionated).
+ */
+textarea {
+  margin: 0;
+  /* 1 */
+  overflow: auto;
+  /* 2 */
+  resize: vertical;
+  /* 3 */
+}
+
+/**
+ * Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* Interactive
+ * ========================================================================== */
+/*
+ * Add the correct display in Edge and IE.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct styles in Edge, IE, and Safari.
+ */
+dialog {
+  background-color: white;
+  border: solid;
+  color: black;
+  display: block;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+ * ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* User interaction
+ * ========================================================================== */
+/*
+ * 1. Remove the tapping delay in IE 10.
+ * 2. Remove the tapping delay on clickable elements
+      in all browsers (opinionated).
+ */
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  /* 1 */
+  touch-action: manipulation;
+  /* 2 */
+}
+
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Accessibility
+ * ========================================================================== */
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements in all browsers (opinionated).
+ */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/* Prepares HTML tag for having a background image applied */
+html.has-image {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: #e50050;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #222222;
+  outline: 0;
+}
+
+/* Placeholder styling */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::-webkit-input-placeholder {
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+:-ms-input-placeholder {
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+::-ms-input-placeholder {
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+::placeholder {
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: #999999;
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder {
+  color: #999999;
+}
+
+#main-content-wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+#main-content-inner {
+  margin: 0 auto;
+}
+
+/* Pad's main content form, unless it's emebeded. */
+body#en__pagebuilder.embedded #main-content-inner,
+body#en__pagebuilder:not(.embedded) #main-content-inner,
+body:not(#en__pagebuilder):not(.embedded) #main-content-inner {
+  padding: 0 1.875rem;
+}
+
+#main-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  /* EN sets field labels to a fixed width of 180px, this makes them responsive */
+  /* Needs QA: Makes images responsive. Look into not using !important. */
+  /* Remove fixed min-width on Thermometer bar */
+  /* Make sure that background colors are not hard coded */
+  /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
+  /* For inputs with multiple components, apply the bottom margin to the field items so that if they wrap they maintain vertical spacing between them */
+  /* Make the spacing between wrapping elements tighter so the user knows they're related */
+  /* Manually control form pacing */
+  /* QA Needed: Does not actually do what it's supposed to when all elelements are on same row. */
+  /* For the custom fields we can properly space them, but for EN canned fields we have to fake the funk since we don't know when row-wraps will happen in Flexbox. */
+  /* EN sets background to white making it not ideal for non-white backgrounds. This resets it to an initial state "transparent". */
+  /************************************
+ * Utility: Flex Wrap
+ * .en-form-flex-wrap - Forces content to wrap
+ ***********************************/
+  /************************************
+ * Utility: Show Hidden Input
+ * .show-hidden-input - Forces hidden inputs to be visible (ie "Radio with Input")
+ ***********************************/
+  /* If invisible other field is being forced visible, we have JS that auto selects the corresponding radio select so we can hide it */
+  /************************************
+ * Utility: Natural Widths
+ * .en-form-natural-widths - Helps items in a form to be displayed at their natural widths
+ ***********************************/
+  /************************************
+ * Utility: Fill Width
+ * .en-form-fill-width - Helps items in a form fill the width of the row (ie Justified content)
+ ***********************************/
+  /************************************
+ * Utility: Lazy Layout for Forms
+ * .en-form-lazy-layout - Helps items in a form  automatically flow to fill their containers dimensions
+ ***********************************/
+  /************************************
+ * Utility: Hide Display
+ * // Depends on corresponding JS library
+ * .simple_country_select
+ ***********************************/
+  /* IE 11 causing regression issues with nested flexbox elements */
+  /* https://stackoverflow.com/questions/40873832/making-flexbox-inherit-proper-width-in-ie11 */
+  /* https://github.com/philipwalton/flexbugs/issues/104 */
+}
+
+#main-content .body-copy {
+  margin-bottom: 3.125rem;
+}
+
+#main-content .indented-body {
+  margin: 0 4.5rem;
+}
+
+#main-content .en__field__label {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  width: auto;
+}
+
+#main-content img {
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+  display: inherit;
+}
+
+#main-content .enWidget__bar .enWidget__progress {
+  min-width: initial;
+}
+
+#main-content .en__twitterTarget,
+#main-content .en__tweetBackgroundText,
+#main-content .en__tweet,
+#main-content .en__tweetDisabled,
+#main-content .en__tweetButton,
+#main-content .en__tweetContact {
+  background-color: initial;
+}
+
+#main-content .en__component--formblock .en__field:only-child,
+#main-content .en__component--formblock .en__field div.en__field__item:only-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#main-content .en__component--formblock .row-wrap .en__field,
+#main-content .en__component--formblock .row-wrap .en__field div.en__field__item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#main-content .en__field__item {
+  padding: 0;
+}
+
+#main-content .en__field__element--splittext .en__field__item,
+#main-content .en__field__element--splitselect .en__field__item {
+  width: 50%;
+}
+
+#main-content .en__field__element--tripletext .en__field__item,
+#main-content .en__field__element--tripleselect .en__field__item {
+  width: 33.333333%;
+}
+
+#main-content .en__component--formblock .en__field:last-of-type,
+#main-content .en__component--formblock .en__field div.en__field__item:last-of-type {
+  margin-right: 0;
+}
+
+#main-content .en__component--formblock .en__field:first-of-type,
+#main-content .en__component--formblock .en__field div.en__field__item:first-of-type {
+  margin-left: 0;
+}
+
+#main-content .en__component--formblock.items-might-wrap .en__field:last-of-type,
+#main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:last-of-type,
+#main-content .en__component--formblock.items-might-wrap .en__field:first-of-type,
+#main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#main-content .en__component .en__field.en__field--radio,
+#main-content .en__component .en__field.en__field--checkbox,
+#main-content .en__component .en__field.en__field--splittext,
+#main-content .en__component .en__field.en__field--tripletext,
+#main-content .en__component .en__field.en__field--splitselect,
+#main-content .en__component .en__field.en__field--tripleselect {
+  margin-bottom: 0;
+}
+
+#main-content .en__component .en__field.en__field--radio .en__field__item,
+#main-content .en__component .en__field.en__field--checkbox .en__field__item,
+#main-content .en__component .en__field.en__field--splittext .en__field__item,
+#main-content .en__component .en__field.en__field--tripletext .en__field__item,
+#main-content .en__component .en__field.en__field--splitselect .en__field__item,
+#main-content .en__component .en__field.en__field--tripleselect .en__field__item {
+  margin-bottom: 0.25rem;
+}
+
+#main-content .en__component .space-below {
+  margin-bottom: 2rem;
+}
+
+#main-content .en__component .space-below .en__field:last-of-type {
+  margin-bottom: 0;
+}
+
+#main-content .en__component .en__field.en__field--radio .en__field__item--other,
+#main-content .en__component .en__field.en__field--checkbox .en__field__item--other {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+#main-content .en__field__element {
+  width: 100%;
+  display: flex;
+}
+
+#main-content .en__component .en__field,
+#main-content .en__component .en__field--splitselect,
+#main-content .en__component .en__field--tripletext,
+#main-content .en__component .en__field--splitselect,
+#main-content .en__component .en__field--tripleselect {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content .en__component--formblock .en__field,
+#main-content .en__component--formblock .en__field div.en__field__item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#main-content .en__field,
+#main-content .en__captcha {
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+#main-content .en__component--formblock {
+  display: flex;
+  flex-direction: row;
+}
+
+#main-content .en__contact__toggle,
+#main-content .en__contact--open .en__contact__toggle {
+  background-color: initial;
+}
+
+#main-content .en__contact__detail {
+  background-color: initial;
+  padding: 0;
+}
+
+#main-content .en-form-flex-wrap,
+#main-content .en-form-flex-wrap .en__field__element {
+  flex-wrap: wrap;
+}
+
+#main-content .show-hidden-input .en__field__item--hidden {
+  display: inline-block;
+}
+
+#main-content .show-hidden-input .en__field--donationAmt {
+  position: relative;
+}
+
+#main-content .show-hidden-input .en__field--withOther .en__field__element--radio > div.en__field__item:nth-last-of-type(2) {
+  display: none;
+}
+
+#main-content .en__component.en-form-natural-widths .en__field,
+#main-content .en__component.en-form-natural-widths .en__field__item {
+  flex-basis: initial;
+}
+
+#main-content .en__component.en-form-fill-width .en__field,
+#main-content .en__component.en-form-fill-width .en__field__item {
+  flex-basis: 100%;
+}
+
+#main-content .en__component--formblock.en-form-lazy-layout {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  flex-wrap: wrap;
+}
+
+#main-content .en__component--formblock.en-form-lazy-layout .en__field,
+#main-content .en__component--formblock.en-form-lazy-layout .en__item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#main-content .en__component.en-form-lazy-layout .en__field {
+  flex-grow: 1;
+  flex-basis: initial;
+}
+
+#main-content #en_custom_field_simple_country_select_long a,
+#main-content #en_custom_field_simple_country_select_short a {
+  cursor: pointer;
+}
+
+#main-content #en_custom_field_simple_country_select_short,
+#main-content .en__component--formblock.country-select-visible .en__field--address1 span {
+  display: none;
+}
+
+#main-content .en__component--formblock.simple_country_select {
+  transition: opacity .3s;
+}
+
+#main-content .en__component--column.en__component--advcolumn:only-child {
+  flex: 1 1 auto;
+}
+
+/* Below large breakpoint the main-content section is expanded to fill the full screen */
+@media (min-width: 1025px) {
+  body {
+    background-color: #eeeeee;
+  }
+  #main-content {
+    background-color: #FFF;
+  }
+  body:not(.embedded) #main-content {
+    margin: 2.1875rem;
+    border-radius: 7px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  #main-content .indented-body {
+    margin: 0 auto;
+  }
+  .hide-medium {
+    display: none !important;
+  }
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #222222;
+  font-family: "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222222;
+  font-family: "vinyl", "Helvetica Neue Bold", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1000px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/************************************
+ * Utility: Page Breakouts
+ * .row-breakout - Makes row 100% width of Main Content by breaking out of Main Content's left and right margin
+ * QA Needed: .page-breakout - Makes Row 100% width of page
+ ***********************************/
+.row-breakout {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+}
+
+/************************************
+ * Utility: Debug
+ * .debug - Helpful for debugging form layouts
+ ***********************************/
+.debug {
+  background: blue;
+}
+
+.debug .en__field {
+  background: green;
+}
+
+.debug .en__field__item {
+  background: yellow;
+}
+
+.debug label,
+.debug select {
+  background: yellow;
+}
+
+#main-content {
+  /* In the event paragraph text is added, remove top margin to prevent vertical mis-alignment when centering */
+  /* In the event paragraph text is added, remove bottom margin to prevent vertical mis-alignment when centering */
+}
+
+#main-content .header-logo {
+  justify-content: flex-start;
+}
+
+#main-content .header-logo img {
+  height: 57px;
+  width: auto;
+  display: block;
+}
+
+#main-content .header-logo a {
+  cursor: default;
+}
+
+#main-content .header-secondary-cta img {
+  display: block;
+}
+
+#main-content .header-logo .en__component:first-child p,
+#main-content .header-secondary-cta .en__component:first-child p,
+#main-content .banner-image .en__component:first-child p {
+  margin-top: 0;
+}
+
+#main-content .header-logo .en__component:last-child p,
+#main-content .header-secondary-cta .en__component:last-child p,
+#main-content .banner-image .en__component:last-child p {
+  margin-bottom: 0;
+}
+
+#main-content .header-secondary-cta {
+  justify-content: flex-end;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+}
+
+#main-content .header-logo,
+#main-content .header-secondary-cta {
+  display: flex;
+  height: 88px;
+  align-items: center;
+}
+
+#main-content .social-share p {
+  text-align: right;
+  font-size: 0.875rem;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#main-content .social-share img {
+  display: inline;
+  margin-left: 1rem;
+  height: 16px;
+}
+
+#main-content .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  transition: opacity 0.3s;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1.5625rem;
+  padding: 2rem;
+}
+
+#main-content .banner.image-100h {
+  min-height: 100px;
+}
+
+#main-content .banner.image-200h {
+  min-height: 200px;
+}
+
+#main-content .banner.image-300h {
+  min-height: 300px;
+}
+
+#main-content .banner.image-400h {
+  min-height: 400px;
+}
+
+#main-content .banner.image-500h {
+  min-height: 500px;
+}
+
+#main-content .banner.image-600h {
+  min-height: 600px;
+}
+
+#main-content .banner.image-700h {
+  min-height: 700px;
+}
+
+#main-content .banner.image-800h {
+  min-height: 800px;
+}
+
+#main-content .banner.image-900h {
+  min-height: 900px;
+}
+
+#main-content .banner.image-1000h {
+  min-height: 1000px;
+}
+
+#main-content .banner.image-position-bottom {
+  background-position: center bottom;
+}
+
+#main-content .banner.image-position-center {
+  background-position: center center;
+}
+
+/* EN Defaults to making the divs blocks after 600px, we're keeping them Flexbox all the way down */
+@media (max-width: 374px) {
+  .social-share {
+    color: transparent;
+  }
+}
+
+/************************************
+ * Medium Breakpoint (Mid Resolution Device)
+ * At this breakpoint, rows elements expand to take up their own row
+ * A row with two input fields display 50% width will now have to rows, one for each input field, displaying 100% width
+ * Inputs that are multipart (ie Spit Text) will still retain their look on a single row and are not broken up
+ * REF: https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+ ***********************************/
+@media (max-width: 767px) {
+  #main-content .banner.image-100h {
+    min-height: 100px;
+  }
+  #main-content .banner.image-200h {
+    min-height: 200px;
+  }
+  #main-content .banner.image-300h {
+    min-height: 300px;
+  }
+  #main-content .banner.image-400h {
+    min-height: 300px;
+  }
+  #main-content .banner.image-500h {
+    min-height: 400px;
+  }
+  #main-content .banner.image-600h {
+    min-height: 400px;
+  }
+  #main-content .banner.image-700h {
+    min-height: 400px;
+  }
+  #main-content .banner.image-800h {
+    min-height: 500px;
+  }
+  #main-content .banner.image-900h {
+    min-height: 500px;
+  }
+  #main-content .banner.image-1000h {
+    min-height: 500px;
+  }
+}
+
+.pre-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFF;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0.6px;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.footer a {
+  color: #FFF;
+}
+
+.footer a:hover {
+  color: #e50050;
+}
+
+body.embedded #main-content {
+  /* When embedded, remove unnecessary padding */
+}
+
+body.embedded #main-content .en__tweetButton {
+  padding-right: 0;
+}
+
+body.embedded #en_actionMessageToggle_ToggleButton,
+body.embedded #en_actionMessageToggle_SubmitButton {
+  display: inline-block;
+}
+
+body#en__pagebuilder {
+  /* Give the background some color so that input fields stand out */
+  background-color: #fafafa;
+  /* Reduces min-height of the page builder */
+}
+
+body#en__pagebuilder .en__component--page.ui-sortable {
+  min-height: 0;
+}
+
+body#en__pagebuilder #main-content {
+  /* Prevent content from jumping in page builder as the editor adds divs to the markup on field / row focus */
+}
+
+body#en__pagebuilder #main-content .en__component--active.en__component--activeTarget .en__field:nth-last-child(2),
+body#en__pagebuilder #main-content .en__component--active.en__component--activeTarget .en__field:last-of-type {
+  /* margin-right: 0; */
+}
+
+body:not(#en__pagebuilder) {
+  /* Hide the settings block when the live page is viewed */
+}
+
+body:not(#en__pagebuilder) .banner-image {
+  display: none;
+}
+
+body:not(#en__pagebuilder) .background-settings,
+body:not(#en__pagebuilder) .layout-settings {
+  display: none;
+}
+
+body:not(#en__pagebuilder) #main-content {
+  /************************************
+   * Utility: Collapsed Div
+   * Needs corresponding JS to work
+   * .collapsed-div
+   ***********************************/
+  /* Doubles Height */
+}
+
+body:not(#en__pagebuilder) #main-content .banner-image {
+  position: absolute;
+}
+
+body:not(#en__pagebuilder) #main-content .en__component--formblock.simple_country_select:not(.country-select-visible) {
+  opacity: 0;
+  height: 0;
+}
+
+body:not(#en__pagebuilder) #main-content .click-to-expand.expanded {
+  height: initial;
+}
+
+body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) {
+  cursor: pointer;
+  height: 230px;
+  overflow: hidden;
+}
+
+body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) .click-to-expand-text-wrapper {
+  height: 180px;
+}
+
+body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) .click-to-expand-text-wrapper:not(.div-expanded) {
+  position: relative;
+  overflow: hidden;
+}
+
+body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) .click-to-expand-text-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) .click-to-expand-cta {
+  background: url(https://apps.4sitestudios.com/temp/custom-template/images/collapsed-div.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 107px 29px;
+  z-index: 100;
+  width: 107px;
+  height: 29px;
+  bottom: 0;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+body:not(#en__pagebuilder) #main-content .height-500px.click-to-expand:not(.expanded) {
+  height: 550px;
+}
+
+body:not(#en__pagebuilder) #main-content .height-500px.click-to-expand:not(.expanded) .click-to-expand-text-wrapper,
+body:not(#en__pagebuilder) #main-content .height-500px.click-to-expand:not(.expanded) .click-to-expand-text-wrapper::after {
+  height: 500px;
+}
+
+/************************************
+* Utility: Designed by 4Site
+* #designed-by-4site
+* .light-font - Add for when being used on dark backgrounds
+* Markup: <!-- Thank you for supporting 4Site Studios -->
+* Markup: <div class="light-font" id="designed-by-4site"><a alt="4Site Studios" href="https://www.4sitestudios.com/engaging-networks" target="_blank" title="4Site Studios"><span class="text-fade">Designed with </span><span id="made-with-love">&hearts;</span><span class="text-fade"> by 4Site Studios</span></a></div>
+***********************************/
+/* Overkill, because if you're going to do something you love */
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  5% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  10% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  15% {
+    -webkit-transform: scale(1.225);
+            transform: scale(1.225);
+  }
+  20% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  25% {
+    -webkit-transform: scale(1.225);
+            transform: scale(1.225);
+  }
+  30% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  35% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  40% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  55% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  60% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  65% {
+    -webkit-transform: scale(0.875);
+            transform: scale(0.875);
+  }
+  70% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  75% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  80% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  85% {
+    -webkit-transform: scale(0.875);
+            transform: scale(0.875);
+  }
+  90% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  95% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  5% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  10% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  15% {
+    -webkit-transform: scale(1.225);
+            transform: scale(1.225);
+  }
+  20% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  25% {
+    -webkit-transform: scale(1.225);
+            transform: scale(1.225);
+  }
+  30% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  35% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  40% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  55% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  60% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  65% {
+    -webkit-transform: scale(0.875);
+            transform: scale(0.875);
+  }
+  70% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  75% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  80% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  85% {
+    -webkit-transform: scale(0.875);
+            transform: scale(0.875);
+  }
+  90% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  95% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#designed-by-4site {
+  text-align: center;
+  font-size: 80%;
+  margin: 2.5rem 0.5rem 0 0.5rem;
+  /* Matches average healthy human heartbeat */
+}
+
+#designed-by-4site .text-fade {
+  opacity: 0.9;
+}
+
+#designed-by-4site #made-with-love {
+  color: #e74b3c;
+  display: inline-block;
+}
+
+#designed-by-4site a {
+  text-decoration: none;
+  color: #222222;
+}
+
+#designed-by-4site.light-font a {
+  color: #ffffff;
+  text-shadow: 1px -1px rgba(50, 50, 50, 0.2);
+}
+
+#designed-by-4site:hover #made-with-love {
+  -webkit-animation: heartbeat .6s infinite;
+          animation: heartbeat .6s infinite;
+}
+
+/************************************
+ * Loading spinner for submit button
+ ***********************************/
+@-webkit-keyframes spin {
+  0% {
+    tranform: rotate(0deg);
+  }
+  100% {
+    tranform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    tranform: rotate(0deg);
+  }
+  100% {
+    tranform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.3125rem;
+  vertical-align: middle;
+}
+
+.loader-quart {
+  border-radius: 50%;
+  border: 0.375rem solid rgba(255, 255, 255, 0.4);
+}
+
+.loader-quart::after {
+  content: '';
+  position: absolute;
+  top: -0.375rem;
+  right: -0.375rem;
+  bottom: -0.375rem;
+  left: -0.375rem;
+  border-radius: 3.125rem;
+  border: 0.375rem solid transparent;
+  border-top-color: #ffffff;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+/* When EN's field validator flags an error it jumps the user to the first error on thepage. Our cu stom error JS executes after EN's and sets a body level class that we can reorder the field presentation on. If we don't wait to re-order the fields, the page will jump to the error which appears below the input resulting in the user having to scroll up to make the change. This is something that should be fixed on EN's end and how they handle errors, but until then we need this work around */
+/* Code dependent on "oc-en-error-helpers.js" which must execute after EN's "pagedata.js" */
+body.error-jump-assist #main-content .en__component .en__field__error {
+  order: 1;
+}
+
+#main-content {
+  /* Page Level Errors */
+  /* Field Level Inline Errors */
+  /* QA Needed: Look into way to do this without :not(radio-to-buttons) so that all Radio to Buttons related code can be in the corresponding Utility section */
+}
+
+#main-content .en__field__error-wrapper .en__field__item {
+  margin-bottom: 0.25rem;
+}
+
+#main-content .en__errorHeader {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  padding: 0.5rem 1.875rem;
+  color: #e74b3c;
+  font-weight: 700;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+#main-content .en__errorList > .en__error {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  padding: 0.5rem 1.875rem;
+  list-style: none;
+  color: #e74b3c;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+#main-content .en__component .en__field__error {
+  padding: 0.25rem 1rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  background-color: #e74b3c;
+}
+
+#main-content .en__component .en__field__error-wrapper .en__field__error,
+#main-content .en__component .en__field__error-wrapper input,
+#main-content .en__component .en__field__error-wrapper select,
+#main-content .en__component .en__field__error-wrapper textarea {
+  border-radius: 5px;
+  border: 1px solid #e74b3c;
+}
+
+#main-content .en__component:not(.radio-to-buttons) .en__field__error-wrapper .en__field__error {
+  border-radius: 0 0 0.3125rem 0.3125rem;
+  border-top: 0;
+}
+
+#main-content .en__component .en__field__error-wrapper {
+  /* Adjust bottom margin on error to make display uniform */
+}
+
+#main-content .en__component .en__field__error-wrapper input:not(.en__field__input--other),
+#main-content .en__component .en__field__error-wrapper select,
+#main-content .en__component .en__field__error-wrapper textarea {
+  border-radius: 0.3125rem 0.3125rem 0 0;
+}
+
+#main-content .en__component .en__field__error-wrapper.en__field--splittext input,
+#main-content .en__component .en__field__error-wrapper.en__field--tripletext input,
+#main-content .en__component .en__field__error-wrapper.en__field--splitselect select,
+#main-content .en__component .en__field__error-wrapper.en__field--tripleselect input,
+#main-content .en__component .en__field__error-wrapper.en__field--splittext .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--tripletext .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--splitselect .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--radio.en__field--withOther .en__field__error {
+  border-radius: 5px;
+  border: 1px solid #e74b3c;
+}
+
+#main-content .en__component .en__field__error-wrapper.en__field--radio .en__field__item:last-of-type,
+#main-content .en__component .en__field__error-wrapper.en__field--checkbox .en__field__item:last-of-type,
+#main-content .en__component .en__field__error-wrapper.en__field--splittext .en__field__item:last-of-type,
+#main-content .en__component .en__field__error-wrapper.en__field--tripletext .en__field__item:last-of-type,
+#main-content .en__component .en__field__error-wrapper.en__field--splitselect .en__field__item:last-of-type,
+#main-content .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__item:last-of-type {
+  margin-bottom: 0.3125rem;
+}
+
+#main-content .en__component .en__field__error-wrapper.en__field--radio, #main-content .en__component .en__field__error-wrapper.en__field--checkbox, #main-content .en__component .en__field__error-wrapper.en__field--splittext, #main-content .en__component .en__field__error-wrapper.en__field--tripletext, #main-content .en__component .en__field__error-wrapper.en__field--splitselect, #main-content .en__component .en__field__error-wrapper.en__field--tripleselect {
+  margin-bottom: 1rem;
+}
+
+#main-content .en__errorHeader,
+#main-content .en__errorList > .en__error,
+#main-content .en__component .en__field__error,
+#main-content .en__component .en__field__error-wrapper .en__field__error,
+#main-content .en__component .en__field__error-wrapper input,
+#main-content .en__component .en__field__error-wrapper select,
+#main-content .en__component .en__field__error-wrapper textarea,
+#main-content .en__component .en__field__error-wrapper.en__field--splittext input,
+#main-content .en__component .en__field__error-wrapper.en__field--tripletext input,
+#main-content .en__component .en__field__error-wrapper.en__field--splitselect select,
+#main-content .en__component .en__field__error-wrapper.en__field--tripleselect input,
+#main-content .en__component .en__field__error-wrapper.en__field--splittext .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--tripletext .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--splitselect .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__error,
+#main-content .en__component .en__field__error-wrapper.en__field--radio.en__field--withOther .en__field__error,
+#main-content .en__component .radio-to-buttons .en__field__error-wrapper .en__field__label--item {
+  border: 1px solid #e74b3c;
+}
+
+#main-content .en__component--copyblock {
+  /**
+  * Copy Block Component: Personel Information Title
+  */
+  /**
+   * Copy Block Component: Address Title
+   */
+  /**
+   * Copy Block Component: Payment Information Title
+   */
+}
+
+#main-content .en__component--copyblock.personal-information-title > h2 {
+  margin-left: 2rem;
+}
+
+#main-content .en__component--copyblock.personal-information-title > h2::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -2rem;
+  margin-right: 2%;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABe0lEQVRYR+2W4TEEQRCFv4sAGZABESACMkAEZIAMiAAZEAEiIANCIALqq9s9e1e7Nd2zVfbPddXV1NZ1v37zeqanZ0xss4nzsyZQo8ABcAK4bjcl/ARegIdmDVc2S+AUuCugnwH3UQYZAu72Iwi8A6hK0TIEboDzIuLc4Ra4iPhmCFjj/Qgo8NqckaJ7hsAXsFFEnDvouxXxzRD4iQB2fELYIacGdE1gcgUmvwV2N1twxGzJds2iZQ7hLvBWRJw77AHvEd8MAfEiZQg3IQGzBHwP3NlQQ/oGVCr0DtQQMMYEKrFKwuQ+0SHp2/JkFWjj+l5GW68tOGW1BEyy2heqsKJBm81LqMSWwG/Xrim9CrhaIg9jUZESAe/yEXCc0vXP+RHwZ1/otSEC7tTRq535KvMvwrwVjmoqs2R9BK6Ay7EZB+LFvu7+t0ogM3bVclwa17oElP25FjUZd9iWo0vAw+KB+w97ag92l0Bm5htLcjEzlq7h2ETF+MkJ/AKQCTkh5Nk4+QAAAABJRU5ErkJggg==");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+#main-content .en__component--copyblock.address-title > h2 {
+  margin-left: 2rem;
+}
+
+#main-content .en__component--copyblock.address-title > h2::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: -2rem;
+  margin-right: 2%;
+  height: 2rem;
+  width: 1.75rem;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB6UlEQVRYR6WX/TFlQRDFz4uADKwIEAEbASJABIgAEVgRIAJEgAgQATIgAupXdUeN2Zme7rld9f66fbrP9PdbKC77kjYlrU8/LDxPv1tJdxGTi4DyjqRzSX86mDdJx5Ig0xUvgX+SDrvWfiuAgYgpHgIjzpPTC0lHFoMeAcJ+UzGA4asp73ymHnC0V9HdtdLRI0A+VzKjn5K2MselP4g8SFrKPmBjtRUFiwDVflkANwznSRUSTwWuGQWLACHOQ9rNZ+a0xF5L4kH/iUWA3l7LEJ7Xt6KALfAhAl+Fdq9eSuMuvGXUZcBoMRc+QmBOCuBZ9WURoJ2Y+e6hYhTh49S+oRooKxmwJwq1Nhzqgtoc+JD0tzOI7iUtF089mCZnKAJsvddGkREd5gLthfBqllW116dJyEQMEUC5nAVG0Tc/vWR3Q5gAC4YbYI6wktmoVekNFysNXlIsomr4m71ZWOay2fZ6K/Q4z1jpTelFACDrl8oeETqGeTKLAOByKHnINIdPDvZEYDQK3dd7ayARjkTB9foogUhHmJU/koKEOZV00imAM0noucRbA8kYM57pmB+quaP3aeqxM1wSJdArSFfhzUlBwtb+rESO1h8OIxEAXKYiHPrEYJQA+Pzw8Bwq1ZqYQwCDaf9zHwzJN9UKWyGqF8gUAAAAAElFTkSuQmCC");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+#main-content .en__component--copyblock.payment-information-title > h2 {
+  margin-left: 2rem;
+}
+
+#main-content .en__component--copyblock.payment-information-title > h2::before {
+  content: "";
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -2rem;
+  margin-right: 2%;
+  height: 1.75rem;
+  width: 2rem;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAtElEQVRYR+2WwQ3CMAxFXyfoCGUEOgkrsAEjEDZghG5URmg26AYgR40ERVVQgpwe7FsOzn/6tmw3VI6msj4GEB24AyfgoFSSCRiAmwCI+EVJeC0TAGagBXrgoQRyBEZgEoDnIqrdkEHXAN4dUCr/p4wBmAO7csAGkTkQHVgvp9Q7d4JuLqOU4L+2pwHs5x6oeZJ56XwHXHNbuTAvHKUSAnEGusIPf033y1nutKffF6ABVHfgBWDaOs5lsuVZAAAAAElFTkSuQmCC");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+#main-content .en__component--copyblock.view-message .btn--view-message {
+  padding-left: 0;
+  background-color: #ffffff;
+  color: inherit;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+#main-content .en__component--copyblock.view-message .btn--view-message::before {
+  content: '\2b';
+  display: inline-block;
+  margin-right: 2%;
+}
+
+#main-content .en__component--copyblock.view-message .btn--view-message.active::before {
+  content: '\2212';
+  display: inline-block;
+  margin-right: 2%;
+}
+
+/************************************
+ * Utility: Ellipsis Loader
+ * .ellipsis-loader - Displays animated looping ellipse at end of content
+ ***********************************/
+@keyframes ellipsis {
+  to {
+    width: 1.25rem;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25rem;
+  }
+}
+
+.ellipsis-loader::after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 250ms infinite;
+  animation: ellipsis steps(4, end) 250ms infinite;
+  content: "\2026";
+  /* ascii code for the ellipsis character */
+  width: 0;
+}
+
+/************************************
+ * Utility: Radio Buttons
+ * .radio-to-buttons - Converts Radio selects to Buttons. Also partially working for checkboxes but needs more development and QA
+ ***********************************/
+#main-content .radio-to-buttons {
+  /* Converts Radio Selects to Styled Button Selects */
+}
+
+#main-content .radio-to-buttons label.en__field__label.en__field__label--item:hover,
+#main-content .radio-to-buttons input[type='radio']:checked + label {
+  background-color: #e50050;
+  border: 1px solid transparent;
+  color: #fafafa;
+}
+
+#main-content .radio-to-buttons .en__field__label--item {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+#main-content .radio-to-buttons .en__field__input--radio + .en__field__label::before,
+#main-content .radio-to-buttons .en__field__input--checkbox + .en__field__label::before,
+#main-content .radio-to-buttons .en__field__input--radio:checked + .en__field__label::before,
+#main-content .radio-to-buttons .en__field__input--checkbox:checked + .en__field__label::before {
+  display: none !important;
+}
+
+#main-content .radio-to-buttons .en__field__input--radio + .en__field__label,
+#main-content .radio-to-buttons .en__field__input--checkbox + .en__field__label {
+  margin-left: 0 !important;
+}
+
+#main-content .radio-to-buttons label.en__field__label.en__field__label--item {
+  display: block;
+  padding: 0.9375rem;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #999999;
+}
+
+#main-content {
+  /************************************
+ * Utility: Give By Select Logos
+ * Assumes items are in order of Card, PayPal, Check
+ * .give-by-select
+ ***********************************/
+}
+
+#main-content .give-by-select {
+  /* Card */
+  /* Paypal */
+  /* Check */
+}
+
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) label {
+  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-card-black.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position-x: calc(50% - 24px);
+  background-position-y: calc(50% - 1px);
+  padding-left: 2.5rem;
+}
+
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) label {
+  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-paypal-black.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position-x: calc(50% - 24px);
+  background-position-y: calc(50% + 1px);
+  padding-left: 2.5rem;
+}
+
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) label {
+  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-check-black.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position-x: calc(50% - 24px);
+  background-position-y: 50%;
+  padding-left: 2.5rem;
+}
+
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) label.en__field__label.en__field__label--item:hover,
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) input[type='radio']:checked + label {
+  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-card-white.svg);
+}
+
+#main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(1) label.en__field__label.en__field__label--item:hover,
+#main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(1) input[type='radio']:checked + label {
+  background-color: #444444;
+  border-color: #444444;
+}
+
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) label.en__field__label.en__field__label--item:hover,
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) input[type='radio']:checked + label {
+  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-paypal-white.svg);
+}
+
+#main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(2) label.en__field__label.en__field__label--item:hover,
+#main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(2) input[type='radio']:checked + label {
+  background-color: #444444;
+  border-color: #444444;
+}
+
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) label.en__field__label.en__field__label--item:hover,
+#main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) input[type='radio']:checked + label {
+  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-check-white.svg);
+}
+
+#main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(3) label.en__field__label.en__field__label--item:hover,
+#main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(3) input[type='radio']:checked + label {
+  background-color: #444444;
+  border-color: #444444;
+}
+
+body.form-right #main-content-wrapper {
+  margin-right: initial;
+}
+
+body.form-left #main-content-wrapper {
+  margin-left: initial;
+}
+
+#main-content {
+  /* General */
+  /* Focus state */
+  /**
+  * Form Block Component: Select Fields
+  * Overrides EN Default Styling to ensure mobile friendly widths
+  */
+  /* Custom Styling for Radio & Checkbox Inputs */
+  /* CSS code for checkmark symbol */
+  /* REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
+  /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
+  /* QA Needed: EN's hidden input field */
+  /* Forces the hidden "Other" field on the Donation Amount block to be shown by default */
+  /* When monthly giving is selected, append "/mo" to giving amount button labels */
+  /* Depends on JS to add "monthly-giving" class to function */
+  /* This needs further work */
+  /* Add coloring when checked or on hover */
+  /* Exclude adding "/mo" to Other input buttons */
+  /* Hot fix for donation frequency and amount being in the same secton together */
+  /* First pass at making "Other" input for monthly gifts look better */
+  /* Advocacy form */
+  /* Temporary fix of EN Advanced Columns to add IE 11 support */
+  /* REF: https://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/ */
+  /* REF: https://github.com/philipwalton/flexbugs#flexbug-4 */
+}
+
+#main-content input[type="date"],
+#main-content input[type="datetime"],
+#main-content input[type="datetime-local"],
+#main-content input[type="email"],
+#main-content input[type="month"],
+#main-content input[type="number"],
+#main-content input[type="password"],
+#main-content input[type="range"],
+#main-content input[type="search"],
+#main-content input[type="tel"],
+#main-content input[type="text"],
+#main-content input[type="time"],
+#main-content input[type="url"],
+#main-content input[type="week"],
+#main-content input[type="hidden"],
+#main-content select,
+#main-content textarea {
+  max-width: 100%;
+  width: 100%;
+  min-width: initial;
+  display: block;
+  box-sizing: border-box;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0.5rem;
+  border: 0.0625rem solid #fafafa;
+  border-radius: 5px;
+  background-color: #FFF;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #222222;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#main-content select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+  background-origin: content-box;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 0.5625rem 0.375rem;
+  padding-right: 1rem;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+
+#main-content textarea {
+  height: 6.25rem;
+  resize: vertical;
+}
+
+#main-content input[type="date"]:focus,
+#main-content input[type="datetime"]:focus,
+#main-content input[type="datetime-local"]:focus,
+#main-content input[type="email"]:focus,
+#main-content input[type="month"]:focus,
+#main-content input[type="number"]:focus,
+#main-content input[type="password"]:focus,
+#main-content input[type="range"]:focus,
+#main-content input[type="search"]:focus,
+#main-content input[type="tel"]:focus,
+#main-content input[type="text"]:focus,
+#main-content input[type="time"]:focus,
+#main-content input[type="url"]:focus,
+#main-content input[type="week"]:focus,
+#main-content select:focus,
+#main-content textarea:focus {
+  outline: none;
+  border: 0.0625rem solid #e50050;
+  background-color: #fafafa;
+  box-shadow: 0 0 0.3125rem #cacaca;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+
+#main-content .en__field__input--select {
+  min-width: initial !important;
+}
+
+#main-content .en__field__input--radio,
+#main-content .en__field__input--checkbox {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+#main-content .en__field__input--radio + .en__field__label,
+#main-content .en__field__input--checkbox + .en__field__label {
+  position: relative;
+  margin-left: 2rem;
+  cursor: pointer;
+  display: flex;
+}
+
+#main-content .en__field__input--radio + .en__field__label::before,
+#main-content .en__field__input--checkbox + .en__field__label::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: -2rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0.0625rem solid #999999;
+  box-shadow: inset 0 0 0 0.3125rem #fff;
+  cursor: pointer;
+  transition-duration: .25s;
+  transition-property: border-color, background-color;
+}
+
+#main-content .en__field__input--radio + .en__field__label::before {
+  border-radius: 50%;
+}
+
+#main-content .en__field__input--checkbox + .en__field__label::before {
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+#main-content .en__field__input--radio:checked + .en__field__label::before,
+#main-content .en__field__input--checkbox:checked + .en__field__label::before {
+  border-color: #e50050;
+  background-color: #e50050;
+}
+
+#main-content .en__field__input--checkbox:checked + .en__field__label::before {
+  content: "\a0\2713";
+  border-color: #e50050;
+  background-color: #e50050;
+  color: #ffffff;
+}
+
+#main-content .en__field__input--radio:focus + .en__field__label::before,
+#main-content .en__field__input--checkbox:focus + .en__field__label::before {
+  outline: #999999 auto 0.3125rem;
+}
+
+#main-content .en__field--hidden {
+  display: block;
+  width: 100% !important;
+}
+
+#main-content .en__field--donationAmt.show-other .en__field__item--hidden {
+  display: inline-block;
+}
+
+#main-content .msgDetails {
+  /* Hide Edit and Submit button once a collapsed action is expanded */
+}
+
+#main-content .msgDetails .en__component--contactblock .en__field__input--checkbox + .en__field__label::before {
+  top: -2%;
+}
+
+#main-content .msgDetails .en__component--contactblock,
+#main-content .msgDetails .en__component--formblock {
+  display: none;
+  padding: 0;
+}
+
+#main-content .msgDetails.show .en__component--contactblock,
+#main-content .msgDetails.show .en__component--formblock {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+#main-content .msgDetails.show #en_actionMessageToggle_ToggleWrapper,
+#main-content .msgDetails.show #en_actionMessageToggle_SubmitButton {
+  display: none;
+}
+
+#main-content .en-row-center.en__component--formblock,
+#main-content .en-row-center .en__field__element {
+  justify-content: center;
+}
+
+#main-content .recurring-payment {
+  margin-bottom: 1.25rem;
+}
+
+#main-content .en__component--formblock.recurring-payment {
+  flex-direction: row;
+}
+
+#main-content .en-row-center.recurring-payment div.en__field__item:first-of-type {
+  text-align: right;
+}
+
+#main-content .en-row-end.en__component--formblock,
+#main-content .en-row-end .en__field__element {
+  justify-content: flex-end;
+}
+
+#main-content .en__component .recurring-payment .en__field__item {
+  margin-right: 0.5rem;
+}
+
+#main-content .en__field--donationAmt .en__field__item--other input {
+  padding-left: 2rem;
+  min-width: 215px;
+}
+
+#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
+  content: "/mo";
+  line-height: 2;
+  font-size: 75%;
+  margin-left: 0.1875rem;
+  color: #999999;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+
+#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input:checked + .en__field__label--item::after,
+#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input:hover + .en__field__label--item::after {
+  color: #FFF;
+}
+
+#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input[value="Other"] + .en__field__label--item::after,
+#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input[value="other"] + .en__field__label--item::after {
+  content: initial;
+}
+
+#main-content .recurring-payment,
+#main-content .en__field--donationAmt .en__field__element--radio {
+  flex-wrap: wrap;
+  justify-items: center;
+  width: 90%;
+  margin: 0.9375rem auto;
+}
+
+#main-content .show-hidden-input .en__field--donationAmt .en__field__item--other::before {
+  display: block;
+  content: "$";
+  position: relative;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  height: 0;
+  left: 1rem;
+  top: 0.5rem;
+}
+
+#main-content .show-hidden-input .en__field--donationAmt .en__field__item--other::after {
+  display: block;
+  opacity: .8;
+  font-size: 80%;
+  position: relative;
+  font-family: inherit;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  left: 1rem;
+  top: 0.25rem;
+}
+
+#main-content .show-hidden-input .en__field--donationAmt.monthly-giving .en__field__item--other::after {
+  content: "enter monthly amount";
+}
+
+#main-content .show-hidden-input .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
+  content: "enter amount";
+}
+
+#main-content .en__component--contactblock {
+  background-color: initial;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#main-content .en__component--column.en__component--advcolumn {
+  flex: 1 0 0%;
+}
+
+@media (min-width: 769px) {
+  #main-content .recurring-payment .en__field__item {
+    min-width: 170px;
+  }
+}
+
+/************************************
+ * Medium Breakpoint (Mid Resolution Device)
+ * At this breakpoint, rows elements expand to take up their own row
+ * A row with two input fields display 50% width will now have to rows, one for each input field, displaying 100% width
+ * Inputs that are multipart (ie Spit Text) will still retain their look on a single row and are not broken up
+ * REF: https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+ ***********************************/
+@media (max-width: 767px) {
+  /* Override EN Default Behavior */
+  .en__component--column.en__component--advcolumn.row-breakout {
+    width: auto;
+  }
+  /* Hide all the middle giving value */
+  .donation-amount.show-hidden-input.round-buttons .en__field__item:not(:first-of-type):not(:last-of-type) {
+    display: none;
+  }
+  /* Show the second giving value */
+  #main-content .donation-amount.show-hidden-input.round-buttons .en__field__item:nth-child(2) {
+    display: initial !important;
+  }
+  /* Hides long form country select */
+  #main-content #en_custom_field_simple_country_select_long {
+    display: none;
+  }
+  /* Shows short form hidden country select */
+  #main-content #en_custom_field_simple_country_select_short {
+    display: initial;
+  }
+  .en__component--column.en__component--advcolumn,
+  .en__component--row--2 .en__component--column {
+    width: 100%;
+  }
+}
+
+#main-content {
+  /** New CSS For Collapsed Slim Twitter Cards **/
+  /************************************
+ * Utility: Pill Buttons
+ * .pill-buttons - Rounds corners to create pill shape
+ ***********************************/
+  /************************************
+ * Utility: Dark Style Buttons
+ * .dark-buttons - Can be applied to buttons and both radio selects and checkboxes
+ ***********************************/
+  /************************************
+ * Utility: Thin Buttons
+ * .thin-buttons - Reduces font-size and padding
+ ***********************************/
+}
+
+#main-content .en__field--donationAmt.en__field.en__field--radio .en__field__item {
+  min-width: 100px;
+  margin-bottom: 1rem;
+  /*In the event the buttons wrap */
+}
+
+#main-content #en_actionMessageToggle_ToggleWrapper button {
+  margin: 0;
+  background-color: transparent;
+  color: #222222;
+  outline: none;
+}
+
+#main-content #en_actionMessageToggle_SubmitButton button {
+  margin: 0;
+  background-color: #e50050;
+  color: #ffffff;
+}
+
+#main-content .pill-buttons button,
+#main-content .pill-buttons.radio-to-buttons label,
+#main-content .pill-buttons.radio-to-buttons input[type='radio'] + label,
+#main-content .pill-buttons.radio-to-buttons input[type='text'],
+#main-content .pill-buttons.radio-to-buttons input[type='number'],
+#main-content .pill-buttons.radio-to-buttons input[type='tel'] {
+  border-radius: 1000px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#main-content .dark-buttons button,
+#main-content .dark-buttons.radio-to-buttons label.en__field__label.en__field__label--item:hover,
+#main-content .dark-buttons.radio-to-buttons input[type='radio']:checked + label {
+  background-color: #e50050;
+  border-color: #e50050;
+}
+
+#main-content .dark-buttons button:hover,
+#main-content .dark-buttons button:focus,
+#main-content .dark-buttons .en__field__input--radio:checked + .en__field__label::before,
+#main-content .dark-buttons .en__field__input--checkbox:checked + .en__field__label::before {
+  background-color: #e50050;
+  border-color: #e50050;
+}
+
+#main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value input,
+#main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill,
+#main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill:hover,
+#main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill:focus
+.en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #e50050 inset;
+  caret-color: #fff;
+  background-color: #e50050;
+  border-color: #e50050;
+  color: #fff;
+}
+
+#main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value::before {
+  color: #fff;
+}
+
+#main-content .thin-buttons button,
+#main-content .thin-buttons.radio-to-buttons label.en__field__label--item,
+#main-content .thin-buttons.radio-to-buttons input[type='radio'] + label.en__field__label--item,
+#main-content .thin-buttons.radio-to-buttons input[type='text'] + label.en__field__label--item,
+#main-content .thin-buttons.radio-to-buttons input[type='tel'] + label.en__field__label--item {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  font-size: 0.75rem;
+}
+
+#main-content .red .en__submit button {
+  background-color: #e74b3c;
+}
+
+#main-content .arrow .en__submit button::after {
+  content: "→";
+  float: right;
+  margin-right: 1rem;
+  opacity: .9;
+}
+
+#main-content .arrow .en__submit button:disabled::after {
+  content: none;
+}
+
+#main-content button {
+  display: block;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.875rem 1rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #e50050;
+  color: #eeeeee;
+}
+
+#main-content .en__submit {
+  width: 370px;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+#main-content .en__submit button {
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.75rem 0;
+  line-height: 0.8;
+  letter-spacing: 1.9px;
+  margin: 2rem 0;
+}
+
+#main-content .next-step .en__submit button {
+  width: initial;
+  margin-left: auto;
+}
+
+#main-content button:hover,
+#main-content button:focus {
+  background-color: #7f002c;
+}
+
+#main-content button[disabled],
+#main-content button[disabled]:hover,
+#main-content button[disabled]:focus {
+  background-color: #ff7fac;
+  color: #eeeeee;
+}
+
+#main-content button[disabled] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+#main-content {
+  /*Override EN Default Icons */
+}
+
+#main-content .banner-text {
+  text-align: center;
+  max-width: 500px;
+}
+
+#main-content .banner-text p {
+  font-size: 1.625rem;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  padding: 0 0.9375rem;
+  color: #222222;
+  display: inline-block;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+#main-content .banner-text p:first-of-type:not(:only-child) {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.125rem;
+  margin-bottom: 0;
+}
+
+#main-content .banner-text p:last-of-type:not(:only-child) {
+  padding-top: 0.125rem;
+  padding-bottom: 0.3125rem;
+  margin-top: 0;
+}
+
+#main-content .banner-text.green p {
+  color: #ffffff;
+  display: inline;
+  background-color: #0e8542;
+  padding: 0.3125rem 0;
+  position: relative;
+  box-shadow: 1em 0 0 0 #0e8542, -1em 0 0 0 #0e8542;
+}
+
+#main-content .banner-text.red p {
+  color: #ffffff;
+  display: inline;
+  background-color: #e74b3c;
+  padding: 0.3125rem 0;
+  position: relative;
+  box-shadow: 1em 0 0 0 #e74b3c, -1em 0 0 0 #e74b3c;
+}
+
+#main-content .banner-text.black p {
+  color: #ffffff;
+  display: inline;
+  background-color: #323232;
+  padding: 0.3125rem 0;
+  position: relative;
+  box-shadow: 1em 0 0 0 #323232, -1em 0 0 0 #323232;
+}
+
+#main-content .banner-text:first-of-type:not(:only-child) {
+  top: -1rem;
+}
+
+#main-content .banner-text:last-of-type:not(:only-child) {
+  bottom: -1rem;
+}
+
+#main-content .banner-text.lead p {
+  font-size: 2.125rem;
+}
+
+#main-content .en__field__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+#main-content .en__share__button {
+  height: 16px;
+  width: 16px;
+}
+
+#main-content .en__shares {
+  align-items: center;
+}
+
+#main-content .en__shares::before {
+  content: "SHARE";
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: #323232;
+  margin-right: 1rem;
+}
+
+#main-content .en__share__button--facebook {
+  background-image: url(../../images/global/facebook.svg) !important;
+}
+
+#main-content .en__share__button--twitter {
+  background-image: url(../../images/global/twitter.svg) !important;
+}
+
+#main-content .en__share__button--gplus {
+  background-size: 16px;
+}
+
+/*# sourceMappingURL=maps/styles.css.map */

@@ -1,0 +1,30 @@
+{
+  "name": "4site-en-template",
+  "version": "1.0.0",
+  "description": "Engaging Networks template by 4Site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernanDOTdo/Organic-Consumers-Engaging-Network-Templates.git"
+  },
+  "author": "4Site",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernanDOTdo/Organic-Consumers-Engaging-Network-Templates/issues"
+  },
+  "homepage": "https://github.com/fernanDOTdo/Organic-Consumers-Engaging-Network-Templates#readme"
+}

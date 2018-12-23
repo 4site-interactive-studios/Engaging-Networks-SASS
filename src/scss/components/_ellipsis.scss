@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the elipse component.
+// -----------------------------------------------------------------------------
+
+/************************************
+ * Utility: Ellipsis Loader
+ * .ellipsis-loader - Displays animated looping ellipse at end of content
+ ***********************************/
+
+
+@keyframes ellipsis {
+  to {
+    width: rem(20px);
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: rem(20px);
+  }
+}
+
+.ellipsis-loader::after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 250ms infinite;
+  animation: ellipsis steps(4,end) 250ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0;
+}

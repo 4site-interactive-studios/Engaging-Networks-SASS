@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.pre-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer{
+  background-color: $footer-bg-color;
+  color: $footer-txt-color;
+  font-size: rem(14px);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: 0.6px;
+  text-align: center;
+  padding: rem(40px) 0;
+  a{
+    color: $footer-link-color;
+    &:hover{
+      color: $footer-hover-link-color;
+    }
+  }
+}

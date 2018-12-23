@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the embedded page
+// -----------------------------------------------------------------------------
+
+body.embedded{
+  #main-content{
+    /* When embedded, remove unnecessary padding */
+    .en__tweetButton{
+      padding-right: 0;
+    }
+  }
+
+  #en_actionMessageToggle_ToggleButton,
+  #en_actionMessageToggle_SubmitButton{
+    display: inline-block;
+  }
+}

@@ -1,0 +1,22 @@
+/*
+
+
+##         ######  #### ######## ########     ######  ######## ##     ## ########  ####  #######   ######
+##    ##  ##    ##  ##     ##    ##          ##    ##    ##    ##     ## ##     ##  ##  ##     ## ##    ##
+##    ##  ##        ##     ##    ##          ##          ##    ##     ## ##     ##  ##  ##     ## ##
+##    ##   ######   ##     ##    ######       ######     ##    ##     ## ##     ##  ##  ##     ##  ######
+#########       ##  ##     ##    ##                ##    ##    ##     ## ##     ##  ##  ##     ##       ##
+      ##  ##    ##  ##     ##    ##          ##    ##    ##    ##     ## ##     ##  ##  ##     ## ##    ##
+      ##   ######  ####    ##    ########     ######     ##     #######  ########  ####  #######   ######
+
+*/
+/* Add a background image when the page is not embedded or in the page builder */
+@media (min-width: 1025px) {
+  body:not(.embedded):not(#en__pagebuilder) {
+    background: #3d834a url("../../images/oca/fruit-and-vegetables-seamless-green-compressor.jpg") repeat;
+    background-size: 300px;
+    background-position: left top;
+  }
+}
+
+/*# sourceMappingURL=maps/theme.css.map */

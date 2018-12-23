@@ -1,0 +1,374 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/* Prepares HTML tag for having a background image applied */
+html.has-image {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+  @include on-event {
+    color: $text-color;
+    outline: 0;
+  }
+}
+
+/* Placeholder styling */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  color: $field-placeholder-color;
+  opacity: 1; /* Firefox */
+}
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: $field-placeholder-color;
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder {
+  color: $field-placeholder-color;
+}
+
+
+#main-content-wrapper {
+  margin: 0 auto;
+  max-width: map-get($breakpoints, 'large');
+  width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+#main-content-inner {
+  margin: 0 auto;
+}
+
+/* Pad's main content form, unless it's emebeded. */
+body#en__pagebuilder.embedded #main-content-inner,
+body#en__pagebuilder:not(.embedded) #main-content-inner,
+body:not(#en__pagebuilder):not(.embedded) #main-content-inner {
+  padding: rem(0 30px);
+}
+
+#main-content {
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .body-copy{
+    margin-bottom: rem(50px);
+  }
+
+  .indented-body{
+    margin: rem(0 72px);
+  }
+
+  /* EN sets field labels to a fixed width of 180px, this makes them responsive */
+  .en__field__label {
+    padding-top: rem(4px);
+    padding-bottom: rem(4px);
+    width: auto;
+  }
+
+  /* Needs QA: Makes images responsive. Look into not using !important. */
+  img {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+    display: inherit;
+  }
+
+  /* Remove fixed min-width on Thermometer bar */
+  .enWidget__bar .enWidget__progress {
+    min-width: initial;
+  }
+
+  /* Make sure that background colors are not hard coded */
+  .en__twitterTarget,
+  .en__tweetBackgroundText,
+  .en__tweet,
+  .en__tweetDisabled,
+  .en__tweetButton,
+  .en__tweetContact {
+    background-color: initial;
+  }
+
+
+  .en__component--formblock .en__field:only-child,
+  .en__component--formblock .en__field div.en__field__item:only-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .en__component--formblock .row-wrap .en__field,
+  .en__component--formblock .row-wrap .en__field div.en__field__item {
+    margin-left: rem(8px);
+    margin-right: rem(8px);
+  }
+
+  .en__field__item {
+    padding: 0;
+
+  }
+
+  .en__field__element--splittext .en__field__item,
+  .en__field__element--splitselect .en__field__item {
+    width: 50%;
+  }
+
+  .en__field__element--tripletext .en__field__item,
+  .en__field__element--tripleselect .en__field__item {
+    width: 33.333333%;
+  }
+
+
+  /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
+  .en__component--formblock .en__field:last-of-type,
+  .en__component--formblock .en__field div.en__field__item:last-of-type {
+    margin-right: 0;
+  }
+
+  .en__component--formblock .en__field:first-of-type,
+  .en__component--formblock .en__field div.en__field__item:first-of-type {
+    margin-left: 0;
+  }
+
+  .en__component--formblock.items-might-wrap .en__field:last-of-type,
+  .en__component--formblock.items-might-wrap .en__field div.en__field__item:last-of-type,
+  .en__component--formblock.items-might-wrap .en__field:first-of-type,
+  .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type {
+    margin-left: rem(8px);
+    margin-right: rem(8px);
+  }
+
+
+  /* For inputs with multiple components, apply the bottom margin to the field items so that if they wrap they maintain vertical spacing between them */
+  .en__component .en__field.en__field--radio,
+  .en__component .en__field.en__field--checkbox,
+  .en__component .en__field.en__field--splittext,
+  .en__component .en__field.en__field--tripletext,
+  .en__component .en__field.en__field--splitselect,
+  .en__component .en__field.en__field--tripleselect {
+    margin-bottom: 0;
+  }
+
+  /* Make the spacing between wrapping elements tighter so the user knows they're related */
+  .en__component .en__field.en__field--radio .en__field__item,
+  .en__component .en__field.en__field--checkbox .en__field__item,
+  .en__component .en__field.en__field--splittext .en__field__item,
+  .en__component .en__field.en__field--tripletext .en__field__item,
+  .en__component .en__field.en__field--splitselect .en__field__item,
+  .en__component .en__field.en__field--tripleselect .en__field__item {
+    margin-bottom: rem(4px);
+  }
+
+  /* Manually control form pacing */
+  .en__component .space-below {
+    margin-bottom: rem(32px);
+  }
+
+  .en__component .space-below .en__field:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* QA Needed: Does not actually do what it's supposed to when all elelements are on same row. */
+  .en__component .en__field.en__field--radio .en__field__item--other,
+  .en__component .en__field.en__field--checkbox .en__field__item--other {
+    margin-top: 0;
+    margin-bottom: rem(20px);
+  }
+
+  .en__field__element {
+    width: 100%;
+    display: flex;
+  }
+
+  .en__component .en__field,
+  .en__component .en__field--splitselect,
+  .en__component .en__field--tripletext,
+  .en__component .en__field--splitselect,
+  .en__component .en__field--tripleselect {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .en__component--formblock .en__field,
+  .en__component--formblock .en__field div.en__field__item {
+    margin-left: rem(8px);
+    margin-right: rem(8px);
+  }
+
+  .en__field,
+  .en__captcha {
+    padding-bottom: 0;
+    margin-bottom: rem(16px);
+  }
+
+  /* For the custom fields we can properly space them, but for EN canned fields we have to fake the funk since we don't know when row-wraps will happen in Flexbox. */
+  .en__component--formblock {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* EN sets background to white making it not ideal for non-white backgrounds. This resets it to an initial state "transparent". */
+  .en__contact__toggle,
+  .en__contact--open .en__contact__toggle {
+    background-color: initial;
+  }
+
+  .en__contact__detail {
+    background-color: initial;
+    padding: 0;
+  }
+
+  /************************************
+ * Utility: Flex Wrap
+ * .en-form-flex-wrap - Forces content to wrap
+ ***********************************/
+
+  .en-form-flex-wrap,
+  .en-form-flex-wrap .en__field__element {
+    flex-wrap: wrap;
+  }
+
+  /************************************
+ * Utility: Show Hidden Input
+ * .show-hidden-input - Forces hidden inputs to be visible (ie "Radio with Input")
+ ***********************************/
+
+  .show-hidden-input .en__field__item--hidden {
+    display: inline-block;
+  }
+
+
+  .show-hidden-input .en__field--donationAmt {
+    position: relative;
+  }
+
+  /* If invisible other field is being forced visible, we have JS that auto selects the corresponding radio select so we can hide it */
+  .show-hidden-input .en__field--withOther .en__field__element--radio > div.en__field__item:nth-last-of-type(2) {
+    display: none;
+  }
+
+  /************************************
+ * Utility: Natural Widths
+ * .en-form-natural-widths - Helps items in a form to be displayed at their natural widths
+ ***********************************/
+
+  .en__component.en-form-natural-widths .en__field,
+  .en__component.en-form-natural-widths .en__field__item {
+    flex-basis: initial;
+  }
+
+  /************************************
+ * Utility: Fill Width
+ * .en-form-fill-width - Helps items in a form fill the width of the row (ie Justified content)
+ ***********************************/
+  .en__component.en-form-fill-width .en__field,
+  .en__component.en-form-fill-width .en__field__item {
+    flex-basis: 100%;
+  }
+
+  .en__component--formblock.en-form-lazy-layout {
+    margin-left: rem(-8px);
+    margin-right: rem(-8px);
+    flex-wrap: wrap;
+  }
+
+  /************************************
+ * Utility: Lazy Layout for Forms
+ * .en-form-lazy-layout - Helps items in a form  automatically flow to fill their containers dimensions
+ ***********************************/
+
+  .en__component--formblock.en-form-lazy-layout .en__field,
+  .en__component--formblock.en-form-lazy-layout .en__item {
+    margin-left: rem(8px);
+    margin-right: rem(8px);
+  }
+
+  .en__component.en-form-lazy-layout .en__field {
+    flex-grow: 1;
+    flex-basis: initial;
+  }
+
+  /************************************
+ * Utility: Hide Display
+ * // Depends on corresponding JS library
+ * .simple_country_select
+ ***********************************/
+  #en_custom_field_simple_country_select_long a,
+  #en_custom_field_simple_country_select_short a {
+    cursor: pointer;
+  }
+
+  #en_custom_field_simple_country_select_short,
+  .en__component--formblock.country-select-visible .en__field--address1 span {
+    display: none;
+  }
+
+  .en__component--formblock.simple_country_select {
+    transition: opacity .3s;
+  }
+
+  /* IE 11 causing regression issues with nested flexbox elements */
+  /* https://stackoverflow.com/questions/40873832/making-flexbox-inherit-proper-width-in-ie11 */
+  /* https://github.com/philipwalton/flexbugs/issues/104 */
+  .en__component--column.en__component--advcolumn:only-child {
+    flex: 1 1 auto;
+  }
+
+}
+
+
+/* Below large breakpoint the main-content section is expanded to fill the full screen */
+@include media(">large") {
+  body {
+    background-color: $body-color;
+  }
+
+  #main-content {
+    background-color: #FFF;
+  }
+
+  body:not(.embedded) #main-content {
+    margin: rem(35px);
+    border-radius: $form-border-radius;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    overflow: hidden;
+  }
+}
+
+@include media("<medium") {
+  #main-content .indented-body{
+    margin: 0 auto;
+  }
+  .hide-medium{
+    display: none !important;
+  }
+}
