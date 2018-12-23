@@ -2,3 +2,6 @@
 .idea
 node_modules
 .DS_Store
+**/.DS_Store
+dist/css/maps/styles.css.map
+dist/css/maps/theme.css.map
