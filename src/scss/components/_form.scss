@@ -296,6 +296,8 @@ body.form-left #main-content-wrapper {
     margin-bottom: rem(8px);
     left: rem(16px);
     top: rem(4px);
+    width: calc(100% - 16px);
+    display: inline-block;
   }
 
   .show-hidden-input .en__field--donationAmt.monthly-giving .en__field__item--other::after {

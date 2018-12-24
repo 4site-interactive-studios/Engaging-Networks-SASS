@@ -29,6 +29,10 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
 
+/// Copy heading color
+/// @type Color
+$heading-color: $text-color !default;
+
 /// Main brand color
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
@@ -53,6 +57,17 @@ $dark-grey: rgb(68, 68, 68) !default;
 /// @type Color
 $darker-grey: rgb(50, 50, 50) !default;
 
+/// Copy bold color
+/// @type Color
+$bold-color: $mid-grey !default;
+
+/// Link color
+/// @type Color
+$link-color: $brand-color !default;
+
+/// Link Hover color
+/// @type Color
+$link-hover-color: darken($brand-color, 20%) !default;
 
 /// Red
 /// @type Color
@@ -74,7 +89,7 @@ $error-color: $red !default;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1000px !default;
+$max-width: 900px !default;
 
 
 
@@ -87,7 +102,7 @@ $breakpoints: (
   'small': 375px,
   'medium': 768px,
   'large': 1024px,
-);
+) !default;
 
 
 
@@ -124,6 +139,6 @@ $field-focus-box-shadow: 0 0 0.3125rem #cacaca !default;
 $radio-border-color: $mid-grey !default;
 $radio-checked-color: $brand-color !default;
 $button-bg-color: $brand-color !default;
-$button-disabled-bg-color: lighten($brand-color, 30%) !default;
-$button-hover-bg-color: darken($brand-color, 20%) !default;
+$button-disabled-bg-color: lighten($button-bg-color, 30%) !default;
+$button-hover-bg-color: darken($button-bg-color, 20%) !default;
 $button-txt-color: $body-color !default;

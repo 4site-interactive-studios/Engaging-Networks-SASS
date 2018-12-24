@@ -24,7 +24,7 @@
   padding-left: 20px; /* 3 */
   padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
- }
+}
 
 /**
  * Hide text while making it readable for screen readers
@@ -60,7 +60,7 @@
  * .row-breakout - Makes row 100% width of Main Content by breaking out of Main Content's left and right margin
  * QA Needed: .page-breakout - Makes Row 100% width of page
  ***********************************/
-.row-breakout{
+.row-breakout {
   margin-left: rem(-30px);
   margin-right: rem(-30px);
 }
@@ -70,19 +70,143 @@
  * Utility: Debug
  * .debug - Helpful for debugging form layouts
  ***********************************/
-.debug{
+.debug {
   background: blue;
 }
 
-.debug .en__field{
+.debug .en__field {
   background: green;
 }
 
-.debug .en__field__item{
+.debug .en__field__item {
   background: yellow;
 }
 
 .debug label,
-.debug select{
+.debug select {
   background: yellow;
+}
+
+
+//
+// Text
+//
+
+.text-monospace {
+  font-family: $code-font-stack;
+}
+
+// Alignment
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Transformation
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+// Weight and italics
+
+.font-weight-light {
+  font-weight: 300 !important;
+}
+
+.font-weight-lighter {
+  font-weight: 200 !important;
+}
+
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.font-weight-bolder {
+  font-weight: 900 !important;
+}
+
+.font-italic {
+  font-style: italic !important;
+}
+
+// Contextual colors
+
+.text-white {
+  color: #FFF !important;
+}
+
+.text-body {
+  color: $text-color !important;
+}
+
+.text-muted {
+  color: $mid-grey !important;
+}
+
+.text-black-50 {
+  color: rgba($darker-grey, .5) !important;
+}
+
+.text-white-50 {
+  color: rgba(#FFF, .5) !important;
+}
+
+// Misc
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-break {
+  word-break: break-word !important;
+}
+
+.text-small {
+  font-size: 80% !important;
+}
+.text-big {
+  font-size: 120% !important;
+}
+
+.text-center{
+  text-align: center !important;
+}
+.text-right{
+  text-align: right !important;
+}
+.text-left{
+  text-align: left !important;
+}
+
+// Reset
+
+.text-reset {
+  color: inherit !important;
 }

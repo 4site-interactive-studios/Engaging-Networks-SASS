@@ -3,3 +3,263 @@
 // theme.
 // -----------------------------------------------------------------------------
 
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: rem(64px);
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  color: $brand-color;
+  margin-top: 0;
+  margin-bottom: rem(40px);
+}
+
+h2 {
+  font-size: rem(42px);
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: rem(20px);
+}
+
+#main-content {
+
+  .en__field__input--checkbox + .en__field__label:before {
+    font-size: rem(16px);
+    top: 7px;
+  }
+
+  .en__field__label, .en__component--copyblock {
+    font-size: rem(18px);
+  }
+
+  .body-copy {
+    margin-bottom: 0;
+    justify-content: space-between;
+
+    > div:first-child {
+      flex: 1 1 auto;
+      max-width: 430px;
+      margin-right: 30px;
+    }
+
+    > div:last-child {
+      flex: 0 0 auto;
+      max-width: 50%;
+      margin: auto;
+
+      div, p, img {
+        margin: auto;
+      }
+    }
+  }
+
+  hr {
+    border-top: 1px solid #E4E4E4;
+    margin: 45px 0;
+  }
+
+  .recurring-payment,
+  .en__field--donationAmt .en__field__element--radio {
+    margin: 0;
+    width: 80%;
+  }
+
+  .pill-buttons {
+    button,
+    &.radio-to-buttons label,
+    &.radio-to-buttons input[type='radio'] + label,
+    &.radio-to-buttons input[type='text'],
+    &.radio-to-buttons input[type='number'],
+    &.radio-to-buttons input[type='tel'] {
+      border-radius: 0;
+      padding: rem(10px 25px);
+      text-transform: uppercase;
+      font-size: rem(30px);
+    }
+  }
+
+  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
+    text-transform: none;
+    line-height: 1.8;
+  }
+
+  .en__field--recurrpay {
+    .en__field__item {
+      max-width: 290px;
+
+      label {
+        font-weight: bold;
+        font-size: rem(24px) !important;
+        padding: rem(15px 25px) !important;
+      }
+    }
+  }
+
+  .en__component--formblock.items-might-wrap .en__field,
+  .en__component--formblock.items-might-wrap .en__field:first-of-type,
+  .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type,
+  .en__component--formblock.items-might-wrap .en__field div.en__field__item {
+    margin-left: 0;
+    margin-right: rem(16px);
+  }
+
+  .en__component--formblock.items-might-wrap .en__field:last-of-type,
+  .en__component--formblock.items-might-wrap .en__field div.en__field__item:last-of-type {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .en__component .en__field.en__field--radio .en__field__item--other {
+    &:before {
+      line-height: 3;
+    }
+
+    input {
+      height: 64px;
+      border: 1px solid $brand-color;
+      box-shadow: none;
+      font-size: rem(30px);
+      text-transform: none;
+      padding-left: 35px;
+    }
+  }
+
+  .radio-to-buttons label.en__field__label.en__field__label--item {
+    border: 1px solid $brand-color;
+  }
+
+  .give-by-select {
+    .en__field__item {
+      max-width: 235px;
+    }
+
+    &.radio-to-buttons label.en__field__label.en__field__label--item {
+      text-transform: none;
+      border: 1px solid $mid-grey;
+      font-size: rem(20px);
+      background-position-x: 40px !important;
+    }
+
+    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
+    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item input[type='radio']:checked + label {
+      background-color: $brand-color !important;
+      border-color: $brand-color !important;
+    }
+  }
+
+  .radio-to-buttons.dark-buttons label.en__field__label.en__field__label--item:hover,
+  .radio-to-buttons.dark-buttons input[type='radio']:checked + label {
+    background-color: $brand-color !important;
+    border-color: $brand-color !important;
+  }
+
+  .en__submit {
+    width: 290px;
+
+    button {
+      text-transform: uppercase;
+      font-family: $heading-font-stack;
+      font-size: rem(36px);
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      letter-spacing: 1.8px;
+      min-height: 62px;
+    }
+  }
+
+  .footer {
+    padding-top: 0;
+
+    .social-links {
+      margin-top: 20px;
+
+      a {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@include media("<large") {
+  #main-content {
+    .body-copy {
+      > div:last-child {
+        max-width: 30%;
+      }
+    }
+
+  }
+}
+
+@include media("<=medium") {
+  h1 {
+    font-size: rem(42px);
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: rem(35px);
+  }
+
+  #main-content {
+    .en__component--formblock {
+      display: block;
+
+      .en__field,
+      .en__field div.en__field__item {
+        margin: 15px auto;
+      }
+    }
+
+    .en__field__element {
+      display: block;
+
+      .en__field__item {
+        margin: 10px auto !important;
+        display: block;
+        width: 90%;
+      }
+    }
+
+    .en__field--donationAmt .en__field__item--other input{
+      min-width: 0;
+    }
+
+    .body-copy {
+      > div:first-child {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      > div:last-child {
+        max-width: 100%;
+      }
+    }
+
+    hr {
+      margin: 35px 0;
+    }
+
+    .en__submit {
+      margin: rem(16px auto);
+    }
+
+    .footer{
+      p{
+        text-align: center !important;
+      }
+    }
+
+  }
+}

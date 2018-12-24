@@ -1,0 +1,1035 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${page~title} | International Campaign for Tibet</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#00853e">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00853e">
+
+    <!-- 4Site Template CSS -->
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet" href="dist/css/theme.css">
+
+    <!-- Google Optimize: Page hiding snippet (recommended)  -->
+    <!--
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-P99B2PT':true});</script>    
+    -->
+
+    <!-- Google Analytics or Google Tag Mnager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47383745-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+
+      function gtag () {dataLayer.push(arguments)}
+
+      gtag('js', new Date())
+
+      gtag('config', 'UA-73603812-1')
+    </script>
+
+    <script></script>
+    <!-- here to ensure a non-blocking load still occurs in IE and Edge, even if scripts follow loadCSS in head -->
+
+
+    <!-- Local Development Files Start -->
+    <link rel="stylesheet" href="https://e-activist.com/ea-demo/frontend/pbAssets/build/css/enPage.css?v=3.49.0">
+    <script>
+      (function () {
+
+        var en = {}
+
+        en.dependencies = [{
+          'conditions': [{
+            'condition': 'AND',
+            'target': 'field:63748',
+            'comparator': '==',
+            'value': 'Y'
+          }], 'actions': [{'type': 'setValue', 'target': 'field:63746', 'value': 'MONTHLY'}]
+        }, {
+          'conditions': [{
+            'condition': 'AND',
+            'target': 'field:63748',
+            'comparator': '==',
+            'value': 'N'
+          }, {'condition': 'OR', 'target': 'field:63748', 'comparator': '==', 'value': ''}],
+          'actions': [{'type': 'setValue', 'target': 'field:63746', 'value': ''}]
+        }]
+
+        en.altLists = []
+
+        en.validators = [{
+          'componentId': 63747,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Payment Currency is a mandatory form field.'
+        }, {
+          'componentId': 63750,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Please select an amount.'
+        }, {
+          'componentId': 63752,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'First name is a mandatory form field.'
+        }, {
+          'componentId': 63753,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Last name is a mandatory form field.'
+        }, {
+          'componentId': 63755,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Email is a mandatory form field.'
+        }, {
+          'componentId': 63757,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Country is a mandatory form field.'
+        }, {
+          'componentId': 63759,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Address is a mandatory form field.'
+        }, {
+          'componentId': 63760,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Apt., ste., bldg. is a mandatory form field.'
+        }, {
+          'componentId': 63762,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'City is a mandatory form field.'
+        }, {
+          'componentId': 63763,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'ZIP Code is a mandatory form field.'
+        }, {
+          'componentId': 63764,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'State is a mandatory form field.'
+        }, {
+          'componentId': 64041,
+          'type': 'REQ',
+          'format': '',
+          'errorMessage': 'Paypal Billing Agreement is a mandatory form field.'
+        }, {'componentId': 63765, 'type': 'REQ', 'format': '', 'errorMessage': 'null is a mandatory form field.'}]
+
+        en.alerts = [{'type': 'MFE', 'content': 'is a mandatory form field.'}]
+
+        en.premiumGifts = {}
+
+        window.EngagingNetworks = en
+
+      })()
+    </script>
+    <script src="https://e-activist.com/ea-demo/frontend/pbAssets/build/js/enPage.js?v=3.49.0"></script>
+    <script>
+      var pageJson = {
+        'clientId': 10031,
+        'pageCount': 1,
+        'campaignId': 19930,
+        'campaignPageId': 7077,
+        'pageNumber': 1
+      }
+    </script>
+    <!-- Local Development Files End -->
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+<!--
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+<!-- End Google Tag Manager -->
+
+<!-- 4Site Template Body Wrapper -->
+<div id="main-content-wrapper">
+    <div id="main-content" class="template-2">
+        <div id="main-content-inner">
+
+            <!-- EN Form Start -->
+            <form method="post" action="/page/7077/donate/2" class="en__component en__component--page">
+                <input type="hidden" name="hidden" class="en__hiddenFields" value="">
+                <input type="hidden" name="sessionId" value="7322bc75461b4c7b8b1304a9bb4142e7-server50011">
+
+
+                <ul class="en__errorList">
+                </ul>
+
+                <div class="en__component en__component--row en__component--advrow">
+                    <div class="en__component en__component en__component--column en__component--advcolumn header-logo"
+                         style="">
+                        <div class="en__component en__component--copyblock" style="
+
+
+
+
+
+
+
+">
+                            <p style="text-align: center;"><a href="https://www.savetibet.org/" target="_blank"><img
+                                    alt="International Campaign for Tibet"
+                                    srcset="images/ict/logo.jpg, images/ict/logo@2x.jpg 2x"
+                                    src="images/ict/logo.jpg"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="en__component en__component--row en__component--advrow body-copy">
+                    <div class="en__component en__component en__component--column en__component--advcolumn">
+                        <div class="en__component en__component--copyblock">
+                            <h1>Help Save Tibet</h1>
+
+                            <p>
+                                Your gift will help to promote human rights and
+                                democratic freedoms for the people of Tibet. All
+                                efforts are made possible by the contributions of
+                                people of conscience like you.
+                            </p>
+                            <p>
+                                <strong>
+                                    Together, we can shift the balance toward
+                                    compassion and kindness. Make a gift today.
+                                </strong>
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="en__component en__component en__component--column en__component--advcolumn">
+                        <div class="en__component en__component--copyblock" style="">
+                            <p><img src="images/ict/dakini_082.jpg"
+                                    srcset="images/ict/dakini_082.jpg, images/ict/dakini_082-@2x.jpg 2x"></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="en__component en__component--copyblock" style="">
+                    <h2 id="donation-information-section-header">Donation Information</h2>
+                </div>
+                <div class="en__component en__component--row en__component--advrow">
+                    <div class="en__component en__component en__component--column en__component--advcolumn form-body"
+                         style="">
+                        <div class="en__component en__component--formblock recurring-payment radio-to-buttons dark-buttons pill-buttons en-form-fill-width space-below"
+                             style="">
+
+
+                            <div class="en__field en__field--radio en__field--63748 en__field--recurrpay">
+                                <div class="en__field__element en__field__element--radio
+">
+                                    <div class="en__field__item">
+                                        <input id="en__field_transaction_recurrpay0" checked="" type="radio"
+                                               class="en__field__input en__field__input--radio" value="N"
+                                               name="transaction.recurrpay">
+                                        <label for="en__field_transaction_recurrpay0"
+                                               class="en__field__label en__field__label--item">One-Time Gift</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input id="en__field_transaction_recurrpay1" type="radio"
+                                               class="en__field__input en__field__input--radio" value="Y"
+                                               name="transaction.recurrpay">
+                                        <label for="en__field_transaction_recurrpay1"
+                                               class="en__field__label en__field__label--item">Monthly Gift</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" class="en__field__input en__field__input--hidden"
+                                   name="transaction.recurrday" value="1">
+
+                            <input type="hidden" class="en__field__input en__field__input--hidden"
+                                   name="transaction.recurrfreq" value="">
+
+                            <input type="hidden" class="en__field__input en__field__input--hidden"
+                                   name="transaction.paycurrency" value="USD">
+
+
+                        </div>
+                        <div class="en__component en__component--copyblock">
+                            <p>Select Gift Amount</p>
+                        </div>
+                        <div class="en__component en__component--formblock donation-amt row-wrap radio-to-buttons dark-buttons pill-buttons show-hidden-input items-might-wrap"
+                             style="">
+
+                            <div class="en__field en__field--radio en__field--withOther en__field--63750 en__field--donationAmt en__mandatory">
+                                <div class="en__field__element en__field__element--radio">
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio" value="0"
+                                               name="transaction.donationAmt" id="en__field_transaction_donationAmt0">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt0">$</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio" value="0"
+                                               name="transaction.donationAmt" id="en__field_transaction_donationAmt1">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt1">$</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio" value="0"
+                                               name="transaction.donationAmt" id="en__field_transaction_donationAmt2">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt2">$</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio" value="0"
+                                               name="transaction.donationAmt" id="en__field_transaction_donationAmt3">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt3">$</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio" value="0"
+                                               name="transaction.donationAmt" id="en__field_transaction_donationAmt4">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt4">$</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio" value="0"
+                                               name="transaction.donationAmt" id="en__field_transaction_donationAmt5">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt5">$</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input type="radio" class="en__field__input en__field__input--radio"
+                                               value="Other" name="transaction.donationAmt"
+                                               id="en__field_transaction_donationAmt6">
+                                        <label class="en__field__label en__field__label--item"
+                                               for="en__field_transaction_donationAmt6">Other</label>
+                                    </div>
+                                    <div class="en__field__item en__field__item--other en__field__item--hidden">
+                                        <input class="en__field__input en__field__input--other" type="text"
+                                               name="transaction.donationAmt.other" value="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <hr>
+                        <div class="en__component en__component--copyblock">
+                            <h2 id="personal-information-section-header">Your Information</h2>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock" style="">
+
+
+                            <div class="en__field en__field--text en__field--63752 en__field--firstName en__mandatory">
+                                <label for="en__field_supporter_firstName" class="en__field__label" style="">First
+                                    name</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_firstName" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.firstName"
+                                           value="">
+                                </div>
+                            </div>
+                            <div class="en__field en__field--text en__field--63753 en__field--lastName en__mandatory">
+                                <label for="en__field_supporter_lastName" class="en__field__label" style="">Last
+                                    name</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_lastName" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.lastName"
+                                           value="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock" style="">
+
+
+                            <div class="en__field en__field--text en__field--63755 en__field--emailAddress en__mandatory">
+                                <label for="en__field_supporter_emailAddress" class="en__field__label"
+                                       style="">Email</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_emailAddress" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.emailAddress"
+                                           value="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock simple_country_select" style="">
+
+
+                            <div class="en__field en__field--select en__field--63757 en__field--country en__mandatory">
+                                <label for="en__field_supporter_country" class="en__field__label"
+                                       style="">Country</label>
+                                <div class="en__field__element en__field__element--select">
+                                    <select id="en__field_supporter_country"
+                                            class="en__field__input en__field__input--select" name="supporter.country">
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Åland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia, Plurinational State of</option>
+                                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="CV">Cabo Verde</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo, the Democratic Republic of the</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Côte d'Ivoire</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CW">Curaçao</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                        <option value="FO">Faroe Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GG">Guernsey</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard Island and McDonald Islands</option>
+                                        <option value="VA">Holy See (Vatican City State)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran, Islamic Republic of</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IM">Isle of Man</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JE">Jersey</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KP">Korea, Democratic People's Republic of</option>
+                                        <option value="KR">Korea, Republic of</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao People's Democratic Republic</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macao</option>
+                                        <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia, Federated States of</option>
+                                        <option value="MD">Moldova, Republic of</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestine, State of</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Réunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="BL">Saint Barthélemy</option>
+                                        <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="MF">Saint Martin (French part)</option>
+                                        <option value="PM">Saint Pierre and Miquelon</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SX">Sint Maarten (Dutch part)</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="SS">South Sudan</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TW">Taiwan, Province of China</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic of</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VG">Virgin Islands, British</option>
+                                        <option value="VI">Virgin Islands, U.S.</option>
+                                        <option value="WF">Wallis and Futuna</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock" style="">
+
+
+                            <div class="en__field en__field--text en__field--63759 en__field--address1 en__mandatory">
+                                <label for="en__field_supporter_address1" class="en__field__label"
+                                       style="">Address</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_address1" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.address1"
+                                           value="">
+                                </div>
+                            </div>
+                            <div class="en__field en__field--text en__field--63760 en__field--address2 en__mandatory">
+                                <label for="en__field_supporter_address2" class="en__field__label" style="">Apt., ste.,
+                                    bldg.</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_address2" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.address2"
+                                           value="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock" style="">
+
+
+                            <div class="en__field en__field--text en__field--63762 en__field--city en__mandatory">
+                                <label for="en__field_supporter_city" class="en__field__label" style="">City</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_city" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.city"
+                                           value="">
+                                </div>
+                            </div>
+                            <div class="en__field en__field--select en__field--63764 en__field--region en__mandatory">
+                                <label for="en__field_supporter_region" class="en__field__label" style="">State</label>
+                                <div class="en__field__element en__field__element--select">
+                                    <select id="en__field_supporter_region"
+                                            class="en__field__input en__field__input--select" name="supporter.region">
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="AB">Alberta</option>
+                                        <option value="BC">British Columbia</option>
+                                        <option value="MB">Manitoba</option>
+                                        <option value="NB">New Brunswick</option>
+                                        <option value="NL">Newfoundland and Labrador</option>
+                                        <option value="NS">Nova Scotia</option>
+                                        <option value="ON">Ontario</option>
+                                        <option value="PE">Prince Edward Island</option>
+                                        <option value="QC">Quebec</option>
+                                        <option value="SK">Saskatchewan</option>
+                                        <option value="NT">Northwest Territories</option>
+                                        <option value="NU">Nunavut</option>
+                                        <option value="YT">Yukon</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="en__field en__field--text en__field--63763 en__field--postcode en__mandatory">
+                                <label for="en__field_supporter_postcode" class="en__field__label" style="">ZIP
+                                    Code</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_supporter_postcode" type="text"
+                                           class="en__field__input en__field__input--text" name="supporter.postcode"
+                                           value="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <hr>
+                        <div class="en__component en__component--copyblock" style="">
+                            <h2 id="payment-information-section-header">Payment Information</h2>
+                            <p>Please select a payment method</p>
+                        </div>
+                        <div class="en__component en__component--formblock give-by-select radio-to-buttons dark-buttons pill-buttons en-form-fill-width space-below"
+                             style="">
+
+
+                            <div class="en__field en__field--radio en__field--question en__field--63765 en__field--give-by-select en__mandatory">
+                                <div class="en__field__element en__field__element--radio
+">
+                                    <div class="en__field__item">
+                                        <input id="en__field_supporter_questions_637650" checked="" type="radio"
+                                               class="en__field__input en__field__input--radio" value="card"
+                                               name="supporter.questions.63765">
+                                        <label for="en__field_supporter_questions_637650"
+                                               class="en__field__label en__field__label--item">Card</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input id="en__field_supporter_questions_637651" type="radio"
+                                               class="en__field__input en__field__input--radio" value="paypal"
+                                               name="supporter.questions.63765">
+                                        <label for="en__field_supporter_questions_637651"
+                                               class="en__field__label en__field__label--item">PayPal</label>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <input id="en__field_supporter_questions_637652" type="radio"
+                                               class="en__field__input en__field__input--radio" value="check"
+                                               name="supporter.questions.63765">
+                                        <label for="en__field_supporter_questions_637652"
+                                               class="en__field__label en__field__label--item">Check</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock" style="">
+
+
+                            <input type="hidden" class="en__field__input en__field__input--hidden"
+                                   name="supporter.NOT_TAGGED_30"
+                                   value="By submitting this form, you agree to allow International Campaign for Tibet to take funds from your PayPal account.">
+
+
+                        </div>
+                        <div class="en__component en__component--formblock payment-information give-by-card" style="">
+
+
+                            <div class="en__field en__field--text en__field--63769 en__field--ccnumber">
+                                <label for="en__field_transaction_ccnumber" class="en__field__label" style="">Credit
+                                    Card Number</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_transaction_ccnumber" type="text"
+                                           class="en__field__input en__field__input--text" name="transaction.ccnumber"
+                                           value="">
+                                </div>
+                            </div>
+                            <div class="en__field en__field--select en__field--63768 en__field--paymenttype">
+                                <label for="en__field_transaction_paymenttype" class="en__field__label" style="">Payment
+                                    Type</label>
+                                <div class="en__field__element en__field__element--select">
+                                    <select id="en__field_transaction_paymenttype"
+                                            class="en__field__input en__field__input--select"
+                                            name="transaction.paymenttype">
+                                        <option selected="selected" value="Visa">Visa</option>
+                                        <option value="MasterCard">MasterCard</option>
+                                        <option value="Amex">Amex</option>
+                                        <option value="Discover">Discover</option>
+                                        <option value="Paypal">Paypal</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock payment-information give-by-card space-below"
+                             style="">
+
+
+                            <div class="en__field en__field--splitselect en__field--63771 en__field--ccexpire">
+                                <label for="en__field_transaction_ccexpire" class="en__field__label" style="">Credit
+                                    Card Expiration</label>
+                                <div class="en__field__element en__field__element--splitselect">
+                                    <input type="hidden" name="transaction.ccexpire.delimiter" value="">
+                                    <div class="en__field__item">
+                                        <select id="en__field_transaction_ccexpire"
+                                                class="en__field__input en__field__input--splitselect"
+                                                name="transaction.ccexpire">
+                                            <option selected="selected" value="">Month</option>
+                                            <option value="01">01 - Jan</option>
+                                            <option value="02">02 - Feb</option>
+                                            <option value="03">03 - Mar</option>
+                                            <option value="04">04 - Apr</option>
+                                            <option value="05">05 - May</option>
+                                            <option value="06">06 - Jun</option>
+                                            <option value="07">07 - Jul</option>
+                                            <option value="08">08 - Aug</option>
+                                            <option value="09">09 - Sep</option>
+                                            <option value="10">10 - Oct</option>
+                                            <option value="11">11 - Nov</option>
+                                            <option value="12">12 - Dec</option>
+                                        </select>
+                                    </div>
+                                    <div class="en__field__item">
+                                        <select class="en__field__input en__field__input--splitselect"
+                                                name="transaction.ccexpire">
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="en__field en__field--text en__field--63772 en__field--ccvv">
+                                <label for="en__field_transaction_ccvv" class="en__field__label" style="">Credit Card
+                                    CVV</label>
+                                <div class="en__field__element en__field__element--text">
+                                    <input id="en__field_transaction_ccvv" type="text"
+                                           class="en__field__input en__field__input--text" name="transaction.ccvv"
+                                           value="">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock space-below" style="">
+
+
+                            <div class="en__field en__field--checkbox en__field--question en__field--43980 en__field--organic-consumers-association-news-action-alerts">
+                                <div class="en__field__element en__field__element--checkbox
+	">
+                                    <div class="en__field__item">
+                                        <input id="en__field_supporter_questions_43980" checked="" type="checkbox"
+                                               class="en__field__input en__field__input--checkbox" value="Y"
+                                               name="supporter.questions.43980">
+                                        <label for="en__field_supporter_questions_43980"
+                                               class="en__field__label en__field__label--item">I would like to receive
+                                            International Campaign for Tibet News &amp; Action Alerts</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="en__component en__component--formblock en-row-center pill-buttons smart-gift-amount-submit-label">
+
+
+                            <div class="en__submit">
+                                <button style="">Donate Now</button>
+                            </div>
+
+                        </div>
+                        <div class="en__component en__component--copyblock text-small text-center" style="">
+                            <p>Donors are encouraged to read the International Campaign for Tibet’s <a
+                                    href="https://www.savetibet.org/about-ict/charitable-solicitation-disclosure-statement/"
+                                    target="_blank">Charitable Solicitation Disclosure Statement</a></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Footer Start -->
+                <div class="en__component en__component--row en__component--advrow footer">
+                    <div class="en__component en__component en__component--column en__component--advcolumn">
+                        <div class="en__component en__component--copyblock text-small text-left">
+                            <p>
+                                International Campaign for Tibet<br>
+                                1825 Jefferson Place NW | Washington, DC | 20036 | USA<br>
+                                Phone: (202) 785-1515 | Fax: (202) 785-4343 | <a href="mailto:info@savetibet.org">info@savetibet.org</a>
+                            </p>
+                            <p>
+                                Press Inquiries: <a href="mailto:press@savetibet.org">press@savetibet.org</a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="en__component en__component en__component--column en__component--advcolumn">
+                        <div class="en__component en__component--copyblock text-small text-right">
+                            <p>
+                                © 2019 International Campaign for Tibet. All Rights Reserved.
+                            </p>
+                            <p class="social-links">
+                                <a href="https://www.savetibet.org/feed/" title="RSS Feed" target="_blank">
+                                    <img src="images/ict/icon-rss.jpg"
+                                         srcset="images/ict/icon-rss.jpg, images/ict/icon-rss@2x.jpg 2x"
+                                         alt="RSS"></a>
+                                <a href="https://www.facebook.com/pages/International-Campaign-for-Tibet/16266289036"
+                                   title="Follow Us on Facebook" target="_blank">
+                                    <img
+                                            src="images/ict/icon-facebook.jpg"
+                                            srcset="images/ict/icon-facebook.jpg, images/ict/icon-facebook@2x.jpg 2x"
+                                            alt="Facebook"></a>
+                                <a
+                                        href="https://youtube.com/intercampaigntibet" title="ICT's YouTube Videos"
+                                        target="_blank">
+                                    <img
+                                            src="images/ict/icon-youtube.jpg"
+                                            srcset="images/ict/icon-youtube.jpg, images/ict/icon-youtube@2x.jpg 2x"
+                                            alt="YouTube"></a>
+                                <a href="https://twitter.com/savetibetorg"
+                                   title="Follow Us on Twitter"
+                                   target="_blank">
+                                    <img
+                                            src="images/ict/icon-twitter.jpg"
+                                            srcset="images/ict/icon-twitter.jpg, images/ict/icon-twitter@2x.jpg 2x"
+                                            alt="Twitter"></a>
+                                <a href="https://weblog.savetibet.org"
+                                   target="_blank"
+                                   title="ICT Blog">
+                                    <img
+                                        src="images/ict/icon.jpg"
+                                        srcset="images/ict/icon.jpg, images/ict/icon@2x.jpg 2x"
+                                        alt="ICT Blog"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="en__component en__component--copyblock" style="
+
+
+
+
+
+
+
+">
+                    <!-- Thank you for supporting 4Site Studios -->
+                    <div id="designed-by-4site"><a
+                            href="https://www.4sitestudios.com/engaging-networks" target="_blank"
+                            title="4Site Studios"><span class="text-fade">Designed with </span><span
+                            id="made-with-love">♥</span><span class="text-fade"> by 4Site Studios</span></a>
+                    </div>
+                </div>
+                <!-- Footer End -->
+            </form>
+            <!-- EN Form End -->
+
+
+        </div>
+    </div>
+</div>
+<!-- End 4Site Template Body Wrapper -->
+
+<script>!function () {
+  'remove' in Element.prototype || (Element.prototype.remove = function () {this.parentNode && this.parentNode.removeChild(this)})
+  var e = document.querySelector('.banner-image img')
+  if (e) {
+    var r = e.src
+    document.querySelector('.banner-image').remove(), document.querySelector('.banner').style.backgroundImage = 'url(' + r + ')'
+  }
+}()</script>
+
+<!-- 4Site Template JS -->
+<script async src="dist/js/scripts.js"></script>
+<!-- End 4Site Template JS -->
+
+</body>
+
+</html>

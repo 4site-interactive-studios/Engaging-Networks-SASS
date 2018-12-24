@@ -31,10 +31,10 @@ html.has-image {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $link-color;
   text-decoration: none;
   @include on-event {
-    color: $text-color;
+    color: $link-hover-color;
     outline: 0;
   }
 }
@@ -61,7 +61,7 @@ a {
   margin: 0 auto;
   max-width: map-get($breakpoints, 'large');
   width: 100%;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: $text-font-stack;
 }
 
 #main-content-inner {

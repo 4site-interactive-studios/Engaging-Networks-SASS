@@ -14,8 +14,8 @@
 
 // 1. Configuration and helpers
 @import
-'abstracts/variables-default',
 'themes/variables',
+'abstracts/variables-default',
 'abstracts/functions',
 'abstracts/mixins';
 
@@ -25,5 +25,5 @@
 'vendors/rem';
 
 // 3. Theme -- Uncomment the theme you want to use
-@import 'themes/theme-oca';
-//@import 'themes/theme-ict';
+//@import 'themes/theme-oca';
+@import 'themes/theme-ict';

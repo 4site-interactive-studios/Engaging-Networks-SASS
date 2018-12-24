@@ -917,12 +917,12 @@ html.has-image {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: #3c8eb3;
   text-decoration: none;
 }
 
 a:hover, a:active, a:focus {
-  color: #222222;
+  color: #e54e32;
   outline: 0;
 }
 
@@ -961,9 +961,9 @@ a:hover, a:active, a:focus {
 
 #main-content-wrapper {
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1000px;
   width: 100%;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 #main-content-inner {
@@ -1237,7 +1237,7 @@ body:not(#en__pagebuilder):not(.embedded) #main-content-inner {
 }
 
 /* Below large breakpoint the main-content section is expanded to fill the full screen */
-@media (min-width: 1025px) {
+@media (min-width: 1001px) {
   body {
     background-color: #eeeeee;
   }
@@ -1246,13 +1246,13 @@ body:not(#en__pagebuilder):not(.embedded) #main-content-inner {
   }
   body:not(.embedded) #main-content {
     margin: 2.1875rem;
-    border-radius: 7px;
+    border-radius: 0;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
     overflow: hidden;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 599px) {
   #main-content .indented-body {
     margin: 0 auto;
   }
@@ -1265,15 +1265,23 @@ body:not(#en__pagebuilder):not(.embedded) #main-content-inner {
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: #43505a;
   font-family: "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
   line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #222222;
+  color: #43505a;
   font-family: "vinyl", "Helvetica Neue Bold", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1.brand, h2.brand, h3.brand, h4.brand, h5.brand, h6.brand {
+  color: #e54e32;
+}
+
+strong {
+  color: #6f6f6f;
 }
 
 /**
@@ -1292,7 +1300,7 @@ h1, h2, h3, h4, h5, h6 {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   /* 1 */
   margin-left: auto;
   /* 2 */
@@ -1364,6 +1372,116 @@ h1, h2, h3, h4, h5, h6 {
 .debug label,
 .debug select {
   background: yellow;
+}
+
+.text-monospace {
+  font-family: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.font-weight-light {
+  font-weight: 300 !important;
+}
+
+.font-weight-lighter {
+  font-weight: 200 !important;
+}
+
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.font-weight-bolder {
+  font-weight: 900 !important;
+}
+
+.font-italic {
+  font-style: italic !important;
+}
+
+.text-white {
+  color: #FFF !important;
+}
+
+.text-body {
+  color: #43505a !important;
+}
+
+.text-muted {
+  color: #999999 !important;
+}
+
+.text-black-50 {
+  color: rgba(50, 50, 50, 0.5) !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-break {
+  word-break: break-word !important;
+}
+
+.text-small {
+  font-size: 80% !important;
+}
+
+.text-big {
+  font-size: 120% !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-reset {
+  color: inherit !important;
 }
 
 #main-content {
@@ -1506,7 +1624,7 @@ h1, h2, h3, h4, h5, h6 {
  * Inputs that are multipart (ie Spit Text) will still retain their look on a single row and are not broken up
  * REF: https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
  ***********************************/
-@media (max-width: 767px) {
+@media (max-width: 599px) {
   #main-content .banner.image-100h {
     min-height: 100px;
   }
@@ -1546,8 +1664,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-  background-color: #323232;
-  color: #FFF;
+  background-color: #FFF;
+  color: #43505a;
   font-size: 0.875rem;
   font-style: normal;
   font-stretch: normal;
@@ -1558,11 +1676,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer a {
-  color: #FFF;
+  color: #3c8eb3;
 }
 
 .footer a:hover {
-  color: #e50050;
+  color: #e54e32;
 }
 
 body.embedded #main-content {
@@ -1882,7 +2000,7 @@ body:not(#en__pagebuilder) #main-content .height-500px.click-to-expand:not(.expa
 
 #designed-by-4site a {
   text-decoration: none;
-  color: #222222;
+  color: #43505a;
 }
 
 #designed-by-4site.light-font a {
@@ -1983,7 +2101,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
   padding: 0.25rem 1rem;
   color: #ffffff;
   font-size: 0.75rem;
-  border-radius: 5px;
+  border-radius: 0;
   background-color: #e74b3c;
 }
 
@@ -1991,7 +2109,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 #main-content .en__component .en__field__error-wrapper input,
 #main-content .en__component .en__field__error-wrapper select,
 #main-content .en__component .en__field__error-wrapper textarea {
-  border-radius: 5px;
+  border-radius: 0;
   border: 1px solid #e74b3c;
 }
 
@@ -2019,7 +2137,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 #main-content .en__component .en__field__error-wrapper.en__field--splitselect .en__field__error,
 #main-content .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__error,
 #main-content .en__component .en__field__error-wrapper.en__field--radio.en__field--withOther .en__field__error {
-  border-radius: 5px;
+  border-radius: 0;
   border: 1px solid #e74b3c;
 }
 
@@ -2176,7 +2294,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 
 #main-content .radio-to-buttons label.en__field__label.en__field__label--item:hover,
 #main-content .radio-to-buttons input[type='radio']:checked + label {
-  background-color: #e50050;
+  background-color: #3c8eb3;
   border: 1px solid transparent;
   color: #fafafa;
 }
@@ -2201,7 +2319,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 #main-content .radio-to-buttons label.en__field__label.en__field__label--item {
   display: block;
   padding: 0.9375rem;
-  border-radius: 5px;
+  border-radius: 0;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-size: 1rem;
   text-align: center;
@@ -2345,15 +2463,15 @@ body.form-left #main-content-wrapper {
   height: 2.5rem;
   margin: 0;
   padding: 0.5rem;
-  border: 0.0625rem solid #fafafa;
-  border-radius: 5px;
+  border: 0.0625rem solid #999999;
+  border-radius: 0;
   background-color: #FFF;
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+  box-shadow: none;
   font-family: inherit;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: #222222;
+  color: #43505a;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2392,7 +2510,7 @@ body.form-left #main-content-wrapper {
 #main-content select:focus,
 #main-content textarea:focus {
   outline: none;
-  border: 0.0625rem solid #e50050;
+  border: 0.0625rem solid #3c8eb3;
   background-color: #fafafa;
   box-shadow: 0 0 0.3125rem #cacaca;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -2446,20 +2564,20 @@ body.form-left #main-content-wrapper {
 }
 
 #main-content .en__field__input--checkbox + .en__field__label::before {
-  border-radius: 5px;
+  border-radius: 0;
   box-shadow: none;
 }
 
 #main-content .en__field__input--radio:checked + .en__field__label::before,
 #main-content .en__field__input--checkbox:checked + .en__field__label::before {
-  border-color: #e50050;
-  background-color: #e50050;
+  border-color: #3c8eb3;
+  background-color: #3c8eb3;
 }
 
 #main-content .en__field__input--checkbox:checked + .en__field__label::before {
   content: "\a0\2713";
-  border-color: #e50050;
-  background-color: #e50050;
+  border-color: #3c8eb3;
+  background-color: #3c8eb3;
   color: #ffffff;
 }
 
@@ -2584,6 +2702,8 @@ body.form-left #main-content-wrapper {
   margin-bottom: 0.5rem;
   left: 1rem;
   top: 0.25rem;
+  width: calc(100% - 16px);
+  display: inline-block;
 }
 
 #main-content .show-hidden-input .en__field--donationAmt.monthly-giving .en__field__item--other::after {
@@ -2605,7 +2725,7 @@ body.form-left #main-content-wrapper {
   flex: 1 0 0%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 601px) {
   #main-content .recurring-payment .en__field__item {
     min-width: 170px;
   }
@@ -2618,7 +2738,7 @@ body.form-left #main-content-wrapper {
  * Inputs that are multipart (ie Spit Text) will still retain their look on a single row and are not broken up
  * REF: https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
  ***********************************/
-@media (max-width: 767px) {
+@media (max-width: 599px) {
   /* Override EN Default Behavior */
   .en__component--column.en__component--advcolumn.row-breakout {
     width: auto;
@@ -2670,13 +2790,13 @@ body.form-left #main-content-wrapper {
 #main-content #en_actionMessageToggle_ToggleWrapper button {
   margin: 0;
   background-color: transparent;
-  color: #222222;
+  color: #43505a;
   outline: none;
 }
 
 #main-content #en_actionMessageToggle_SubmitButton button {
   margin: 0;
-  background-color: #e50050;
+  background-color: #e54e32;
   color: #ffffff;
 }
 
@@ -2694,16 +2814,16 @@ body.form-left #main-content-wrapper {
 #main-content .dark-buttons button,
 #main-content .dark-buttons.radio-to-buttons label.en__field__label.en__field__label--item:hover,
 #main-content .dark-buttons.radio-to-buttons input[type='radio']:checked + label {
-  background-color: #e50050;
-  border-color: #e50050;
+  background-color: #3c8eb3;
+  border-color: #3c8eb3;
 }
 
 #main-content .dark-buttons button:hover,
 #main-content .dark-buttons button:focus,
 #main-content .dark-buttons .en__field__input--radio:checked + .en__field__label::before,
 #main-content .dark-buttons .en__field__input--checkbox:checked + .en__field__label::before {
-  background-color: #e50050;
-  border-color: #e50050;
+  background-color: #3c8eb3;
+  border-color: #3c8eb3;
 }
 
 #main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value input,
@@ -2712,10 +2832,10 @@ body.form-left #main-content-wrapper {
 #main-content .dark-buttons .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill:focus
 .en__field--donationAmt .en__field__item--other.has-value input:-webkit-autofill {
   -webkit-text-fill-color: #fff;
-  -webkit-box-shadow: 0 0 0 1000px #e50050 inset;
+  -webkit-box-shadow: 0 0 0 1000px #3c8eb3 inset;
   caret-color: #fff;
-  background-color: #e50050;
-  border-color: #e50050;
+  background-color: #3c8eb3;
+  border-color: #3c8eb3;
   color: #fff;
 }
 
@@ -2754,12 +2874,12 @@ body.form-left #main-content-wrapper {
   font-family: inherit;
   padding: 0.875rem 1rem;
   border: 0.0625rem solid transparent;
-  border-radius: 5px;
+  border-radius: 0;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
-  background-color: #e50050;
+  background-color: #E0A331;
   color: #eeeeee;
 }
 
@@ -2786,13 +2906,13 @@ body.form-left #main-content-wrapper {
 
 #main-content button:hover,
 #main-content button:focus {
-  background-color: #7f002c;
+  background-color: #956916;
 }
 
 #main-content button[disabled],
 #main-content button[disabled]:hover,
 #main-content button[disabled]:focus {
-  background-color: #ff7fac;
+  background-color: #f4deb6;
   color: #eeeeee;
 }
 
@@ -2817,7 +2937,7 @@ body.form-left #main-content-wrapper {
   font-stretch: normal;
   letter-spacing: normal;
   padding: 0 0.9375rem;
-  color: #222222;
+  color: #43505a;
   display: inline-block;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
@@ -2910,6 +3030,31 @@ body.form-left #main-content-wrapper {
 
 #main-content .en__share__button--gplus {
   background-size: 16px;
+}
+
+/* Pad's main content form, unless it's emebeded. */
+body:not(#en__pagebuilder):not(.embedded) .template-2 #main-content-inner {
+  padding: 3.125rem 3.75rem;
+}
+
+#main-content.template-2 .header-logo {
+  justify-content: center;
+  height: auto;
+}
+
+#main-content.template-2 .header-logo img {
+  height: auto;
+}
+
+#main-content.template-2 .header-logo a {
+  cursor: pointer;
+}
+
+/* Below large breakpoint the main-content section is expanded to fill the full screen */
+@media (min-width: 1001px) {
+  body:not(.embedded) #main-content.template-2 {
+    margin: 2.1875rem 0;
+  }
 }
 
 /*# sourceMappingURL=maps/styles.css.map */

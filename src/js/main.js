@@ -1,6 +1,5 @@
 /************************************
  * Template: 4Site Template - Parent Theme Base
- * Project: Organic Consumers Association
  ***********************************/
 
 /************************************
@@ -990,7 +989,7 @@ window.addEventListener('load', function() {
     { id: 'en__field_transaction_ccnumber', placeholder: 'Card number', autocomplete: 'cc-number', type: 'tel' },
     { id: 'en__field_transaction_paymenttype', autocomplete: 'cc-type' },
     { id: 'en__field_transaction_ccvv', type: 'tel', autocomplete: 'cc-csc' },
-    { name: 'transaction.donationAmt.other', placeholder: 'Other amount', type: 'tel' }
+    { name: 'transaction.donationAmt.other', placeholder: 'Other', type: 'tel' }
   ];
 
   var us_field_overrides = [

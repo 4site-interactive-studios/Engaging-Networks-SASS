@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Template 2 Page.
+// -----------------------------------------------------------------------------
+
+/* Pad's main content form, unless it's emebeded. */
+body:not(#en__pagebuilder):not(.embedded) {
+  .template-2 {
+    #main-content-inner {
+      padding: rem(50px 60px);
+    }
+  }
+}
+
+#main-content.template-2 {
+  .header-logo {
+    justify-content: center;
+    height: auto;
+    img {
+      height: auto;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+  }
+}
+/* Below large breakpoint the main-content section is expanded to fill the full screen */
+@include media(">large") {
+  body:not(.embedded) #main-content.template-2 {
+    margin: rem(35px 0);
+  }
+}
