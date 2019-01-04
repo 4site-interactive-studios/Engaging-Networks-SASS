@@ -288,7 +288,7 @@ Element.prototype.isVisible = function() {
   var donation_amount_other_name = 'transaction.donationAmt.other';
   var processing_fee_name = 'supporter.questions.64038';
   var payment_frequency_name = 'transaction.recurrpay';
-  var payment_source_name = 'supporter.questions.63765';
+  var payment_source_class = '.give-by-select';
   var payment_card_type = 'transaction.paymenttype';
   var field_wrapper_error_class = 'en__field__error-wrapper';
   var field_error_class = 'en__field__error';
@@ -468,7 +468,7 @@ Element.prototype.isVisible = function() {
 
 
   window.getPaymentType = function() {
-    var payment_type_buttons = document.querySelectorAll('input[name="' + payment_source_name + '"]');
+    var payment_type_buttons = document.querySelectorAll(payment_source_class+' input[type="radio"]');
     for(i = 0; i < payment_type_buttons.length; i++) {
       if(payment_type_buttons[i].checked) {
         if(payment_type_buttons[i].value == 'card') {
@@ -1202,8 +1202,7 @@ window.addEventListener('load', function() {
     window.addEventListener('load', function() {
     
       // Input names and IDs we reference
-      var payment_method_wrapper_class_name = 'en__field--63765';
-      var payment_method_name = 'supporter.questions.63765';
+      var payment_method_wrapper_class_name = 'en__field--give-by-select';
       var payment_by_card_block_class_name = 'give-by-card';
       var payment_by_paypal_block_class_name = 'give-by-paypal';
       var payment_by_check_block_class_name = 'give-by-check';
@@ -1375,7 +1374,7 @@ window.addEventListener('load', function() {
           // add a class to the body to assist with EN's automatic scroll-to-first-error functionality
           // when we have moved the error display to below the field instead of the default top location
           document.querySelector('body').classList.add('error-jump-assist');
-          var valid_form = validatePaymentFields(window.getSelectedRadioValue(payment_method_name));// && (typeof window.en_nb_valid_email === 'undefined' || window.en_nb_valid_email);
+          var valid_form = validatePaymentFields(window.getSelectedRadioValue(document.querySelectorAll('.'+payment_method_wrapper_class_name + ' input[type="radio"]')[0].getAttribute('name')));// && (typeof window.en_nb_valid_email === 'undefined' || window.en_nb_valid_email);
     
           if(window.getDonationAmount() <= 0) {
             var donation_fields = document.querySelector('input[name="transaction.donationAmt"]');
@@ -1394,7 +1393,7 @@ window.addEventListener('load', function() {
       }
     
       // Initialize the current payment method
-      handlePaymentMethod(window.getSelectedRadioValue(payment_method_name));
+      handlePaymentMethod(window.getSelectedRadioValue(document.querySelectorAll('.'+payment_method_wrapper_class_name + ' input[type="radio"]')[0].getAttribute('name')));
     
       // Initialize error wrapper handling for the errors produced by Engaging Networks
       if (form){
@@ -1448,7 +1447,7 @@ window.addEventListener('load', function() {
       var donation_amount_other_name = 'transaction.donationAmt.other';
       var payment_card_type_name = 'transaction.paymenttype';
       var processing_fee_name = 'supporter.questions.64038';
-      var payment_method_wrapper_class_name = 'en__field--63765';
+      var payment_method_wrapper_class_name = 'en__field--give-by-select';
   
       window.calculateProcessingFee = function() {
         var processing_fee_checkbox = document.querySelector('input[name="' + processing_fee_name + '"]');
