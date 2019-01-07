@@ -2436,6 +2436,7 @@ body.form-left #main-content-wrapper {
   /* Temporary fix of EN Advanced Columns to add IE 11 support */
   /* REF: https://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/ */
   /* REF: https://github.com/philipwalton/flexbugs#flexbug-4 */
+  /* Hide Opt-In Label */
 }
 
 #main-content input[type="date"],
@@ -2723,6 +2724,10 @@ body.form-left #main-content-wrapper {
 
 #main-content .en__component--column.en__component--advcolumn {
   flex: 1 0 0%;
+}
+
+#main-content .en__field--opt-in label {
+  display: none;
 }
 
 @media (min-width: 601px) {

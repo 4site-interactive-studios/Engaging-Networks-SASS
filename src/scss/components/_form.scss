@@ -322,6 +322,11 @@ body.form-left #main-content-wrapper {
   .en__component--column.en__component--advcolumn {
     flex: 1 0 0%;
   }
+
+  /* Hide Opt-In Label */
+  .en__field--opt-in label{
+    display: none;
+  }
 }
 
 @include media(">medium") {
