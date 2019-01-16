@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fernanDOTdo/Organic-Consumers-Engaging-Network-Templates.git"
+    "url": "git+git@github.com:4site-interactive-studios/Engaging-Network-SASS.git"
   },
   "author": "4Site",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fernanDOTdo/Organic-Consumers-Engaging-Network-Templates/issues"
+    "url": "https://github.com/4site-interactive-studios/Engaging-Network-SASS/issues"
   },
-  "homepage": "https://github.com/fernanDOTdo/Organic-Consumers-Engaging-Network-Templates#readme"
+  "homepage": "https://github.com/4site-interactive-studios/Engaging-Network-SASS#readme"
 }
