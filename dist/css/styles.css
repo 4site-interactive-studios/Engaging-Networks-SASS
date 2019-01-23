@@ -1266,18 +1266,18 @@ body:not(#en__pagebuilder):not(.embedded) #main-content-inner {
 .en__field__input--other,
 .en__field__input--splittext,
 .en__field__input--tripletext {
-  width: auto !important;
+  width: auto;
 }
 
 /* Reset height */
 .en__field__input--textarea {
-  height: initial !important;
+  height: initial;
 }
 
 /* Reset minimum and default width */
 .en__component--column {
-  min-width: auto !important;
-  width: auto !important;
+  min-width: auto;
+  width: auto;
 }
 
 /* Fix for flexbox sub-pixel rounding causing a 1px jitter in Chrome. */

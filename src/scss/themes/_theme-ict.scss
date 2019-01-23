@@ -190,19 +190,21 @@ h2 {
       }
     }
   }
-}
 
-#main-content .en__component .en__field.en__field--radio .en__field__item--other input{
-  width: 200px;
-}
+  .en__component .en__field.en__field--radio .en__field__item--other input{
+    width: 200px;
+  }
+  
+  .recurring-payment,
+  .en__field--donationAmt .en__field__element--radio{
+    width: 100%;
+  }
+  
+  /* If an image is at the top of a column next to a header also at the top, the header will appear slightly lower than the top of the image, this compensates for that visual discrepency */
+  .header-spacer-for-image{
+    margin-top: 11px;
+  }
 
-#main-content .recurring-payment, #main-content .en__field--donationAmt .en__field__element--radio{
-  width: 100%;
-}
-
-/* If an image is at the top of a column next to a header also at the top, the header will appear slightly lower than the top of the image, this compensates for that visual discrepency */
-#main-content .header-spacer-for-image{
-  margin-top: 11px;
 }
 
 @include media("<large") {
