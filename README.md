@@ -4,16 +4,18 @@
 ## How to install the repository and work locally
 
 1. Clone the repository to your computer.
-2. Open the terminal and type `npm install` to install the third-party dependencies.
-   - If you don't have npm: https://blog.teamtreehouse.com/install-node-js-npm-mac
-   - Install XCode: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
-   - Install Homebrew via Terminal: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-   - Install NPM via Terminal: `brew install node`
-3. Run `gulp` to start the compiling + watch tasks.
-4. Change anything you want. The assets will get recompiled every time you save.
-5. When you finish, type `CTRL+C` on the terminal to exit the watch task.
-6. Run `gulp prod` to generate the minified assets.
-7. Commit & Push your changes.
+2. If you don't have npm: https://blog.teamtreehouse.com/install-node-js-npm-mac
+    - Install XCode: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
+    - Install Homebrew via Terminal: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+    - Install NPM via Terminal: `brew install node`
+3. Open the terminal and navigate to repository.
+   * Type `npm install` to install the third-party dependencies.
+   * 
+4. Run `gulp` to start the compiling + watch tasks.
+5. Change anything you want. The assets will get recompiled every time you save.
+6. When you finish, type `CTRL+C` on the terminal to exit the watch task.
+7. Run `gulp prod` to generate the minified assets.
+8. Commit & Push your changes.
 
 ## How to customize template/colors
 
