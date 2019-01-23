@@ -6,12 +6,14 @@
 1. Clone the repository to your computer.
 2. Open the terminal and type `npm install` to install the third-party dependencies.
    - If you don't have npm: https://blog.teamtreehouse.com/install-node-js-npm-mac
+   - Install XCode: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
+   - Install via Terminal Homebrew: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   - Install NPM: brew install node
 3. Run `gulp` to start the compiling + watch tasks.
 4. Change anything you want. The assets will get recompiled every time you save.
 5. When you finish, type `CTRL+C` on the terminal to exit the watch task.
 6. Run `gulp prod` to generate the minified assets.
 7. Commit & Push your changes.
-
 
 ## How to customize template/colors
 
