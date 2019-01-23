@@ -188,6 +188,19 @@ h2 {
   margin-right: 15px;
 }
 
+#main-content .en__component .en__field.en__field--radio .en__field__item--other input {
+  width: 200px;
+}
+
+#main-content .recurring-payment, #main-content .en__field--donationAmt .en__field__element--radio {
+  width: 100%;
+}
+
+/* If an image is at the top of a column next to a header also at the top, the header will appear slightly lower than the top of the image, this compensates for that visual discrepency */
+#main-content .header-spacer-for-image {
+  margin-top: 11px;
+}
+
 @media (max-width: 999px) {
   #main-content .body-copy > div:last-child {
     max-width: 30%;
@@ -235,6 +248,15 @@ h2 {
   }
   #main-content .footer p {
     text-align: center !important;
+  }
+  #main-content .responsive-image img,
+  #main-content img.responsive-image {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  #main-content #main-content .header-spacer-for-image {
+    margin-top: 0px;
   }
 }
 

@@ -54,6 +54,24 @@
   width: 1px;
 }
 
+/**
+ * Hides Content or Columns, but not when being viewed in Page Builder
+ */
+body:not(#en__pagebuilder) .hide{
+  display: none !important;
+}
+
+body:not(#en__pagebuilder) .hide{
+  display: none !important;
+}
+
+#en__pagebuilder .hide{
+  background-color: #ff00001a !important;
+}
+
+#en__pagebuilder .hide.en__component--column{
+  outline-color: #ff0000 !important;
+}
 
 /************************************
  * Utility: Page Breakouts
