@@ -10,7 +10,6 @@
     - Install NPM via Terminal: `brew install node`
 3. Open the terminal and navigate to repository.
    * Type `npm install` to install the third-party dependencies.
-   * 
 4. Run `gulp` to start the compiling + watch tasks.
 5. Change anything you want. The assets will get recompiled every time you save.
 6. When you finish, type `CTRL+C` on the terminal to exit the watch task.
