@@ -8,7 +8,7 @@
     - Install XCode: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
     - Install Homebrew via Terminal: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
     - Install NPM via Terminal: `brew install node`
-3. Open the terminal and navigate to repository.
+3. Open Terminal and navigate to repository.
    * Type `npm install` to install the third-party dependencies.
 4. Run `gulp` to start the compiling + watch tasks.
 5. Change anything you want. The assets will get recompiled every time you save.
