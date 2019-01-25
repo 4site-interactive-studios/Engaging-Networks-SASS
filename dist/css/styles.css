@@ -1850,7 +1850,7 @@ body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) .click-
 }
 
 body:not(#en__pagebuilder) #main-content .click-to-expand:not(.expanded) .click-to-expand-cta {
-  background: url(https://apps.4sitestudios.com/temp/custom-template/images/collapsed-div.png);
+  background: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/collapsed-div.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 107px 29px;
@@ -2415,7 +2415,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 }
 
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) label {
-  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-card-black.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-card-black.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -2425,7 +2425,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 }
 
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) label {
-  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-paypal-black.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-paypal-black.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 14px;
@@ -2435,7 +2435,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 }
 
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) label {
-  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-check-black.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-check-black.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -2446,7 +2446,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) label.en__field__label.en__field__label--item:hover,
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) input[type='radio']:checked + label {
-  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-card-white.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-card-white.svg);
 }
 
 #main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(1) label.en__field__label.en__field__label--item:hover,
@@ -2457,7 +2457,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) label.en__field__label.en__field__label--item:hover,
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) input[type='radio']:checked + label {
-  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-paypal-white.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-paypal-white.svg);
 }
 
 #main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(2) label.en__field__label.en__field__label--item:hover,
@@ -2468,7 +2468,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) label.en__field__label.en__field__label--item:hover,
 #main-content .give-by-select.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) input[type='radio']:checked + label {
-  background-image: url(https://apps.4sitestudios.com/temp/custom-template/images/icon-check-white.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-check-white.svg);
 }
 
 #main-content .give-by-select.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(3) label.en__field__label.en__field__label--item:hover,
