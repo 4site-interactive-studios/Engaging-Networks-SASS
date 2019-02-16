@@ -28,7 +28,7 @@
 .en__field__input--other,
 .en__field__input--splittext,
 .en__field__input--tripletext {
-	width: auto !important;
+	/* width: auto !important; */
 }
 
 /* Reset height */
