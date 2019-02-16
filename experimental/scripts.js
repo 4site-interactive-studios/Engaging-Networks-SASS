@@ -1,3 +1,25 @@
+// document.getElementsByTagName("BODY")[0]
+var body = document.body;
+var mainContentWrapper = document.getElementById("main-content-wrapper");
+
+if (window.location.search.indexOf('mode=DEMO') > -1) {
+    // More advanced method: https://gomakethings.com/getting-all-query-string-values-from-a-url-with-vanilla-js/
+    body.classList.add("demo");
+    mainContentWrapper.insertAdjacentHTML('afterend', '<button id="debug-template" type="button" style="display: none;" onclick="debugTemplate()">Toggle Debug</button>');
+    mainContentWrapper.insertAdjacentHTML('afterend', '<button id="visualize-layout" type="button" style="display: none;" onclick="visualizeLayout()">Visualize Layout</button>');
+}
+
+function debugTemplate() {
+    body.classList.toggle("debug");
+    body.classList.remove("visualize-layout");
+}
+
+function visualizeLayout() {
+    body.classList.toggle("visualize-layout");
+    body.classList.remove("debug");
+}
+
+
 /************************************
  * EN HELPER SCRIPTS
  ***********************************/
