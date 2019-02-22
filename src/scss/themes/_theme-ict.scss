@@ -86,6 +86,9 @@ h2 {
       text-transform: uppercase;
       font-size: rem(30px);
     }
+    .en__field--donationAmt .en__field__item--other.has-value input{
+      background-color: $brand-color;
+    }
   }
 
   .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
@@ -219,12 +222,21 @@ h2 {
 }
 
 @include media("<=medium") {
+  body:not(#en__pagebuilder):not(.embedded) {
+    .template-2 {
+      #main-content-inner {
+        padding: rem(50px 25px);
+      }
+    }
+  }
+
   h1 {
     font-size: rem(42px);
     margin-bottom: 30px;
   }
   h2 {
-    font-size: rem(35px);
+    font-size: rem(32px);
+    letter-spacing: 2px;
   }
 
   #main-content {
@@ -243,12 +255,26 @@ h2 {
       .en__field__item {
         margin: 10px auto !important;
         display: block;
-        width: 90%;
+        width: 100%;
       }
     }
 
-    .en__field--donationAmt .en__field__item--other input{
+    .en__component .en__field.en__field--radio .en__field__item--other input{
       min-width: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .en__field--recurrpay {
+      .en__field__item {
+        max-width: 100%;
+      }
+    }
+
+    .give-by-select {
+      .en__field__item {
+        max-width: 100%;
+      }
     }
 
     .body-copy {

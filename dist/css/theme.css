@@ -95,6 +95,10 @@ h2 {
   font-size: 1.875rem;
 }
 
+#main-content .pill-buttons .en__field--donationAmt .en__field__item--other.has-value input {
+  background-color: #e54e32;
+}
+
 #main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
   text-transform: none;
   line-height: 1.8;
@@ -212,12 +216,16 @@ h2 {
 }
 
 @media (max-width: 600px) {
+  body:not(#en__pagebuilder):not(.embedded) .template-2 #main-content-inner {
+    padding: 3.125rem 1.5625rem;
+  }
   h1 {
     font-size: 2.625rem;
     margin-bottom: 30px;
   }
   h2 {
-    font-size: 2.1875rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
   #main-content .en__component--formblock {
     display: block;
@@ -232,10 +240,18 @@ h2 {
   #main-content .en__field__element .en__field__item {
     margin: 10px auto !important;
     display: block;
-    width: 90%;
+    width: 100%;
   }
-  #main-content .en__field--donationAmt .en__field__item--other input {
+  #main-content .en__component .en__field.en__field--radio .en__field__item--other input {
     min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #main-content .en__field--recurrpay .en__field__item {
+    max-width: 100%;
+  }
+  #main-content .give-by-select .en__field__item {
+    max-width: 100%;
   }
   #main-content .body-copy > div:first-child {
     margin-right: 0;
