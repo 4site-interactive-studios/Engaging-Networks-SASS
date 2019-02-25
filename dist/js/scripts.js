@@ -1706,3 +1706,22 @@ window.addEventListener('load', function() {
     }
   
   }); })();
+
+
+  /**********************************************************
+  *  De-select opt-in if country is changed to outside the US
+  ***********************************************************/
+  (function() {
+    var country = document.getElementById('en__field_supporter_country');
+    if(country) {
+      country.addEventListener('change', function(e) {
+        if(e.target.value != 'US') {
+          var checkboxes = document.querySelectorAll('.en__field--opt-in .en__field__input--checkbox');
+          for(var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = false;
+          }
+        }
+      });
+    }
+
+  })();
