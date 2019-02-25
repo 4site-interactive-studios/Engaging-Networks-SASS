@@ -16,7 +16,7 @@ body:not(#en__pagebuilder):not(.embedded) {
     justify-content: center;
     height: auto;
     img {
-      height: auto;
+      width: 178px;
     }
 
     a {
@@ -29,5 +29,10 @@ body:not(#en__pagebuilder):not(.embedded) {
 @include media(">large") {
   body:not(.embedded) #main-content.template-2 {
     margin: rem(35px 0);
+  }
+  body{
+    background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10014/ICT-Donation-page-Background-Pattern-tile-cream.png?v=1550786373000");
+    background-repeat: repeat;
+    background-color: #f6f2e6;
   }
 }
