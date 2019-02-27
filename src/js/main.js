@@ -1709,7 +1709,7 @@ window.addEventListener('load', function() {
 
 
   /**********************************************************
-  *  De-select opt-in if country is changed to outside the US.
+  *  De-select opt-in if country is changed to outside the US
   ***********************************************************/
   (function() {
     var country = document.getElementById('en__field_supporter_country');
