@@ -399,7 +399,7 @@ body.form-left #main-content-wrapper {
   }
 
   .en__field__input--checkbox:checked + .en__field__label::before {
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 13px !important;
+    line-height: 20px !important;
   }
 }
