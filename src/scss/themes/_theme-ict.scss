@@ -3,7 +3,10 @@
 // theme.
 // -----------------------------------------------------------------------------
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 
@@ -32,13 +35,13 @@ h2 {
 }
 
 #main-content {
-
   .en__field__input--checkbox + .en__field__label:before {
     font-size: rem(16px);
     top: 7px;
   }
 
-  .en__field__label, .en__component--copyblock {
+  .en__field__label,
+  .en__component--copyblock {
     font-size: rem(18px);
   }
 
@@ -57,14 +60,16 @@ h2 {
       max-width: 50%;
       margin: auto;
 
-      div, p, img {
+      div,
+      p,
+      img {
         margin: auto;
       }
     }
   }
 
   hr {
-    border-top: 1px solid #E4E4E4;
+    border-top: 1px solid #e4e4e4;
     margin: 45px 0;
   }
 
@@ -77,21 +82,24 @@ h2 {
   .pill-buttons {
     button,
     &.radio-to-buttons label,
-    &.radio-to-buttons input[type='radio'] + label,
-    &.radio-to-buttons input[type='text'],
-    &.radio-to-buttons input[type='number'],
-    &.radio-to-buttons input[type='tel'] {
+    &.radio-to-buttons input[type="radio"] + label,
+    &.radio-to-buttons input[type="text"],
+    &.radio-to-buttons input[type="number"],
+    &.radio-to-buttons input[type="tel"] {
       border-radius: 0;
       padding: rem(10px 25px);
       text-transform: uppercase;
       font-size: rem(30px);
     }
-    .en__field--donationAmt .en__field__item--other.has-value input{
+    .en__field--donationAmt .en__field__item--other.has-value input {
       background-color: $brand-color;
+      color: $field-bg-color;
     }
   }
 
-  .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
+  .en__field--donationAmt.monthly-giving
+    div:not(.en__field__item--other)
+    .en__field__label--item::after {
     text-transform: none;
     line-height: 1.8;
   }
@@ -110,14 +118,18 @@ h2 {
 
   .en__component--formblock.items-might-wrap .en__field,
   .en__component--formblock.items-might-wrap .en__field:first-of-type,
-  .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type,
+  .en__component--formblock.items-might-wrap
+    .en__field
+    div.en__field__item:first-of-type,
   .en__component--formblock.items-might-wrap .en__field div.en__field__item {
     margin-left: 0;
     margin-right: rem(16px);
   }
 
   .en__component--formblock.items-might-wrap .en__field:last-of-type,
-  .en__component--formblock.items-might-wrap .en__field div.en__field__item:last-of-type {
+  .en__component--formblock.items-might-wrap
+    .en__field
+    div.en__field__item:last-of-type {
     margin-left: 0;
     margin-right: 0;
   }
@@ -153,15 +165,23 @@ h2 {
       background-position-x: 40px !important;
     }
 
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item input[type='radio']:checked + label {
+    &.radio-to-buttons.dark-buttons
+      .en__field__element--radio
+      .en__field__item
+      label.en__field__label.en__field__label--item:hover,
+    &.radio-to-buttons.dark-buttons
+      .en__field__element--radio
+      .en__field__item
+      input[type="radio"]:checked
+      + label {
       background-color: $brand-color !important;
       border-color: $brand-color !important;
     }
   }
 
-  .radio-to-buttons.dark-buttons label.en__field__label.en__field__label--item:hover,
-  .radio-to-buttons.dark-buttons input[type='radio']:checked + label {
+  .radio-to-buttons.dark-buttons
+    label.en__field__label.en__field__label--item:hover,
+  .radio-to-buttons.dark-buttons input[type="radio"]:checked + label {
     background-color: $brand-color !important;
     border-color: $brand-color !important;
   }
@@ -194,20 +214,19 @@ h2 {
     }
   }
 
-  .en__component .en__field.en__field--radio .en__field__item--other input{
+  .en__component .en__field.en__field--radio .en__field__item--other input {
     width: 200px;
   }
-  
+
   .recurring-payment,
-  .en__field--donationAmt .en__field__element--radio{
+  .en__field--donationAmt .en__field__element--radio {
     width: 100%;
   }
-  
+
   /* If an image is at the top of a column next to a header also at the top, the header will appear slightly lower than the top of the image, this compensates for that visual discrepency */
-  .header-spacer-for-image{
+  .header-spacer-for-image {
     margin-top: 11px;
   }
-
 }
 
 @include media("<large") {
@@ -217,7 +236,6 @@ h2 {
         max-width: 30%;
       }
     }
-
   }
 }
 
@@ -259,7 +277,7 @@ h2 {
       }
     }
 
-    .en__component .en__field.en__field--radio .en__field__item--other input{
+    .en__component .en__field.en__field--radio .en__field__item--other input {
       min-width: 0;
       width: 100%;
       text-align: center;
@@ -296,22 +314,21 @@ h2 {
       margin: rem(16px auto);
     }
 
-    .footer{
-      p{
+    .footer {
+      p {
         text-align: center !important;
       }
     }
 
     .responsive-image img,
-    img.responsive-image{
-        width: 100%;
-        max-width: 100%;     
-        min-width: 100%;
+    img.responsive-image {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
     }
 
-    #main-content .header-spacer-for-image{
+    #main-content .header-spacer-for-image {
       margin-top: 0px;
     }
-
   }
 }

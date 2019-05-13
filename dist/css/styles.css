@@ -2629,7 +2629,7 @@ body.form-left #main-content-wrapper {
   border: 0.0625rem solid #999999;
   box-shadow: inset 0 0 0 0.3125rem #fff;
   cursor: pointer;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
   transition-property: border-color, background-color;
 }
 
@@ -2673,7 +2673,9 @@ body.form-left #main-content-wrapper {
   /* Hide Edit and Submit button once a collapsed action is expanded */
 }
 
-#main-content .msgDetails .en__component--contactblock .en__field__input--checkbox + .en__field__label::before {
+#main-content .msgDetails .en__component--contactblock
+.en__field__input--checkbox
++ .en__field__label::before {
   top: -2%;
 }
 
@@ -2725,7 +2727,9 @@ body.form-left #main-content-wrapper {
   min-width: 215px;
 }
 
-#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) .en__field__label--item::after {
+#main-content .en__field--donationAmt.monthly-giving
+div:not(.en__field__item--other)
+.en__field__label--item::after {
   content: "/mo";
   line-height: 2;
   font-size: 75%;
@@ -2734,13 +2738,25 @@ body.form-left #main-content-wrapper {
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
-#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input:checked + .en__field__label--item::after,
-#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input:hover + .en__field__label--item::after {
-  color: #FFF;
+#main-content .en__field--donationAmt.monthly-giving
+div:not(.en__field__item--other)
+input:checked
++ .en__field__label--item::after,
+#main-content .en__field--donationAmt.monthly-giving
+div:not(.en__field__item--other)
+input:hover
++ .en__field__label--item::after {
+  color: #fff;
 }
 
-#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input[value="Other"] + .en__field__label--item::after,
-#main-content .en__field--donationAmt.monthly-giving div:not(.en__field__item--other) input[value="other"] + .en__field__label--item::after {
+#main-content .en__field--donationAmt.monthly-giving
+div:not(.en__field__item--other)
+input[value="Other"]
++ .en__field__label--item::after,
+#main-content .en__field--donationAmt.monthly-giving
+div:not(.en__field__item--other)
+input[value="other"]
++ .en__field__label--item::after {
   content: initial;
 }
 
@@ -2767,7 +2783,7 @@ body.form-left #main-content-wrapper {
 
 #main-content .show-hidden-input .en__field--donationAmt .en__field__item--other::after {
   display: block;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 80%;
   position: relative;
   font-family: inherit;
@@ -2780,11 +2796,15 @@ body.form-left #main-content-wrapper {
   display: inline-block;
 }
 
-#main-content .show-hidden-input .en__field--donationAmt.monthly-giving .en__field__item--other::after {
+#main-content .show-hidden-input
+.en__field--donationAmt.monthly-giving
+.en__field__item--other::after {
   content: "enter monthly amount";
 }
 
-#main-content .show-hidden-input .en__field--donationAmt:not(.monthly-giving) .en__field__item--other::after {
+#main-content .show-hidden-input
+.en__field--donationAmt:not(.monthly-giving)
+.en__field__item--other::after {
   content: "enter amount";
 }
 
@@ -2822,11 +2842,14 @@ body.form-left #main-content-wrapper {
     width: auto;
   }
   /* Hide all the middle giving value */
-  .donation-amount.show-hidden-input.round-buttons .en__field__item:not(:first-of-type):not(:last-of-type) {
+  .donation-amount.show-hidden-input.round-buttons
+.en__field__item:not(:first-of-type):not(:last-of-type) {
     display: none;
   }
   /* Show the second giving value */
-  #main-content .donation-amount.show-hidden-input.round-buttons .en__field__item:nth-child(2) {
+  #main-content
+.donation-amount.show-hidden-input.round-buttons
+.en__field__item:nth-child(2) {
     display: initial !important;
   }
   /* Hides long form country select */
@@ -2840,6 +2863,13 @@ body.form-left #main-content-wrapper {
   .en__component--column.en__component--advcolumn,
   .en__component--row--2 .en__component--column {
     width: 100%;
+  }
+  #main-content .en__field__input--checkbox + .en__field__label {
+    display: block;
+  }
+  .en__field__input--checkbox:checked + .en__field__label::before {
+    font-size: 13px;
+    line-height: 20px;
   }
 }
 
