@@ -3142,7 +3142,7 @@ input[value="other"]
 
 /* Pad's main content form, unless it's emebeded. */
 body:not(#en__pagebuilder):not(.embedded) .template-2 #main-content-inner {
-  padding: 3.125rem 3.75rem;
+  padding: 0.9375rem 3.125rem;
 }
 
 #main-content.template-2 .header-logo {
@@ -3152,6 +3152,7 @@ body:not(#en__pagebuilder):not(.embedded) .template-2 #main-content-inner {
 
 #main-content.template-2 .header-logo img {
   width: 178px;
+  margin: 15px auto;
 }
 
 #main-content.template-2 .header-logo a {

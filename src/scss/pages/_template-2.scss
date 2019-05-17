@@ -6,7 +6,7 @@
 body:not(#en__pagebuilder):not(.embedded) {
   .template-2 {
     #main-content-inner {
-      padding: rem(50px 60px);
+      padding: rem(15px 50px);
     }
   }
 }
@@ -17,12 +17,12 @@ body:not(#en__pagebuilder):not(.embedded) {
     height: auto;
     img {
       width: 178px;
+      margin: 15px auto;
     }
 
     a {
       cursor: pointer;
     }
-
   }
 }
 /* Below large breakpoint the main-content section is expanded to fill the full screen */
@@ -30,7 +30,7 @@ body:not(#en__pagebuilder):not(.embedded) {
   body:not(.embedded) #main-content.template-2 {
     margin: rem(35px 0);
   }
-  body{
+  body {
     background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10014/ICT-Donation-page-Background-Pattern-tile-cream.png?v=1550786373000");
     background-repeat: repeat;
     background-color: #f6f2e6;
