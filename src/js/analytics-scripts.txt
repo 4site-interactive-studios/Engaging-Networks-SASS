@@ -1,0 +1,171 @@
+<!-- IMPORTANT: WORK IN PROGRESS, NOT CURRENTLY FUNCTIONAL -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXXX-X');
+<script>
+
+<!-- Enhanced eCommerce for gtag.js - Google Analytics -->
+<script>
+
+    // REFERENCES
+    // https://developers.google.com/analytics/devguides/collection/gtagjs/enhanced-ecommerce
+    // https://developers.google.com/gtagjs/reference/event
+    // https://developers.google.com/analytics/devguides/collection/gtagjs/events
+    //
+    // EVENTS
+    // add_to_cart - a user adds items to cart (view a donation page)
+    // begin_checkout - a user begins checkout (starts editing the donation form)
+    // checkout_progress - a user completes a checkout step (completes a field on the donation form)
+    // purchase - a user completes a purchase (completes the form)
+    // exception - an error occurs (runs into trouble submitting the form)
+
+    gtag('require', 'ec');
+
+    // Called when a donation is viewed or "a product is added to a shopping cart".
+    function addToCart() {
+        gtag('ec:addProduct',{
+        'id': '${page~title}', // Product ID/SKU - Type: string
+        'name': '${page~title}', // Product name - Type: string
+        'category': 'Donation', // Product category - Type: string
+        'brand': 'RAN', // Product brand - Type: string
+        'variant': '{receipt_data~recurringFrequency}', // Variant of the product like: color, size etc - Type: string
+        'price': '{receipt_data~amount~[en1]}', // Product position in a list - Type: numeric Example: 10
+        'quantity': 1
+    });
+
+    // The enhanced ecommerce command which is used to measure product add to cart.
+    gtag('ec:setAction', 'add'); // measure product add to cart
+        gtag('send', 'event', 'enhanced ecommerce', 'button click', 'add to Cart'); // Send 'add to cart' using an event.
+    }
+
+    // Call the "addToCart" function on load
+    document.addEventListener("DOMContentLoaded", function() {
+        addToCart();
+    });
+
+    // Transaction level information is provided via an actionFieldObject.
+    gtag('ec:setAction', 'purchase', {
+    'id': '${page~title}',
+    'affiliation': 'Engaging Networks - Donation Page',
+    'revenue': '{receipt_data~amount~[en1]}'
+    });
+
+    gtag('send', 'pageview');     // Send transaction data with initial pageview.
+</script>
+
+<!-- Gift Amount and Frequency - Engaging Networks -->
+<script>
+
+    function getGiftAmount(){
+
+        var giftAmount = 'Not Available';
+        var selectedGiftAmount = document.getElementsByName('transaction.donationAmt');
+        var receiptGiftAmount = '{receipt_data~amount~[en1]}';
+
+        // If there is no returned receipting variable for Gift Amount
+        if (receiptGiftAmount.includes('data')){
+            receiptGiftAmount = '';
+        }
+        
+        if (receiptGiftAmount){
+            giftAmount = receiptGiftAmount;
+
+            //Strip characters except numbers and decimal, and force two trailing decimal places
+            giftAmount = parseFloat(Math.round(giftAmount.replace(/[^0-9.]/g, "") * 100) / 100).toFixed(2);   
+        }
+        
+        if (selectedGiftAmount){
+            for (var i = 0, length = selectedGiftAmount.length; i < length; i++){
+                if (selectedGiftAmount[i].checked){
+                    giftAmount = selectedGiftAmount[i].value;
+
+                    //Strip characters except numbers and decimal, and force two trailing decimal places
+                    giftAmount = parseFloat(Math.round(giftAmount.replace(/[^0-9.]/g, "") * 100) / 100).toFixed(2);
+                    break;
+                }
+            }
+        } 
+
+        console.log('Gift Amount is: ' + giftAmount);
+    }
+
+    function getGiftFrequency(){
+
+        var giftFrequency = 'Not Available';
+        var selectedFrequency = document.getElementsByName('transaction.recurrpay');
+        var paymentProcessorFrequency = document.getElementsByName('transaction.recurrfreq')[0];
+        if (paymentProcessorFrequency){
+            var paymentProcessorFrequency = paymentProcessorFrequency.value;
+        }
+        var receiptFrequency = '{receipt_data~recurringFrequency}';
+       
+        // If there is no returned receipting variable for Gift Frequency
+        if (receiptFrequency.includes('data')){
+            receiptFrequency = '';
+        }
+
+        if (receiptFrequency){
+            giftFrequency = receiptFrequency;
+        }
+
+        if (selectedFrequency){
+            for (var i = 0, length = selectedFrequency.length; i < length; i++){
+                if (selectedFrequency[i].checked){
+                    giftFrequency = selectedFrequency[i].value;
+                    if (giftFrequency == "N" || giftFrequency == "NO"){   
+                        giftFrequency = "ONE-TIME"
+                    }else if (giftFrequency == "Y" || giftFrequency == "YES"){
+                        if (paymentProcessorFrequency){
+                            giftFrequency = paymentProcessorFrequency;
+                        } else {
+                            giftFrequency = "RECURRING"
+                        }                    
+                    }
+                    break;
+                }
+            }
+        }
+
+        console.log('Gift Frequency is: ' + giftFrequency);
+    }
+ 
+    // On Gift Amount Change
+    var giftAmountOptions = document.getElementsByName('transaction.donationAmt');
+    if (giftAmountOptions){
+        var prev = null;
+        for (var i = 0; i < giftAmountOptions.length; i++) {
+            giftAmountOptions[i].addEventListener('change', function() {
+                if (this !== prev) {
+                    prev = this;
+                }
+                getGiftAmount();  
+            });
+        }
+    }
+
+    // On Gift Frequency Change
+    var giftFrequencyOptions = document.getElementsByName('transaction.recurrpay');
+    if (giftFrequencyOptions){
+        var prev = null;
+        for (var i = 0; i < giftFrequencyOptions.length; i++) {
+            giftFrequencyOptions[i].addEventListener('change', function() {
+                if (this !== prev) {
+                    prev = this;
+                }
+                getGiftFrequency();
+            });
+        }
+    }  
+
+    // On Page Load
+    document.addEventListener('DOMContentLoaded', function() {
+        getGiftAmount();
+        getGiftFrequency();
+    });     
+</script>
