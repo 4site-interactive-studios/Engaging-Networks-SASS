@@ -1,0 +1,186 @@
+/* Reset input widths */
+.en__field__label,
+.en__field__input--calendar,
+.en__field__input--email,
+.en__field__input--number,
+.en__field__input--password,
+.en__field__input--telephone,
+.en__field__input--text,
+.en__field__input--textarea,
+.en__field__input--select,
+.en__field__input--other,
+.en__field__input--splittext,
+.en__field__input--tripletext {
+	/* width: auto !important; */
+}
+
+/* Reset height */
+.en__field__input--textarea {
+	height: initial !important;
+}
+
+/* Reset minimum and default width */
+.en__component--column {
+    min-width: auto !important;
+    width: auto !important;
+}
+
+/************************************
+  * General overrides of EN styles
+  ***********************************/
+ 
+ /* QA Needed: In the event Theme CSS causes a hidden field to become displayed, forrce its display to remain hidden */ 
+ /* This was an issue originally reported by EN staff, not sure if it still persists with recent styling updates */
+ #main-content .en__hidden{
+    display: none !important;
+}
+
+#main-content .en__field,
+#main-content .en__captcha{
+padding-bottom: 0;
+margin-bottom: 1rem;
+}
+
+/* For the custom fields we can properly space them, but for EN canned fields we have to fake the funk since we don't know when row-wraps will happen in Flexbox. */
+#main-content .en__component--formblock{
+    /*
+display: flex;
+flex-direction: row;*/
+}
+
+/* For inputs with multiple components, apply the bottom margin to the field items so that if they wrap they maintain vertical spacing between them */
+#main-content .en__component .en__field.en__field--radio,
+#main-content .en__component .en__field.en__field--checkbox,
+#main-content .en__component .en__field.en__field--splittext,
+#main-content .en__component .en__field.en__field--tripletext,
+#main-content .en__component .en__field.en__field--splitselect,
+#main-content .en__component .en__field.en__field--tripleselect{
+margin-bottom: 0;
+}
+
+/* Make the spacing between wrapping elements tighter so the user knows they're related */
+#main-content .en__component .en__field.en__field--radio .en__field__item,
+#main-content .en__component .en__field.en__field--checkbox .en__field__item,
+#main-content .en__component .en__field.en__field--splittext .en__field__item,
+#main-content .en__component .en__field.en__field--tripletext .en__field__item,
+#main-content .en__component .en__field.en__field--splitselect .en__field__item,
+#main-content .en__component .en__field.en__field--tripleselect .en__field__item{
+margin-bottom: .25rem;
+}
+
+/* Pick up the normal spacing on the last element so form pacing continues as expected */
+/*
+#main-content .en__component .en__field.en__field--radio .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--checkbox .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--splittext .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--tripletext .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--splitselect .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--tripleselect .en__field__item:last-of-type{
+margin-bottom: 1rem;
+}*/
+
+
+/* QA Needed: Does not actually do what it's supposed to when all elelements are on same row. */
+#main-content .en__component .en__field.en__field--radio .en__field__item--other,
+#main-content .en__component .en__field.en__field--checkbox .en__field__item--other{
+    margin-top: .25rem;
+    margin-bottom: 1.25rem;
+}
+
+#main-content .en__field__element{
+width: 100%;
+display: flex;
+}
+
+#main-content .en__component .en__field,
+#main-content .en__component .en__field--splitselect,
+#main-content .en__component .en__field--tripletext,
+#main-content .en__component .en__field--splitselect,
+#main-content .en__component .en__field--tripleselect {
+flex-basis: 100%;
+display: flex;
+flex-direction: column;
+}
+
+/*
+#main-content .en__component--formblock .en__field,
+#main-content .en__component--formblock .en__field div.en__field__item{
+margin-left: .5rem;
+margin-right: .5rem;
+}*/
+
+/* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
+body #main-content .en__component--formblock .en__field:last-of-type,
+body #main-content .en__component--formblock .en__field div.en__field__item:last-of-type{
+margin-right: 0rem;
+}
+
+
+#main-content .en__component--formblock .en__field:first-of-type,
+#main-content .en__component--formblock .en__field div.en__field__item:first-of-type{
+margin-left: 0rem;
+}
+
+#main-content .en__component--formblock.items-might-wrap .en__field:last-of-type,
+#main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:last-of-type,
+#main-content .en__component--formblock.items-might-wrap .en__field:first-of-type,
+#main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type{
+margin-left: .5rem;
+margin-right: .5rem;
+}
+
+#main-content .en__component--formblock .en__field:only-child,
+#main-content .en__component--formblock .en__field div.en__field__item:only-child{
+margin-left: 0;
+margin-right: 0;
+}
+
+#main-content .en__component--formblock .row-wrap .en__field,
+#main-content .en__component--formblock .row-wrap .en__field div.en__field__item{
+margin-left: .5rem;
+margin-right: .5rem;
+}
+
+#main-content .en__field__item {
+padding: 0;
+
+}
+
+#main-content .en__field__element--splittext .en__field__item,
+#main-content .en__field__element--splitselect .en__field__item{
+width: 50%;
+}
+#main-content .en__field__element--tripletext .en__field__item,
+#main-content .en__field__element--tripleselect .en__field__item{
+width: 33.333333%;
+}
+
+
+
+/* EN sets field labels to a fixed width of 180px, this makes them responsive */
+#main-content .en__field__label {
+padding-top: .25em;
+padding-bottom: .25em;
+width: auto;
+}
+
+/* Remove fixed min-width on Thermometer bar */
+#main-content .enWidget__bar .enWidget__progress{
+min-width: initial;
+}
+
+ /* EN sets background of the contact block to white making it not ideal for non-white backgrounds. This resets it to an initial state "transparent". */
+ #main-content .en__contact__toggle,
+ #main-content .en__contact--open .en__contact__toggle {
+     background-color: initial;
+ }
+
+ /* Make sure that background colors are not hard coded */
+ #main-content .en__twitterTarget,
+ #main-content .en__tweetBackgroundText,
+ #main-content .en__tweet,
+ #main-content .en__tweetDisabled,
+ #main-content .en__tweetButton,
+ #main-content .en__tweetContact{
+   background-color: initial;
+ }

@@ -249,3 +249,61 @@ Element.prototype.isVisible = function() {
       document.querySelector(submit_button_selector).disabled = false;      
     });
   }
+
+/************************************
+ * INPUT AND TEXTAREA ACTIVITY CLASSES (FOCUS AND BLUR)
+ * REF: https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
+ ***********************************/
+
+const enInput = (() => {
+
+// add has-value class
+const handleFocus = (e) => {
+    const target = e.target;
+    const targetWrapper = target.parentNode.parentNode;
+    targetWrapper.classList.add('has-value');
+    // targetWrapper.classList.remove('en__field--validationFailed');
+    // targetWrapper.classList.add('en__field--validationNeeded');
+    // targetWrapper.removeChild(targetWrapper.firstChild);
+    // target.setAttribute('placeholder', target.getAttribute('data-placeholder'));
+};
+
+// remove has-value class
+const handleBlur = (e) => {
+    const target = e.target;
+    const targetWrapper = target.parentNode.parentNode;
+
+    if(target.value) {
+        targetWrapper.classList.add('has-value');
+    }else{
+        targetWrapper.classList.remove('has-value');
+    }
+};
+
+// register events
+const bindEvents = (element) => {
+    const floatField = element.querySelector('input, textarea');
+    floatField.addEventListener('focus', handleFocus);
+    floatField.addEventListener('blur', handleBlur);    
+};
+
+// get DOM elements
+const init = () => {
+    const floatContainers = document.querySelectorAll('.en__field--text, .en__field--textarea');
+
+    floatContainers.forEach((element) => {
+
+        if (element.querySelector('input, textarea').value) {
+            element.parentNode.parentNode.classList.add('has-value');
+        }
+
+    bindEvents(element);
+    });
+};
+
+return {
+    init: init
+};
+})();
+
+enInput.init();

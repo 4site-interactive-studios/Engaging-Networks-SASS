@@ -1,0 +1,62 @@
+/*
+ * ##########################################################
+ * # INTERNET EXPLORER 11 SUPPORT (IE11)
+ * #
+ * # IE 11 does not have full support for CSS grids, but the main content area which is built with Engaging Network's Advanced Columns will work
+ * # However to make this possible, subsequent Advanced Columns sections will display as auto width content areas on IE 11 and not full width
+ * # On all other modern browsers they will display as full width in the content, filling the available space, similar to Flexbox
+ * # To best support IE 11 only use a single Advanced Column component on your page for the layout. All other rows should be the one or two column rows component
+ * ##########################################################
+ */
+
+/* Grid fixes for IE goes here... */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    /* All three column advanced grids */
+    .en__component--advcolumn:first-child:nth-last-child(3),
+    .en__component--advcolumn:first-child:nth-last-child(3) ~ .en__component--advcolumn {
+
+    } 
+
+    /* Explicit position for each grid item */
+    .en__component--advcolumn:nth-child(1){
+        -ms-grid-row: 1;
+        grid-row: 1;       
+        background: blue;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        grid-column: 1 / span 1;
+    }
+    .en__component--advcolumn:nth-child(2){
+        -ms-grid-row: 1;
+        grid-row: 1;
+        background: red;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+        grid-column: 2 / span 1;     
+    }
+    .en__component--advcolumn:nth-child(3){
+        -ms-grid-row: 1;
+        grid-row: 1;
+        background: green;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+        grid-column: 3 / span 1;     
+    }    
+    .en__component--advcolumn:nth-child(4){
+        -ms-grid-row: 1;
+        grid-row: 1;
+        background: purple;
+        -ms-grid-column: 4;
+        -ms-grid-column-span: 1;
+        grid-column: 4 / span 1;     
+    }   
+    .en__component--advcolumn:nth-child(5){
+        -ms-grid-row: 1;
+        grid-row: 1;
+        background: orange;
+        -ms-grid-column: 5;
+        -ms-grid-column-span: 1;
+        grid-column: 5 / span 1;     
+    }           
+}
