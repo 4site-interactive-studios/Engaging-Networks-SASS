@@ -65,6 +65,7 @@ margin-bottom: 0;
 }
 
 /* Make the spacing between wrapping elements tighter so the user knows they're related */
+#main-content .en__component div[class*="withOther"].en__field .en__field__item,
 #main-content .en__component .en__field.en__field--radio .en__field__item,
 #main-content .en__component .en__field.en__field--checkbox .en__field__item,
 #main-content .en__component .en__field.en__field--splittext .en__field__item,
@@ -74,37 +75,41 @@ margin-bottom: 0;
 margin-bottom: .5rem;
 }
 
-#main-content .en__component .en__field.en__field--radio .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--checkbox .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--splittext .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--tripletext .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--splitselect .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--tripleselect .en__field__item:last-of-type{
-margin-bottom: 1rem;
-
 /* Pick up the normal spacing on the last element so form pacing continues as expected */
-/*
-#main-content .en__component .en__field.en__field--radio .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--checkbox .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--splittext .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--tripletext .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--splitselect .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--tripleselect .en__field__item:last-of-type{
-margin-bottom: 1rem;
-}*/
+#main-content .en__component .en__field:not(.en__field--validationFailed) .en__field__item--other,
+#main-content .en__component .en__field.en__field--radio:not(.en__field--validationFailed) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--checkbox:not(.en__field--validationFailed) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--splittext:not(.en__field--validationFailed) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--tripletext:not(.en__field--validationFailed) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--splitselect:not(.en__field--validationFailed) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--tripleselect:not(.en__field--validationFailed) .en__field__item:last-of-type{
+ margin-bottom: 1rem;
+}
+
+/* Pick up the normal spacing on the error element to contunue form pacing continues as expected when in an error state */
+#main-content .en__component .en__field.en__field--radio.en__field--validationFailed,
+#main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed,
+#main-content .en__component .en__field.en__field--splittext.en__field--validationFailed,
+#main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed,
+#main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed,
+#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed{
+ margin-bottom: 1rem;
+}
 
 
 /* QA Needed: Does not actually do what it's supposed to when all elelements are on same row. */
-#main-content .en__component .en__field.en__field--radio .en__field__item--other,
-#main-content .en__component .en__field.en__field--checkbox .en__field__item--other{
+/*
+#main-content .en__component .en__field.en__field--radio:not(.en__field--validationFailed) .en__field__item--other,
+#main-content .en__component .en__field.en__field--checkbox:not(.en__field--validationFailed) .en__field__item--other{
     margin-top: .25rem;
     margin-bottom: 1.25rem;
-}
+}*/
 
+/*
 #main-content .en__field__element{
 width: 100%;
 display: flex;
-}
+}*/
 
 #main-content .en__component .en__field,
 #main-content .en__component .en__field--splitselect,
