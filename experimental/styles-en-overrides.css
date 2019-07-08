@@ -2,6 +2,7 @@
     padding: initial;
 }
 
+.en__field__item,
 .en__field__element--calendar,
 .en__field__element--checkbox,
 .en__field__element--email,
@@ -17,9 +18,9 @@
 .en__field__element--text,
 .en__field__element--textarea,
 .en__field__element--tripleselect,
-.en__field__element--tripletext,
-.en__field__item{
+.en__field__element--tripletext{
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* Reset input widths */
@@ -87,6 +88,7 @@ margin-bottom: 0;
 }*/
 
 /* Make the spacing between wrapping elements tighter so the user knows they're related */
+#main-content .en__component .en__field.en__field--select .en__field__item:not(.en__field__item--other),
 #main-content .en__component .en__field.en__field--radio .en__field__item:not(.en__field__item--other),
 #main-content .en__component .en__field.en__field--checkbox .en__field__item:not(.en__field__item--other),
 #main-content .en__component .en__field.en__field--splittext .en__field__item:not(.en__field__item--other),
@@ -117,6 +119,7 @@ margin-bottom: 0;
 }*/
 
 /* Pick up the normal spacing on the error element to contunue form pacing continues as expected when in an error state */
+#main-content .en__component .en__field.en__field--select.en__field--validationFailed,
 #main-content .en__component .en__field.en__field--radio.en__field--validationFailed,
 #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed,
 #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed,

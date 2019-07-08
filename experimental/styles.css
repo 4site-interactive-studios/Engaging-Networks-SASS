@@ -329,6 +329,7 @@
    /*border-bottom: 0px;*/
  }
  
+ #main-content .en__component .en__field__error-wrapper.en__field--select.en__field--withOther select,
  #main-content .en__component .en__field__error-wrapper.en__field--splittext input,
  #main-content .en__component .en__field__error-wrapper.en__field--tripletext input,
  #main-content .en__component .en__field__error-wrapper.en__field--splitselect select,
@@ -344,6 +345,7 @@
  
  
  /* Adjust bottom margin on error to make display uniform */
+ #main-content .en__component .en__field__error-wrapper.en__field--select.en__field--withOther .en__field__item:last-of-type,
  #main-content .en__component .en__field__error-wrapper.en__field--radio .en__field__item:last-of-type,
  #main-content .en__component .en__field__error-wrapper.en__field--checkbox .en__field__item:last-of-type,
  #main-content .en__component .en__field__error-wrapper.en__field--splittext .en__field__item:last-of-type,
@@ -353,6 +355,7 @@
    margin-bottom: .25rem;
  }
  
+ #main-content .en__component .en__field__error-wrapper.en__field--select.en__field--withOther,
  #main-content .en__component .en__field__error-wrapper.en__field--radio,
  #main-content .en__component .en__field__error-wrapper.en__field--checkbox,
  #main-content .en__component .en__field__error-wrapper.en__field--splittext,
@@ -424,6 +427,8 @@ body.embedded #main-content .en__tweetButton{
     border-bottom-left-radius: 0px;        
 }
 
+
+#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
 #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
 #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
 #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
@@ -438,6 +443,7 @@ body.embedded #main-content .en__tweetButton{
 
 .float-labels #main-content .en__field--text.en__field--validationFailed .en__field__error,
 .float-labels #main-content .en__field--textarea.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
 #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
 #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
 #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__error,
