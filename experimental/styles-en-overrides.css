@@ -2,6 +2,26 @@
     padding: initial;
 }
 
+.en__field__element--calendar,
+.en__field__element--checkbox,
+.en__field__element--email,
+.en__field__element--number,
+.en__field__element--password,
+.en__field__element--radio,
+.en__field__element--range,
+.en__field__element--rating,
+.en__field__element--select,
+.en__field__element--splitselect,
+.en__field__element--splittext,
+.en__field__element--telephone,
+.en__field__element--text,
+.en__field__element--textarea,
+.en__field__element--tripleselect,
+.en__field__element--tripletext,
+.en__field__item{
+    display: flex;
+}
+
 /* Reset input widths */
 .en__field__label,
 .en__field__input--calendar,
@@ -54,7 +74,9 @@ display: flex;
 flex-direction: row;*/
 }
 
+
 /* For inputs with multiple components, apply the bottom margin to the field items so that if they wrap they maintain vertical spacing between them */
+/*
 #main-content .en__component .en__field.en__field--radio,
 #main-content .en__component .en__field.en__field--checkbox,
 #main-content .en__component .en__field.en__field--splittext,
@@ -62,7 +84,7 @@ flex-direction: row;*/
 #main-content .en__component .en__field.en__field--splitselect,
 #main-content .en__component .en__field.en__field--tripleselect{
 margin-bottom: 0;
-}
+}*/
 
 /* Make the spacing between wrapping elements tighter so the user knows they're related */
 #main-content .en__component div[class*="withOther"].en__field .en__field__item,
@@ -76,13 +98,13 @@ margin-bottom: .5rem;
 }
 
 /* Pick up the normal spacing on the last element so form pacing continues as expected */
-#main-content .en__component .en__field:not(.en__field--validationFailed) .en__field__item--other,
-#main-content .en__component .en__field.en__field--radio:not(.en__field--validationFailed) .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--checkbox:not(.en__field--validationFailed) .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--splittext:not(.en__field--validationFailed) .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--tripletext:not(.en__field--validationFailed) .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--splitselect:not(.en__field--validationFailed) .en__field__item:last-of-type,
-#main-content .en__component .en__field.en__field--tripleselect:not(.en__field--validationFailed) .en__field__item:last-of-type{
+#main-content .en__component .en__field:not(.en__field--validationFailed).en__field--withOther,
+#main-content .en__component .en__field.en__field--radio:not(.en__field--validationFailed):not(.en__field--withOther) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--checkbox:not(.en__field--validationFailed):not(.en__field--withOther) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--splittext:not(.en__field--validationFailed):not(.en__field--withOther) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--tripletext:not(.en__field--validationFailed):not(.en__field--withOther) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--splitselect:not(.en__field--validationFailed):not(.en__field--withOther) .en__field__item:last-of-type,
+#main-content .en__component .en__field.en__field--tripleselect:not(.en__field--validationFailed):not(.en__field--withOther) .en__field__item:last-of-type{
  margin-bottom: 1rem;
 }
 
@@ -111,14 +133,20 @@ width: 100%;
 display: flex;
 }*/
 
-#main-content .en__component .en__field,
+/*
+#main-content .en__component .en__field{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}*/
+
 #main-content .en__component .en__field--splitselect,
 #main-content .en__component .en__field--tripletext,
 #main-content .en__component .en__field--splitselect,
-#main-content .en__component .en__field--tripleselect {
-flex-basis: 100%;
-display: flex;
-flex-direction: column;
+#main-content .en__component .en__field--tripleselect{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row; 
 }
 
 /*
@@ -164,15 +192,17 @@ margin-right: .5rem;
 padding: 0;
 
 }
-
+/*
 #main-content .en__field__element--splittext .en__field__item,
 #main-content .en__field__element--splitselect .en__field__item{
 width: 50%;
-}
+}*/
+
+/*
 #main-content .en__field__element--tripletext .en__field__item,
 #main-content .en__field__element--tripleselect .en__field__item{
 width: 33.333333%;
-}
+}*/
 
 
 
