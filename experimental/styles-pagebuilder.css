@@ -1,22 +1,22 @@
 /* When in page builder we want to center the content area on the page and must reduce it by 50px to make it visible because of the sidebar */
 #en__pagebuilder {
-	width: calc(100% - 51px);
+    width: calc(100% - 51px);
 }
 
- /* If in page builder, give the background some color so that input fields stand out */
- body#en__pagebuilder{
+/* If in page builder, give the background some color so that input fields stand out */
+body#en__pagebuilder {
     background-color: #f1f1f1;
-  }
+}
 
 /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
 #en__pagebuilder .en__container {
-	margin-left: 1px !important;
-	margin-right: 1px !important;
-	border: none !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
+    border: none !important;
 }
 
 /* Page builder adds a hidden div to the bottom of the layout, this can result in undesired spacing */
-#en__pagebuilder .en__component--row:nth-last-child(2){
+#en__pagebuilder .en__component--row:nth-last-child(2) {
     padding-bottom: 0px;
 }
 
@@ -25,41 +25,41 @@
 /* This fix has NOT been tested for regressions in other browsers */
 /* e.g https://d.pr/i/CRYKHa */
 body:not(#en__pagebuilder) .en__component--column:last-of-type,
-#en__pagebuilder .en__component--column{
+#en__pagebuilder .en__component--column {
     position: relative;
     right: -.15px;
 }
 
 /** Utility Class: Hides Content or Columns, but not when being viewed in Page Builder **/
-body:not(#en__pagebuilder) .hide{
+body:not(#en__pagebuilder) .hide {
     display: none !important;
 }
 
-body:not(#en__pagebuilder) .hide{
+body:not(#en__pagebuilder) .hide {
     display: none !important;
 }
 
-#en__pagebuilder .hide{
+#en__pagebuilder .hide {
     background-color: #ff00001a !important;
 }
 
-#en__pagebuilder .hide.en__component--column{
+#en__pagebuilder .hide.en__component--column {
     outline-color: #ff0000 !important;
 }
 
 /* Useful when starting a template from scratch in page builder. Prevents the space from becoming zero width if all rows are deleted */
-#en__pagebuilder #main-content-inner{
+#en__pagebuilder #main-content-inner {
     min-width: 300px;
     outline: dashed 1px #999;
 }
 
- /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
- body#en__pagebuilder #main-content .en__component--formblock:hover .en__field:nth-last-of-type(2),
- body#en__pagebuilder #main-content .en__component--formblock:hover .en__field div.en__field__item:nth-last-of-type(2){
-   margin-right: 0rem;
- }
+/* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
+body#en__pagebuilder #main-content .en__component--formblock:hover .en__field:nth-last-of-type(2),
+body#en__pagebuilder #main-content .en__component--formblock:hover .en__field div.en__field__item:nth-last-of-type(2) {
+    margin-right: 0rem;
+}
 
-  /* Reduces min-height of the page builder */
-  #en__pagebuilder .en__component--page.ui-sortable{
+/* Reduces min-height of the page builder */
+#en__pagebuilder .en__component--page.ui-sortable {
     min-height: 0px;
-  }
+}

@@ -8,52 +8,52 @@
  * ##########################################################
  */
 
-.layout-1{
+.layout-1 {
     font-family: roboto;
 }
 
 /* Remove un-needed spacer margin in the page builder */
-#en__pagebuilder.layout-1  .en__container{
+#en__pagebuilder.layout-1 .en__container {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 /* Set Content Alignment */
 .layout-1 #main-content {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 /* Set gap between rows and columns */
-.layout-1 .en__component--row{
-	grid-gap: 1rem !important;
+.layout-1 .en__component--row {
+    grid-gap: 1rem !important;
 }
 
 /* Match grid-gap with pseudo column gap on two column components */
-.layout-1.en__component--row--2 .en__component--column--1{
+.layout-1.en__component--row--2 .en__component--column--1 {
     margin-right: .5rem;
 }
 
 /* Match grid-gap with pseudo column gap on two column components */
-.layout-1.en__component--row--2 .en__component--column--2{
+.layout-1.en__component--row--2 .en__component--column--2 {
     margin-left: .5rem;
 }
 
 /* Match grid-gap on rows as long as the row is not the last of its siblings */
-.layout-1 .en__component--row:not(:last-child){
-	padding-bottom: 1rem;
+.layout-1 .en__component--row:not(:last-child) {
+    padding-bottom: 1rem;
 }
 
 /* Set padding within sections */
 .layout-1 .en__component--column {
-	padding: .25rem 1rem;
+    padding: .25rem 1rem;
 }
 
 /* Desktop Max Width and Margins */
@@ -63,7 +63,7 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     border: 4px solid black;
-    border: .25rem solid black;  
+    border: .25rem solid black;
 }
 
 /* Default Desktop Layout */
@@ -153,7 +153,7 @@
         border: none;
         max-width: 100%;
     }
-    
+
     /* Default Mobile Layout */
     .layout-1 .header {
         -ms-grid-row: 1;
@@ -194,5 +194,5 @@
         -ms-grid-column-span: 3;
         grid-column: 1 / span 3;
     }
-    
+
 }

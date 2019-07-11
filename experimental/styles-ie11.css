@@ -10,53 +10,58 @@
  */
 
 /* Grid fixes for IE goes here... */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
 
     /* All three column advanced grids */
     .en__component--advcolumn:first-child:nth-last-child(3),
-    .en__component--advcolumn:first-child:nth-last-child(3) ~ .en__component--advcolumn {
-
-    } 
+    .en__component--advcolumn:first-child:nth-last-child(3)~.en__component--advcolumn {
+        widows: initial; /*Disposible placeholder rule to prevent VSCode Error around empty rulesets*/
+    }
 
     /* Explicit position for each grid item */
-    .en__component--advcolumn:nth-child(1){
+    .en__component--advcolumn:nth-child(1) {
         -ms-grid-row: 1;
-        grid-row: 1;       
+        grid-row: 1;
         background: blue;
         -ms-grid-column: 1;
         -ms-grid-column-span: 1;
         grid-column: 1 / span 1;
     }
-    .en__component--advcolumn:nth-child(2){
+
+    .en__component--advcolumn:nth-child(2) {
         -ms-grid-row: 1;
         grid-row: 1;
         background: red;
         -ms-grid-column: 2;
         -ms-grid-column-span: 1;
-        grid-column: 2 / span 1;     
+        grid-column: 2 / span 1;
     }
-    .en__component--advcolumn:nth-child(3){
+
+    .en__component--advcolumn:nth-child(3) {
         -ms-grid-row: 1;
         grid-row: 1;
         background: green;
         -ms-grid-column: 3;
         -ms-grid-column-span: 1;
-        grid-column: 3 / span 1;     
-    }    
-    .en__component--advcolumn:nth-child(4){
+        grid-column: 3 / span 1;
+    }
+
+    .en__component--advcolumn:nth-child(4) {
         -ms-grid-row: 1;
         grid-row: 1;
         background: purple;
         -ms-grid-column: 4;
         -ms-grid-column-span: 1;
-        grid-column: 4 / span 1;     
-    }   
-    .en__component--advcolumn:nth-child(5){
+        grid-column: 4 / span 1;
+    }
+
+    .en__component--advcolumn:nth-child(5) {
         -ms-grid-row: 1;
         grid-row: 1;
         background: orange;
         -ms-grid-column: 5;
         -ms-grid-column-span: 1;
-        grid-column: 5 / span 1;     
-    }           
+        grid-column: 5 / span 1;
+    }
 }

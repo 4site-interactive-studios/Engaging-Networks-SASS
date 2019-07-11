@@ -18,8 +18,11 @@
 .en__field__element--text,
 .en__field__element--textarea,
 .en__field__element--tripleselect,
-.en__field__element--tripletext{
+.en__field__element--tripletext {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -36,12 +39,12 @@
 .en__field__input--other,
 .en__field__input--splittext,
 .en__field__input--tripletext {
-	/* width: auto !important; */
+    widows: initial; /*Disposible placeholder rule to prevent VSCode Error around empty rulesets*/
 }
 
 /* Reset height */
 .en__field__input--textarea {
-	height: initial !important;
+    height: initial !important;
 }
 
 /* Reset minimum and default width */
@@ -53,26 +56,29 @@
 /************************************
   * General overrides of EN styles
   ***********************************/
- 
- /* QA Needed: In the event Theme CSS causes a hidden field to become displayed, forrce its display to remain hidden */ 
- /* This was an issue originally reported by EN staff, not sure if it still persists with recent styling updates */
- #main-content .en__hidden{
+
+/* QA Needed: In the event Theme CSS causes a hidden field to become displayed, forrce its display to remain hidden */
+/* This was an issue originally reported by EN staff, not sure if it still persists with recent styling updates */
+#main-content .en__hidden {
     display: none !important;
 }
 
 #main-content .en__field,
-#main-content .en__captcha{
+#main-content .en__captcha {
     padding-bottom: 0;
     margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 /* For the custom fields we can properly space them, but for EN canned fields we have to fake the funk since we don't know when row-wraps will happen in Flexbox. */
-#main-content .en__component--formblock{
-    /*
-display: flex;
-flex-direction: row;*/
+#main-content .en__component--formblock {
+    widows: initial; /*Disposible placeholder rule to prevent VSCode Error around empty rulesets*/
 }
 
 
@@ -94,16 +100,20 @@ margin-bottom: 0;
 #main-content .en__component .en__field.en__field--splittext .en__field__item:not(.en__field__item--other),
 #main-content .en__component .en__field.en__field--tripletext .en__field__item:not(.en__field__item--other),
 #main-content .en__component .en__field.en__field--splitselect .en__field__item:not(.en__field__item--other),
-#main-content .en__component .en__field.en__field--tripleselect .en__field__item:not(.en__field__item--other){
+#main-content .en__component .en__field.en__field--tripleselect .en__field__item:not(.en__field__item--other) {
     margin-bottom: .5rem;
     margin-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
-#main-content .en__component div[class*="withOther"].en__field .en__field__item{
+#main-content .en__component div[class*="withOther"].en__field .en__field__item {
     margin-bottom: .5rem;
-    margin-right: 1rem;  
+    margin-right: 1rem;
 }
 
 /* Pick up the normal spacing on the last element so form pacing continues as expected */
@@ -125,8 +135,8 @@ margin-bottom: 0;
 #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed,
 #main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed,
 #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed,
-#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed{
- margin-bottom: 1rem;
+#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed {
+    margin-bottom: 1rem;
 }
 
 
@@ -154,10 +164,16 @@ display: flex;
 #main-content .en__component .en__field--splitselect,
 #main-content .en__component .en__field--tripletext,
 #main-content .en__component .en__field--splitselect,
-#main-content .en__component .en__field--tripleselect{
+#main-content .en__component .en__field--tripleselect {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row; 
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
 /*
@@ -169,40 +185,41 @@ margin-right: .5rem;
 
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
 body #main-content .en__component--formblock .en__field:last-of-type,
-body #main-content .en__component--formblock .en__field div.en__field__item:last-of-type{
-margin-right: 0rem;
+body #main-content .en__component--formblock .en__field div.en__field__item:last-of-type {
+    margin-right: 0rem;
 }
 
 
 #main-content .en__component--formblock .en__field:first-of-type,
-#main-content .en__component--formblock .en__field div.en__field__item:first-of-type{
-margin-left: 0rem;
+#main-content .en__component--formblock .en__field div.en__field__item:first-of-type {
+    margin-left: 0rem;
 }
 
 #main-content .en__component--formblock.items-might-wrap .en__field:last-of-type,
 #main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:last-of-type,
 #main-content .en__component--formblock.items-might-wrap .en__field:first-of-type,
-#main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type{
-margin-left: .5rem;
-margin-right: .5rem;
+#main-content .en__component--formblock.items-might-wrap .en__field div.en__field__item:first-of-type {
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 #main-content .en__component--formblock .en__field:only-child,
-#main-content .en__component--formblock .en__field div.en__field__item:only-child{
-margin-left: 0;
-margin-right: 0;
+#main-content .en__component--formblock .en__field div.en__field__item:only-child {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #main-content .en__component--formblock .row-wrap .en__field,
-#main-content .en__component--formblock .row-wrap .en__field div.en__field__item{
-margin-left: .5rem;
-margin-right: .5rem;
+#main-content .en__component--formblock .row-wrap .en__field div.en__field__item {
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 
 #main-content .en__field__item {
-padding: 0;
+    padding: 0;
 
 }
+
 /*
 #main-content .en__field__element--splittext .en__field__item,
 #main-content .en__field__element--splitselect .en__field__item{
@@ -219,28 +236,28 @@ width: 33.333333%;
 
 /* EN sets field labels to a fixed width of 180px, this makes them responsive */
 #main-content .en__field__label {
-padding-top: .25em;
-padding-bottom: .25em;
-width: auto;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    width: auto;
 }
 
 /* Remove fixed min-width on Thermometer bar */
-#main-content .enWidget__bar .enWidget__progress{
-min-width: initial;
+#main-content .enWidget__bar .enWidget__progress {
+    min-width: initial;
 }
 
- /* EN sets background of the contact block to white making it not ideal for non-white backgrounds. This resets it to an initial state "transparent". */
- #main-content .en__contact__toggle,
- #main-content .en__contact--open .en__contact__toggle {
-     background-color: initial;
- }
+/* EN sets background of the contact block to white making it not ideal for non-white backgrounds. This resets it to an initial state "transparent". */
+#main-content .en__contact__toggle,
+#main-content .en__contact--open .en__contact__toggle {
+    background-color: initial;
+}
 
- /* Make sure that background colors are not hard coded */
- #main-content .en__twitterTarget,
- #main-content .en__tweetBackgroundText,
- #main-content .en__tweet,
- #main-content .en__tweetDisabled,
- #main-content .en__tweetButton,
- #main-content .en__tweetContact{
-   background-color: initial;
- }
+/* Make sure that background colors are not hard coded */
+#main-content .en__twitterTarget,
+#main-content .en__tweetBackgroundText,
+#main-content .en__tweet,
+#main-content .en__tweetDisabled,
+#main-content .en__tweetButton,
+#main-content .en__tweetContact {
+    background-color: initial;
+}

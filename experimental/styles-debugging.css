@@ -4,51 +4,51 @@
  * ##########################################################
  */
 
- body.demo #debug-template{
+body.demo #debug-template {
     position: fixed;
     top: 0;
     left: 0;
     margin: 1rem;
     padding: .25rem;
     z-index: 9999;
-    opacity: .75;   
+    opacity: .75;
     display: block !important;
 }
 
- body.debug .en__component--row{
+body.debug .en__component--row {
     background: lightblue;
 }
 
 body.debug .en__component--row--1 .en__component--column {
-	background: blue;
+    background: blue;
 }
 
 body.debug .en__component--row--2 .en__component--column {
-	background: orange;
+    background: orange;
 }
 
 body.debug .en__component--advcolumn {
-	background: rebeccapurple;
+    background: rebeccapurple;
 }
 
 body.debug .header {
-	background-color: yellow;
+    background-color: yellow;
 }
 
 body.debug .banner {
-	background-color: red;
+    background-color: red;
 }
 
 body.debug .sidebar {
-	background-color: grey;
+    background-color: grey;
 }
 
 body.debug .content {
-	background-color: green;
+    background-color: green;
 }
 
 body.debug .footer {
-	background-color: pink;
+    background-color: pink;
 }
 
 /*
@@ -57,14 +57,14 @@ body.debug .footer {
  * ##########################################################
  */
 
- body.demo #visualize-layout{
+body.demo #visualize-layout {
     position: fixed;
     top: 0;
     right: 0;
     margin: 1rem;
     padding: .25rem;
     z-index: 9999;
-    opacity: .75;    
+    opacity: .75;
     display: block !important;
 }
 
@@ -73,18 +73,18 @@ body,
 body.visualize-layout #main-content-wrapper,
 body.visualize-layout #main-content,
 body.visualize-layout #main-content-inner,
-body.visualize-layout .en__component--row{
+body.visualize-layout .en__component--row {
     background: #ffffff !important;
 }
 
-body.visualize-layout .en__component--column{
+body.visualize-layout .en__component--column {
     background: #e3e3e3 !important;
 }
 
-body.visualize-layout .en__component--column > *{
+body.visualize-layout .en__component--column>* {
     visibility: hidden !important;
 }
 
-body.visualize-layout div{
+body.visualize-layout div {
     border-color: #adaaaa !important;
 }
