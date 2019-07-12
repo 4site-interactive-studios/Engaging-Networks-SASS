@@ -4,7 +4,8 @@
  * ##########################################################
  */
 
-body.demo #debug-template {
+
+ body.demo #debug-template {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,6 +14,13 @@ body.demo #debug-template {
     z-index: 9999;
     opacity: .75;
     display: block !important;
+}
+
+body.debug *{
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -o-transition: color 0 ease-in !important;
+    transition: none !important;    
 }
 
 body.debug .en__component--row {
@@ -68,8 +76,14 @@ body.demo #visualize-layout {
     display: block !important;
 }
 
-html,
-body,
+body.visualize-layout *{
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -o-transition: color 0 ease-in !important;
+    transition: none !important;    
+}
+
+body.visualize-layout,
 body.visualize-layout #main-content-wrapper,
 body.visualize-layout #main-content,
 body.visualize-layout #main-content-inner,
