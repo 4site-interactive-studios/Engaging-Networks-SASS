@@ -282,6 +282,18 @@
   width: 100% !important;
 }
 
+/* Needs QA: Makes images responsive. Look into not using !important. */
+#main-content img {
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+  display: inherit;
+}
+
+/* When embedded, remove unnecessary padding */
+body.embedded #main-content .en__tweetButton {
+  padding-right: 0px;
+}
 
 /************************************
   * Error Messages
@@ -391,17 +403,64 @@ body.error-jump-assist #main-content .en__component .en__field__error {
   margin-bottom: 1rem;
 }
 
-/* Needs QA: Makes images responsive. Look into not using !important. */
-#main-content img {
-  max-width: 100%;
-  height: auto !important;
-  margin: 0 auto;
-  display: inherit;
+#main-content .en__field--text.en__field--validationFailed input,
+#main-content .en__field--textarea.en__field--validationFailed textarea {
+  border-color: #e74b3c;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
-/* When embedded, remove unnecessary padding */
-body.embedded #main-content .en__tweetButton {
-  padding-right: 0px;
+
+#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
+  border: 1px solid #e74b3c;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+#main-content .en__field--text.en__field--validationFailed .en__field__error,
+#main-content .en__field--textarea.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__error,
+#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__error {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+#main-content .en__field--radio.en__field--validationFailed #main-content .en__field--checkbox.en__field--validationFailed {
+  border-color: #e84b3c;
+}
+
+#main-content div[class*="-column-"].en__field .en__field__element,
+#main-content .en__field.column .en__field__element {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-content div[class*="-row-"].en__field .en__field__element,
+#main-content .en__field.row .en__field__element {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*
@@ -439,57 +498,9 @@ body.embedded #main-content .en__tweetButton {
   transform: translate(0.5rem, 0.2rem) scale(0.7);
 }
 
-/*
-.float-labels #main-content .en__field--text .en__field__error,
-.float-labels #main-content .en__field--textarea .en__field__error{
-    order: 3;
-}*/
-
 .float-labels #main-content .en__field--text.en__field--validationFailed label,
 .float-labels #main-content .en__field--textarea.en__field--validationFailed label {
   opacity: 1;
-}
-
-.float-labels #main-content .en__field--text.en__field--validationFailed input,
-.float-labels #main-content .en__field--textarea.en__field--validationFailed textarea {
-  border-color: #e74b3c;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-
-#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
-#main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
-#main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
-#main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
-#main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
-#main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
-#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
-  border: 1px solid #e74b3c;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-  padding: 0.5rem 0.5rem 0rem 0.5rem;
-}
-
-.float-labels #main-content .en__field--text.en__field--validationFailed .en__field__error,
-.float-labels #main-content .en__field--textarea.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__error,
-#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__error {
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-}
-
-
-.float-labels #main-content .en__field--text.en__field--validationNeeded input,
-.float-labels #main-content .en__field--textarea.en__field--validationNeeded textarea {
-  border-color: #e74b3c;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
 }
 
 .float-labels #main-content .en__field--text.en__field--validationNeeded .en__field__error,
@@ -498,28 +509,8 @@ body.embedded #main-content .en__tweetButton {
   border-top-left-radius: 0px;
 }
 
-#main-content .en__field--radio.en__field--validationFailed #main-content .en__field--checkbox.en__field--validationFailed {
-  border-color: #e84b3c;
-}
-
-#main-content div[class*="-column-"].en__field .en__field__element,
-#main-content .en__field.column .en__field__element {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#main-content div[class*="-row-"].en__field .en__field__element,
-#main-content .en__field.row .en__field__element {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.float-labels #main-content .en__field--text.en__field--validationNeeded input,
+.float-labels #main-content .en__field--textarea.en__field--validationNeeded textarea {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
