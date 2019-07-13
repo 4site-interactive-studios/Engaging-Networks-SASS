@@ -53,8 +53,9 @@ body:not(#en__pagebuilder) .hide {
     outline-color: #ff0000 !important;
 }
 
+/* Looks like this may no longer be the case, or it's no longer an issue for the refactored styles. Temporarily disabling the style */
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
 body#en__pagebuilder #main-content .en__component--formblock:hover .en__field:nth-last-of-type(2),
 body#en__pagebuilder #main-content .en__component--formblock:hover .en__field div.en__field__item:nth-last-of-type(2) {
-    margin-right: 0rem;
+   /* margin-right: 0rem; */
 }
