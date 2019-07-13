@@ -41,10 +41,6 @@ body:not(#en__pagebuilder) .hide {
     display: none !important;
 }
 
-body:not(#en__pagebuilder) .hide {
-    display: none !important;
-}
-
 #en__pagebuilder .hide {
     background-color: #ff00001a !important;
 }
