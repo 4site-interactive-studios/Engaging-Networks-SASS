@@ -8,6 +8,12 @@ body#en__pagebuilder {
     background-color: #f1f1f1;
 }
 
+/* If the user accidentally deletes all content from the form, prevent it from completely collapsing in on itself and making it impossible for the user to add new content */
+body#en__pagebuilder form{
+    min-height: 25px !important;
+    outline: solid 1px #999999;
+}
+
 /* Adjust the editable space in the Page Editor so that the content can occupy as much space as possible */
 #en__pagebuilder .en__container {
     margin-left: 1px !important;
@@ -47,19 +53,8 @@ body:not(#en__pagebuilder) .hide {
     outline-color: #ff0000 !important;
 }
 
-/* Useful when starting a template from scratch in page builder. Prevents the space from becoming zero width if all rows are deleted */
-#en__pagebuilder #main-content-inner {
-    min-width: 300px;
-    outline: dashed 1px #999;
-}
-
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
 body#en__pagebuilder #main-content .en__component--formblock:hover .en__field:nth-last-of-type(2),
 body#en__pagebuilder #main-content .en__component--formblock:hover .en__field div.en__field__item:nth-last-of-type(2) {
     margin-right: 0rem;
-}
-
-/* Reduces min-height of the page builder */
-#en__pagebuilder .en__component--page.ui-sortable {
-    min-height: 0px;
 }
