@@ -1,4 +1,3 @@
-// document.getElementsByTagName("BODY")[0]
 var body = document.body;
 var mainContentWrapper = document.getElementById("main-content-wrapper");
 
@@ -288,14 +287,11 @@ const enInput = (() => {
 
   // get DOM elements
   const init = () => {
-    const floatContainers = document.querySelectorAll('.en__field--text, .en__field--textarea');
-
-    floatContainers.forEach((element) => {
-
+    const formInput = document.querySelectorAll('.en__field--text, .en__field--textarea');
+    formInput.forEach((element) => {
       if (element.querySelector('input, textarea').value) {
         element.parentNode.parentNode.classList.add('has-value');
       }
-
       bindEvents(element);
     });
   };
