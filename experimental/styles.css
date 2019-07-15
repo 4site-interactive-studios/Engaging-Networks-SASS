@@ -480,8 +480,8 @@ body.error-jump-assist #main-content .en__component .en__field__error {
   position: absolute;
   -webkit-transform-origin: top left;
   transform-origin: top left;
-  -webkit-transform: translate(0.5rem, 0.5rem) scale(1);
-  transform: translate(0.5rem, 0.5rem) scale(1);
+  -webkit-transform: translate(0.5rem, 5px) scale(1);
+  transform: translate(0.5rem, 5px) scale(1);
   opacity: 0.6;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
@@ -494,8 +494,8 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 .float-labels #main-content .en__field--textarea.has-value label.en__field__label,
 .float-labels #main-content .en__field--textarea.focus label.en__field__label,
 .float-labels #main-content .en__field--textarea.blur label.en__field__label {
-  -webkit-transform: translate(0.5rem, 0.2rem) scale(0.7);
-  transform: translate(0.5rem, 0.2rem) scale(0.7);
+  -webkit-transform: translate(0.5rem, 0px) scale(0.7);
+  transform: translate(0.5rem, 0px) scale(0.7);
 }
 
 .float-labels #main-content .en__field--text.en__field--validationFailed label,
