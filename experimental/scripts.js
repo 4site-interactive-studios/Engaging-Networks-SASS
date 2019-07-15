@@ -263,17 +263,14 @@ const enInput = (() => {
   const handleFocus = (e) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
-    targetWrapper.classList.add('has-value');
-    // targetWrapper.classList.remove('en__field--validationFailed');
-    // targetWrapper.classList.add('en__field--validationNeeded');
-    // targetWrapper.removeChild(targetWrapper.firstChild);
-    // target.setAttribute('placeholder', target.getAttribute('data-placeholder'));
+    targetWrapper.classList.add('has-focus');
   };
 
   // remove has-value class
   const handleBlur = (e) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
+    targetWrapper.classList.remove('has-focus');
 
     if (target.value) {
       targetWrapper.classList.add('has-value');

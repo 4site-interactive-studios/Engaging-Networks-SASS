@@ -479,11 +479,9 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 }
 
 .float-labels #main-content .en__field--text.has-value label.en__field__label,
-.float-labels #main-content .en__field--text.focus label.en__field__label,
-.float-labels #main-content .en__field--text.blur label.en__field__label,
+.float-labels #main-content .en__field--text.has-focus label.en__field__label,
 .float-labels #main-content .en__field--textarea.has-value label.en__field__label,
-.float-labels #main-content .en__field--textarea.focus label.en__field__label,
-.float-labels #main-content .en__field--textarea.blur label.en__field__label {
+.float-labels #main-content .en__field--textarea.has-focus label.en__field__label{
   -webkit-transform: translate(0.5rem, 0px) scale(0.7);
   transform: translate(0.5rem, 0px) scale(0.7);
 }
