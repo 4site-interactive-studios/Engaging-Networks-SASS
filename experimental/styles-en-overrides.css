@@ -74,6 +74,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: relative;
 }
 
 /* For the custom fields we can properly space them, but for EN canned fields we have to fake the funk since we don't know when row-wraps will happen in Flexbox. */
@@ -109,6 +110,7 @@ margin-bottom: 0;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
 }
 
 #main-content .en__component div[class*="withOther"].en__field .en__field__item {
@@ -186,11 +188,23 @@ margin-right: .5rem;
 }*/
 
 /* Needs QA: ENs page builder adds a div to the formblock DOM on hover. This will cause a small right margin to appear as the expected input fields are no longer the last of their siblings */
-body #main-content .en__component--formblock .en__field:last-of-type,
-body #main-content .en__component--formblock .en__field div.en__field__item:last-of-type {
-    margin-right: 0rem;
+/* NEED TO REVISIT FOR CODE CLEANUP !important is bad and we should feel bad */
+#main-content .en__component--formblock .en__field:last-of-type,
+#main-content .en__component--formblock .en__field div.en__field__item:last-of-type {
+    margin-right: 0rem !important;
 }
 
+/* If the form field has a hidden "other" field we need to remove the end of row spacing */
+/* NEED TO REVISIT FOR CODE CLEANUP */
+#main-content .en__component--formblock .en__field--withOther div.en__field__item:nth-last-child(2) {
+    margin-right: 0px;
+}
+
+/* If the form field has a hidden "other", add spacing to the left of the Other field */
+/* NEED TO REVISIT FOR CODE CLEANUP */
+#main-content .en__component--formblock .en__field--withOther div.en__field__item:nth-last-child(2)+div.en__field__item:not(.en__field__item--hidden) {
+    margin-left: 1rem;
+}
 
 #main-content .en__component--formblock .en__field:first-of-type,
 #main-content .en__component--formblock .en__field div.en__field__item:first-of-type {
