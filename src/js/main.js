@@ -1671,7 +1671,7 @@ window.addEventListener("load", function() {
     var donation_amount_name = "transaction.donationAmt";
     var donation_amount_other_name = "transaction.donationAmt.other";
     var payment_card_type_name = "transaction.paymenttype";
-    var processing_fee_name = "supporter.questions.64038";
+    var processing_fee_name = "supporter.processing_fees";
     var payment_method_wrapper_class_name = "en__field--give-by-select";
 
     window.calculateProcessingFee = function() {
@@ -1837,7 +1837,7 @@ window.addEventListener("load", function() {
     var donation_amount_other_name = "transaction.donationAmt.other";
     var processing_fee_present =
       typeof window.calculateProcessingFee === "function";
-    var processing_fee_name = "supporter.questions.64038";
+    var processing_fee_name = "supporter.processing_fees";
     var payment_frequency_name = "transaction.recurrpay";
 
     function updateLabel() {
