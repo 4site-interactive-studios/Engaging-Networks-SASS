@@ -4,15 +4,15 @@
 
 /// Copy text color
 /// @type Color
-$text-color: #43505a;
+$text-color: #43505a !default;
 
 /// Copy heading color
 /// @type Color
-$heading-color: $text-color;
+$heading-color: #f99337 !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: #e54e32;
+$brand-color: #0666f2 !default;
 
 /// Body Background Color
 /// @type Color
@@ -36,64 +36,58 @@ $darker-grey: rgb(50, 50, 50) !default;
 
 /// Copy bold color
 /// @type Color
-$bold-color: #6f6f6f;
+$bold-color: #6f6f6f !default;
 
 /// Link color
 /// @type Color
-$link-color: #3c8eb3;
+$link-color: $brand-color !default;
 
 /// Link Hover color
 /// @type Color
-$link-hover-color: $brand-color;
-
+$link-hover-color: lighten($brand-color, 10) !default;
 
 /// Red
 /// @type Color
-$red: #e74b3c !default;
+$red: #f99337 !default;
 
 /// Green
 /// @type Color
 $green: #0e8542 !default;
 
-
 /// Error Color
 /// @type Color
-$error-color: $red !default;
-
+$error-color: #e74b3c !default;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-        'small': 375px,
-        'medium': 600px,
-        'large': 1000px,
+  "small": 375px,
+  "medium": 600px,
+  "large": 1024px
 );
 
-
 // Header & Footer Variables
-$footer-bg-color: #FFF;
-$footer-txt-color: $text-color;
-$footer-link-color: $link-color;
-$footer-hover-link-color: $link-hover-color;
-
-
+$footer-bg-color: $brand-color !default;
+$footer-txt-color: #dadada !default;
+$footer-link-color: #fff !default;
+$footer-hover-link-color: $red !default;
 
 /// Form & Fields Related Variables
-$form-border-radius: 0;
+$form-border-radius: 7px !default;
 $field-outline-color: $mid-grey !default;
 $field-placeholder-color: $mid-grey !default;
-$field-border-radius: 0;
-$field-border-color: $mid-grey;
-$field-focus-border-color: $link-color;
-$field-bg-color: #FFF !default;
+$field-border-radius: 4px !default;
+$field-border-color: $mid-grey !default;
+$field-focus-border-color: $link-color !default;
+$field-bg-color: #fff !default;
 $field-focus-bg-color: $light-grey !default;
 $field-txt-color: $text-color !default;
-$field-box-shadow: none;
+$field-box-shadow: none !default;
 $field-focus-box-shadow: 0 0 0.3125rem #cacaca !default;
 $radio-border-color: $mid-grey !default;
-$radio-checked-color: $link-color;
-$button-bg-color: #e54e32;
-$button-disabled-bg-color: lighten($button-bg-color, 30%);
-$button-hover-bg-color: darken($button-bg-color, 20%);
+$radio-checked-color: $link-color !default;
+$button-bg-color: #f99337 !default;
+$button-disabled-bg-color: lighten($button-bg-color, 30%) !default;
+$button-hover-bg-color: darken($button-bg-color, 20%) !default;
 $button-txt-color: $body-color !default;

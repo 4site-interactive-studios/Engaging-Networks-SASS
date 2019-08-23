@@ -13,17 +13,13 @@
 */
 
 // 1. Configuration and helpers
-@import
-'themes/variables',
-'abstracts/variables-default',
-'abstracts/functions',
-'abstracts/mixins';
+@import "themes/variables", "abstracts/variables-default", "abstracts/functions",
+  "abstracts/mixins";
 
 // 2. Vendors
-@import
-'vendors/include-media',
-'vendors/rem';
+@import "vendors/include-media", "vendors/rem";
 
 // 3. Theme -- Uncomment the theme you want to use
 //@import 'themes/theme-oca';
-@import 'themes/theme-ict';
+// @import 'themes/theme-ict';
+@import "themes/theme-mfa";

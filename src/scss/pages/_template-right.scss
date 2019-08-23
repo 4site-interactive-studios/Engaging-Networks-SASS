@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Template Right Page.
+// -----------------------------------------------------------------------------
+
+body.template-right {
+  &::after {
+    height: 100vh;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    transition: opacity linear 0.1s;
+    content: "";
+    width: 100vw;
+    background: #fff;
+    z-index: 1;
+  }
+  &::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px #eee;
+    border-bottom-color: $brand-color;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform;
+    z-index: 2;
+  }
+  &.loaded {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+  #foursite-page-wrapper {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+    // Only layout container
+    > div {
+      &.right-container {
+        max-width: 600px;
+        flex: 0 1 auto;
+      }
+      &.left-container {
+        flex: auto;
+        position: fixed;
+        top: 0;
+        left: 600px;
+        background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/mfa-2018-bg-cows-reversed-1920x1110.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: calc(100vw - 600px);
+      }
+    }
+  }
+}
+
+/* Pad's main content form, unless it's emebeded. */
+body:not(#en__pagebuilder):not(.embedded) {
+  .template-right {
+    #main-content-inner {
+      // Empty
+    }
+  }
+}
+
+#main-content.template-right {
+  .header-logo {
+    justify-content: center;
+    height: auto;
+    img {
+      width: 178px;
+      margin: 15px auto;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+}
+/* Below large breakpoint the main-content section is expanded to fill the full screen */
+@include media(">large") {
+  body:not(.embedded) #main-content.template-right {
+    margin: 0;
+  }
+  body.template-right {
+    background-image: none;
+  }
+}

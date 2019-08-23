@@ -1,0 +1,154 @@
+// -----------------------------------------------------------------------------
+// This file contains everything related to the Mercy for Animals
+// theme.
+// -----------------------------------------------------------------------------
+.theme-mfa {
+  #main-content {
+    h2 {
+      font-size: 1.6rem;
+    }
+    .sectionHeading {
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+    .banner-text {
+      &.orange h1 {
+        color: #ffffff;
+        display: inline;
+        background-color: $heading-color;
+        padding: rem(5px 0);
+        position: relative;
+        box-shadow: 1em 0 0 0 $heading-color, -1em 0 0 0 $heading-color;
+      }
+    }
+    .en__field__label {
+      font-weight: 700;
+    }
+    .donation-amt {
+      display: block;
+      margin-top: 40px;
+
+      .en__field__label--positionabove {
+        display: none;
+      }
+      .en__field--recurrpay {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        .en__field__item {
+          margin-bottom: 0;
+          @include media("<medium") {
+            width: 100%;
+          }
+        }
+        .en__field__label {
+          font-size: 1.4em;
+          font-weight: 400;
+          padding: 12px 25px;
+          @include media("<medium") {
+            width: 100%;
+          }
+        }
+      }
+      .en__field--donationAmt {
+        .en__field__label {
+          width: 100%;
+        }
+        .en__field__element--radio {
+          justify-content: space-around;
+          .en__field__item {
+            margin: 10px !important;
+            &.en__field__item--other {
+              margin-top: 20px !important;
+            }
+          }
+        }
+      }
+    }
+    .en__component--formblock {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      @include media("<medium") {
+        display: block;
+      }
+      .en__field {
+        flex-basis: calc(50% - 1rem);
+        margin: 0;
+        margin-bottom: 20px;
+        &--city,
+        &--region,
+        &--postcode,
+        &--ccvv {
+          flex-basis: calc(33% - 1rem);
+        }
+        &--ccexpire {
+          label {
+            visibility: hidden;
+          }
+          flex-basis: 66%;
+          .en__field__element--splitselect {
+            display: flex;
+            justify-content: space-between;
+            .en__field__item {
+              margin: 0 !important;
+              flex-basis: calc(50% - 0.4rem);
+            }
+          }
+        }
+      }
+      .en__field--giveBySelect {
+        width: 100%;
+        flex-basis: 100%;
+        .en__field__element--radio {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          > div {
+            flex: auto;
+            @include media("<medium") {
+              width: 100%;
+              margin: 10px 0 !important;
+            }
+            .en__field__label {
+              font-size: 1.4em;
+              font-weight: 400;
+              padding: 12px 25px;
+              width: 100%;
+              background-position-x: calc(50% - 45px);
+            }
+          }
+        }
+      }
+    }
+    .ccLogosHolder {
+      min-height: 50px;
+    }
+    .actionContainer {
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+    .additionalWaysToGive {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px auto;
+      div {
+        max-width: 150px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Add a background image when the page is not embedded or in the page builder */
+@include media(">large") {
+  body.theme-mfa:not(.embedded):not(#en__pagebuilder) {
+    background: $button-bg-color url("../../images/mfa/animals.jpg") repeat;
+    background-size: 300px;
+    background-position: left top;
+  }
+}

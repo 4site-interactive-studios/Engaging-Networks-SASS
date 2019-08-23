@@ -1378,7 +1378,7 @@ window.addEventListener("load", function() {
 (function() {
   window.addEventListener("load", function() {
     // Input names and IDs we reference
-    var payment_method_wrapper_class_name = "en__field--give-by-select";
+    var payment_method_wrapper_class_name = "en__field--giveBySelect";
     var payment_by_card_block_class_name = "give-by-card";
     var payment_by_paypal_block_class_name = "give-by-paypal";
     var payment_by_check_block_class_name = "give-by-check";
@@ -1460,6 +1460,7 @@ window.addEventListener("load", function() {
           }
           break;
       }
+      //document.querySelector("body.template-right").classList.add("loaded");
     }
 
     // Show or hide all blocks with a class name

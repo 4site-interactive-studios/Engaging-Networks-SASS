@@ -13,47 +13,27 @@
 */
 
 // 1. Configuration and helpers
-@import
-'themes/variables',
-'abstracts/variables-default',
-'abstracts/functions',
-'abstracts/mixins';
+@import "themes/variables", "abstracts/variables-default", "abstracts/functions",
+  "abstracts/mixins";
 
 // 2. Vendors
-@import
-'vendors/normalize',
-'vendors/sanitize',
-'vendors/include-media',
-'vendors/rem';
+@import "vendors/normalize", "vendors/sanitize", "vendors/include-media",
+  "vendors/rem";
 
 // 3. Base stuff
-@import
-'base/base',
-'base/fonts',
-'base/typography',
-'base/helpers';
+@import "base/keyframes", "base/base", "base/fonts", "base/typography",
+  "base/helpers";
 
 // 4. Layout-related sections
-@import
-'layout/header',
-'layout/footer',
-'layout/embed',
-'layout/page-builder',
-'layout/not-page-builder';
+@import "layout/header", "layout/footer", "layout/embed", "layout/page-builder",
+  "layout/not-page-builder";
 
 // 5. Components
-@import
-'components/designed-by-4site',
-'components/spinner',
-'components/error',
-'components/copy-block',
-'components/ellipsis',
-'components/radio-to-button',
-'components/payment',
-'components/form',
-'components/button';
+@import "components/designed-by-4site", "components/spinner", "components/error",
+  "components/copy-block", "components/ellipsis", "components/radio-to-button",
+  "components/payment", "components/form", "components/button";
 
 // 6. Page-specific styles
-@import
-'pages/template-1',
-'pages/template-2';
+@import "pages/template-1";
+// @import "pages/template-2";
+// @import "pages/template-right";
