@@ -147,7 +147,8 @@
 /* Add a background image when the page is not embedded or in the page builder */
 @include media(">large") {
   body.theme-mfa:not(.embedded):not(#en__pagebuilder) {
-    background: $button-bg-color url("../../images/mfa/animals.jpg") repeat;
+    background: $button-bg-color
+      url("https://apps.4sitestudios.com/fernando/mfa/animals.jpg") repeat;
     background-size: 300px;
     background-position: left top;
   }

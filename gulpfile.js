@@ -71,6 +71,7 @@ function prod(done) {
 
 exports.scripts = scripts;
 exports.css = css;
+exports.css_prod = css_prod;
 exports.watch = watch;
 exports.prod = prod;
 exports.default = gulp.parallel(css, scripts, watch);
