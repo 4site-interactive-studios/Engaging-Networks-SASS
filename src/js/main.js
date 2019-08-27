@@ -1708,10 +1708,10 @@ window.addEventListener("load", function() {
             processing_fee = donation_amount * 0.025 + 0.1;
             break;
           default:
-            processing_fee = 0;
+            processing_fee =
+              donation_amount * (processing_fee_checkbox.value / 10);
             break;
         }
-
         return roundDollarAmount(processing_fee);
       } else {
         return 0;
