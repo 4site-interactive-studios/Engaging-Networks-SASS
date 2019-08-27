@@ -447,9 +447,11 @@ window.getDonationInput = function() {
   return undefined;
 };
 
-window.getDonationAmount = function() {
+window.getDonationAmount = function(exclude_fee) {
+  exclude_fee = exclude_fee || false;
   var donation_input = window.getDonationInput();
   if (donation_input == undefined) return 0;
+  if (exclude_fee) return donation_input.value;
   return donation_input.hasAttribute("data-original")
     ? parseFloat(donation_input.getAttribute("data-original"))
     : parseFloat(donation_input.value);
@@ -1684,7 +1686,7 @@ window.addEventListener("load", function() {
         processing_fee_checkbox.isVisible()
       ) {
         var payment_type = window.getPaymentType();
-        var donation_amount = window.getDonationAmount();
+        var donation_amount = window.getDonationAmount(true);
         if (donation_amount == 0) return 0;
         var processing_fee = 0;
 
@@ -1709,10 +1711,10 @@ window.addEventListener("load", function() {
             break;
           default:
             processing_fee =
-              donation_amount * (processing_fee_checkbox.value / 10);
+              (processing_fee_checkbox.value / 100) * donation_amount;
             break;
         }
-        return roundDollarAmount(processing_fee);
+        return parseFloat(processing_fee).toFixed(2);
       } else {
         return 0;
       }
@@ -1724,19 +1726,15 @@ window.addEventListener("load", function() {
 
     function setProcessingFee(processing_fee) {
       var donation_input = window.getDonationInput();
-      if (!donation_input) return;
 
-      if (donation_input.name == "donation_amount_other_name") {
-        var original_value = donation_input.getAttribute("data-original");
-        if (!original_value) {
-          donation_input.setAttribute("data-original", donation_input.value);
-          original_value = donation_input.value;
-        }
-        donation_input.value =
-          parseFloat(original_value) + parseFloat(processing_fee);
-      } else {
-        donation_input.setAttribute("data-fee", processing_fee);
-      }
+      if (!donation_input || !donation_input.value) return;
+
+      var donation_with_fee = roundDollarAmount(
+        parseFloat(donation_input.value) + parseFloat(processing_fee)
+      );
+
+      donation_input.setAttribute("data-original", donation_with_fee);
+      donation_input.setAttribute("data-fee", processing_fee);
     }
 
     function updateDonationAmount() {
@@ -1821,7 +1819,7 @@ window.addEventListener("load", function() {
         updateDonationAmount
       );
       field_donation_amount_other.addEventListener(
-        "keydown",
+        "blur",
         updateDonationAmount
       );
     }
@@ -1864,7 +1862,7 @@ window.addEventListener("load", function() {
     }
 
     function updateStorage() {
-      var amount = window.getDonationAmount();
+      var amount = window.getDonationAmount(true);
       if (amount !== undefined) window.putItemInStorage("oc_en_amount", amount);
 
       var fee = window.getProcessingFee();
