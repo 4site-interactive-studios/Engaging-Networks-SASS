@@ -70,16 +70,6 @@ if (!Element.prototype.matches) {
     var donate_amount_other_name = "transaction.donationAmt.other";
     var payment_frequency_name = "transaction.recurrpay";
 
-    var monthly_prefills = window.oc_monthly_prefills
-      ? window.oc_monthly_prefills
-      : [22, 45, 105, 175, 250];
-    var single_prefills = window.oc_single_prefills
-      ? window.oc_single_prefills
-      : [50, 75, 150, 250, 500];
-    var pre_selected_value = window.oc_selected_prefill
-      ? parseInt(window.oc_selected_prefill)
-      : 0;
-
     var current_donation_frequency = "";
     var current_donation_amount = window.getDonationAmount();
 
@@ -142,25 +132,9 @@ if (!Element.prototype.matches) {
       }
     }
 
-    function processDonationValues(prefill_value = 0) {
-      var current_donation_frequency = window.getDonationFrequency();
-      if (current_donation_frequency == " Monthly") {
-        replaceDonationValues(single_prefills, monthly_prefills, prefill_value);
-      } else {
-        replaceDonationValues(monthly_prefills, single_prefills, prefill_value);
-      }
-    }
-
     var donation_frequency_buttons = document.querySelectorAll(
       'input[name="' + payment_frequency_name + '"]'
     );
-    for (i = 0; i < donation_frequency_buttons.length; i++) {
-      donation_frequency_buttons[i].addEventListener("change", function(e) {
-        if (processDonationValues) {
-          processDonationValues();
-        }
-      });
-    }
 
     var donation_amount_buttons = document.querySelectorAll(
       'input[name="' + donate_amount_name + '"]'
@@ -179,8 +153,6 @@ if (!Element.prototype.matches) {
         current_donation_amount = window.getDonationAmount();
       });
     }
-
-    processDonationValues(pre_selected_value);
   });
 })();
 
@@ -888,6 +860,8 @@ function pageHasLoaded(e) {
  ***********************************/
 (function() {
   window.addEventListener("load", function() {
+    // Change the submit button to work as a regular button
+    document.querySelector(".en__submit button").setAttribute("type", "button");
     var html = document.getElementsByTagName("html")[0]; // '0' to assign the first (and only `HTML` tag)
     var body = document.getElementsByTagName("body")[0]; // '0' to assign the first (and only `HTML` tag)
 
@@ -1095,7 +1069,11 @@ window.addEventListener("load", function() {
     },
     { id: "en__field_transaction_paymenttype", autocomplete: "cc-type" },
     { id: "en__field_transaction_ccvv", type: "tel", autocomplete: "cc-csc" },
-    { name: "transaction.donationAmt.other", placeholder: "Other", type: "tel" }
+    {
+      name: "transaction.donationAmt.other",
+      placeholder: "Other amount",
+      type: "tel"
+    }
   ];
 
   var us_field_overrides = [
@@ -1569,9 +1547,9 @@ window.addEventListener("load", function() {
     }
 
     // Add our form submit handler
-    var form = document.querySelector("form.en__component");
+    var form = document.querySelector(submit_button_selector);
     if (form) {
-      form.addEventListener("submit", function(e) {
+      form.addEventListener("click", function(e) {
         // add a class to the body to assist with EN's automatic scroll-to-first-error functionality
         // when we have moved the error display to below the field instead of the default top location
         document.querySelector("body").classList.add("error-jump-assist");
@@ -1597,8 +1575,19 @@ window.addEventListener("load", function() {
         if (!valid_form) {
           e.preventDefault();
           e.stopImmediatePropagation();
-          this.querySelector(submit_button_selector).disabled = false;
+          document.querySelector(submit_button_selector).disabled = false;
           return false;
+        } else {
+          // window.updateDonationAmount();
+          window.switchDonationAmount();
+          var submit_btn = document.querySelector(
+            '.en__submit button[type="button"]'
+          );
+          if (submit_btn != null) {
+            submit_btn.setAttribute("type", "submit");
+            submit_btn.click();
+          }
+          //document.querySelector("form.en__component").submit();
         }
       });
     }
@@ -1737,17 +1726,25 @@ window.addEventListener("load", function() {
       donation_input.setAttribute("data-fee", processing_fee);
     }
 
-    function updateDonationAmount() {
+    window.updateDonationAmount = function() {
       setProcessingFee(window.calculateProcessingFee());
       window.dispatchEvent(new Event("proccessingFeeCalculated"));
-    }
+    };
 
-    var form = document.querySelector("form.en__component");
-    if (form) {
-      form.addEventListener("submit", function(e) {
-        updateDonationAmount();
-      });
-    }
+    // Switch donation amount with processing fee before submit the form
+    window.switchDonationAmount = function() {
+      var donation_input = window.getDonationInput();
+
+      if (!donation_input || !donation_input.value) return;
+      var amount = window.getDonationAmount(true);
+      var donation_original = parseFloat(
+        donation_input.getAttribute("data-original")
+      );
+      if (amount != donation_original) {
+        window.putItemInStorage("oc_selected_prefill", amount);
+        donation_input.value = donation_original; // Set the new amount
+      }
+    };
 
     function initializeBaseDonationAmounts() {
       var donation_amount_buttons = document.querySelectorAll(
@@ -1823,6 +1820,7 @@ window.addEventListener("load", function() {
         updateDonationAmount
       );
     }
+    updateDonationAmount();
   });
 })();
 

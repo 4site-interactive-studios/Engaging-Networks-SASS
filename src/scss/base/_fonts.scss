@@ -1,4 +1,17 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
-@import "https://use.typekit.net/euy8mnd.css";
+@import "https://fonts.googleapis.com/css?family=Montserrat:700";
+
+@font-face {
+  font-family: "Museo Sans W01_500";
+  src: url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/a29947fd-0c53-492b-b2f4-399b01153b30.eot#iefix);
+  src: url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/a29947fd-0c53-492b-b2f4-399b01153b30.eot#iefix)
+      format("eot"),
+    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/d9896899-f08c-4750-a874-a9e10d83c2cb.woff2)
+      format("woff2"),
+    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/d42dd843-62b0-4623-8855-d5882512c3c9.woff)
+      format("woff"),
+    url(https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/6d532ccb-086c-4000-bab2-5d16862fcf01.ttf)
+      format("truetype");
+}

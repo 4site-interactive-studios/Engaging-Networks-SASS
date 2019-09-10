@@ -2,28 +2,24 @@
 // This file contains all application-wide Default Sass variables.
 // -----------------------------------------------------------------------------
 
-
 // Font Size Baseline
 $rem-baseline: 16px !default;
 $rem-fallback: false !default;
 $rem-px-only: false !default;
 
+/// Regular font family
+/// @type List
+$text-font-stack: "Museo Sans W01_500", "Museo Sans", Gotham, "Helvetica Neue",
+  Arial, sans-serif !default;
 
 /// Heading font family
 /// @type List
-$heading-font-stack: 'vinyl', 'Helvetica Neue Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-
-/// Regular font family
-/// @type List
-$text-font-stack: 'proxima-nova', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$heading-font-stack: $text-font-stack !default;
 
 /// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
-
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
 
 /// Copy text color
 /// @type Color
@@ -77,52 +73,34 @@ $red: #e74b3c !default;
 /// @type Color
 $green: #0e8542 !default;
 
-
-
 /// Error Color
 /// @type Color
 $error-color: $red !default;
-
-
-
-
 
 /// Container's maximum width
 /// @type Length
 $max-width: 900px !default;
 
-
-
-
-
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 375px,
-  'medium': 768px,
-  'large': 1024px,
+  "small": 375px,
+  "medium": 768px,
+  "large": 1024px
 ) !default;
-
-
-
-
-
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
-
+$base-url: "/assets/" !default;
 
 // Header & Footer Variables
 $footer-bg-color: $darker-grey !default;
-$footer-txt-color: #FFF !default;
-$footer-link-color: #FFF !default;
+$footer-txt-color: #fff !default;
+$footer-link-color: #fff !default;
 $footer-hover-link-color: $brand-color !default;
-
-
 
 /// Form & Fields Related Variables
 $form-border-radius: 7px !default;
@@ -131,7 +109,7 @@ $field-placeholder-color: $mid-grey !default;
 $field-border-radius: 5px !default;
 $field-border-color: $light-grey !default;
 $field-focus-border-color: $brand-color !default;
-$field-bg-color: #FFF !default;
+$field-bg-color: #fff !default;
 $field-focus-bg-color: $light-grey !default;
 $field-txt-color: $text-color !default;
 $field-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1) !default;
