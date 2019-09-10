@@ -19,7 +19,7 @@
         formBackgroundColor: "#0666f2",
         buttomTextColor: "#FFFFFF",
         buttomBackgroundColor: "#f99338",
-        maxLimit: 200,
+        maxLimit: 1000,
         minLimit: 10
       },
       options
