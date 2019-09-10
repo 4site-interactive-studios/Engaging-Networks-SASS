@@ -1,0 +1,143 @@
+#upsell-modal {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  top: 10px;
+}
+#upsell-modal .upsell-panel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #000;
+  min-height: 200px;
+}
+#upsell-modal .upsell-copy {
+  padding: 20px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
+
+#upsell-modal .upsell-copy p {
+  font-size: 14px;
+  text-align: left;
+  line-height: normal;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#upsell-modal .upsell-no-thanks {
+  text-align: center;
+  margin: 0;
+}
+#upsell-modal .upsell-deny {
+  font-size: 18px;
+  line-height: normal;
+  text-decoration: none;
+  color: #009bc4;
+}
+#upsell-modal .upsell-deny:hover {
+  color: #2980d9;
+}
+
+#upsell-modal .upsell-title {
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#upsell-modal .upsell-subtitle {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+#upsell-modal .upsell-recommendation {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#upsell-modal .upsell-recommendation .upsell-confirm {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  text-align: center;
+}
+#upsell-modal .upsell-recommendation .upsell-confirm:hover {
+  opacity: 0.8;
+}
+
+#upsell-modal .upsell-recommendation--amount {
+  padding: 15px;
+  text-align: center;
+}
+
+#upsell-modal .upsell-recommendation--amount span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#upsell-modal .upsell-recommendation--amount input {
+  display: inline-block;
+  border: 2px solid #767271;
+  font-size: 20px;
+  min-height: 32px;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+#upsell-modal .upsell-modal--close {
+  border: 0;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  line-height: normal;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+#upsell-modal .upsell-modal--close:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 768px) {
+  #upsell-modal .upsell-copy p {
+    font-size: 16px;
+  }
+
+  #upsell-modal {
+    height: 450px;
+    top: 100px;
+  }
+  #upsell-modal .upsell-panel {
+    float: left;
+    width: 35%;
+    height: 100%;
+    padding-top: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  #upsell-modal .upsell-copy {
+    padding: 30px;
+    float: left;
+    width: 64.5%;
+    height: 100%;
+  }
+}

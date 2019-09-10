@@ -1583,7 +1583,12 @@ window.addEventListener("load", function() {
           var submit_btn = document.querySelector(
             '.en__submit button[type="button"]'
           );
-          if (submit_btn != null) {
+          if (
+            submit_btn != null &&
+            !$("form")
+              .first()
+              .upsell()
+          ) {
             submit_btn.setAttribute("type", "submit");
             submit_btn.click();
           }
