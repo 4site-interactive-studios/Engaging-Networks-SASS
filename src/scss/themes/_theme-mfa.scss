@@ -148,6 +148,429 @@
   }
 }
 
+// Bryan's Custom Start
+/* Remove top margin */
+p {
+  margin-top: 0;
+}
+
+/* Set max-width of currency field and remove margin*/
+.en__field.en__field--select.en__field--paycurrency {
+  max-width: 184px;
+  margin-bottom: 0 !important;
+}
+
+/* Makes max width of content area 840px, other break points need to be adjusted */
+#main-content-wrapper {
+  max-width: 910px;
+}
+
+/* Change from space-around to centered */
+.theme-mfa
+  #main-content
+  .donation-amt
+  .en__field--donationAmt
+  .en__field__element--radio {
+  justify-content: center;
+}
+
+/* Change from space-around to space-between */
+.theme-mfa #main-content .en__component--formblock {
+  justify-content: space-between;
+}
+
+/* Reduce the space between fields */
+.theme-mfa
+  #main-content
+  .en__component--formblock
+  .en__field:not(.en__field--000000) {
+  flex-basis: calc((100% / 2) - (1rem / 2));
+}
+
+/* Reduce the spacr between fields */
+.theme-mfa #main-content .en__component--formblock .en__field.en__field--city,
+.theme-mfa #main-content .en__component--formblock .en__field.en__field--region,
+.theme-mfa
+  #main-content
+  .en__component--formblock
+  .en__field.en__field--postcode {
+  flex-basis: calc((100% / 3) - (1rem / 3) - (1rem / 3));
+}
+
+/* Remove font-size increase */
+.theme-mfa #main-content .donation-amt .en__field--recurrpay .en__field__label {
+  font-size: 1rem;
+}
+
+/* Remove font-size increase */
+.theme-mfa
+  #main-content
+  .en__component--formblock
+  .en__field--giveBySelect
+  .en__field__element--radio
+  > div
+  .en__field__label {
+  font-size: 1rem;
+}
+
+/* Remove font-weight increase on radio selects turned buttons */
+.theme-mfa #main-content .en__field__element--radio .en__field__label {
+  font-weight: initial;
+}
+
+/* Remove right margin if last item. Might not need to be !important once added into CSS */
+#main-content .en__component--formblock .en__field:last-of-type,
+#main-content
+  .en__component--formblock
+  .en__field
+  div.en__field__item:last-of-type {
+  margin-right: 0rem !important;
+}
+
+/* Adjust margin */
+.theme-mfa
+  #main-content
+  .donation-amt
+  .en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item {
+  margin: 0 0.5rem 1rem 0.5rem !important;
+}
+
+/* No bottom margin needed since the elements inside provide it */
+#main-content .recurring-payment,
+#main-content .en__field--donationAmt .en__field__element--radio {
+  margin-bottom: 0;
+}
+
+/* No top margin needed once the element on its row are aligned  with flex-start (see below)*/
+.theme-mfa
+  #main-content
+  .donation-amt
+  .en__field--donationAmt
+  .en__field__element--radio
+  .en__field__item.en__field__item--other {
+  margin-top: 0px !important;
+}
+
+/* Align items to the "top" of their element */
+#main-content
+  .en__component
+  .en__field.en__field--select
+  .en__field__item:not(.en__field__item--other),
+#main-content
+  .en__component
+  .en__field.en__field--radio
+  .en__field__item:not(.en__field__item--other),
+#main-content
+  .en__component
+  .en__field.en__field--checkbox
+  .en__field__item:not(.en__field__item--other),
+#main-content
+  .en__component
+  .en__field.en__field--splittext
+  .en__field__item:not(.en__field__item--other),
+#main-content
+  .en__component
+  .en__field.en__field--tripletext
+  .en__field__item:not(.en__field__item--other),
+#main-content
+  .en__component
+  .en__field.en__field--splitselect
+  .en__field__item:not(.en__field__item--other),
+#main-content
+  .en__component
+  .en__field.en__field--tripleselect
+  .en__field__item:not(.en__field__item--other) {
+  align-content: flex-start;
+}
+
+/* No need for a top margin */
+#main-content .recurring-payment,
+#main-content .en__field--donationAmt .en__field__element--radio {
+  margin-top: 0 !important;
+}
+
+/* Remove margin from WYSIWYG inserted P tag */
+#main-content .header-logo p {
+  margin-top: 0;
+}
+
+/* Fix to enfieldoverrides.css */
+#main-content
+  .en__component
+  .en__field.en__field--radio
+  .en__field__item:not(.en__field__item--other) {
+  margin-right: 0.5rem;
+}
+
+/* Center the submit button */
+#main-content .en__submit {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-content .en__field--donationAmt .en__field__item--other input {
+  width: 215px;
+}
+
+#main-content .sectionHeadingWrapper,
+#main-content .sectionRowWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Reduce spacing */
+#main-content .en__component .space-below {
+  margin-bottom: 1rem;
+}
+
+/*
+    #main-content .en__component .en__field--ccnumber,
+    #main-content .en__component .ccLogosHolder{
+        flex-basis: calc((100%/2) - (1rem/2));
+    }*/
+
+.theme-mfa
+  #main-content
+  .en__component--formblock
+  .en__field.en__field--ccnumber {
+  flex-basis: 100%;
+}
+
+#main-content .en__component .ccLogosHolder {
+  margin-bottom: 1rem;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  opacity: 0.6;
+}
+
+#main-content .en__component .ccLogos {
+  height: 28px;
+  margin: 6px 0;
+  background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/mfa-card-display.jpg?v=1555710278000");
+  width: 177px;
+  display: block;
+  background-size: cover;
+}
+
+/** Utility Class: Hides Content or Columns, but not when being viewed in Page Builder **/
+body:not(#en__pagebuilder) .hide {
+  display: none !important;
+}
+
+#en__pagebuilder .hide {
+  background-color: #ff00001a !important;
+}
+
+#en__pagebuilder .hide.en__component--column {
+  outline-color: #ff0000 !important;
+}
+
+/* Show expiration date label */
+.theme-mfa #main-content .en__component--formblock .en__field--ccexpire label {
+  visibility: visible;
+}
+
+.monthly-callout {
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #41b6e6;
+  color: #fff;
+  margin-top: 20px;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  max-width: 472px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+.monthly-callout p {
+  margin-bottom: 0;
+}
+
+.monthly-callout:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #41b6e6;
+  border-width: 20px;
+  margin-left: 53px;
+  z-index: 1;
+}
+
+/* Remove margin */
+.theme-mfa #main-content .donation-amt {
+  margin-top: 0;
+}
+
+/* Visually center the icons with their labels */
+.theme-mfa
+  #main-content
+  .en__component--formblock
+  .en__field--giveBySelect
+  .en__field__element--radio
+  > div
+  .en__field__label {
+  padding: 12px 7px 12px 32px;
+  background-position-x: calc(50% - 30px);
+}
+
+/* Make sure the input is above the card images */
+input#en__field_transaction_ccnumber {
+  background-color: transparent;
+  z-index: 1;
+}
+
+#en__field_transaction_ccnumber {
+  background-image: url("https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10040/mfa-card-display.jpg?v=1555710278000");
+  background-size: 170px;
+  background-position-x: calc(100% - 8px);
+  background-position-y: center;
+}
+
+#main-content .en__field--donationAmt .en__field__item--other {
+  position: relative;
+}
+
+#main-content
+  .show-hidden-input
+  .en__field--donationAmt
+  .en__field__item--other::before {
+  position: absolute;
+}
+
+#main-content
+  .show-hidden-input
+  .en__field--donationAmt
+  .en__field__item--other::after {
+  position: absolute;
+  top: 3rem;
+}
+
+#main-content
+  .en__field--donationAmt.monthly-giving
+  div:not(.en__field__item--other)
+  .en__field__label--item::after {
+  line-height: 1.9;
+}
+
+.i1-25 .en__field:nth-child(1) {
+  flex-basis: calc((100% / 4) - (1rem / 2)) !important;
+}
+.i1-33 .en__field:nth-child(1) {
+  flex-basis: calc((100% / 3) - (1rem / 2)) !important;
+}
+.i1-50 .en__field:nth-child(1) {
+  flex-basis: calc((100% / 2) - (1rem / 2)) !important;
+}
+.i1-75 .en__field:nth-child(1) {
+  flex-basis: calc((100% / (1+1 / 3)) - (1rem / 2)) !important;
+}
+.i1-100 .en__field:nth-child(1) {
+  flex-basis: calc((100% / 1) - (1rem / 2)) !important;
+}
+
+.i1-25 .en__field:nth-child(2) {
+  flex-basis: calc((100% / 4) - (1rem / 2)) !important;
+}
+.i1-33 .en__field:nth-child(2) {
+  flex-basis: calc((100% / 3) - (1rem / 2)) !important;
+}
+.i1-50 .en__field:nth-child(2) {
+  flex-basis: calc((100% / 2) - (1rem / 2)) !important;
+}
+.i1-75 .en__field:nth-child(2) {
+  flex-basis: calc((100% / (1+1 / 3)) - (1rem / 2)) !important;
+}
+.i1-100 .en__field:nth-child(2) {
+  flex-basis: calc((100% / 1) - (1rem / 2)) !important;
+}
+
+body.theme-mfa:not(.embedded):not(#en__pagebuilder) {
+  background-image: url("https://i.imgur.com/jkDM0cs.png");
+}
+
+@media (max-width: 370px) {
+  /* When display is too small, remove down carrot as giving frequency options may stack */
+  .monthly-callout:after {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .theme-mfa
+    #main-content
+    .donation-amt
+    .en__field--recurrpay
+    .en__field__item {
+    width: auto;
+  }
+
+  .theme-mfa
+    #main-content
+    .en__component--formblock
+    .en__field--giveBySelect
+    .en__field__element--radio
+    > div {
+    margin-left: 0.25rem !important;
+    max-width: calc((100% / 3) - (1rem / 3));
+    margin-right: 0.25rem !important;
+  }
+
+  .theme-mfa
+    #main-content
+    .en__component--formblock
+    .en__field--giveBySelect
+    .en__field__element--radio
+    > div:first-child {
+    margin-left: 0rem !important;
+  }
+
+  .theme-mfa
+    #main-content
+    .en__component--formblock
+    .en__field--giveBySelect
+    .en__field__element--radio
+    > div:last-child {
+    margin-right: 0rem !important;
+  }
+
+  .theme-mfa
+    #main-content
+    .en__component--formblock
+    .en__field--giveBySelect
+    .en__field__element--radio
+    > div
+    .en__field__label {
+    padding: 12px 15px 12px 35px;
+  }
+
+  .theme-mfa
+    #main-content
+    .en__component--formblock
+    .en__field--giveBySelect
+    .en__field__element--radio
+    > div
+    .en__field__label {
+    background-position-x: calc((100% / 2) - 30px);
+  }
+}
+
+/* Need to change "transaction.donationAmt.other" placeholder from "Other" to "Other amount". Then also get translations. When Indian Rupel is selected change $ to ₹ and vice-versa with $ as default. JS is stripping the "en__field__item--hidden" class from "en__field__item--other" causing it to not be styled properly. */
+
+// Bryan's Custom End
+
 /* Add a background image when the page is not embedded or in the page builder */
 @include media(">large") {
   body.theme-mfa:not(.embedded):not(#en__pagebuilder) {

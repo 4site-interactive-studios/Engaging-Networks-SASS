@@ -1656,6 +1656,72 @@ window.addEventListener("load", function() {
       field_donation_amount_other.addEventListener("paste", change_handler);
       field_donation_amount_other.addEventListener("keydown", change_handler);
     }
+    // Put a credit card class according to the number
+    var credit_card_field = document.getElementById(
+      "en__field_transaction_ccnumber"
+    );
+    if (credit_card_field) {
+      var cc_handler = function(e) {
+        if (this.value == "")
+          return (this.className = "en__field__input en__field__input--text ");
+        var number = this.value;
+
+        var cc_class = false;
+        // visa
+        var re = new RegExp("^4");
+        if (number.match(re) != null) cc_class = "Visa";
+
+        // Mastercard
+        // Updated for Mastercard 2017 BINs expansion
+        if (
+          /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/.test(
+            number
+          )
+        )
+          cc_class = "Mastercard";
+
+        // AMEX
+        re = new RegExp("^3[47]");
+        if (number.match(re) != null) cc_class = "Amex";
+
+        // Discover
+        re = new RegExp(
+          "^(6011|622(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[0-1][0-9]|92[0-5]|64[4-9])|65)"
+        );
+        if (number.match(re) != null) cc_class = "Discover";
+
+        // Diners
+        re = new RegExp("^36");
+        if (number.match(re) != null) cc_class = "Diners";
+
+        // Diners - Carte Blanche
+        re = new RegExp("^30[0-5]");
+        if (number.match(re) != null) cc_class = "Diners";
+
+        // JCB
+        re = new RegExp("^35(2[89]|[3-8][0-9])");
+        if (number.match(re) != null) cc_class = "Jcb";
+
+        // Visa Electron
+        re = new RegExp("^(4026|417500|4508|4844|491(3|7))");
+        if (number.match(re) != null) cc_class = "Visa-electron";
+
+        if (cc_class) {
+          var payment_type_select = document.getElementById(
+            "en__field_transaction_paymenttype"
+          );
+          if (payment_type_select) {
+            payment_type_select.value = cc_class;
+          }
+
+          this.className =
+            "en__field__input en__field__input--text " + cc_class;
+        } else {
+          this.className = "en__field__input en__field__input--text ";
+        }
+      };
+      credit_card_field.addEventListener("keyup", cc_handler);
+    }
   });
 })();
 
@@ -1845,6 +1911,23 @@ window.addEventListener("load", function() {
       var button = document.querySelector(
         ".smart-gift-amount-submit-label button"
       );
+      var amount = window.getDonationAmount();
+      var frequency = window.getDonationFrequency();
+      var payment_amount = document.querySelectorAll(".payment-amount");
+      var payment_currency = document.querySelectorAll(".payment-currency");
+      var payment_frequency = document.querySelectorAll(".payment-frequency");
+
+      payment_amount.forEach(elem => (elem.innerHTML = amount));
+      payment_currency.forEach(
+        elem =>
+          (elem.innerHTML = document.getElementById(
+            "en__field_transaction_paycurrency"
+          ).value)
+      );
+      payment_frequency.forEach(
+        elem => (elem.innerHTML = !frequency ? "Once" : "Monthly")
+      );
+
       if (button) {
         button.innerHTML = getLabel();
       }
@@ -1894,8 +1977,18 @@ window.addEventListener("load", function() {
     var donation_frequency_buttons = document.querySelectorAll(
       'input[name="' + payment_frequency_name + '"]'
     );
+    var donation_currency = document.getElementById(
+      "en__field_transaction_paycurrency"
+    );
     for (i = 0; i < donation_frequency_buttons.length; i++) {
       donation_frequency_buttons[i].addEventListener("change", function() {
+        updateStorage();
+        updateLabel();
+        updateAmountLabels();
+      });
+    }
+    if (donation_currency) {
+      donation_currency.addEventListener("change", function() {
         updateStorage();
         updateLabel();
         updateAmountLabels();
