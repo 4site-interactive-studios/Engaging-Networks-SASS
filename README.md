@@ -1,4 +1,4 @@
-# Engaging Network Templates by 4Site
+# Engaging Networks Templates by 4Site
 
 
 ## How to install the repository and work locally
