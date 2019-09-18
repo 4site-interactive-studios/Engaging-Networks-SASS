@@ -567,6 +567,28 @@ body.theme-mfa:not(.embedded):not(#en__pagebuilder) {
   }
 }
 
+/* Bring the Giving Amount Confirmation Text closer to the Submit Button */
+.giving-amount-confirmation {
+  position: relative;
+  top: -1.75rem;
+}
+
+/* Style dynamic text in WYSIWYG */
+#en__pagebuilder .payment-amount,
+#en__pagebuilder .payment-currency,
+#en__pagebuilder .payment-frequency {
+  display: inline-block !important;
+  background-color: #00ff081a !important;
+}
+
+/* Remove Background Image on Mobile */
+@media (max-width: 1025px) {
+  body.theme-mfa:not(.embedded):not(#en__pagebuilder) {
+    background-color: #ffffff;
+    background-image: none;
+  }
+}
+
 /* Need to change "transaction.donationAmt.other" placeholder from "Other" to "Other amount". Then also get translations. When Indian Rupel is selected change $ to ₹ and vice-versa with $ as default. JS is stripping the "en__field__item--hidden" class from "en__field__item--other" causing it to not be styled properly. */
 
 // Bryan's Custom End
