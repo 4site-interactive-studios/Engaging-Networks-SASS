@@ -589,6 +589,27 @@ body.theme-mfa:not(.embedded):not(#en__pagebuilder) {
   }
 }
 
+@media (max-width: 599px) {
+  .theme-mfa
+    #main-content
+    .en__component--formblock
+    .en__field--giveBySelect
+    .en__field__element--radio
+    > div {
+    max-width: 100%;
+  }
+}
+
+.theme-mfa
+  #main-content
+  .en__component--formblock
+  .en__field--giveBySelect
+  .en__field__element--radio
+  > div:last-child
+  .en__field__label {
+  background-position-x: calc(50% - 83px) !important;
+}
+
 /* Need to change "transaction.donationAmt.other" placeholder from "Other" to "Other amount". Then also get translations. When Indian Rupel is selected change $ to ₹ and vice-versa with $ as default. JS is stripping the "en__field__item--hidden" class from "en__field__item--other" causing it to not be styled properly. */
 
 // Bryan's Custom End

@@ -73,64 +73,66 @@ if (!Element.prototype.matches) {
     var current_donation_frequency = "";
     var current_donation_amount = window.getDonationAmount();
 
-    function selectDonationValue(index) {
-      var donate_inputs = document.querySelectorAll(
-        'input[name="' + donate_amount_name + '"]'
-      );
-      for (var i = 0; i < donate_inputs.length; i++) {
-        if (i == index) {
-          donate_inputs[i].checked = true;
-        } else {
-          donate_inputs[i].checked = false;
-        }
-      }
+    // function selectDonationValue(index) {
+    //   var donate_inputs = document.querySelectorAll(
+    //     'input[name="' + donate_amount_name + '"]'
+    //   );
+    //   for (var i = 0; i < donate_inputs.length; i++) {
+    //     if (i == index) {
+    //       donate_inputs[i].checked = true;
+    //     } else {
+    //       donate_inputs[i].checked = false;
+    //     }
+    //   }
 
-      var donate_other_input = document.querySelector(
-        'input[name="' + donate_amount_other_name + '"]'
-      );
-      if (donate_other_input) {
-        if (index == -1 && select_other_if_amount_not_found) {
-          donate_other_input.checked = true;
-        } else {
-          donate_other_input.parentNode.classList.remove("has-value");
-          donate_other_input.value = "";
-        }
-      }
-    }
+    //   var donate_other_input = document.querySelector(
+    //     'input[name="' + donate_amount_other_name + '"]'
+    //   );
+    //   if (donate_other_input) {
+    //     if (index == -1 && select_other_if_amount_not_found) {
+    //       donate_other_input.checked = true;
+    //     } else {
+    //       donate_other_input.parentNode.classList.remove("has-value");
+    //       donate_other_input.value = "";
+    //     }
+    //   }
+    // }
 
-    function replaceDonationValues(
-      source_prefills,
-      update_prefills,
-      prefill_value = 0
-    ) {
-      var donate_inputs = document.querySelectorAll(
-        'input[name="' + donate_amount_name + '"]'
-      );
-      for (var i = 0; i < donate_inputs.length; i++) {
-        donate_inputs[i].value = update_prefills[i];
-        donate_inputs[i].parentNode.querySelector("label").textContent =
-          "$" + donate_inputs[i].value;
-        donate_inputs[i].setAttribute("data-original", update_prefills[i]);
-      }
+    // TODO: Delete below
 
-      if (prefill_value && update_prefills.indexOf(prefill_value) > -1)
-        current_donation_amount = prefill_value;
+    // function replaceDonationValues(
+    //   source_prefills,
+    //   update_prefills,
+    //   prefill_value = 0
+    // ) {
+    //   var donate_inputs = document.querySelectorAll(
+    //     'input[name="' + donate_amount_name + '"]'
+    //   );
+    //   for (var i = 0; i < donate_inputs.length; i++) {
+    //     donate_inputs[i].value = update_prefills[i];
+    //     donate_inputs[i].parentNode.querySelector("label").textContent =
+    //       "$" + donate_inputs[i].value;
+    //     donate_inputs[i].setAttribute("data-original", update_prefills[i]);
+    //   }
 
-      var select_index = update_prefills.indexOf(
-        parseInt(current_donation_amount)
-      );
-      selectDonationValue(select_index);
-      if (select_index == -1 && select_other_if_amount_not_found) {
-        var donate_other_input = document.querySelector(
-          'input[name="' + donate_amount_other_name + '"]'
-        );
+    //   if (prefill_value && update_prefills.indexOf(prefill_value) > -1)
+    //     current_donation_amount = prefill_value;
 
-        if (donate_other_input) {
-          donate_other_input.value = current_donation_amount;
-          donate_other_input.parentNode.classList.add("has-value");
-        }
-      }
-    }
+    //   var select_index = update_prefills.indexOf(
+    //     parseInt(current_donation_amount)
+    //   );
+    //   selectDonationValue(select_index);
+    //   if (select_index == -1 && select_other_if_amount_not_found) {
+    //     var donate_other_input = document.querySelector(
+    //       'input[name="' + donate_amount_other_name + '"]'
+    //     );
+
+    //     if (donate_other_input) {
+    //       donate_other_input.value = current_donation_amount;
+    //       donate_other_input.parentNode.classList.add("has-value");
+    //     }
+    //   }
+    // }
 
     var donation_frequency_buttons = document.querySelectorAll(
       'input[name="' + payment_frequency_name + '"]'
@@ -1089,67 +1091,67 @@ window.addEventListener("load", function() {
       label: "ZIP Code",
       type: "tel"
     },
-    { id: "en__field_supporter_city", placeholder: "City", label: "City" },
-    {
-      id: "en__field_supporter_region",
-      label: "State",
-      label: "State",
-      type: "select",
-      options: [
-        { value: "", label: "Select a State" },
-        { value: "AL", label: "Alabama" },
-        { value: "AK", label: "Alaska" },
-        { value: "AZ", label: "Arizona" },
-        { value: "AR", label: "Arkansas" },
-        { value: "CA", label: "California" },
-        { value: "CO", label: "Colorado" },
-        { value: "CT", label: "Connecticut" },
-        { value: "DE", label: "Delaware" },
-        { value: "DC", label: "District of Columbia" },
-        { value: "FL", label: "Florida" },
-        { value: "GA", label: "Georgia" },
-        { value: "HI", label: "Hawaii" },
-        { value: "ID", label: "Idaho" },
-        { value: "IL", label: "Illinois" },
-        { value: "IN", label: "Indiana" },
-        { value: "IA", label: "Iowa" },
-        { value: "KS", label: "Kansas" },
-        { value: "KY", label: "Kentucky" },
-        { value: "LA", label: "Louisiana" },
-        { value: "ME", label: "Maine" },
-        { value: "MD", label: "Maryland" },
-        { value: "MA", label: "Massachusetts" },
-        { value: "MI", label: "Michigan" },
-        { value: "MN", label: "Minnesota" },
-        { value: "MS", label: "Mississippi" },
-        { value: "MO", label: "Missouri" },
-        { value: "MT", label: "Montana" },
-        { value: "NE", label: "Nebraska" },
-        { value: "NV", label: "Nevada" },
-        { value: "NH", label: "New Hampshire" },
-        { value: "NJ", label: "New Jersey" },
-        { value: "NM", label: "New Mexico" },
-        { value: "NY", label: "New York" },
-        { value: "NC", label: "North Carolina" },
-        { value: "ND", label: "North Dakota" },
-        { value: "OH", label: "Ohio" },
-        { value: "OK", label: "Oklahoma" },
-        { value: "OR", label: "Oregon" },
-        { value: "PA", label: "Pennsylvania" },
-        { value: "RI", label: "Rhode Island" },
-        { value: "SC", label: "South Carolina" },
-        { value: "SD", label: "South Dakota" },
-        { value: "TN", label: "Tennessee" },
-        { value: "TX", label: "Texas" },
-        { value: "UT", label: "Utah" },
-        { value: "VT", label: "Vermont" },
-        { value: "VA", label: "Virginia" },
-        { value: "WA", label: "Washington" },
-        { value: "WV", label: "West Virginia" },
-        { value: "WI", label: "Wisconsin" },
-        { value: "WY", label: "Wyoming" }
-      ]
-    }
+    { id: "en__field_supporter_city", placeholder: "City", label: "City" }
+    // {
+    //   id: "en__field_supporter_region",
+    //   label: "State",
+    //   label: "State",
+    //   type: "select",
+    //   options: [
+    //     { value: "", label: "Select a State" },
+    //     { value: "AL", label: "Alabama" },
+    //     { value: "AK", label: "Alaska" },
+    //     { value: "AZ", label: "Arizona" },
+    //     { value: "AR", label: "Arkansas" },
+    //     { value: "CA", label: "California" },
+    //     { value: "CO", label: "Colorado" },
+    //     { value: "CT", label: "Connecticut" },
+    //     { value: "DE", label: "Delaware" },
+    //     { value: "DC", label: "District of Columbia" },
+    //     { value: "FL", label: "Florida" },
+    //     { value: "GA", label: "Georgia" },
+    //     { value: "HI", label: "Hawaii" },
+    //     { value: "ID", label: "Idaho" },
+    //     { value: "IL", label: "Illinois" },
+    //     { value: "IN", label: "Indiana" },
+    //     { value: "IA", label: "Iowa" },
+    //     { value: "KS", label: "Kansas" },
+    //     { value: "KY", label: "Kentucky" },
+    //     { value: "LA", label: "Louisiana" },
+    //     { value: "ME", label: "Maine" },
+    //     { value: "MD", label: "Maryland" },
+    //     { value: "MA", label: "Massachusetts" },
+    //     { value: "MI", label: "Michigan" },
+    //     { value: "MN", label: "Minnesota" },
+    //     { value: "MS", label: "Mississippi" },
+    //     { value: "MO", label: "Missouri" },
+    //     { value: "MT", label: "Montana" },
+    //     { value: "NE", label: "Nebraska" },
+    //     { value: "NV", label: "Nevada" },
+    //     { value: "NH", label: "New Hampshire" },
+    //     { value: "NJ", label: "New Jersey" },
+    //     { value: "NM", label: "New Mexico" },
+    //     { value: "NY", label: "New York" },
+    //     { value: "NC", label: "North Carolina" },
+    //     { value: "ND", label: "North Dakota" },
+    //     { value: "OH", label: "Ohio" },
+    //     { value: "OK", label: "Oklahoma" },
+    //     { value: "OR", label: "Oregon" },
+    //     { value: "PA", label: "Pennsylvania" },
+    //     { value: "RI", label: "Rhode Island" },
+    //     { value: "SC", label: "South Carolina" },
+    //     { value: "SD", label: "South Dakota" },
+    //     { value: "TN", label: "Tennessee" },
+    //     { value: "TX", label: "Texas" },
+    //     { value: "UT", label: "Utah" },
+    //     { value: "VT", label: "Vermont" },
+    //     { value: "VA", label: "Virginia" },
+    //     { value: "WA", label: "Washington" },
+    //     { value: "WV", label: "West Virginia" },
+    //     { value: "WI", label: "Wisconsin" },
+    //     { value: "WY", label: "Wyoming" }
+    //   ]
+    // }
   ];
 
   var canada_field_overrides = [
@@ -1169,28 +1171,28 @@ window.addEventListener("load", function() {
       id: "en__field_supporter_city",
       placeholder: "Municipality",
       label: "Municipality"
-    },
-    {
-      id: "en__field_supporter_region",
-      label: "Province",
-      type: "select",
-      options: [
-        { value: "", label: "Select a Province" },
-        { value: "AB", label: "Alberta" },
-        { value: "BC", label: "British Columbia" },
-        { value: "MB", label: "Manitoba" },
-        { value: "NB", label: "New Brunswick" },
-        { value: "NL", label: "Newfoundland and Labrador" },
-        { value: "NT", label: "Northwest Territories" },
-        { value: "NS", label: "Nova Scotia" },
-        { value: "NU", label: "Nunavut" },
-        { value: "ON", label: "Ontario" },
-        { value: "PE", label: "Prince Edward Island" },
-        { value: "QC", label: "Quebec" },
-        { value: "SK", label: "Saskatchewan" },
-        { value: "YT", label: "Yukon" }
-      ]
     }
+    // {
+    //   id: "en__field_supporter_region",
+    //   label: "Province",
+    //   type: "select",
+    //   options: [
+    //     { value: "", label: "Select a Province" },
+    //     { value: "AB", label: "Alberta" },
+    //     { value: "BC", label: "British Columbia" },
+    //     { value: "MB", label: "Manitoba" },
+    //     { value: "NB", label: "New Brunswick" },
+    //     { value: "NL", label: "Newfoundland and Labrador" },
+    //     { value: "NT", label: "Northwest Territories" },
+    //     { value: "NS", label: "Nova Scotia" },
+    //     { value: "NU", label: "Nunavut" },
+    //     { value: "ON", label: "Ontario" },
+    //     { value: "PE", label: "Prince Edward Island" },
+    //     { value: "QC", label: "Quebec" },
+    //     { value: "SK", label: "Saskatchewan" },
+    //     { value: "YT", label: "Yukon" }
+    //   ]
+    // }
   ];
 
   var other_field_overrides = [
@@ -1533,18 +1535,18 @@ window.addEventListener("load", function() {
     }
 
     // Add our donation amount change handler
-    var donation_amount_buttons = document.querySelectorAll(
-      'input[name="' + donation_amount_name + '"]'
-    );
-    for (i = 0; i < donation_amount_buttons.length; i++) {
-      donation_amount_buttons[i].onchange = function() {
-        if (parseInt(window.getSelectedRadioValue(donation_amount_name))) {
-          document
-            .querySelector('input[name="' + donation_amount_other_name + '"]')
-            .parentNode.classList.remove("has-value");
-        }
-      };
-    }
+    // var donation_amount_buttons = document.querySelectorAll(
+    //   'input[name="' + donation_amount_name + '"]'
+    // );
+    // for (i = 0; i < donation_amount_buttons.length; i++) {
+    //   donation_amount_buttons[i].onchange = function() {
+    //     if (parseInt(window.getSelectedRadioValue(donation_amount_name))) {
+    //       document
+    //         .querySelector('input[name="' + donation_amount_other_name + '"]')
+    //         .parentNode.classList.remove("has-value");
+    //     }
+    //   };
+    // }
 
     // Add our form submit handler
     var form = document.querySelector(submit_button_selector);
@@ -1745,35 +1747,10 @@ window.addEventListener("load", function() {
         processing_fee_checkbox.checked &&
         processing_fee_checkbox.isVisible()
       ) {
-        var payment_type = window.getPaymentType();
         var donation_amount = window.getDonationAmount(true);
         if (donation_amount == 0) return 0;
-        var processing_fee = 0;
-
-        switch (payment_type.toUpperCase()) {
-          case "VI":
-            processing_fee = donation_amount * 0.025 + 0.1;
-            break;
-          case "MC":
-            processing_fee = donation_amount * 0.025 + 0.1;
-            break;
-          case "DI":
-            processing_fee = donation_amount * 0.025 + 0.1;
-            break;
-          case "AX":
-            processing_fee = donation_amount * 0.025 + 0.1;
-            break;
-          case "PAYPAL":
-            processing_fee = donation_amount * 0.05 + 0.3;
-            break;
-          case "CHECK":
-            processing_fee = donation_amount * 0.025 + 0.1;
-            break;
-          default:
-            processing_fee =
-              (processing_fee_checkbox.value / 100) * donation_amount;
-            break;
-        }
+        var processing_fee =
+          (processing_fee_checkbox.value / 100) * donation_amount;
         return parseFloat(processing_fee).toFixed(2);
       } else {
         return 0;
@@ -1828,10 +1805,17 @@ window.addEventListener("load", function() {
             donation_amount_buttons[i].value
           );
         }
-        donation_amount_buttons[i].addEventListener("click", function(e) {
-          updateDonationAmount();
-        });
       }
+      document.addEventListener("click", function(e) {
+        if (e.target && e.target.name == donation_amount_name) {
+          updateDonationAmount();
+          if (parseInt(window.getSelectedRadioValue(donation_amount_name))) {
+            document
+              .querySelector('input[name="' + donation_amount_other_name + '"]')
+              .parentNode.classList.remove("has-value");
+          }
+        }
+      });
     }
     initializeBaseDonationAmounts();
 
@@ -1911,7 +1895,7 @@ window.addEventListener("load", function() {
       var button = document.querySelector(
         ".smart-gift-amount-submit-label button"
       );
-      var amount = window.getDonationAmount();
+      var amount = window.getDonationAmount().toFixed(2);
       var frequency = window.getDonationFrequency();
       var payment_amount = document.querySelectorAll(".payment-amount");
       var payment_currency = document.querySelectorAll(".payment-currency");
@@ -1985,6 +1969,21 @@ window.addEventListener("load", function() {
         updateStorage();
         updateLabel();
         updateAmountLabels();
+        document
+          .querySelector('input[name="' + donation_amount_other_name + '"]')
+          .parentNode.classList.remove("has-value");
+        setTimeout(() => {
+          // Don't Ask
+          if (
+            document.querySelector(
+              'input[name="' + donation_amount_other_name + '"]'
+            ).value > 0
+          ) {
+            document
+              .querySelector('input[name="' + donation_amount_other_name + '"]')
+              .parentNode.classList.add("has-value");
+          }
+        }, 200);
       });
     }
     if (donation_currency) {
