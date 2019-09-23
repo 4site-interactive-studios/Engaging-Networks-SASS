@@ -2,80 +2,66 @@
 // This file contains all styles related to Payments.
 // -----------------------------------------------------------------------------
 
-#main-content{
-
+#main-content {
   /************************************
  * Utility: Give By Select Logos
  * Assumes items are in order of Card, PayPal, Check
  * .give-by-select
  ***********************************/
 
-  .give-by-select{
-    /* Card */
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) label{
-      background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-card-black.svg);
-      background-position: left center;
+  .give-by-select {
+    .icon {
+      background-position: center;
       background-repeat: no-repeat;
-      background-size: 20px;
-      background-position-x: calc(50% - 24px);
-      background-position-y: calc(50% - 1px);
-      padding-left: rem(40px);
+      background-size: contain;
+      width: 20px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      color: transparent;
+      &.card {
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTUgMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjIgKDUxMTYwKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLWNhcmQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBkPSJNMTMuNSwwIEwxLjUsMCBDMC42Njc1LDAgMC4wMDc1LDAuNjY3NSAwLjAwNzUsMS41IEwwLDEwLjUgQzAsMTEuMzMyNSAwLjY2NzUsMTIgMS41LDEyIEwxMy41LDEyIEMxNC4zMzI1LDEyIDE1LDExLjMzMjUgMTUsMTAuNSBMMTUsMS41IEMxNSwwLjY2NzUgMTQuMzMyNSwwIDEzLjUsMCBaIE0xMy41LDEwLjUgTDEuNSwxMC41IEwxLjUsNiBMMTMuNSw2IEwxMy41LDEwLjUgWiBNMTMuNSwzIEwxLjUsMyBMMS41LDEuNSBMMTMuNSwxLjUgTDEzLjUsMyBaIiBpZD0iaWNvbi1jYXJkIiBmaWxsPSIjMzIzMjMyIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+");
+      }
+      &.paypal {
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSIxN3B4IiB2aWV3Qm94PSIwIDAgMTQgMTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjIgKDUxMTYwKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLXBheXBhbDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJpY29uLXBheXBhbCIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPHBhdGggZD0iTTExLjg2Njk1MDMsMS4yNTcwNDIyNSBDMTEuMTQ0NjE0MiwwLjQxOTAxNDA4NSA5LjgwMzEzMjg2LDAgNy45NDU2OTcxNiwwIEwyLjc4NjE1MzU1LDAgQzIuNDc2NTgwOTMsMCAyLjE2NzAwODMyLDAuMzE0MjYwNTYzIDIuMDYzODE3NDQsMC42Mjg1MjExMjcgTDAsMTQuMzUxMjMyNCBDMCwxNC42NjU0OTMgMC4yMDYzODE3NDQsMTQuODc1IDAuNDEyNzYzNDg5LDE0Ljg3NSBMMy42MTE2ODA1MywxNC44NzUgTDQuNDM3MjA3NSw5Ljc0MjA3NzQ2IEw0LjQzNzIwNzUsOS45NTE1ODQ1MSBDNC41NDAzOTgzOCw5LjYzNzMyMzk0IDQuODQ5OTcwOTksOS4zMjMwNjMzOCA1LjE1OTU0MzYxLDkuMzIzMDYzMzggTDYuNzA3NDA2NjksOS4zMjMwNjMzOCBDOS42OTk5NDE5OCw5LjMyMzA2MzM4IDExLjk3MDE0MTIsOC4wNjYwMjExMyAxMi42OTI0NzczLDQuNjA5MTU0OTMgQzEyLjY5MjQ3NzMsNC41MDQ0MDE0MSAxMi42OTI0NzczLDQuMzk5NjQ3ODkgMTIuNjkyNDc3Myw0LjI5NDg5NDM3IEMxMi41ODkyODY0LDQuMjk0ODk0MzcgMTIuNTg5Mjg2NCw0LjI5NDg5NDM3IDEyLjY5MjQ3NzMsNC4yOTQ4OTQzNyBDMTIuNzk1NjY4MSwyLjkzMzA5ODU5IDEyLjU4OTI4NjQsMi4wOTUwNzA0MiAxMS44NjY5NTAzLDEuMjU3MDQyMjUiIGlkPSJTaGFwZSIgZmlsbD0iIzMyMzIzMiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTIuMzU2ODg2NCw0IEMxMi4zNTY4ODY0LDQuMTA3MTQyODYgMTIuMzU2ODg2NCw0LjIxNDI4NTcxIDEyLjM1Njg4NjQsNC4zMjE0Mjg1NyBDMTEuNjI5MTI4NSw3Ljk2NDI4NTcxIDkuMzQxODg5NjUsOS4xNDI4NTcxNCA2LjMyNjg5MjkzLDkuMTQyODU3MTQgTDQuNzY3NDExODcsOS4xNDI4NTcxNCBDNC40NTU1MTU2Niw5LjE0Mjg1NzE0IDQuMTQzNjE5NDQsOS40NjQyODU3MSA0LjAzOTY1NDA0LDkuNzg1NzE0MjkgTDMsMTYuMzIxNDI4NiBDMywxNi41MzU3MTQzIDMuMTAzOTY1NCwxNi43NSAzLjQxNTg2MTYyLDE2Ljc1IEw2LjExODk2MjEyLDE2Ljc1IEM2LjQzMDg1ODMzLDE2Ljc1IDYuNzQyNzU0NTUsMTYuNTM1NzE0MyA2Ljc0Mjc1NDU1LDE2LjIxNDI4NTcgTDYuNzQyNzU0NTUsMTYuMTA3MTQyOSBMNy4yNjI1ODE1NywxMi43ODU3MTQzIEw3LjI2MjU4MTU3LDEyLjU3MTQyODYgQzcuMjYyNTgxNTcsMTIuMjUgNy41NzQ0Nzc3OCwxMi4wMzU3MTQzIDcuODg2MzczOTksMTIuMDM1NzE0MyBMOC4zMDIyMzU2MSwxMi4wMzU3MTQzIEMxMC45MDEzNzA3LDEyLjAzNTcxNDMgMTIuOTgwNjc4OCwxMC45NjQyODU3IDEzLjUwMDUwNTgsNy43NSBDMTMuNzA4NDM2Niw2LjQ2NDI4NTcxIDEzLjYwNDQ3MTIsNS4yODU3MTQyOSAxMi45ODA2Nzg4LDQuNTM1NzE0MjkgQzEyLjg3NjcxMzQsNC4zMjE0Mjg1NyAxMi42Njg3ODI2LDQuMTA3MTQyODYgMTIuMzU2ODg2NCw0IiBpZD0iU2hhcGUiIGZpbGw9IiMzMjMyMzIiIG9wYWNpdHk9IjAuMjE5OTk5OTk5Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS41MzYyMzE5LDQuMzE4NzUgQzExLjQzMTU2Miw0LjMxODc1IDExLjMyNjg5MjEsNC4yMTI1IDExLjIyMjIyMjIsNC4yMTI1IEMxMS4xMTc1NTIzLDQuMjEyNSAxMS4wMTI4ODI0LDQuMjEyNSAxMC45MDgyMTI2LDQuMTA2MjUgQzEwLjQ4OTUzMyw0IDEwLjA3MDg1MzUsNCA5LjU0NzUwNDAzLDQgTDUuNDY1Mzc4NDIsNCBDNS4zNjA3MDg1Myw0IDUuMjU2MDM4NjUsNCA1LjE1MTM2ODc2LDQuMTA2MjUgQzQuOTQyMDI4OTksNC4yMTI1IDQuODM3MzU5MSw0LjQyNSA0LjgzNzM1OTEsNC42Mzc1IEw0LDEwLjE2MjUgTDQsMTAuMzc1IEM0LjEwNDY2OTg5LDEwLjA1NjI1IDQuNDE4Njc5NTUsOS43Mzc1IDQuNzMyNjg5MjEsOS43Mzc1IEw2LjMwMjczNzUyLDkuNzM3NSBDOS4zMzgxNjQyNSw5LjczNzUgMTEuNjQwOTAxOCw4LjQ2MjUgMTIuMzczNTkxLDQuOTU2MjUgQzEyLjM3MzU5MSw0Ljg1IDEyLjM3MzU5MSw0Ljc0Mzc1IDEyLjQ3ODI2MDksNC42Mzc1IEMxMi4yNjg5MjExLDQuNTMxMjUgMTIuMTY0MjUxMiw0LjQyNSAxMS45NTQ5MTE0LDQuNDI1IEMxMS42NDA5MDE4LDQuMzE4NzUgMTEuNjQwOTAxOCw0LjMxODc1IDExLjUzNjIzMTksNC4zMTg3NSIgaWQ9IlNoYXBlIiBmaWxsPSIjRTlFOUU5IiBvcGFjaXR5PSIwLjIyOTk5OTk4OSI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
+      }
+      &.check {
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMTggMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjIgKDUxMTYwKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLWNoZWNrPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTE1Ljc1LDAgQzE2LjcyMTI1LDAgMTcuNSwwLjc3ODc1IDE3LjUsMS43NSBMMTcuNSwxMi4yNSBDMTcuNSwxMy4yMjEyNSAxNi43MjEyNSwxNCAxNS43NSwxNCBMMS43NSwxNCBDMC43Nzg3NSwxNCAwLDEzLjIyMTI1IDAsMTIuMjUgTDAuMDA4NzUsMS43NSBDMC4wMDg3NSwwLjc3ODc1IDAuNzc4NzUsMCAxLjc1LDAgTDE1Ljc1LDAgWiBNOC43NSwzLjUgTDguNzUsMS43NSBMMS43NSwxLjc1IEwxLjc1LDMuNSBMOC43NSwzLjUgWiBNMTUuNzUsMTIuMjUgTDE1Ljc1LDEwLjUgTDcuODc1LDEwLjUgTDcuODc1LDEyLjI1IEwxNS43NSwxMi4yNSBaIE0xNS43NSw3Ljg3NSBMMTUuNzUsNi4xMjUgTDEuNzUsNi4xMjUgTDEuNzUsNy44NzUgTDE1Ljc1LDcuODc1IFoiIGlkPSJpY29uLWNoZWNrIiBmaWxsPSIjMzIzMjMyIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+");
+      }
     }
 
-    /* Paypal */
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) label{
-      background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-paypal-black.svg);
-      background-position: left center;
-      background-repeat: no-repeat;
-      background-size: 14px;
-      background-position-x: calc(50% - 24px);
-      background-position-y: calc(50% + 1px);
-      padding-left: rem(40px);
+    &.radio-to-buttons
+      .en__field__element--radio
+      .en__field__item
+      label.en__field__label.en__field__label--item:hover
+      .icon,
+    &.radio-to-buttons
+      .en__field__element--radio
+      .en__field__item
+      input[type="radio"]:checked
+      + label
+      .icon {
+      &.card {
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTUgMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjIgKDUxMTYwKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLWNhcmQtd2hpdGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBkPSJNMTMuNSwwIEwxLjUsMCBDMC42Njc1LDAgMC4wMDc1LDAuNjY3NSAwLjAwNzUsMS41IEwwLDEwLjUgQzAsMTEuMzMyNSAwLjY2NzUsMTIgMS41LDEyIEwxMy41LDEyIEMxNC4zMzI1LDEyIDE1LDExLjMzMjUgMTUsMTAuNSBMMTUsMS41IEMxNSwwLjY2NzUgMTQuMzMyNSwwIDEzLjUsMCBaIE0xMy41LDEwLjUgTDEuNSwxMC41IEwxLjUsNiBMMTMuNSw2IEwxMy41LDEwLjUgWiBNMTMuNSwzIEwxLjUsMyBMMS41LDEuNSBMMTMuNSwxLjUgTDEzLjUsMyBaIiBpZD0iaWNvbi1jYXJkLXdoaXRlIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+") !important;
+      }
+      &.paypal {
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSIxN3B4IiB2aWV3Qm94PSIwIDAgMTQgMTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjIgKDUxMTYwKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLXBheXBhbC13aGl0ZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJpY29uLXBheXBhbC13aGl0ZSIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPHBhdGggZD0iTTExLjg2Njk1MDMsMS4yNTcwNDIyNSBDMTEuMTQ0NjE0MiwwLjQxOTAxNDA4NSA5LjgwMzEzMjg2LDAgNy45NDU2OTcxNiwwIEwyLjc4NjE1MzU1LDAgQzIuNDc2NTgwOTMsMCAyLjE2NzAwODMyLDAuMzE0MjYwNTYzIDIuMDYzODE3NDQsMC42Mjg1MjExMjcgTDAsMTQuMzUxMjMyNCBDMCwxNC42NjU0OTMgMC4yMDYzODE3NDQsMTQuODc1IDAuNDEyNzYzNDg5LDE0Ljg3NSBMMy42MTE2ODA1MywxNC44NzUgTDQuNDM3MjA3NSw5Ljc0MjA3NzQ2IEw0LjQzNzIwNzUsOS45NTE1ODQ1MSBDNC41NDAzOTgzOCw5LjYzNzMyMzk0IDQuODQ5OTcwOTksOS4zMjMwNjMzOCA1LjE1OTU0MzYxLDkuMzIzMDYzMzggTDYuNzA3NDA2NjksOS4zMjMwNjMzOCBDOS42OTk5NDE5OCw5LjMyMzA2MzM4IDExLjk3MDE0MTIsOC4wNjYwMjExMyAxMi42OTI0NzczLDQuNjA5MTU0OTMgQzEyLjY5MjQ3NzMsNC41MDQ0MDE0MSAxMi42OTI0NzczLDQuMzk5NjQ3ODkgMTIuNjkyNDc3Myw0LjI5NDg5NDM3IEMxMi41ODkyODY0LDQuMjk0ODk0MzcgMTIuNTg5Mjg2NCw0LjI5NDg5NDM3IDEyLjY5MjQ3NzMsNC4yOTQ4OTQzNyBDMTIuNzk1NjY4MSwyLjkzMzA5ODU5IDEyLjU4OTI4NjQsMi4wOTUwNzA0MiAxMS44NjY5NTAzLDEuMjU3MDQyMjUiIGlkPSJTaGFwZS1Db3B5LTIiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTEyLjM1Njg4NjQsNCBDMTIuMzU2ODg2NCw0LjEwNzE0Mjg2IDEyLjM1Njg4NjQsNC4yMTQyODU3MSAxMi4zNTY4ODY0LDQuMzIxNDI4NTcgQzExLjYyOTEyODUsNy45NjQyODU3MSA5LjM0MTg4OTY1LDkuMTQyODU3MTQgNi4zMjY4OTI5Myw5LjE0Mjg1NzE0IEw0Ljc2NzQxMTg3LDkuMTQyODU3MTQgQzQuNDU1NTE1NjYsOS4xNDI4NTcxNCA0LjE0MzYxOTQ0LDkuNDY0Mjg1NzEgNC4wMzk2NTQwNCw5Ljc4NTcxNDI5IEwzLDE2LjMyMTQyODYgQzMsMTYuNTM1NzE0MyAzLjEwMzk2NTQsMTYuNzUgMy40MTU4NjE2MiwxNi43NSBMNi4xMTg5NjIxMiwxNi43NSBDNi40MzA4NTgzMywxNi43NSA2Ljc0Mjc1NDU1LDE2LjUzNTcxNDMgNi43NDI3NTQ1NSwxNi4yMTQyODU3IEw2Ljc0Mjc1NDU1LDE2LjEwNzE0MjkgTDcuMjYyNTgxNTcsMTIuNzg1NzE0MyBMNy4yNjI1ODE1NywxMi41NzE0Mjg2IEM3LjI2MjU4MTU3LDEyLjI1IDcuNTc0NDc3NzgsMTIuMDM1NzE0MyA3Ljg4NjM3Mzk5LDEyLjAzNTcxNDMgTDguMzAyMjM1NjEsMTIuMDM1NzE0MyBDMTAuOTAxMzcwNywxMi4wMzU3MTQzIDEyLjk4MDY3ODgsMTAuOTY0Mjg1NyAxMy41MDA1MDU4LDcuNzUgQzEzLjcwODQzNjYsNi40NjQyODU3MSAxMy42MDQ0NzEyLDUuMjg1NzE0MjkgMTIuOTgwNjc4OCw0LjUzNTcxNDI5IEMxMi44NzY3MTM0LDQuMzIxNDI4NTcgMTIuNjY4NzgyNiw0LjEwNzE0Mjg2IDEyLjM1Njg4NjQsNCIgaWQ9IlNoYXBlLUNvcHktMyIgZmlsbD0iIzMyMzIzMiIgb3BhY2l0eT0iMC4yMTk5OTk5OTkiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTExLjUzNjIzMTksNC4zMTg3NSBDMTEuNDMxNTYyLDQuMzE4NzUgMTEuMzI2ODkyMSw0LjIxMjUgMTEuMjIyMjIyMiw0LjIxMjUgQzExLjExNzU1MjMsNC4yMTI1IDExLjAxMjg4MjQsNC4yMTI1IDEwLjkwODIxMjYsNC4xMDYyNSBDMTAuNDg5NTMzLDQgMTAuMDcwODUzNSw0IDkuNTQ3NTA0MDMsNCBMNS40NjUzNzg0Miw0IEM1LjM2MDcwODUzLDQgNS4yNTYwMzg2NSw0IDUuMTUxMzY4NzYsNC4xMDYyNSBDNC45NDIwMjg5OSw0LjIxMjUgNC44MzczNTkxLDQuNDI1IDQuODM3MzU5MSw0LjYzNzUgTDQsMTAuMTYyNSBMNCwxMC4zNzUgQzQuMTA0NjY5ODksMTAuMDU2MjUgNC40MTg2Nzk1NSw5LjczNzUgNC43MzI2ODkyMSw5LjczNzUgTDYuMzAyNzM3NTIsOS43Mzc1IEM5LjMzODE2NDI1LDkuNzM3NSAxMS42NDA5MDE4LDguNDYyNSAxMi4zNzM1OTEsNC45NTYyNSBDMTIuMzczNTkxLDQuODUgMTIuMzczNTkxLDQuNzQzNzUgMTIuNDc4MjYwOSw0LjYzNzUgQzEyLjI2ODkyMTEsNC41MzEyNSAxMi4xNjQyNTEyLDQuNDI1IDExLjk1NDkxMTQsNC40MjUgQzExLjY0MDkwMTgsNC4zMTg3NSAxMS42NDA5MDE4LDQuMzE4NzUgMTEuNTM2MjMxOSw0LjMxODc1IiBpZD0iU2hhcGUtQ29weS00IiBmaWxsPSIjRTlFOUU5IiBvcGFjaXR5PSIwLjIyOTk5OTk4OSI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+") !important;
+      }
+      &.check {
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMTggMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQ5LjIgKDUxMTYwKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLWNoZWNrLXdoaXRlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTE1Ljc1LDAgQzE2LjcyMTI1LDAgMTcuNSwwLjc3ODc1IDE3LjUsMS43NSBMMTcuNSwxMi4yNSBDMTcuNSwxMy4yMjEyNSAxNi43MjEyNSwxNCAxNS43NSwxNCBMMS43NSwxNCBDMC43Nzg3NSwxNCAwLDEzLjIyMTI1IDAsMTIuMjUgTDAuMDA4NzUsMS43NSBDMC4wMDg3NSwwLjc3ODc1IDAuNzc4NzUsMCAxLjc1LDAgTDE1Ljc1LDAgWiBNOC43NSwzLjUgTDguNzUsMS43NSBMMS43NSwxLjc1IEwxLjc1LDMuNSBMOC43NSwzLjUgWiBNMTUuNzUsMTIuMjUgTDE1Ljc1LDEwLjUgTDcuODc1LDEwLjUgTDcuODc1LDEyLjI1IEwxNS43NSwxMi4yNSBaIE0xNS43NSw3Ljg3NSBMMTUuNzUsNi4xMjUgTDEuNzUsNi4xMjUgTDEuNzUsNy44NzUgTDE1Ljc1LDcuODc1IFoiIGlkPSJpY29uLWNoZWNrLXdoaXRlIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+") !important;
+      }
     }
 
-    /* Check */
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) label{
-      background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-check-black.svg);
-      background-position: left center;
-      background-repeat: no-repeat;
-      background-size: 20px;
-      background-position-x: calc(50% - 24px);
-      background-position-y: 50%;
-      padding-left: rem(40px);
-    }
-
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(1) input[type='radio']:checked + label{
-      background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-card-white.svg);
-    }
-
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(1) label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(1) input[type='radio']:checked + label{
-      background-color: $dark-grey;
-      border-color: $dark-grey;
-    }
-
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(2) input[type='radio']:checked + label{
-      background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-paypal-white.svg);
-    }
-
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(2) label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(2) input[type='radio']:checked + label{
-      background-color: $dark-grey;
-      border-color: $dark-grey;
-    }
-
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons .en__field__element--radio .en__field__item:nth-child(3) input[type='radio']:checked + label{
-      background-image: url(https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS/images/global/icon-check-white.svg);
-    }
-
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(3) label.en__field__label.en__field__label--item:hover,
-    &.radio-to-buttons.dark-buttons .en__field__element--radio .en__field__item:nth-child(3) input[type='radio']:checked + label{
+    &.radio-to-buttons.dark-buttons
+      .en__field__element--radio
+      .en__field__item
+      label.en__field__label.en__field__label--item:hover,
+    &.radio-to-buttons.dark-buttons
+      .en__field__element--radio
+      .en__field__item
+      input[type="radio"]:checked
+      + label {
       background-color: $dark-grey;
       border-color: $dark-grey;
     }
   }
-
 }
