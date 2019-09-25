@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>${page~title} | Ocean Conservancy</title>
+	
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-TileImage" content="https://oceanconservancy.org/wp-content/themes/oco-wp/images/ms-tile.png">
+    <meta name="msapplication-TileColor" content="#ef0303">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net/"> 
+    <link rel="dns-prefetch" href="//d2amdniajcqcy4.cloudfront.net/"> 
+    <link rel="shortcut icon" sizes="196x196" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-android-highres.png">
+    <link rel="shortcut icon" sizes="128x128" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-android.png">
+    <link rel="apple-touch-icon" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-icon-iphone-@2x.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-icon-ipad-@2x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-icon-ipad-pro-@2x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://oceanconservancy.org/wp-content/themes/oco-wp/images/touch-icon-iphone-@3x.png">
+    <link rel="shortcut icon" href="https://oceanconservancy.org/wp-content/themes/oco-wp/favicon.ico">	
+	
+	<!-- Address bar color in mobile browser -->
+	<meta name="theme-color" content="#2BA8DD" />
+
+    <!-- 4Site Template CSS -->
+    <style>
+        
+        /* HoneyPot Fields: Visually hide withou display:none and text-indent:-5000px since spam/scam bots might check for that. */
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_80,
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_80 label,
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_80 label:before,
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_80 select,
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_80 input,
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_81,
+        body:not(#en__pagebuilder) .en__field--NOT_TAGGED_82{
+        	color: rgba(255,255,255,0.01);
+        	border-color: rgba(255,255,255,0.01);
+        	opacity: 0.01;
+        }
+        
+        body#en__pagebuilder .en__field--NOT_TAGGED_80,
+        body#en__pagebuilder .en__field--NOT_TAGGED_81,
+        body#en__pagebuilder .en__field--NOT_TAGGED_82{
+        	opacity: 0.4;
+        }
+
+    </style>
+    
+    <style>
+        /* Temp Fix while Recaptcha is in place for Donation forms */
+        .temporary-recaptcha{
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/css/parent-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/css/child-theme-base.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/css/child-theme-custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/child-theme/js/oc-en-never-bounce-integration.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,900|Work+Sans"> 
+    
+    <!-- 4Site Template JS: Render Critical: Donation Amounts -->
+    <script src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Ocean-Conservancy-Engaging-Networks-Template@master/themes/parent-theme/js/oc-en-donation-value-toggle.js"></script>
+    
+    <!-- Google Optimize: Page hiding snippet (recommended)  -->
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-P99B2PT':true});</script>    
+    
+    <!-- Google Tag Manager -->
+    <!-- Hard inclusion of JQuery because GTM is loading code expecting it to be there -->
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P99B2PT');</script>
+    <!-- End Google Tag Manager -->      
+    
+    <!-- Begin ThreatMetric profiling tags below -->
+    <script type="text/javascript" src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=e1991-${page~sessionId}&page_id=1"></script>
+    <!-- End profiling tags -->   
+    
+    <script></script><!-- here to ensure a non-blocking load still occurs in IE and Edge, even if scripts follow loadCSS in head -->
+
+</head>
+
+<body>
+    
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P99B2PT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->    
+    
+    <!-- Begin ThreatMetric profiling tags below -->    
+    <noscript>
+    <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;"
+    src="https://h.online-metrix.net/fp/tags.js?org_id=7nrfulxi&session_id=ocean-${page~sessionId}&page_id=1"></iframe>
+    </noscript>
+    <!-- End profiling tags -->          
+    
+    <!-- PYM: Needed to prevent bug in PYM's iFrame Height Calculation -->
+    <!-- REF: https://github.com/nprapps/pym.js/issues/83 -->
+    <div style="height: 0px !important; width: 0px !important;">&nbsp;</div>
+    
+    <!-- 4Site Template Body Wrapper -->
+    <div id="main-content-wrapper">
+    <div id="main-content">
+    <div id="main-content-inner">
+
+    </div>
+    </div>
+    </div>
+    <!-- End 4Site Template Body Wrapper -->
+    
+    <!-- 4Site Template JS: Render Critical: Page Banenr -->
+    <!-- <script src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-page-banner.js"></script> -->
+    <script>!function(){"remove"in Element.prototype||(Element.prototype.remove=function(){this.parentNode&&this.parentNode.removeChild(this)});var e=document.querySelector(".banner-image img");if(e){var r=e.src;document.querySelector(".banner-image").remove(),document.querySelector(".banner").style.backgroundImage="url("+r+")"}}();</script>   
+
+    <!-- 4Site Template JS -->
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/visibility.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-helpers.js"></script>
+    <script src="https://d2amdniajcqcy4.cloudfront.net/donation/js/parent-theme.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-background-settings.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-click-to-expand.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-international-country-select.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-field-overrides.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-payment-method-handlers.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-processing-fee.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-button-label.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-rev-messaging.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-toggle-memory.js"></script>
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-check-for-monthly-only.js"></script>
+    <script src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-hide-honeypot-fields.js"></script>
+    <!-- End 4Site Template JS -->
+
+    <!-- Begin Never Bounce -->
+    <script async src="https://d2amdniajcqcy4.cloudfront.net/donation/js/oc-en-neverbounce.js"></script>
+    <script async src="https://cdn.neverbounce.com/widget/dist/NeverBounce.js"></script>
+    <!-- End Never Bounce -->
+    
+    <!-- PYM Responsive iFrame Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.3.2/pym.v1.min.js"></script>
+
+	<!-- PYM Child Page Scripts -->
+    <script>
+
+        var pymChild = new pym.Child();
+
+		document.addEventListener("DOMContentLoaded", function() {
+			pymChild.sendMessage('childLoaded', 'loading');
+			console.log('Child: "DOMContentLoaded" loaded message has been sent to parent');
+		});
+
+		window.addEventListener("load", function() {
+			setTimeout(function() {
+                    pymChild.sendHeight();
+            }, 25);
+			console.log('Child: "load" message has been sent to parent');
+		});
+
+        // Utilizing PYM responsive iFrame library, resizes parent iFrame any time a child iframe is clicked. Overkill but a universal fix that solves for most use cases.
+        if (typeof pymChild !== "undefined") {
+            document.onclick = function() {
+        
+                // Send height update immedietely.
+                pymChild.sendHeight();
+        
+                // And then wait a moment before triggering again so any visual page redraws are corrected for.
+                setTimeout(function() {
+                    pymChild.sendHeight();
+                }, 25);
+            };
+        };
+	</script>    
+	
+	<!-- eCard Style to be merged into main CSS -->
+	<style>
+
+        #main-content .en__ecarditems__thumb{
+            height: auto !important;
+        }
+        
+        #main-content .en__ecarditems__showprev{
+            /*display: none !important;*/
+        }
+        
+        #main-content button.en__ecarditems__addrecipient{
+            margin: 4px !important;
+        }
+        
+        #main-content .en__ecardrecipients__name,
+        #main-content .ecardrecipient__name{
+            width: calc(50% - 1rem) !important;
+        }
+        
+        #main-content .en__ecardrecipients__email,
+        #main-content .ecardrecipient__email{
+            width: calc(50% - 1rem) !important;
+        }
+        
+        #main-content .ecardrecipient__name,
+        #main-content .ecardrecipient__email{
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: normal;
+            line-height: 1.5;
+            color: #0a0a0a;
+            opacity: .8;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        #main-content .en__ecardrecipients__list:before{
+            /* content: "Recipient List"; */
+            color: #323232;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #323232;    
+        }
+        
+        
+        #main-content .en__ecardrecipients__recipient{
+            padding: 0;
+        }
+        
+        #main-content .en__ecardrecipients__list{
+            min-height: 50px;
+            border: 0px;
+            padding: 0px;
+        }
+        
+        #main-content .ecardrecipient__remove button{
+            width: 30px;
+            height: 30px;
+            background-color: #e74b3c !important;
+            padding: 0 !important;
+            font-size: 12px !important;
+            position: relative;
+            right: 2px;
+        }
+        
+        #main-content .en__ecarditems__thumb img{
+            height: 150px !important;
+            width: auto;
+            border: 2px solid #009bc4;
+            filter: brightness(75%);
+        }
+        
+        #main-content .en__ecarditems__thumb:hover img{
+            filter: brightness(87.5%);
+            opacity: .75;
+        }
+        
+        #main-content .en__ecarditems__thumb.thumb--active img{
+            filter: brightness(100%);
+        }
+        
+        #main-content .en__ecarditems__thumb {
+            width: auto !important;
+        }
+        
+        #main-content .en__ecarditems__thumb:last-child {
+            margin-right: 0px;
+        }
+        
+        #main-content .en__ecardmessage__default{
+            margin-bottom: 40px;
+            height: 18rem;
+        }
+        
+        #main-content button.en__ecarditems__prevclose{
+            background-color: transparent;
+            top: 5px;
+            right: -29px;
+            font-size: 2rem;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+        
+        #main-content .en__ecarditems__showprev{
+            background-color: #323232;
+            margin-bottom: 40px;
+        }
+        
+        @media screen and (max-width: 700px) {
+            #main-content button.en__ecarditems__prevclose{
+                right: 17px;
+                color: #9e9e9e;
+            }
+        }
+	    
+	</style>
+	
+	<!-- Helped classes to be merged -->
+	<style>
+	    body#en__pagebuilder #main-content .hide-if-chained,
+	    body#en__pagebuilder #main-content .hide-if-direct{
+            padding: 12px;
+            background-color: #fffde5;
+	   }
+	</style>
+
+</body>
+
+</html>

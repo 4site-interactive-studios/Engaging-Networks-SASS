@@ -460,12 +460,18 @@ body.error-jump-assist #main-content .en__component .en__field__error {
  */
 
 .float-labels #main-content .en__field--text input[type="text"],
-.float-labels #main-content .en__field--textarea textarea {
+.float-labels #main-content .en__field--textarea textarea{
   padding: 0.9rem 0.5rem 0rem 0.5rem;
 }
 
+.float-labels #main-content .en__field--select select{
+  padding: 0.9rem 1.5rem 0rem 0.5rem;
+  background-position: right -1rem top 0.25rem;
+}
+
 .float-labels #main-content .en__field--text label.en__field__label,
-.float-labels #main-content .en__field--textarea label.en__field__label {
+.float-labels #main-content .en__field--textarea label.en__field__label,
+.float-labels #main-content .en__field--select label.en__field__label {
   z-index: 1;
   position: absolute;
   -webkit-transform-origin: top left;
@@ -481,24 +487,28 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 .float-labels #main-content .en__field--text.has-value label.en__field__label,
 .float-labels #main-content .en__field--text.has-focus label.en__field__label,
 .float-labels #main-content .en__field--textarea.has-value label.en__field__label,
-.float-labels #main-content .en__field--textarea.has-focus label.en__field__label{
+.float-labels #main-content .en__field--textarea.has-focus label.en__field__label,
+.float-labels #main-content .en__field--select label.en__field__label{
   -webkit-transform: translate(0.5rem, 0px) scale(0.7);
   transform: translate(0.5rem, 0px) scale(0.7);
 }
 
 .float-labels #main-content .en__field--text.en__field--validationFailed label,
-.float-labels #main-content .en__field--textarea.en__field--validationFailed label {
+.float-labels #main-content .en__field--textarea.en__field--validationFailed label,
+.float-labels #main-content .en__field--select.en__field--validationFailed label {
   opacity: 1;
 }
 
 .float-labels #main-content .en__field--text.en__field--validationNeeded .en__field__error,
-.float-labels #main-content .en__field--textarea.en__field--validationNeeded .en__field__error {
+.float-labels #main-content .en__field--textarea.en__field--validationNeeded .en__field__error,
+.float-labels #main-content .en__field--select.en__field--validationNeeded .en__field__error {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
 
 .float-labels #main-content .en__field--text.en__field--validationNeeded input,
-.float-labels #main-content .en__field--textarea.en__field--validationNeeded textarea {
+.float-labels #main-content .en__field--textarea.en__field--validationNeeded textarea,
+.float-labels #main-content .en__field--select.en__field--validationNeeded select {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
