@@ -394,7 +394,8 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 }
 
 #main-content .en__field--text.en__field--validationFailed input,
-#main-content .en__field--textarea.en__field--validationFailed textarea {
+#main-content .en__field--textarea.en__field--validationFailed textarea,
+#main-content .en__field--select.en__field--validationFailed select {
   border-color: #e74b3c;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -416,6 +417,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 
 #main-content .en__field--text.en__field--validationFailed .en__field__error,
 #main-content .en__field--textarea.en__field--validationFailed .en__field__error,
+#main-content .en__field--select.en__field--validationFailed .en__field__error,
 #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
 #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
 #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
