@@ -397,7 +397,7 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 #main-content .en__field--textarea.en__field--validationFailed textarea,
 #main-content .en__field--select.en__field--validationFailed select {
   border-color: #e74b3c;
-  background-color: rgba(232, 75, 60, .1);
+  background-color: rgba(232, 75, 60, .05);
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
