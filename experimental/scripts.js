@@ -302,3 +302,13 @@ const enInput = (() => {
 })();
 
 enInput.init();
+
+/* Automatically select other radio input when an amount is entered into it. */
+
+(function () {
+    for (var e = document.querySelectorAll(".en__field--withOther .en__field__input--other"), t = 0; t < e
+        .length; t++) e[t].addEventListener("input", function (e) {
+        this.parentNode.parentNode.querySelector(".en__field__item:nth-last-child(2) input")
+            .checked = !0
+    })
+})();
