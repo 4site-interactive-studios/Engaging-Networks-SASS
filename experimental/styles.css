@@ -317,6 +317,8 @@ input:not(:-webkit-autofill) {
 
 /* Needs code that account for the small text shown during the process of autofilling */
 /* Fernando says he has seen this happening elsewhere */
+/* https://stackoverflow.com/questions/57242841/input-text-very-small-when-hovering-on-autofill-suggestion */
+/* https://bugs.chromium.org/p/chromium/issues/detail?id=953689#c24 */
 /* Screencast: https://d.pr/v/2xecBA */
 
 
