@@ -289,10 +289,6 @@ body.embedded #main-content .en__tweetButton {
   * Error Messages
   ***********************************/
 
-#main-content .en__field__error-wrapper .en__field__item {
-  margin-bottom: 0.25rem;
-}
-
 /* Page Level Errors */
 .en__errorHeader {
   margin-left: -1.875rem;
@@ -335,64 +331,6 @@ body.error-jump-assist #main-content .en__component .en__field__error {
   order: 1;
 }
 
-#main-content .en__component .en__field__error-wrapper .en__field__error,
-#main-content .en__component .en__field__error-wrapper input,
-#main-content .en__component .en__field__error-wrapper select,
-#main-content .en__component .en__field__error-wrapper textarea {
-  border-radius: 0.3rem;
-  border: 1px solid #e74b3c;
-
-}
-
-/* QA Needed: Look into way to do this without :not(radio-to-buttons) so that all Radio to Buttons related code can be in the corresponding Utility section */
-#main-content .en__component:not(.radio-to-buttons) .en__field__error-wrapper .en__field__error {
-  border-radius: 0 0 0.3rem 0.3rem;
-  border-top: 0px;
-}
-
-#main-content .en__component .en__field__error-wrapper input:not(.en__field__input--other),
-#main-content .en__component .en__field__error-wrapper select,
-#main-content .en__component .en__field__error-wrapper textarea {
-  border-radius: 0.3rem 0.3rem 0 0;
-  /*border-bottom: 0px;*/
-}
-
-#main-content .en__component .en__field__error-wrapper.en__field--select.en__field--withOther select,
-#main-content .en__component .en__field__error-wrapper.en__field--splittext input,
-#main-content .en__component .en__field__error-wrapper.en__field--tripletext input,
-#main-content .en__component .en__field__error-wrapper.en__field--splitselect select,
-#main-content .en__component .en__field__error-wrapper.en__field--tripleselect input,
-#main-content .en__component .en__field__error-wrapper.en__field--splittext .en__field__error,
-#main-content .en__component .en__field__error-wrapper.en__field--tripletext .en__field__error,
-#main-content .en__component .en__field__error-wrapper.en__field--splitselect .en__field__error,
-#main-content .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__error,
-#main-content .en__component .en__field__error-wrapper.en__field--radio.en__field--withOther .en__field__error {
-  border-radius: 0.3rem;
-  border: 1px solid #e74b3c;
-}
-
-
-/* Adjust bottom margin on error to make display uniform */
-#main-content .en__component .en__field__error-wrapper.en__field--select.en__field--withOther .en__field__item:last-of-type,
-#main-content .en__component .en__field__error-wrapper.en__field--radio .en__field__item:last-of-type,
-#main-content .en__component .en__field__error-wrapper.en__field--checkbox .en__field__item:last-of-type,
-#main-content .en__component .en__field__error-wrapper.en__field--splittext .en__field__item:last-of-type,
-#main-content .en__component .en__field__error-wrapper.en__field--tripletext .en__field__item:last-of-type,
-#main-content .en__component .en__field__error-wrapper.en__field--splitselect .en__field__item:last-of-type,
-#main-content .en__component .en__field__error-wrapper.en__field--tripleselect .en__field__item:last-of-type {
-  margin-bottom: .25rem;
-}
-
-#main-content .en__component .en__field__error-wrapper.en__field--select.en__field--withOther,
-#main-content .en__component .en__field__error-wrapper.en__field--radio,
-#main-content .en__component .en__field__error-wrapper.en__field--checkbox,
-#main-content .en__component .en__field__error-wrapper.en__field--splittext,
-#main-content .en__component .en__field__error-wrapper.en__field--tripletext,
-#main-content .en__component .en__field__error-wrapper.en__field--splitselect,
-#main-content .en__component .en__field__error-wrapper.en__field--tripleselect {
-  margin-bottom: 1rem;
-}
-
 #main-content .en__field--text.en__field--validationFailed input,
 #main-content .en__field--textarea.en__field--validationFailed textarea,
 #main-content .en__field--select.en__field--validationFailed select {
@@ -401,7 +339,6 @@ body.error-jump-assist #main-content .en__component .en__field__error {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-
 
 #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
 #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
