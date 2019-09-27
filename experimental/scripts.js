@@ -288,6 +288,18 @@ const enInput = (() => {
     targetWrapper.classList.add('has-value');
   };
 
+  // Handle Browser Autofill
+  const onAutoFillStart = (e) => e.parentNode.parentNode.classList.add('is-autofilled', 'has-value');
+  const onAutoFillCancel = (e) => e.parentNode.parentNode.classList.remove('is-autofilled', 'has-value');
+  const onAnimationStart = ({ target, animationName }) => {
+      switch (animationName) {
+          case 'onAutoFillStart':
+              return onAutoFillStart(target)
+          case 'onAutoFillCancel':
+              return onAutoFillCancel(target)
+      }
+  }
+
   // register events
   const bindEvents = (element) => {
     const enField = element.querySelector('input, textarea, select');
@@ -295,6 +307,7 @@ const enInput = (() => {
     enField.addEventListener('blur', handleBlur);
     enField.addEventListener('change', handleChange);
     enField.addEventListener('input', handleInput);
+    enField.addEventListener('animationstart', onAnimationStart, false)  
   };
 
   // get DOM elements

@@ -286,6 +286,41 @@ body.embedded #main-content .en__tweetButton {
 }
 
 /************************************
+  * Browser Form Autofill
+  * REF: https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
+  ***********************************/
+
+@keyframes onAutoFillStart {from {/**/}  to {/**/}}
+@keyframes onAutoFillCancel {from {/**/}  to {/**/}}
+input:-webkit-autofill {
+    /* Expose a hook for JavaScript when autofill is shown */
+    /* JavaScript can capture 'animationstart' events */
+    animation-name: onAutoFillStart;
+    
+    /* Make the background color become blue/yellow really slowly */
+    transition: background-color 50000s ease-in-out 0s;
+}
+
+input:not(:-webkit-autofill) {
+    /* Expose a hook for JS onAutoFillCancel */
+    /* JavaScript can capture 'animationstart' events */
+    animation-name: onAutoFillCancel;
+}
+
+.is-autofilled,
+.is-autofilled label{
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* Needs code that account for the small text shown during the process of autofilling */
+/* Fernando says he has seen this happening elsewhere */
+/* Screencast: https://d.pr/v/2xecBA */
+
+
+/************************************
   * Error Messages
   ***********************************/
 
@@ -312,6 +347,16 @@ body.embedded #main-content .en__tweetButton {
 
 /* Field Level Inline Errors */
 #main-content .en__component .en__field__error {
+  padding: 0.25rem 0.5rem 0 0;
+  color: #e74b3c;
+  font-size: 0.75rem;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+/* Field Level Inline Errors */
+.fancy-errors #main-content .en__component .en__field__error {
   padding: 0.25rem 0.5rem;
   color: #ffffff;
   font-size: 0.75rem;
@@ -320,7 +365,6 @@ body.embedded #main-content .en__tweetButton {
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
-
 }
 
 /* When EN's field validator flags an error it jumps the user to the first error on thepage. Our custom error JS executes after EN's and sets a body level class that we can reorder the field presentation on. If we don't wait to re-order the fields, the page will jump to the error which appears below the input resulting in the user having to scroll up to make the change. This is something that should be fixed on EN's end and how they handle errors, but until then we need this work around */
@@ -336,6 +380,11 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 #main-content .en__field--select.en__field--validationFailed select {
   border-color: #e74b3c;
   background-color: rgba(232, 75, 60, .05);
+}
+
+.fancy-errors #main-content .en__field--text.en__field--validationFailed input,
+.fancy-errors #main-content .en__field--textarea.en__field--validationFailed textarea,
+.fancy-errors #main-content .en__field--select.en__field--validationFailed select {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -348,9 +397,28 @@ body.error-jump-assist #main-content .en__component .en__field__error {
 #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
 #main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
   border: 1px solid #e74b3c;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
   padding: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+#main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+#main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
+  border-radius: 0.3rem;
+}
+
+.fancy-errors #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+.fancy-errors #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+.fancy-errors #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+.fancy-errors #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+.fancy-errors #main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+.fancy-errors #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+.fancy-errors #main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;  
 }
 
 #main-content .en__field--text.en__field--validationFailed .en__field__error,
