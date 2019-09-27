@@ -7,26 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experimental 2019-07-10 v4 (Every Field) | Experimental</title>
     <meta name="Description" content="Lorem ipsum delor.">
+
     <!-- Favicons and Touch icons: https://realfavicongenerator.net/ -->
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
     <!-- Address bar color in mobile browser -->
-    <meta name="theme-color" content="#000000" /> <!-- Preconnect. Update after all page asset locations are known. -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Preconnect. Update after all page asset locations are known. -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net/">
-    <link rel="preconnect" href="https://fonts.googleapis.com/"> <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>    <script>      window.dataLayer = window.dataLayer || [];      function gtag(){dataLayer.push(arguments);}      gtag('js', new Date());           gtag('config', 'UA-00000000-0');    </script>    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-00000000-0');
+    </script>
+
     <!-- Do not render any part of the page until domcontentloaded-completed class has been added -->
     <style>
-        body:not(#en__pagebuilder):not(.domcontentloaded-completed) {
+        body:not(#en__pagebuilder):not(.domcontentloaded) {
             display: none;
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.body.classList.add("domcontentloaded-completed");
-        }, false);
+            document.body.classList.add("domcontentloaded");
+        }, true);
     </script>
     <script></script>
     <!-- here to ensure a non-blocking load still occurs in IE and Edge, even if scripts follow loadCSS in head -->
+   
     <meta name="title" content="" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
@@ -192,12 +209,12 @@
                         </div>
                         <div class="en__component en__component en__component--column en__component--advcolumn banner">
                             <div class="en__component en__component--codeblock"></div>
-                            <div class="en__component en__component--formblock radio-to-buttons i1-center i2-center i2-show-hidden-radio-input i3-50 i3-start i4-50 i4-end i6-33 i6-start i6-m50 i6-mstart i7-33 i7-m50 i7-mend i8-33 i8-end i8-m100 i10-50 i10-start i11-50 i11-end css-display_flex css-flex-wrap_wrap css-align-items_flex-start"
-                                style="">
+                            <div
+                                class="en__component en__component--formblock radio-to-buttons i1-center i2-center i2-show-hidden-radio-input i3-50 i3-start i4-50 i4-end i6-33 i6-start i6-m50 i6-mstart i7-33 i7-m50 i7-mend i8-33 i8-end i8-m100 i10-50 i10-start i11-50 i11-end css-display_flex css-flex-wrap_wrap css-align-items_flex-start">
                                 <div
                                     class="en__field en__field--radio en__field--494248 en__field--recurrfreq en__mandatory">
-                                    <label for="en__field_transaction_recurrfreq" class="en__field__label"
-                                        style="">Recurring Frequency</label>
+                                    <label for="en__field_transaction_recurrfreq" class="en__field__label">Recurring
+                                        Frequency</label>
                                     <div class="en__field__element en__field__element--radio">
                                         <div class="en__field__item"> <input id="en__field_transaction_recurrfreq0"
                                                 checked type="radio" class="en__field__input en__field__input--radio"
@@ -213,7 +230,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--withOther en__field--494249 en__field--donationAmt en__mandatory">
-                                    <label class="en__field__label" style="">Donation Amount</label>
+                                    <label class="en__field__label">Donation Amount</label>
                                     <div class="en__field__element en__field__element--radio	">
                                         <div class="en__field__item"> <input checked type="radio"
                                                 class="en__field__input en__field__input--radio" value="25"
@@ -252,7 +269,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--text en__field--490661 en__field--firstName en__mandatory">
-                                    <label for="en__field_supporter_firstName" class="en__field__label" style="">First
+                                    <label for="en__field_supporter_firstName" class="en__field__label">First
                                         Name</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_supporter_firstName" type="text"
@@ -261,7 +278,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--text en__field--490660 en__field--lastName en__mandatory">
-                                    <label for="en__field_supporter_lastName" class="en__field__label" style="">Last
+                                    <label for="en__field_supporter_lastName" class="en__field__label">Last
                                         Name</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_supporter_lastName" type="text"
@@ -270,7 +287,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--text en__field--490662 en__field--address1 en__mandatory">
-                                    <label for="en__field_supporter_address1" class="en__field__label" style="">Address
+                                    <label for="en__field_supporter_address1" class="en__field__label">Address
                                         1</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_supporter_address1" type="text"
@@ -278,7 +295,7 @@
                                             value="" /> </div>
                                 </div>
                                 <div class="en__field en__field--text en__field--490663 en__field--city en__mandatory">
-                                    <label for="en__field_supporter_city" class="en__field__label" style="">City</label>
+                                    <label for="en__field_supporter_city" class="en__field__label">City</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_supporter_city" type="text"
                                             class="en__field__input en__field__input--text" name="supporter.city"
@@ -286,8 +303,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--select en__field--490664 en__field--region en__mandatory">
-                                    <label for="en__field_supporter_region" class="en__field__label"
-                                        style="">Region</label>
+                                    <label for="en__field_supporter_region" class="en__field__label">Region</label>
                                     <div class="en__field__element en__field__element--select"> <select
                                             id="en__field_supporter_region"
                                             class="en__field__input en__field__input--select" name="supporter.region">
@@ -347,8 +363,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--text en__field--490665 en__field--postcode en__mandatory">
-                                    <label for="en__field_supporter_postcode" class="en__field__label"
-                                        style="">Postcode</label>
+                                    <label for="en__field_supporter_postcode" class="en__field__label">Postcode</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_supporter_postcode" type="text"
                                             class="en__field__input en__field__input--text" name="supporter.postcode"
@@ -356,7 +371,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--text en__field--494245 en__field--ccnumber en__mandatory">
-                                    <label for="en__field_transaction_ccnumber" class="en__field__label" style="">Credit
+                                    <label for="en__field_transaction_ccnumber" class="en__field__label">Credit
                                         Card Number</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_transaction_ccnumber" type="text"
@@ -365,7 +380,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--text en__field--494247 en__field--ccexpire en__mandatory">
-                                    <label for="en__field_transaction_ccexpire" class="en__field__label" style="">Credit
+                                    <label for="en__field_transaction_ccexpire" class="en__field__label">Credit
                                         Card Expiration</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_transaction_ccexpire" type="text"
@@ -373,7 +388,7 @@
                                             value="" /> </div>
                                 </div>
                                 <div class="en__field en__field--text en__field--494246 en__field--ccvv en__mandatory">
-                                    <label for="en__field_transaction_ccvv" class="en__field__label" style="">Credit
+                                    <label for="en__field_transaction_ccvv" class="en__field__label">Credit
                                         Card Verification Value</label>
                                     <div class="en__field__element en__field__element--text"> <input
                                             id="en__field_transaction_ccvv" type="text"
@@ -391,12 +406,12 @@
                             </div>
                         </div>
                         <div class="en__component en__component en__component--column en__component--advcolumn content">
-                            <div class="en__component en__component--formblock radio-to-buttons i1-50 i1-start i2-50 i2-end i3-66 i3-start i4-33 i4-end i5-33 i5-start i6-66 i6-end i7-33 i7-start i8-66 i8-end i9-100 i14-show-hidden-radio-input css-display_flex css-flex-wrap_wrap css-align-items_flex-start"
-                                style="">
+                            <div
+                                class="en__component en__component--formblock radio-to-buttons i1-50 i1-start i2-50 i2-end i3-66 i3-start i4-33 i4-end i5-33 i5-start i6-66 i6-end i7-33 i7-start i8-66 i8-end i9-100 i14-show-hidden-radio-input css-display_flex css-flex-wrap_wrap css-align-items_flex-start">
                                 <div
                                     class="en__field en__field--textarea en__field--question en__field--90493 en__field--sample-text-area en__mandatory">
-                                    <label for="en__field_supporter_questions_90493" class="en__field__label"
-                                        style="">Sample Text Area</label>
+                                    <label for="en__field_supporter_questions_90493" class="en__field__label">Sample
+                                        Text Area</label>
                                     <div class="en__field__element en__field__element--textarea"> <textarea
                                             id="en__field_supporter_questions_90493"
                                             class="en__field__input en__field__input--textarea"
@@ -404,8 +419,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--select en__field--question en__field--183983 en__field--qa-select en__mandatory">
-                                    <label for="en__field_supporter_questions_183983" class="en__field__label"
-                                        style="">QA: Select</label>
+                                    <label for="en__field_supporter_questions_183983" class="en__field__label">QA:
+                                        Select</label>
                                     <div class="en__field__element en__field__element--select"> <select
                                             id="en__field_supporter_questions_183983"
                                             class="en__field__input en__field__input--select"
@@ -417,8 +432,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--select en__field--question en__field--183984 en__field--qa-select-column- en__mandatory">
-                                    <label for="en__field_supporter_questions_183984" class="en__field__label"
-                                        style="">QA: Select (Column)</label>
+                                    <label for="en__field_supporter_questions_183984" class="en__field__label">QA:
+                                        Select (Column)</label>
                                     <div class="en__field__element en__field__element--select"> <select
                                             id="en__field_supporter_questions_183984"
                                             class="en__field__input en__field__input--select"
@@ -430,8 +445,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--select en__field--withOther en__field--question en__field--90501 en__field--sample-select-with-input en__mandatory">
-                                    <label for="en__field_supporter_questions_90501" class="en__field__label"
-                                        style="">Sample Select with Input</label>
+                                    <label for="en__field_supporter_questions_90501" class="en__field__label">Sample
+                                        Select with Input</label>
                                     <div class="en__field__element en__field__element--select">
                                         <div class="en__field__item"> <select id="en__field_supporter_questions_90501"
                                                 class="en__field__input en__field__input--select"
@@ -450,8 +465,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--splitselect en__field--question en__field--90499 en__field--qa-split-select en__mandatory">
-                                    <label for="en__field_supporter_questions_90499" class="en__field__label"
-                                        style="">QA: Split Select</label>
+                                    <label for="en__field_supporter_questions_90499" class="en__field__label">QA: Split
+                                        Select</label>
                                     <div class="en__field__element en__field__element--splitselect"> <input
                                             type="hidden" name="supporter.questions.90499.delimiter" value="~">
                                         <div class="en__field__item"> <select id="en__field_supporter_questions_90499"
@@ -472,8 +487,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--tripleselect en__field--question en__field--90503 en__field--qa-triple-select en__mandatory">
-                                    <label for="en__field_supporter_questions_90503" class="en__field__label"
-                                        style="">QA: Triple Select</label>
+                                    <label for="en__field_supporter_questions_90503" class="en__field__label">QA: Triple
+                                        Select</label>
                                     <div class="en__field__element en__field__element--tripleselect"> <input
                                             type="hidden" name="supporter.questions.90503.delimiter" value="~">
                                         <div class="en__field__item"> <select id="en__field_supporter_questions_90503"
@@ -502,8 +517,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--splittext en__field--question en__field--90498 en__field--qa-sample-split-text en__mandatory">
-                                    <label for="en__field_supporter_questions_90498" class="en__field__label"
-                                        style="">QA: Sample Split Text</label>
+                                    <label for="en__field_supporter_questions_90498" class="en__field__label">QA: Sample
+                                        Split Text</label>
                                     <div class="en__field__element en__field__element--splittext"> <input type="hidden"
                                             name="supporter.questions.90498.delimiter" value="~">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_90498"
@@ -516,8 +531,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--question en__field--183964 en__field--qa-radio en__mandatory">
-                                    <label for="en__field_supporter_questions_183964" class="en__field__label"
-                                        style="">QA: Radio</label>
+                                    <label for="en__field_supporter_questions_183964" class="en__field__label">QA:
+                                        Radio</label>
                                     <div class="en__field__element en__field__element--radio">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_1839640"
                                                 type="radio" class="en__field__input en__field__input--radio"
@@ -538,8 +553,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--question en__field--183965 en__field--qa-radio-column- en__mandatory">
-                                    <label for="en__field_supporter_questions_183965" class="en__field__label"
-                                        style="">QA: Radio (Column)</label>
+                                    <label for="en__field_supporter_questions_183965" class="en__field__label">QA: Radio
+                                        (Column)</label>
                                     <div class="en__field__element en__field__element--radio">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_1839650"
                                                 type="radio" class="en__field__input en__field__input--radio"
@@ -561,7 +576,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--withOther en__field--question en__field--183966 en__field--qa-radio-with-input en__mandatory">
-                                    <label class="en__field__label" style="">QA: Radio with Input</label>
+                                    <label class="en__field__label">QA: Radio with Input</label>
                                     <div class="en__field__element en__field__element--radio	">
                                         <div class="en__field__item"> <input type="radio"
                                                 class="en__field__input en__field__input--radio" value="Value 1"
@@ -589,7 +604,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--withOther en__field--question en__field--183963 en__field--qa-radio-with-input-column- en__mandatory">
-                                    <label class="en__field__label" style="">QA: Radio with Input (Column)</label>
+                                    <label class="en__field__label">QA: Radio with Input (Column)</label>
                                     <div class="en__field__element en__field__element--radio	">
                                         <div class="en__field__item"> <input type="radio"
                                                 class="en__field__input en__field__input--radio" value="Value 1"
@@ -617,8 +632,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--question en__field--183967 en__field--qa-radio-buttons- en__mandatory">
-                                    <label for="en__field_supporter_questions_183967" class="en__field__label"
-                                        style="">QA: Radio (Buttons)</label>
+                                    <label for="en__field_supporter_questions_183967" class="en__field__label">QA: Radio
+                                        (Buttons)</label>
                                     <div class="en__field__element en__field__element--radio">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_1839670"
                                                 type="radio" class="en__field__input en__field__input--radio"
@@ -640,8 +655,8 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--question en__field--183969 en__field--qa-radio-buttons-and-column- en__mandatory">
-                                    <label for="en__field_supporter_questions_183969" class="en__field__label"
-                                        style="">QA: Radio (Buttons and Column)</label>
+                                    <label for="en__field_supporter_questions_183969" class="en__field__label">QA: Radio
+                                        (Buttons and Column)</label>
                                     <div class="en__field__element en__field__element--radio">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_1839690"
                                                 type="radio" class="en__field__input en__field__input--radio"
@@ -663,7 +678,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--radio en__field--withOther en__field--question en__field--183968 en__field--qa-radio-with-input-buttons- en__mandatory">
-                                    <label class="en__field__label" style="">QA: Radio with Input (Buttons)</label>
+                                    <label class="en__field__label">QA: Radio with Input (Buttons)</label>
                                     <div class="en__field__element en__field__element--radio	">
                                         <div class="en__field__item"> <input type="radio"
                                                 class="en__field__input en__field__input--radio" value="Value 1"
@@ -691,7 +706,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--checkbox en__field--question en__field--183981 en__field--qa-checkbox en__mandatory">
-                                    <label class="en__field__label" style="">QA: Checkbox</label>
+                                    <label class="en__field__label">QA: Checkbox</label>
                                     <div class="en__field__element en__field__element--checkbox	">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_1839810"
                                                 type="checkbox" class="en__field__input en__field__input--checkbox"
@@ -713,7 +728,7 @@
                                 </div>
                                 <div
                                     class="en__field en__field--checkbox en__field--question en__field--183982 en__field--qa-checkbox-column- en__mandatory">
-                                    <label class="en__field__label" style="">QA: Checkbox (Column)</label>
+                                    <label class="en__field__label">QA: Checkbox (Column)</label>
                                     <div class="en__field__element en__field__element--checkbox	">
                                         <div class="en__field__item"> <input id="en__field_supporter_questions_1839820"
                                                 type="checkbox" class="en__field__input en__field__input--checkbox"
@@ -733,7 +748,7 @@
                                                 class="en__field__label en__field__label--item">Value 3</label> </div>
                                     </div>
                                 </div>
-                                <div class="en__submit"><button style="">Submit</button></div>
+                                <div class="en__submit"><button>Submit</button></div>
                             </div>
                         </div>
                         <div class="en__component en__component en__component--column en__component--advcolumn footer">
@@ -752,7 +767,7 @@
     <!-- CSS is placed in the Footer so that it comes after any CSS inserted by Engaging Networks -->
     <!-- <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1,npm/sanitize.css@11.0.0,gh/4site-interactive-studios/Engaging-Networks-SASS@v1.0.26/experimental/styles-en-overrides.css,gh/4site-interactive-studios/Engaging-Networks-SASS@v1.0.26/experimental/styles.css,gh/4site-interactive-studios/Engaging-Networks-SASS@v1.0.26/experimental/styles-layout-1.css">-->
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/sanitize.css@11.0.0">
     <link rel="stylesheet" href="styles-en-overrides.css">
@@ -778,111 +793,111 @@
         - enabling async CSS loading in browsers that do not support rel=preload
         - applying rel preload css once loaded, whether supported or not.
         */
-        (function( w ){
+        (function (w) {
             "use strict";
             // rel=preload support test
-            if( !w.loadCSS ){
-                w.loadCSS = function(){};
+            if (!w.loadCSS) {
+                w.loadCSS = function () {};
             }
             // define on the loadCSS obj
             var rp = loadCSS.relpreload = {};
             // rel=preload feature support test
             // runs once and returns a function for compat purposes
-            rp.support = (function(){
+            rp.support = (function () {
                 var ret;
                 try {
-                    ret = w.document.createElement( "link" ).relList.supports( "preload" );
+                    ret = w.document.createElement("link").relList.supports("preload");
                 } catch (e) {
                     ret = false;
                 }
-                return function(){
+                return function () {
                     return ret;
                 };
             })();
-        
+
             // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
             // then change that media back to its intended value on load
-            rp.bindMediaToggle = function( link ){
+            rp.bindMediaToggle = function (link) {
                 // remember existing media attr for ultimate state, or default to 'all'
                 var finalMedia = link.media || "all";
-        
-                function enableStylesheet(){
+
+                function enableStylesheet() {
                     // unbind listeners
-                    if( link.addEventListener ){
-                        link.removeEventListener( "load", enableStylesheet );
-                    } else if( link.attachEvent ){
-                        link.detachEvent( "onload", enableStylesheet );
+                    if (link.addEventListener) {
+                        link.removeEventListener("load", enableStylesheet);
+                    } else if (link.attachEvent) {
+                        link.detachEvent("onload", enableStylesheet);
                     }
-                    link.setAttribute( "onload", null ); 
+                    link.setAttribute("onload", null);
                     link.media = finalMedia;
                 }
-        
+
                 // bind load handlers to enable media
-                if( link.addEventListener ){
-                    link.addEventListener( "load", enableStylesheet );
-                } else if( link.attachEvent ){
-                    link.attachEvent( "onload", enableStylesheet );
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
                 }
-        
+
                 // Set rel and non-applicable media type to start an async request
                 // note: timeout allows this to happen async to let rendering continue in IE
-                setTimeout(function(){
+                setTimeout(function () {
                     link.rel = "stylesheet";
                     link.media = "only x";
                 });
                 // also enable media after 3 seconds,
                 // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-                setTimeout( enableStylesheet, 3000 );
+                setTimeout(enableStylesheet, 3000);
             };
-        
+
             // loop through link elements in DOM
-            rp.poly = function(){
+            rp.poly = function () {
                 // double check this to prevent external calls from running
-                if( rp.support() ){
+                if (rp.support()) {
                     return;
                 }
-                var links = w.document.getElementsByTagName( "link" );
-                for( var i = 0; i < links.length; i++ ){
-                    var link = links[ i ];
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
                     // qualify links to those with rel=preload and as=style attrs
-                    if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute(
+                            "data-loadcss")) {
                         // prevent rerunning on link
-                        link.setAttribute( "data-loadcss", true );
+                        link.setAttribute("data-loadcss", true);
                         // bind listeners to toggle media back
-                        rp.bindMediaToggle( link );
+                        rp.bindMediaToggle(link);
                     }
                 }
             };
-        
+
             // if unsupported, run the polyfill
-            if( !rp.support() ){
+            if (!rp.support()) {
                 // run once at least
                 rp.poly();
-        
+
                 // rerun poly on an interval until onload
-                var run = w.setInterval( rp.poly, 500 );
-                if( w.addEventListener ){
-                    w.addEventListener( "load", function(){
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
                         rp.poly();
-                        w.clearInterval( run );
-                    } );
-                } else if( w.attachEvent ){
-                    w.attachEvent( "onload", function(){
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
                         rp.poly();
-                        w.clearInterval( run );
-                    } );
+                        w.clearInterval(run);
+                    });
                 }
             }
-        
-        
+
+
             // commonjs
-            if( typeof exports !== "undefined" ){
+            if (typeof exports !== "undefined") {
                 exports.loadCSS = loadCSS;
-            }
-            else {
+            } else {
                 w.loadCSS = loadCSS;
             }
-        }( typeof global !== "undefined" ? global : this ) );
+        }(typeof global !== "undefined" ? global : this));
     </script>
     <!-- Asyncronysly load web fonts to prevent render blocing -->
     <script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js"></script>
@@ -897,8 +912,7 @@
             }
         });
     </script>
-    <script async
-        src="https://cdn.jsdelivr.net/gh/4site-interactive-studios/Engaging-Networks-SASS@v1.0.26/experimental/scripts.js">
+    <script async src="scripts.js">
     </script> <!-- End 4Site Template JS -->
 </body>
 

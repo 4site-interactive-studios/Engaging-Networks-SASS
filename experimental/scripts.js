@@ -258,14 +258,12 @@ window.clearErrorOnInputHandler = function (element) {
 
 const enInput = (() => {
 
-  // add has-value class
   const handleFocus = (e) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
     targetWrapper.classList.add('has-focus');
   };
 
-  // remove has-value class
   const handleBlur = (e) => {
     const target = e.target;
     const targetWrapper = target.parentNode.parentNode;
@@ -278,18 +276,32 @@ const enInput = (() => {
     }
   };
 
+  const handleInput = (e) => {
+    const target = e.target;
+    const targetWrapper = target.parentNode.parentNode;
+    targetWrapper.classList.add('has-value');
+  };
+
+  const handleChange = (e) => {
+    const target = e.target;
+    const targetWrapper = target.parentNode.parentNode;
+    targetWrapper.classList.add('has-value');
+  };
+
   // register events
   const bindEvents = (element) => {
-    const floatField = element.querySelector('input, textarea');
-    floatField.addEventListener('focus', handleFocus);
-    floatField.addEventListener('blur', handleBlur);
+    const enField = element.querySelector('input, textarea, select');
+    enField.addEventListener('focus', handleFocus);
+    enField.addEventListener('blur', handleBlur);
+    enField.addEventListener('change', handleChange);
+    enField.addEventListener('input', handleInput);
   };
 
   // get DOM elements
   const init = () => {
-    const formInput = document.querySelectorAll('.en__field--text, .en__field--textarea');
+    const formInput = document.querySelectorAll('.en__field--text, .en__field--textarea, .en__field--select');
     formInput.forEach((element) => {
-      if (element.querySelector('input, textarea').value) {
+      if (element.querySelector('input, textarea, select').value) {
         element.parentNode.parentNode.classList.add('has-value');
       }
       bindEvents(element);
@@ -306,9 +318,9 @@ enInput.init();
 /* Automatically select other radio input when an amount is entered into it. */
 
 (function () {
-    for (var e = document.querySelectorAll(".en__field--withOther .en__field__input--other"), t = 0; t < e
-        .length; t++) e[t].addEventListener("input", function (e) {
-        this.parentNode.parentNode.querySelector(".en__field__item:nth-last-child(2) input")
-            .checked = !0
-    })
+  for (var e = document.querySelectorAll(".en__field--withOther .en__field__input--other"), t = 0; t < e
+    .length; t++) e[t].addEventListener("input", function (e) {
+    this.parentNode.parentNode.querySelector(".en__field__item:nth-last-child(2) input")
+      .checked = !0
+  })
 })();
