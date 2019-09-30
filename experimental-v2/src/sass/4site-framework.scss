@@ -1,0 +1,1129 @@
+// 4Site Engaging Networks Framework
+/* Force CSS Grid all the way down, normally EN defaults them to "Block" on lower resolutions. Will be ised as fallback when Grid fails. */
+.en__component--advrow {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-rows: repeat(auto-fit, minmax(0px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(0px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+  }
+  
+  .en__component--row--1,
+  .en__component--row--2 {
+    display: -webkit-box !important;
+    /* Fallback */
+    display: -ms-flexbox !important;
+    /* Fallback */
+    display: flex !important;
+    /* Fallback */
+  }
+  
+  /************************************
+   * Inputs
+   ***********************************/
+  
+  /* General */
+  #main-content input[type="date"],
+  #main-content input[type="datetime"],
+  #main-content input[type="datetime-local"],
+  #main-content input[type="email"],
+  #main-content input[type="month"],
+  #main-content input[type="number"],
+  #main-content input[type="password"],
+  #main-content input[type="range"],
+  #main-content input[type="search"],
+  #main-content input[type="tel"],
+  #main-content input[type="text"],
+  #main-content input[type="time"],
+  #main-content input[type="url"],
+  #main-content input[type="week"],
+  #main-content input[type="hidden"],
+  #main-content select,
+  #main-content textarea {
+    max-width: 100%;
+    width: 100%;
+    min-width: initial;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* height: 2.4375rem; */
+    height: auto !important;
+    margin: 0rem;
+    padding: 0.5rem;
+    border: 1px solid var(--client-light-gray);
+    border-radius: 0.3rem;
+    background-color: var(--client-white);
+    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--client-black);
+    transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  #main-content select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+    background-origin: content-box;
+    background-position: right -1rem center;
+    background-repeat: no-repeat;
+    background-size: 0.5625rem 0.375rem;
+    padding-right: 1.5rem;
+    transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
+  }
+  
+  #main-content textarea {
+    height: 7rem;
+    resize: vertical;
+  }
+  
+  /* Focus state */
+  #main-content input[type="date"]:focus,
+  #main-content input[type="datetime"]:focus,
+  #main-content input[type="datetime-local"]:focus,
+  #main-content input[type="email"]:focus,
+  #main-content input[type="month"]:focus,
+  #main-content input[type="number"]:focus,
+  #main-content input[type="password"]:focus,
+  #main-content input[type="range"]:focus,
+  #main-content input[type="search"]:focus,
+  #main-content input[type="tel"]:focus,
+  #main-content input[type="text"]:focus,
+  #main-content input[type="time"]:focus,
+  #main-content input[type="url"]:focus,
+  #main-content input[type="week"]:focus,
+  #main-content select:focus,
+  #main-content textarea:focus {
+    outline: none;
+    border: 1px solid var(--client-gray);
+    background-color:var(--client-button-font-color);
+    -webkit-box-shadow: 0 0 0.3125rem var(--client-light-gray);
+    box-shadow: 0 0 0.3125rem var(--client-light-gray);
+    transition: box-shadow 0.25s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.25s;
+  }
+  
+  /**
+    * Form Block Component: Select Fields
+    * Overrides EN Default Styling to ensure mobile friendly widths
+    */
+  #main-content .en__field__input--select {
+    min-width: initial !important;
+  }
+  
+  /* Placeholder styling */
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::-webkit-input-placeholder {
+    color: var(--client-light-gray);
+    opacity: 1;
+    /* Firefox */
+  }
+  
+  :-ms-input-placeholder {
+    color: var(--client-light-gray);
+    opacity: 1;
+    /* Firefox */
+  }
+  
+  ::-ms-input-placeholder {
+    color: var(--client-light-gray);
+    opacity: 1;
+    /* Firefox */
+  }
+  
+  ::placeholder {
+    color: var(--client-light-gray);
+    opacity: 1;
+    /* Firefox */
+  }
+  
+  /* Internet Explorer 10-11 */
+  :-ms-input-placeholder {
+    color: var(--client-light-gray);
+  }
+  
+  /* Microsoft Edge */
+  ::-ms-input-placeholder {
+    color: var(--client-light-gray);
+  }
+  
+  /* Custom Styling for Radio & Checkbox Inputs */
+  #main-content .en__field__input--radio,
+  #main-content .en__field__input--checkbox {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+  
+  #main-content .en__field__input--radio+.en__field__label,
+  #main-content .en__field__input--checkbox+.en__field__label {
+    position: relative;
+    margin-left: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  
+  }
+  
+  #main-content .en__field__input--radio+.en__field__label::before,
+  #main-content .en__field__input--checkbox+.en__field__label::before {
+    content: "";
+    position: absolute;
+    height: calc(1.4rem - 2px);
+    width: calc(1.4rem - 2px);
+    left: -2rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #c3c3c3;
+    -webkit-box-shadow: inset 0 0 0 5px var(--client-white);
+    box-shadow: inset 0 0 0 5px var(--client-white);
+    background-color: var(--client-white);
+    cursor: pointer;
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    -webkit-transition-property: border-color, background-color;
+    transition-property: border-color, background-color;
+  }
+  
+  #main-content .en__field__input--radio+.en__field__label::before {
+    border-radius: 50%;
+  }
+  
+  #main-content .en__field__input--checkbox+.en__field__label::before {
+    border-radius: .2rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  #main-content .en__field__input--radio:checked+.en__field__label::before,
+  #main-content .en__field__input--checkbox:checked+.en__field__label::before {
+    background-color:var(--client-button-background-color);  
+    border-color:var(--client-button-border-color);
+  }
+  
+  /* CSS code for checkmark symbol */
+  /* REF: https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
+  #main-content .en__field__input--checkbox:checked+.en__field__label::before {
+    content: "\a0\2713";
+    background-color:var(--client-button-background-color);  
+    border-color:var(--client-button-border-color);
+    color:var(--client-button-font-color);
+  }
+  
+  /* QA Needed: Would like to find a way so that radio input focus is round rather than square. May require re-writing how radio inputs are styled */
+  #main-content .en__field__input--radio:focus+.en__field__label::before,
+  #main-content .en__field__input--checkbox:focus+.en__field__label::before {
+    outline:var(--client-gray) auto 0.3125rem;
+  }
+  
+  /* Buttons */
+  #main-content button {
+    display: block;
+    margin: 0 0 1rem 0;
+    font-family: inherit;
+    padding: 0.85rem 1rem;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0.3rem;
+    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    background-color:var(--client-button-background-color);
+    color:var(--client-white);
+  }
+  
+  #main-content .en__submit button {
+    margin-top: 2rem;
+    background-color:var(--client-submit-button-background-color);
+    border-color:var(--client-submit-button-background-color);
+    color:var(--client-submit-button-font-color);  
+  }
+  
+  #main-content .next-step .en__submit button {
+    width: initial;
+    margin-left: auto;
+  }
+  
+  #main-content button:hover,
+  #main-content button:focus {
+    background-color:var(--client-button-background-color-hover);
+  }
+  
+  #main-content button[disabled],
+  #main-content button[disabled]:hover,
+  #main-content button[disabled]:focus {
+    background-color:var(--client-button-background-color-disabled);
+    color:var(--client-button-font-color);
+  }
+  
+  #main-content button[disabled] {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+  
+  /* QA Needed: EN's hidden input field */
+  .en__field--hidden {
+    display: block;
+    width: 100% !important;
+  }
+  
+  /* Needs QA: Makes images responsive. Look into not using !important. */
+  #main-content img {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+    display: inherit;
+  }
+  
+  /* When embedded, remove unnecessary padding */
+  body.embedded #main-content .en__tweetButton {
+    padding-right: 0px;
+  }
+  
+  /************************************
+    * Browser Form Autofill
+    * REF: https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
+    ***********************************/
+  
+  @keyframes onAutoFillStart {from {/**/}  to {/**/}}
+  @keyframes onAutoFillCancel {from {/**/}  to {/**/}}
+  input:-webkit-autofill {
+      /* Expose a hook for JavaScript when autofill is shown */
+      /* JavaScript can capture 'animationstart' events */
+      animation-name: onAutoFillStart;
+      
+      /* Make the background color become blue/yellow really slowly */
+      transition: background-color 50000s ease-in-out 0s;
+  }
+  
+  input:not(:-webkit-autofill) {
+      /* Expose a hook for JS onAutoFillCancel */
+      /* JavaScript can capture 'animationstart' events */
+      animation-name: onAutoFillCancel;
+  }
+  
+  .is-autofilled,
+  .is-autofilled label{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+  
+  /* Needs code that account for the small text shown during the process of autofilling */
+  /* Fernando says he has seen this happening elsewhere */
+  /* https://stackoverflow.com/questions/57242841/input-text-very-small-when-hovering-on-autofill-suggestion */
+  /* https://bugs.chromium.org/p/chromium/issues/detail?id=953689#c24 */
+  /* Screencast: https://d.pr/v/2xecBA */
+  
+  
+  /************************************
+    * Error Messages
+    ***********************************/
+  
+  /* Page Level Errors */
+  .en__errorHeader {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    padding: 0.5rem 2rem;
+    color:var(--client-error-red);
+    font-weight: 700;
+    text-align: center;
+    background-color:var(--client-error-red);
+  }
+  
+  .en__errorList>.en__error {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    padding: 0.5rem 2rem;
+    list-style: none;
+    color:var(--client-error-page-group-background);
+    text-align: center;
+    background-color:var(--client-error-page-group-background);
+  }
+  
+  /* Field Level Inline Errors */
+  #main-content .en__component .en__field__error {
+    padding: 0.25rem 0.5rem 0 0;
+    color:var(--client-error-red);
+    font-size: 0.75rem;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  
+  /* Field Level Inline Errors */
+  .fancy-errors #main-content .en__component .en__field__error {
+    padding: 0.25rem 0.5rem;
+    color: var(--client-white);
+    font-size: 0.75rem;
+    border-radius: 0.3rem;
+    background-color:var(--client-error-red);
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  
+  /* When EN's field validator flags an error it jumps the user to the first error on thepage. Our custom error JS executes after EN's and sets a body level class that we can reorder the field presentation on. If we don't wait to re-order the fields, the page will jump to the error which appears below the input resulting in the user having to scroll up to make the change. This is something that should be fixed on EN's end and how they handle errors, but until then we need this work around */
+  /* Code dependent on "oc-en-error-helpers.js" which must execute after EN's "pagedata.js" */
+  body.error-jump-assist #main-content .en__component .en__field__error {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  
+  #main-content .en__field--text.en__field--validationFailed input,
+  #main-content .en__field--textarea.en__field--validationFailed textarea,
+  #main-content .en__field--select.en__field--validationFailed select {
+    border-color:var(--client-error-red);
+    background-color:var(--client-error-red-faded);
+  }
+  
+  .fancy-errors #main-content .en__field--text.en__field--validationFailed input,
+  .fancy-errors #main-content .en__field--textarea.en__field--validationFailed textarea,
+  .fancy-errors #main-content .en__field--select.en__field--validationFailed select {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+  #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+  #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+  #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+  #main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+  #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+  #main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
+    border: 1px solid var(--client-error-red);
+    background-color:var(--client-error-red-faded);
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    border-radius: 0.3rem;
+  }
+  
+  .fancy-errors #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__element {
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;  
+  }
+  
+  #main-content .en__field--text.en__field--validationFailed .en__field__error,
+  #main-content .en__field--textarea.en__field--validationFailed .en__field__error,
+  #main-content .en__field--select.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--radio.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed .en__field__error,
+  #main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed .en__field__error {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  
+  #main-content .en__field--radio.en__field--validationFailed #main-content .en__field--checkbox.en__field--validationFailed {
+    border-color:var(--client-error-red);
+  }
+  
+  #main-content div[class*="-column-"].en__field .en__field__element,
+  #main-content .en__field.column .en__field__element {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  #main-content div[class*="-row-"].en__field .en__field__element,
+  #main-content .en__field.row .en__field__element {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  /*
+   * ##########################################################
+   * # FLOAT LABELS
+   * ##########################################################
+   */
+  
+  .float-labels #main-content .en__field--text input[type="text"],
+  .float-labels #main-content .en__field--textarea textarea {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+  }
+  
+  .float-labels #main-content .en__field--select select {
+    padding: 1rem 1.5rem 0rem 0.5rem;
+    background-position: right -1rem top 0.25rem;
+  }
+  
+  .float-labels #main-content .en__field--text label.en__field__label,
+  .float-labels #main-content .en__field--textarea label.en__field__label,
+  .float-labels #main-content .en__field--select label.en__field__label {
+    /* z-index: -1; */
+    position: absolute;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: translate(0.5rem, 4px) scale(1);
+    transform: translate(0.5rem, 4px) scale(1);
+    opacity: 0.5;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    cursor: text;
+  }
+  
+  .float-labels #main-content .en__field--text.has-value label.en__field__label,
+  .float-labels #main-content .en__field--text.has-focus label.en__field__label,
+  .float-labels #main-content .en__field--textarea.has-value label.en__field__label,
+  .float-labels #main-content .en__field--textarea.has-focus label.en__field__label,
+  .float-labels #main-content .en__field--select label.en__field__label {
+    -webkit-transform: translate(0.5rem, 0px) scale(0.7);
+    transform: translate(0.5rem, 0px) scale(0.7);
+  }
+  
+  .float-labels #main-content .en__field--text.en__field--validationFailed label,
+  .float-labels #main-content .en__field--textarea.en__field--validationFailed label,
+  .float-labels #main-content .en__field--select.en__field--validationFailed label {
+    opacity: 1;
+  }
+  
+  .float-labels #main-content .en__field--text.en__field--validationNeeded .en__field__error,
+  .float-labels #main-content .en__field--textarea.en__field--validationNeeded .en__field__error,
+  .float-labels #main-content .en__field--select.en__field--validationNeeded .en__field__error {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  
+  .float-labels #main-content .en__field--text.en__field--validationNeeded input,
+  .float-labels #main-content .en__field--textarea.en__field--validationNeeded textarea,
+  .float-labels #main-content .en__field--select.en__field--validationNeeded select {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  .css-display_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .css-flex-wrap_wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .css-align-items_flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  
+  .css-align-items_flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  
+  /* Uses Padding instead of Margin because padding is counted in the Flex-basis width whereas Margin is outside */
+  /* One optimization idea is to break this file up into three CSS files, 1-10, 11-20, and 21-30. That was they can be included only if that template is using them. */
+  /* Should confirm if the EN class field could even hold enough chars to fit defining 20 fields plus their start/stop classes */
+  /* Why 20 pre-defined options? To cover a single form component with all of the following: * 1. First Name (50%) | 2. Last Name (50%) * 3. Email (100%) * 4. Email Opt-in (100%) * 5. Phone (100%) * 6. Phone Opt-in (100%) * 7. Street (100%) * 8. Street 2 (100%) * 9. City (33%) | 10. State (33%) | 11. Zip (33%) * 12. Country (100%) * 13. Giving Frequency (100%) * 14. Giving Amount (100%) * 15. Gift Type (100%) * 16. Credit Card Number (100%) * 17. Credit Card Expiration (50%) | 18. Credit Card CVV (50%) * 19. Custom Field (100%) * 20. Custom Field (100%) */
+  /* Make all en fields 100% */
+  .en__field {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    padding-bottom: 1rem;
+    margin-bottom: 0rem;    
+  }
+  
+  .i1-25 .en__field:nth-of-type(1),
+  .i2-25 .en__field:nth-of-type(2),
+  .i3-25 .en__field:nth-of-type(3),
+  .i4-25 .en__field:nth-of-type(4),
+  .i5-25 .en__field:nth-of-type(5),
+  .i6-25 .en__field:nth-of-type(6),
+  .i7-25 .en__field:nth-of-type(7),
+  .i8-25 .en__field:nth-of-type(8),
+  .i9-25 .en__field:nth-of-type(9),
+  .i10-25 .en__field:nth-of-type(10),
+  .i11-25 .en__field:nth-of-type(11),
+  .i12-25 .en__field:nth-of-type(12),
+  .i13-25 .en__field:nth-of-type(13),
+  .i14-25 .en__field:nth-of-type(14),
+  .i15-25 .en__field:nth-of-type(15),
+  .i16-25 .en__field:nth-of-type(16),
+  .i17-25 .en__field:nth-of-type(17),
+  .i18-25 .en__field:nth-of-type(18),
+  .i19-25 .en__field:nth-of-type(19),
+  .i20-25 .en__field:nth-of-type(20) {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .i1-33 .en__field:nth-of-type(1),
+  .i2-33 .en__field:nth-of-type(2),
+  .i3-33 .en__field:nth-of-type(3),
+  .i4-33 .en__field:nth-of-type(4),
+  .i5-33 .en__field:nth-of-type(5),
+  .i6-33 .en__field:nth-of-type(6),
+  .i7-33 .en__field:nth-of-type(7),
+  .i8-33 .en__field:nth-of-type(8),
+  .i9-33 .en__field:nth-of-type(9),
+  .i10-33 .en__field:nth-of-type(10),
+  .i11-33 .en__field:nth-of-type(11),
+  .i12-33 .en__field:nth-of-type(12),
+  .i13-33 .en__field:nth-of-type(13),
+  .i14-33 .en__field:nth-of-type(14),
+  .i15-33 .en__field:nth-of-type(15),
+  .i16-33 .en__field:nth-of-type(16),
+  .i17-33 .en__field:nth-of-type(17),
+  .i18-33 .en__field:nth-of-type(18),
+  .i19-33 .en__field:nth-of-type(19),
+  .i20-33 .en__field:nth-of-type(20) {
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .i1-50 .en__field:nth-of-type(1),
+  .i2-50 .en__field:nth-of-type(2),
+  .i3-50 .en__field:nth-of-type(3),
+  .i4-50 .en__field:nth-of-type(4),
+  .i5-50 .en__field:nth-of-type(5),
+  .i6-50 .en__field:nth-of-type(6),
+  .i7-50 .en__field:nth-of-type(7),
+  .i8-50 .en__field:nth-of-type(8),
+  .i9-50 .en__field:nth-of-type(9),
+  .i10-50 .en__field:nth-of-type(10),
+  .i11-50 .en__field:nth-of-type(11),
+  .i12-50 .en__field:nth-of-type(12),
+  .i13-50 .en__field:nth-of-type(13),
+  .i14-50 .en__field:nth-of-type(14),
+  .i15-50 .en__field:nth-of-type(15),
+  .i16-50 .en__field:nth-of-type(16),
+  .i17-50 .en__field:nth-of-type(17),
+  .i18-50 .en__field:nth-of-type(18),
+  .i19-50 .en__field:nth-of-type(19),
+  .i20-50 .en__field:nth-of-type(20) {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .i1-66 .en__field:nth-of-type(1),
+  .i2-66 .en__field:nth-of-type(2),
+  .i3-66 .en__field:nth-of-type(3),
+  .i4-66 .en__field:nth-of-type(4),
+  .i5-66 .en__field:nth-of-type(5),
+  .i6-66 .en__field:nth-of-type(6),
+  .i7-66 .en__field:nth-of-type(7),
+  .i8-66 .en__field:nth-of-type(8),
+  .i9-66 .en__field:nth-of-type(9),
+  .i10-66 .en__field:nth-of-type(10),
+  .i11-66 .en__field:nth-of-type(11),
+  .i12-66 .en__field:nth-of-type(12),
+  .i13-66 .en__field:nth-of-type(13),
+  .i14-66 .en__field:nth-of-type(14),
+  .i15-66 .en__field:nth-of-type(15),
+  .i16-66 .en__field:nth-of-type(16),
+  .i17-66 .en__field:nth-of-type(17),
+  .i18-66 .en__field:nth-of-type(18),
+  .i19-66 .en__field:nth-of-type(19),
+  .i20-66 .en__field:nth-of-type(20) {
+    -ms-flex-preferred-size: 66.66666%;
+    flex-basis: 66.66666%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .i1-75 .en__field:nth-of-type(1),
+  .i2-75 .en__field:nth-of-type(2),
+  .i3-75 .en__field:nth-of-type(3),
+  .i4-75 .en__field:nth-of-type(4),
+  .i5-75 .en__field:nth-of-type(5),
+  .i6-75 .en__field:nth-of-type(6),
+  .i7-75 .en__field:nth-of-type(7),
+  .i8-75 .en__field:nth-of-type(8),
+  .i9-75 .en__field:nth-of-type(9),
+  .i10-75 .en__field:nth-of-type(10),
+  .i11-75 .en__field:nth-of-type(11),
+  .i12-75 .en__field:nth-of-type(12),
+  .i13-75 .en__field:nth-of-type(13),
+  .i14-75 .en__field:nth-of-type(14),
+  .i15-75 .en__field:nth-of-type(15),
+  .i16-75 .en__field:nth-of-type(16),
+  .i17-75 .en__field:nth-of-type(17),
+  .i18-75 .en__field:nth-of-type(18),
+  .i19-75 .en__field:nth-of-type(19),
+  .i20-75 .en__field:nth-of-type(20) {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* For items at the start of a row, remove left padding */
+  .i1-start .en__field:nth-of-type(1),
+  .i2-start .en__field:nth-of-type(2),
+  .i3-start .en__field:nth-of-type(3),
+  .i4-start .en__field:nth-of-type(4),
+  .i5-start .en__field:nth-of-type(5),
+  .i6-start .en__field:nth-of-type(6),
+  .i7-start .en__field:nth-of-type(7),
+  .i8-start .en__field:nth-of-type(8),
+  .i9-start .en__field:nth-of-type(9),
+  .i10-start .en__field:nth-of-type(10),
+  .i11-start .en__field:nth-of-type(11),
+  .i12-start .en__field:nth-of-type(12),
+  .i13-start .en__field:nth-of-type(13),
+  .i14-start .en__field:nth-of-type(14),
+  .i15-start .en__field:nth-of-type(15),
+  .i16-start .en__field:nth-of-type(16),
+  .i17-start .en__field:nth-of-type(17),
+  .i18-start .en__field:nth-of-type(18),
+  .i19-start .en__field:nth-of-type(19),
+  .i20-start .en__field:nth-of-type(20) {
+    padding-left: 0;
+  }
+  
+  /* For items at the end of a row, remove right padding */
+  .i1-end .en__field:nth-of-type(1),
+  .i2-end .en__field:nth-of-type(2),
+  .i3-end .en__field:nth-of-type(3),
+  .i4-end .en__field:nth-of-type(4),
+  .i5-end .en__field:nth-of-type(5),
+  .i6-end .en__field:nth-of-type(6),
+  .i7-end .en__field:nth-of-type(7),
+  .i8-end .en__field:nth-of-type(8),
+  .i9-end .en__field:nth-of-type(9),
+  .i10-end .en__field:nth-of-type(10),
+  .i11-end .en__field:nth-of-type(11),
+  .i12-end .en__field:nth-of-type(12),
+  .i13-end .en__field:nth-of-type(13),
+  .i14-end .en__field:nth-of-type(14),
+  .i15-end .en__field:nth-of-type(15),
+  .i16-end .en__field:nth-of-type(16),
+  .i17-end .en__field:nth-of-type(17),
+  .i18-end .en__field:nth-of-type(18),
+  .i19-end .en__field:nth-of-type(19),
+  .i20-end .en__field:nth-of-type(20) {
+    padding-right: 0;
+  }
+  
+  .i1-center .en__field:nth-of-type(1),
+  .i2-center .en__field:nth-of-type(2),
+  .i3-center .en__field:nth-of-type(3),
+  .i4-center .en__field:nth-of-type(4),
+  .i5-center .en__field:nth-of-type(5),
+  .i6-center .en__field:nth-of-type(6),
+  .i7-center .en__field:nth-of-type(7),
+  .i8-center .en__field:nth-of-type(8),
+  .i9-center .en__field:nth-of-type(9),
+  .i10-center .en__field:nth-of-type(10),
+  .i11-center .en__field:nth-of-type(11),
+  .i12-center .en__field:nth-of-type(12),
+  .i13-center .en__field:nth-of-type(13),
+  .i14-center .en__field:nth-of-type(14),
+  .i15-center .en__field:nth-of-type(15),
+  .i16-center .en__field:nth-of-type(16),
+  .i17-center .en__field:nth-of-type(17),
+  .i18-center .en__field:nth-of-type(18),
+  .i19-center .en__field:nth-of-type(19),
+  .i20-center .en__field:nth-of-type(20) {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .en__field__element--splittext,
+  .en__field__element--splitselect,
+  .en__field__element--tripleselect {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  
+  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
+  .en__field__element--splittext .en__field__item:nth-of-type(1),
+  .en__field__element--splitselect .en__field__item:nth-of-type(1) {
+    -ms-flex-preferred-size: 50% !important;
+    flex-basis: 50% !important;
+    padding-left: 0rem !important;
+    padding-right: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
+  .en__field__element--splittext .en__field__item:nth-of-type(2),
+  .en__field__element--splitselect .en__field__item:nth-of-type(2) {
+    -ms-flex-preferred-size: 50% !important;
+    flex-basis: 50% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
+  .en__field__element--tripletext .en__field__item:nth-of-type(1),
+  .en__field__element--tripleselect .en__field__item:nth-of-type(1) {
+    -ms-flex-preferred-size: 33.33333% !important;
+    flex-basis: 33.33333% !important;
+    padding-left: 0rem !important;
+    padding-right: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
+  .en__field__element--tripletext .en__field__item:nth-of-type(2),
+  .en__field__element--tripleselect .en__field__item:nth-of-type(2) {
+    -ms-flex-preferred-size: 33.33333% !important;
+    flex-basis: 33.33333% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Includes overrides of existing CSS, need for resolve this duplicate styling */
+  .en__field__element--tripletext .en__field__item:nth-of-type(3),
+  .en__field__element--tripleselect .en__field__item:nth-of-type(3) {
+    -ms-flex-preferred-size: 33.33333% !important;
+    flex-basis: 33.33333% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Force input visibility */
+  /* Still needs JS to auto select last radio on input */
+  .i1-show-hidden-radio-input .en__field:nth-of-type(1) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i2-show-hidden-radio-input .en__field:nth-of-type(2) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i3-show-hidden-radio-input .en__field:nth-of-type(3) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i4-show-hidden-radio-input .en__field:nth-of-type(4) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i5-show-hidden-radio-input .en__field:nth-of-type(5) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i6-show-hidden-radio-input .en__field:nth-of-type(6) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i7-show-hidden-radio-input .en__field:nth-of-type(7) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i8-show-hidden-radio-input .en__field:nth-of-type(8) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i9-show-hidden-radio-input .en__field:nth-of-type(9) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i10-show-hidden-radio-input .en__field:nth-of-type(10) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i11-show-hidden-radio-input .en__field:nth-of-type(11) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i12-show-hidden-radio-input .en__field:nth-of-type(12) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i13-show-hidden-radio-input .en__field:nth-of-type(13) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i14-show-hidden-radio-input .en__field:nth-of-type(14) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i15-show-hidden-radio-input .en__field:nth-of-type(15) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i16-show-hidden-radio-input .en__field:nth-of-type(16) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i17-show-hidden-radio-input .en__field:nth-of-type(17) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i18-show-hidden-radio-input .en__field:nth-of-type(18) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i19-show-hidden-radio-input .en__field:nth-of-type(19) .en__field__element--radio .en__field__item:nth-last-child(1),
+  .i20-show-hidden-radio-input .en__field:nth-of-type(20) .en__field__element--radio .en__field__item:nth-last-child(1) {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  
+  /* Hide Other Input Radio Value because it is auto-selected with JS when a value is entered in the Other Input Text field. */
+  .i1-show-hidden-radio-input .en__field:nth-of-type(1) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i2-show-hidden-radio-input .en__field:nth-of-type(2) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i3-show-hidden-radio-input .en__field:nth-of-type(3) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i4-show-hidden-radio-input .en__field:nth-of-type(4) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i5-show-hidden-radio-input .en__field:nth-of-type(5) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i6-show-hidden-radio-input .en__field:nth-of-type(6) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i7-show-hidden-radio-input .en__field:nth-of-type(7) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i8-show-hidden-radio-input .en__field:nth-of-type(8) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i9-show-hidden-radio-input .en__field:nth-of-type(9) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i10-show-hidden-radio-input .en__field:nth-of-type(10) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i11-show-hidden-radio-input .en__field:nth-of-type(11) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i12-show-hidden-radio-input .en__field:nth-of-type(12) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i13-show-hidden-radio-input .en__field:nth-of-type(13) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i14-show-hidden-radio-input .en__field:nth-of-type(14) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i15-show-hidden-radio-input .en__field:nth-of-type(15) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i16-show-hidden-radio-input .en__field:nth-of-type(16) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i17-show-hidden-radio-input .en__field:nth-of-type(17) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i18-show-hidden-radio-input .en__field:nth-of-type(18) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i19-show-hidden-radio-input .en__field:nth-of-type(19) .en__field__element--radio .en__field__item:nth-last-child(2),
+  .i20-show-hidden-radio-input .en__field:nth-of-type(20) .en__field__element--radio .en__field__item:nth-last-child(2) {
+    display: none !important;
+  }
+  
+  /* On error, restyle if the field is also centered */
+  .i1-show-hidden-radio-input.i1-center .en__field:nth-of-type(1).en__field--validationFailed .en__field__element--radio,
+  .i2-show-hidden-radio-input.i2-center .en__field:nth-of-type(2).en__field--validationFailed .en__field__element--radio,
+  .i3-show-hidden-radio-input.i3-center .en__field:nth-of-type(3).en__field--validationFailed .en__field__element--radio,
+  .i4-show-hidden-radio-input.i4-center .en__field:nth-of-type(4).en__field--validationFailed .en__field__element--radio,
+  .i5-show-hidden-radio-input.i5-center .en__field:nth-of-type(5).en__field--validationFailed .en__field__element--radio,
+  .i6-show-hidden-radio-input.i6-center .en__field:nth-of-type(6).en__field--validationFailed .en__field__element--radio,
+  .i7-show-hidden-radio-input.i7-center .en__field:nth-of-type(7).en__field--validationFailed .en__field__element--radio,
+  .i8-show-hidden-radio-input.i8-center .en__field:nth-of-type(8).en__field--validationFailed .en__field__element--radio,
+  .i9-show-hidden-radio-input.i9-center .en__field:nth-of-type(9).en__field--validationFailed .en__field__element--radio,
+  .i10-show-hidden-radio-input.i10-center .en__field:nth-of-type(10).en__field--validationFailed .en__field__element--radio,
+  .i11-show-hidden-radio-input.i11-center .en__field:nth-of-type(11).en__field--validationFailed .en__field__element--radio,
+  .i12-show-hidden-radio-input.i12-center .en__field:nth-of-type(12).en__field--validationFailed .en__field__element--radio,
+  .i13-show-hidden-radio-input.i13-center .en__field:nth-of-type(13).en__field--validationFailed .en__field__element--radio,
+  .i14-show-hidden-radio-input.i14-center .en__field:nth-of-type(14).en__field--validationFailed .en__field__element--radio,
+  .i15-show-hidden-radio-input.i15-center .en__field:nth-of-type(15).en__field--validationFailed .en__field__element--radio,
+  .i16-show-hidden-radio-input.i16-center .en__field:nth-of-type(16).en__field--validationFailed .en__field__element--radio,
+  .i17-show-hidden-radio-input.i17-center .en__field:nth-of-type(17).en__field--validationFailed .en__field__element--radio,
+  .i18-show-hidden-radio-input.i18-center .en__field:nth-of-type(18).en__field--validationFailed .en__field__element--radio,
+  .i19-show-hidden-radio-input.i19-center .en__field:nth-of-type(19).en__field--validationFailed .en__field__element--radio,
+  .i20-show-hidden-radio-input.i20-center .en__field:nth-of-type(20).en__field--validationFailed .en__field__element--radio {
+    border-radius: 0.3rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* On error, restyle if the field is also centered */
+  .i1-show-hidden-radio-input.i1-center .en__field:nth-of-type(1).en__field--validationFailed .en__field__error,
+  .i2-show-hidden-radio-input.i2-center .en__field:nth-of-type(2).en__field--validationFailed .en__field__error,
+  .i3-show-hidden-radio-input.i3-center .en__field:nth-of-type(3).en__field--validationFailed .en__field__error,
+  .i4-show-hidden-radio-input.i4-center .en__field:nth-of-type(4).en__field--validationFailed .en__field__error,
+  .i5-show-hidden-radio-input.i5-center .en__field:nth-of-type(5).en__field--validationFailed .en__field__error,
+  .i6-show-hidden-radio-input.i6-center .en__field:nth-of-type(6).en__field--validationFailed .en__field__error,
+  .i7-show-hidden-radio-input.i7-center .en__field:nth-of-type(7).en__field--validationFailed .en__field__error,
+  .i8-show-hidden-radio-input.i8-center .en__field:nth-of-type(8).en__field--validationFailed .en__field__error,
+  .i9-show-hidden-radio-input.i9-center .en__field:nth-of-type(9).en__field--validationFailed .en__field__error,
+  .i10-show-hidden-radio-input.i10-center .en__field:nth-of-type(10).en__field--validationFailed .en__field__error,
+  .i11-show-hidden-radio-input.i11-center .en__field:nth-of-type(11).en__field--validationFailed .en__field__error,
+  .i12-show-hidden-radio-input.i12-center .en__field:nth-of-type(12).en__field--validationFailed .en__field__error,
+  .i13-show-hidden-radio-input.i13-center .en__field:nth-of-type(13).en__field--validationFailed .en__field__error,
+  .i14-show-hidden-radio-input.i14-center .en__field:nth-of-type(14).en__field--validationFailed .en__field__error,
+  .i15-show-hidden-radio-input.i15-center .en__field:nth-of-type(15).en__field--validationFailed .en__field__error,
+  .i16-show-hidden-radio-input.i16-center .en__field:nth-of-type(16).en__field--validationFailed .en__field__error,
+  .i17-show-hidden-radio-input.i17-center .en__field:nth-of-type(17).en__field--validationFailed .en__field__error,
+  .i18-show-hidden-radio-input.i18-center .en__field:nth-of-type(18).en__field--validationFailed .en__field__error,
+  .i19-show-hidden-radio-input.i19-center .en__field:nth-of-type(19).en__field--validationFailed .en__field__error,
+  .i20-show-hidden-radio-input.i20-center .en__field:nth-of-type(20).en__field--validationFailed .en__field__error {
+    border-radius: 0.3rem !important;
+  }
+  
+  @media screen and (max-width: 40em) {
+  
+    .i1-m50 .en__field:nth-of-type(1),
+    .i2-m50 .en__field:nth-of-type(2),
+    .i3-m50 .en__field:nth-of-type(3),
+    .i4-m50 .en__field:nth-of-type(4),
+    .i5-m50 .en__field:nth-of-type(5),
+    .i6-m50 .en__field:nth-of-type(6),
+    .i7-m50 .en__field:nth-of-type(7),
+    .i8-m50 .en__field:nth-of-type(8),
+    .i9-m50 .en__field:nth-of-type(9),
+    .i10-m50 .en__field:nth-of-type(10),
+    .i11-m50 .en__field:nth-of-type(11),
+    .i12-m50 .en__field:nth-of-type(12),
+    .i13-m50 .en__field:nth-of-type(13),
+    .i14-m50 .en__field:nth-of-type(14),
+    .i15-m50 .en__field:nth-of-type(15),
+    .i16-m50 .en__field:nth-of-type(16),
+    .i17-m50 .en__field:nth-of-type(17),
+    .i18-m50 .en__field:nth-of-type(18),
+    .i19-m50 .en__field:nth-of-type(19),
+    .i20-m50 .en__field:nth-of-type(20) {
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  
+    /* For items at the start of a row, remove left padding */
+    .i1-mstart .en__field:nth-of-type(1),
+    .i2-mstart .en__field:nth-of-type(2),
+    .i3-mstart .en__field:nth-of-type(3),
+    .i4-mstart .en__field:nth-of-type(4),
+    .i5-mstart .en__field:nth-of-type(5),
+    .i6-mstart .en__field:nth-of-type(6),
+    .i7-mstart .en__field:nth-of-type(7),
+    .i8-mstart .en__field:nth-of-type(8),
+    .i9-mstart .en__field:nth-of-type(9),
+    .i10-mstart .en__field:nth-of-type(10),
+    .i11-mstart .en__field:nth-of-type(11),
+    .i12-mstart .en__field:nth-of-type(12),
+    .i13-mstart .en__field:nth-of-type(13),
+    .i14-mstart .en__field:nth-of-type(14),
+    .i15-mstart .en__field:nth-of-type(15),
+    .i16-mstart .en__field:nth-of-type(16),
+    .i17-mstart .en__field:nth-of-type(17),
+    .i18-mstart .en__field:nth-of-type(18),
+    .i19-mstart .en__field:nth-of-type(19),
+    .i20-mstart .en__field:nth-of-type(20) {
+      padding-left: 0;
+    }
+  
+    /* For items at the end of a row, remove right padding */
+    .i1-mend .en__field:nth-of-type(1),
+    .i2-mend .en__field:nth-of-type(2),
+    .i3-mend .en__field:nth-of-type(3),
+    .i4-mend .en__field:nth-of-type(4),
+    .i5-mend .en__field:nth-of-type(5),
+    .i6-mend .en__field:nth-of-type(6),
+    .i7-mend .en__field:nth-of-type(7),
+    .i8-mend .en__field:nth-of-type(8),
+    .i9-mend .en__field:nth-of-type(9),
+    .i10-mend .en__field:nth-of-type(10),
+    .i11-mend .en__field:nth-of-type(11),
+    .i12-mend .en__field:nth-of-type(12),
+    .i13-mend .en__field:nth-of-type(13),
+    .i14-mend .en__field:nth-of-type(14),
+    .i15-mend .en__field:nth-of-type(15),
+    .i16-mend .en__field:nth-of-type(16),
+    .i17-mend .en__field:nth-of-type(17),
+    .i18-mend .en__field:nth-of-type(18),
+    .i19-mend .en__field:nth-of-type(19),
+    .i20-mend .en__field:nth-of-type(20) {
+      padding-right: 0;
+    }
+  
+    .i1-m100 .en__field:nth-of-type(1),
+    .i2-m100 .en__field:nth-of-type(2),
+    .i3-m100 .en__field:nth-of-type(3),
+    .i4-m100 .en__field:nth-of-type(4),
+    .i5-m100 .en__field:nth-of-type(5),
+    .i6-m100 .en__field:nth-of-type(6),
+    .i7-m100 .en__field:nth-of-type(7),
+    .i8-m100 .en__field:nth-of-type(8),
+    .i9-m100 .en__field:nth-of-type(9),
+    .i10-m100 .en__field:nth-of-type(10),
+    .i11-m100 .en__field:nth-of-type(11),
+    .i12-m100 .en__field:nth-of-type(12),
+    .i13-m100 .en__field:nth-of-type(13),
+    .i14-m100 .en__field:nth-of-type(14),
+    .i15-m100 .en__field:nth-of-type(15),
+    .i16-m100 .en__field:nth-of-type(16),
+    .i17-m100 .en__field:nth-of-type(17),
+    .i18-m100 .en__field:nth-of-type(18),
+    .i19-m100 .en__field:nth-of-type(19),
+    .i20-m100 .en__field:nth-of-type(20) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+  
+  #main-content .radio-to-buttons .en__field--radio input[type="radio"]+label {
+    border-radius: 0.3rem;
+    padding: .5rem 1rem !important;
+  }
+  
+  #main-content .radio-to-buttons.fat-buttons .en__field--radio input[type="radio"]+label {
+    padding: .625rem 1.5625rem !important;
+  }
+  
+  #main-content .radio-to-buttons .en__field--radio .en__field__input--radio+.en__field__label {
+    margin-left: 0rem !important;
+  }
+  
+  #main-content .radio-to-buttons .en__field--radio .en__field__input--radio+.en__field__label::before {
+    display: none !important;
+  }
+  
+  #main-content .radio-to-buttons .en__field--radio input[type=radio]+label,
+  #main-content .radio-to-buttons .en__field--radio .en__field__item--other input[type="text"]{
+    background-color:var(--client-white);
+  }
+
+  #main-content .radio-to-buttons .en__field--radio input[type=radio]:checked+label,
+  #main-content .radio-to-buttons .en__field--radio .en__field__item--other.has-value input,
+  #main-content .radio-to-buttons .en__field--radio .en__field__item--other:not(.en__field__item--hidden) input {
+    text-transform: none;
+    background-color:var(--client-button-background-color);
+    border-color:var(--client-button-border-color);
+    color:var(--client-button-font-color);
+  }
+  
+  #main-content .radio-to-buttons .en__field--radio label.en__field__label.en__field__label--item {
+    border: 1px solid var(--client-light-gray);
+    background-position-x: 40px !important
+  }
+  
+  #main-content .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item label.en__field__label.en__field__label--item:hover,
+  #main-content .radio-to-buttons.dark .en__field--radio .en__field__element--radio .en__field__item input[type="radio"]:checked+label {
+    background-color:var(--client-button-background-color);
+    border-color:var(--client-button-border-color)
+  }
+  
+  #main-content .radio-to-buttons.dark .en__field--radio label.en__field__label.en__field__label--item:hover,
+  #main-content .radio-to-buttons.dark .en__field--radio input[type="radio"]:checked+label {
+    background-color:var(--client-button-background-color);
+    border-color:var(--client-button-border-color)
+  }
+  
+  /* Override */
+  #main-content .en__field__input--checkbox:checked+.en__field__label::before {
+    font-size: 0.8rem;
+  }
+  
+  #main-content .radio-to-buttons .en__field__input--other {
+    height: auto !important;
+  }
+  
+  #main-content .radio-to-buttons.fat-buttons .en__field__input--other {
+    padding: .625rem 1.5625rem !important;
+  }
+  
+  #main-content .en__field--validationFailed.has-value input,
+  #main-content .en__field--validationFailed.has-value textarea,
+  #main-content .en__field--select.en__field--validationFailed.has-value select {
+    border-color:var(--client-error-red-grayscale);
+  }
+  
+  .fancy-errors #main-content .en__component .en__field.en__field--select.en__field--withOther.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--radio.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--checkbox.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--splittext.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--tripletext.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--splitselect.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__component .en__field.en__field--tripleselect.en__field--validationFailed.has-value .en__field__element,
+  .fancy-errors #main-content .en__field--validationFailed.has-value .en__field__error {
+    border-color:var(--client-error-red-grayscale);
+    background-color:var(--client-error-red-grayscale);
+    color: var(--client-white);
+  }
+  
+  .en__component--formblock {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  
+  .radio-to-buttons .en__field--radio input[type=radio]:focus+label {
+    outline: none !important;
+    border: 1px solid #666666 !important;
+    -webkit-box-shadow: 0 0 0.3125rem var(--client-light-gray) !important;
+    box-shadow: 0 0 0.3125rem var(--client-light-gray) !important;
+    transition: box-shadow 0.25s, border-color 0.125s ease-in-out, -webkit-box-shadow 0.25s !important;
+  }
+  
+  .en__field--withOther .en__field__element--select .en__field__item:first-child {
+    margin-right: 0 !important;
+  }
+  
+  .en__field--withOther .en__field__element--select .en__field__item--other {
+    margin-left: 1rem !important;
+  }

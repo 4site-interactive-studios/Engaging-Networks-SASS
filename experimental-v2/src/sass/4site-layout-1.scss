@@ -1,0 +1,196 @@
+// Engaging Networks Layouts
+/*
+ * ##########################################################
+ * # LAYOUT 1
+ * # Row 1: Header
+ * # Row 2: Sidebar | Banner
+ * # Row 3: Sidebar | Content
+ * # Row 4: Footer
+ * ##########################################################
+ */
+
+.layout-1 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Remove un-needed spacer margin in the page builder */
+#en__pagebuilder.layout-1 .en__container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Set Content Alignment */
+.layout-1 #main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* Set gap between rows and columns */
+.layout-1 .en__component--row {
+  grid-gap: 1rem !important;
+}
+
+/* Match grid-gap with pseudo column gap on two column components */
+.layout-1.en__component--row--2 .en__component--column--1 {
+  margin-right: 0.5rem;
+}
+
+/* Match grid-gap with pseudo column gap on two column components */
+.layout-1.en__component--row--2 .en__component--column--2 {
+  margin-left: 0.5rem;
+}
+
+/* Match grid-gap on rows as long as the row is not the last of its siblings */
+.layout-1 .en__component--row:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+/* Set padding within sections */
+.layout-1 .en__component--column {
+  padding: 0.25rem 1rem;
+}
+
+/* Desktop Max Width and Margins */
+.layout-1 #main-content-inner {
+  width: 100%;
+  max-width: 62rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0.25rem solid #000000;
+}
+
+/* Default Desktop Layout */
+.layout-1 .header {
+  grid-area: header;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+}
+
+.layout-1 .banner {
+  grid-area: banner;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+.layout-1 .sidebar {
+  grid-area: sidebar;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+.layout-1 .content {
+  grid-area: content;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+.layout-1 .footer {
+  grid-area: footer;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+}
+
+/* Move the sidebar from the left to the right by adding "sidebar-right" class to body */
+.layout-1.sidebar-right .banner {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.layout-1.sidebar-right .content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.layout-1.sidebar-right .sidebar {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+/* Remove margin and border when screen resolution shrinks towards a mobile breakpoint */
+/* Calculated as maximum width of content area + border width + sum of desired minimal margin on both sides */
+@media only screen and (max-width: 1074px) {
+  .layout-1 #main-content-inner {
+    border: none;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    max-width: 100%;
+  }
+}
+
+/* Mobile breakpoint */
+@media only screen and (max-width: 46.5rem) {
+  /* Remove margins and border on mobile */
+  .layout-1 #main-content-inner {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border: none;
+    max-width: 100%;
+  }
+
+  /* Default Mobile Layout */
+  .layout-1 .header {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+
+  .layout-1 .banner {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+
+  .layout-1 .sidebar {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+
+  .layout-1 .content {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+
+  .layout-1 .footer {
+    -ms-grid-row: 5;
+    grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+}

@@ -1,0 +1,27 @@
+// Client Branding and Layouts
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap");
+@import "4site-layout-1";
+
+:root {
+  --client-white: #ffffff;
+  --client-black: #000000;
+  --client-gray: #8a8a8a;
+  --client-light-gray: #cacaca;
+
+  --client-button-background-color: #2ba6cb;
+  --client-button-background-color-hover: #258dad;
+  --client-button-background-color-disabled: #1779ba;
+  --client-button-border-color: #2ba6cb;
+  --client-button-font-color: #ffffff;
+
+  --client-submit-button-background-color: #000000;
+  --client-submit-button-border-color: #000000;
+  --client-submit-button-font-color: #ffffff;
+
+  --client-error-red: #e74b3c;
+  --client-error-red-grayscale: #949494;
+  --client-error-red-faded: #fef6f5;
+
+  --client-error-page-group-background: #f4ddda;
+}

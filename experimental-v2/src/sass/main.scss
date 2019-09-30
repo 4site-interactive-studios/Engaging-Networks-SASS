@@ -1,0 +1,85 @@
+@import "4site-reset";
+@import "4site-framework";
+@import "client-brand";
+@import "4site-pagebuilder";
+@import "4site-debugger";
+
+@import "breakpoint-sass";
+@import "breakpoint-slicer";
+
+$slicer-breakpoints: 0 400px 900px 1200px 1440px;
+body {
+  font-family: "myriad-pro", sans-serif;
+}
+
+#MacacoRosa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100vh;
+  // Layout container
+  > div {
+    &:first-child {
+      max-width: 600px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+    }
+    &:last-child {
+      -webkit-box-flex: 1;
+      -ms-flex: auto;
+      flex: auto;
+      background-image: url("../img/background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      &::before {
+        content: "";
+        width: 13px;
+        height: 100%;
+        position: absolute;
+        background-image: url("../img/lines.svg");
+        background-repeat: repeat-y;
+      }
+    }
+  }
+  // Content Styles
+  .container {
+    margin: 30px 65px;
+  }
+  .logo {
+    display: block;
+    margin-bottom: 45px;
+    max-width: 300px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.15px;
+    color: #333;
+    margin-bottom: 12px;
+    @include from(3) {
+      font-size: 38px;
+    }
+  }
+  p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.29;
+    color: peru;
+    @include from(3) {
+      font-size: 24px;
+    }
+  }
+  footer {
+    max-width: 60%;
+    margin: 20px auto;
+    border: 4px double hotpink;
+    padding: 40px;
+  }
+}
