@@ -30,13 +30,10 @@
         gtag('config', 'UA-00000000-0');
     </script> -->
 
-    <!-- Do not render any part of the page until domcontentloaded-completed class has been added -->
-    <style>body:not(#en__pagebuilder):not(.domcontentloaded) {display: none;}</style>
-    <script>document.addEventListener('DOMContentLoaded', function () {document.body.classList.add("domcontentloaded");}, true);</script>
-    
-    <script></script>
-    <!-- here to ensure a non-blocking load still occurs in IE and Edge, even if scripts follow loadCSS in head -->
-   
+    <!-- Do not render any part of the page until domcontentloaded-completed class has been added, then fade the body in -->
+    <style>body:not(#en__pagebuilder):not(.domcontentloaded){opacity: 0;}body:not(#en__pagebuilder){opacity: 15;transition: opacity .15s ease-in-out;-moz-transition: opacity .15s ease-in-out;-webkit-transition: opacity .15s ease-in-out;}</style>
+    <script>window.addEventListener('DOMContentLoaded', function() {document.body.classList.add("domcontentloaded");}, true);</script>
+
     <meta name="title" content="" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
