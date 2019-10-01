@@ -240,7 +240,6 @@ enInput.init();
     t++
   )
     e[t].addEventListener("focus", function(e) {
-      console.log('test')
       this.parentNode.classList.remove('en__field__item--hidden');
       this.parentNode.parentNode.querySelector(
         ".en__field__item:nth-last-child(2) input"
