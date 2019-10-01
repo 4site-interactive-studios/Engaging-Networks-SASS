@@ -233,13 +233,15 @@ enInput.init();
 (function() {
   for (
     var e = document.querySelectorAll(
-        ".en__field--withOther .en__field__input--other"
+        ".en__field__input--other"
       ),
       t = 0;
     t < e.length;
     t++
   )
-    e[t].addEventListener("input", function(e) {
+    e[t].addEventListener("focus", function(e) {
+      console.log('test')
+      this.parentNode.classList.remove('en__field__item--hidden');
       this.parentNode.parentNode.querySelector(
         ".en__field__item:nth-last-child(2) input"
       ).checked = !0;
